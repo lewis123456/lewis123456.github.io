@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="张凡在 Github 上的个人博客">
+    <meta name="keyword" content="软件，算法，机器人">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="img/header-img.jpg">
+    <link rel="alternate" type="application/atom+xml" title="longman" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        resume｜longman&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="http://longman.kim/resume/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('img/post-default-img.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    longman
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/resume/">resume</a>
+                        </li>
+							
+						
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<style>
+    #about-header{
+        margin-top: 85px;
+    }
+    #about-header img{
+        width: 145px;
+    }
+    .offer-body,
+    .education-body,
+    .project-body,
+    .skills-body,
+    .work-body,
+    .contact-body，
+    .learn-body{
+        padding-left: 25px;
+    }
+    p{
+        margin:0;
+        font-size: 15px;
+    }
+    .body-section{
+        padding-left: 15px;
+    }
+    #offer ul{
+        margin-left: 20px;
+        margin-bottom: 5px!important;
+        border-left: 4px darkgray solid;
+        padding-left: 8px;
+
+    }
+    li{
+        list-style: none;
+        font-size: 15px;
+
+    }
+    .title{
+        color: #777;
+    }
+    .title>span{margin-right: 5px}
+    .detail-info-xueli{
+        display: block;
+        padding-left: 70px;
+    }
+
+
+</style>
+
+<!-- Chinese Version -->
+<div class="zh post-container">
+<    <div class="content" id="about-header"> 
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+                <div>
+                    <img src="source/img/header-img.jpg"  style="border-radius: 50%;"/>
+                </div>
+                <div class="text-center">
+                     <h2>李鹏飞</h2>
+                    <p>意向职位：Java开发工程师</p>
+                </div>
+            </div>
+        </div>
+        <!--正文-->
+        <div class="row" id="offer">
+            <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+                <div class="education-info">
+                    <h3 class="title"><span class="glyphicon glyphicon-user"></span> 教育背景</h3>
+                    <div class="education-body">
+                        <p>2013年9月—2016年6月 &nbsp; &nbsp; &nbsp; 中国科学技术大学 &nbsp; &nbsp; &nbsp; 硕士 &nbsp; &nbsp; &nbsp; 计算机应用</p>
+                        <p>2009年9月—2013年6月 &nbsp; &nbsp; &nbsp; 武汉大学 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; 本科 &nbsp; &nbsp; &nbsp; 计算机科学与技术</p>
+                    </div>
+                </div>
+
+                <div class="skills">
+                                    <h3 class="title"><span class="glyphicon glyphicon-wrench"> 专业技能</h3>
+                                    <div class="skills-body">
+                                        <ul>
+                                            <li>1. Java,Go,C/C++</li>
+                                            <li>2. SpringMVC,SpringBoot,Mybatis,MySQL,Redis,Hbase</li>
+                                            <li>3. CAP,BASE,2PC,3PC,PAXOS,RAFT,RocketMQ,Dubbo,Service Mesh</li>
+                                            <li>4. 算法
+                                            <li>5. 金融业务，区块链技术</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                <div class="work-experience">
+                    <h3 class="title"><span class="glyphicon glyphicon-folder-open"> 工作经历</h3>
+                    <div class="project-body">
+                        2016年7月-至今，微众银行，基础科技产品部，后台开发岗
+                        <ul>
+                            <li>1. 礼品卡</li>
+                            <li>2. 钱包</li>
+                            <li>3. 登录系统</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact-show">
+                    <h3 class="title "> <span class="glyphicon glyphicon-earphone"></span> 联系我</h3>
+                        <div class="contact-body">
+                            <p>微 &nbsp; 信: lewis_longman</p>
+                            <p>邮 &nbsp; 箱: 1131260974@qq.com</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; longman 2018
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://longman.kim/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="img/header-img.jpg">
+</body>
+
+</html>
