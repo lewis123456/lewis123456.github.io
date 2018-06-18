@@ -176,67 +176,83 @@
                 <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><hr>
 <p>按照维基百科的解释，Markdown和html一样，也是一种标记语言，专注于可读可写。相比html，Markdown更加轻量，同时它能够很容易被转换成html或者其他格式。Markdown经常被使用在readme文件中，它有很多的实现版本，扩展并丰富了它的功能。</p>
 <h3 id="标题，段落，区块引用，列表"><a href="#标题，段落，区块引用，列表" class="headerlink" title="标题，段落，区块引用，列表"></a>标题，段落，区块引用，列表</h3><hr>
-<p>在html中标题使用h1, h2, h3, h4, h5, h6等表示，在Markdown中使用#开头来标识，其对于关系如下：  </p>
+<ol>
+<li><p>在html中标题使用h1, h2, h3, h4, h5, h6等表示，在Markdown中使用#开头来标识，其对于关系如下：  </p>
 <blockquote>
-<p># 这是h1<br>## 这是h2<br>###### 这是h6 </p>
+<p># 这是h1<br> ## 这是h2<br> ###### 这是h6 </p>
 </blockquote>
-<p>用#的个数表示标题的阶数。在Markdown中h1，h2还可以用下面这种方法表示：  </p>
+<p> 用#的个数表示标题的阶数。在Markdown中h1，h2还可以用下面这种方法表示：  </p>
 <blockquote>
-<p>这是h1<br>\====<br>这是h2<br>-—–  </p>
+<p>这是h1<br> \====<br> 这是h2<br> -—–  </p>
 </blockquote>
-<p>其中=表示最高阶，-表示第二高阶，任何数量的=和-都有效果。</p>
-<p>段落由一行或多个连续的行组成，段落通过一个或者多个空白行（只包含空格，制表符的行也算空白行）来分隔。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;普通段落不能使用空格或者制表符来进行缩进，如果一定要缩进，则使用\&amp;nbsp插入空格。在段落内<strong>换行</strong>是在行尾插入两个或两个以上的空格，然后再插入回车来实现。</p>
+<p> 其中=表示最高阶，-表示第二高阶，任何数量的=和-都有效果。</p>
+</li>
+<li><p>段落由一行或多个连续的行组成，段落通过一个或者多个空白行（只包含空格，制表符的行也算空白行）来分隔。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;普通段落不能使用空格或者制表符来进行缩进，如果一定要缩进，则使用\&amp;nbsp插入空格。在段落内<strong>换行</strong>是在行尾插入两个或两个以上的空格，然后再插入回车来实现。</p>
 <blockquote>
 <p>区块引用是另外一种组织文本的形式，它相比段落根据方便，因为它能直接换行。使用区块引用只需要在文本的开头插入>即可，</p>
 <blockquote>
-<p>区块引用允许嵌套，即使用>&gt;嵌套在>里面，并且区块里面还可以使用标题，列表，代码块等其他<br>Markdown语法。 </p>
+<p>区块引用允许嵌套，即使用>&gt;嵌套在>里面，并且区块里面还可以使用标题，列表，代码块等其他<br> Markdown语法。 </p>
 </blockquote>
 </blockquote>
-<p>列表分为无序列表和有序列表，无序列表可以在行的开头使用*或者+或者-号，如下:  </p>
+</li>
+<li><p>列表分为无序列表和有序列表，无序列表可以在行的开头使用*或者+或者-号，如下:  </p>
 <blockquote>
-<p>* one<br>* two<br>* three</p>
-</blockquote>
-<blockquote>
-<p>+ one<br>+ two<br>+ three</p>
+<p>* one<br> * two<br> * three</p>
 </blockquote>
 <blockquote>
-<p>- one<br>- two<br>- three</p>
+<p>+ one<br> + two<br> + three</p>
 </blockquote>
-<p>有序列表使用数字加一个英文句点：  </p>
 <blockquote>
-<p>1. one<br>2. two<br>3. three  </p>
+<p>- one<br> - two<br> - three</p>
 </blockquote>
-<p>如果每个列表项内部有多个段落，则每个段落必须缩进4个空格或一个制表符。如果列表项<br>里有引用，则&lt;必须缩进。如果列表项里有代码区块，则代码区块要缩进两次，即两个制表符。  </p>
+<p> 有序列表使用数字加一个英文句点：  </p>
+<blockquote>
+<p>1. one<br> 2. two<br> 3. three  </p>
+</blockquote>
+</li>
+<li><p>如果每个列表项内部有多个段落，则每个段落必须缩进4个空格或一个制表符。如果列表项<br>里有引用，则&lt;必须缩进。如果列表项里有代码区块，则代码区块要缩进两次，即两个制表符。  </p>
 <blockquote>
 <ul>
-<li>one 列表里有多个段落<br>  第一个段落<br>  第二个段落</li>
+<li>one 列表里有多个段落<br>   第一个段落<br>   第二个段落</li>
 <li>two 列表里有区块引用<br>区块应用</li>
 <li>three 列表里有代码区块<pre><code>if (2 == 1) {
-    printf(&quot;hello&quot;);
+   printf(&quot;hello&quot;);
 } else {
     printf(&quot;world&quot;);
 }
 </code></pre></li>
 </ul>
 </blockquote>
+</li>
+</ol>
 <h3 id="链接和图片"><a href="#链接和图片" class="headerlink" title="链接和图片"></a>链接和图片</h3><hr>
-<p>链接分为行内链接和参考式链接。行内链接是直接在需要链接的地方插入链接网址即可，<br>参考式链接是先插入一个链接id，然后在其他地方定义id对应的网址。  </p>
+<ol>
+<li><p>链接分为行内链接和参考式链接。行内链接是直接在需要链接的地方插入链接网址即可，<br>参考式链接是先插入一个链接id，然后在其他地方定义id对应的网址。  </p>
 <blockquote>
 <ol>
-<li>行内链接<br> 这是一个行内链接，[点我](<a href="http://www.sina.com" target="_blank" rel="noopener">http://www.sina.com</a> “新浪”)吧</li>
-<li>参考式链接<br> 这是一个参考式链接，[点我][345]吧<br> [345]: <a href="http://www.sina.com" target="_blank" rel="noopener">http://www.sina.com</a> “新浪”  </li>
+<li>行内链接<br>  这是一个行内链接，[点我](<a href="http://www.sina.com" target="_blank" rel="noopener">http://www.sina.com</a> “新浪”)吧</li>
+<li>参考式链接<br>  这是一个参考式链接，[点我][345]吧<br>  [345]: <a href="http://www.sina.com" target="_blank" rel="noopener">http://www.sina.com</a> “新浪”  </li>
 </ol>
 </blockquote>
-<p>参考式链接相比行内链接，更具有可读性，将与内容无关的链接放在其他位置。  </p>
-<p>插入图片的方法和链接的方法类似，也分为行内式和参考式：  </p>
+<p> 参考式链接相比行内链接，更具有可读性，将与内容无关的链接放在其他位置。  </p>
+</li>
+<li><p>插入图片的方法和链接的方法类似，也分为行内式和参考式：  </p>
 <blockquote>
 <ol>
-<li>行内式<br> 语法是 ![alt text](<a href="https://longman.kim/img/header-img.jpg">https://longman.kim/img/header-img.jpg</a> “不二周助”)  </li>
-<li>参考式<br> 语法是 ![Alt text][id]<br> [id]: url/to/image  “Optional title attribute”<br> 其中alt text表示图片不能显示时出现的文字</li>
+<li>行内式<br>  语法是 ![alt text](<a href="https://longman.kim/img/header-img.jpg">https://longman.kim/img/header-img.jpg</a> “不二周助”)  </li>
+<li>参考式<br>  语法是 ![Alt text][id]<br>  [id]: url/to/image  “Optional title attribute” </li>
 </ol>
 </blockquote>
+<p> 其中alt text表示图片不能显示时出现的文字</p>
+</li>
+</ol>
 <h3 id="代码区块，代码，强调，分割线"><a href="#代码区块，代码，强调，分割线" class="headerlink" title="代码区块，代码，强调，分割线"></a>代码区块，代码，强调，分割线</h3><hr>
-<p>代码区块的建立很简单，只需要简单地缩进4个空格或者一个制表符<br>小段代码要被标记可以直接使用反引号`把它们包起来<br>斜体强调可以使用<em>或者_包裹，粗体强调可以使用**或者__包裹<br>分割线可以使用三个以上的\</em>或者_，即***或者___</p>
+<ol>
+<li>代码区块的建立很简单，只需要简单地缩进4个空格或者一个制表符  </li>
+<li>小段代码要被标记可以直接使用反引号`把它们包起来  </li>
+<li>斜体强调可以使用*或者_包裹，粗体强调可以使用**或者__包裹  </li>
+<li>分割线可以使用三个以上的*或者_，即***或者___</li>
+</ol>
 <h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><hr>
 <blockquote>
 <p>表格的简单写法<br>  |id|name|<br>  |:-|:-|<br>  |1|A1|<br>  |2|A2|<br>  |3|A3|  </p>
