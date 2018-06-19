@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        垃圾回收算法｜longman&#39;s blog
+        Java的垃圾回收算法｜longman&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://longman.kim/2018/06/15/垃圾回收算法/">
+    <link rel="canonical" href="http://longman.kim/2018/06/19/Java的垃圾回收算法/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>垃圾回收算法</h1>
+                    <h1>Java的垃圾回收算法</h1>
                     
                     <span class="meta">
                          作者 lewis longman
                         <span>
-                          日期 2018-06-15
+                          日期 2018-06-19
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -162,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            垃圾回收算法
+            Java的垃圾回收算法
         </span>
     </div>
 </header>
@@ -173,21 +173,34 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                
+                <h3 id="判断对象是否已死"><a href="#判断对象是否已死" class="headerlink" title="判断对象是否已死"></a>判断对象是否已死</h3><h5 id="1-引用计数"><a href="#1-引用计数" class="headerlink" title="1. 引用计数"></a>1. 引用计数</h5><h5 id="2-可达性分析（根搜索法）"><a href="#2-可达性分析（根搜索法）" class="headerlink" title="2. 可达性分析（根搜索法）"></a>2. 可达性分析（根搜索法）</h5><ol>
+<li><p>哪些对象可以作为根</p>
+<ul>
+<li>jvm栈对象</li>
+<li>静态常量对象（方法区）</li>
+<li>本地方法栈对象</li>
+</ul>
+</li>
+<li><p>强引用，软引用，弱引用，虚引用</p>
+<ul>
+<li>new出来的对象是强引用</li>
+<li>SoftReference来实现软引用，当内存不够用时，濒临逸出的情况下，gc就会把软引用的对象回收</li>
+<li>WeakReference来实现弱引用，弱引用的对象将会在下一次的gc被回收</li>
+<li>PhantomReference来实现虚引用，虚引用没有办法访问对象实例</li>
+</ul>
+</li>
+</ol>
+<p>### </p>
+
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2018/06/18/Markdown基本使用命令/" data-toggle="tooltip" data-placement="top"
-                           title="Markdown基本使用命令">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2018/06/14/hello-world/" data-toggle="tooltip" data-placement="top"
-                           title="Hello World">Next Post &rarr;</a>
+                        <a href="/2018/06/19/hexo常用命令/" data-toggle="tooltip" data-placement="top"
+                           title="hexo常用命令">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -204,7 +217,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#判断对象是否已死"><span class="toc-text">判断对象是否已死</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-引用计数"><span class="toc-text">1. 引用计数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-可达性分析（根搜索法）"><span class="toc-text">2. 可达性分析（根搜索法）</span></a></li></ol></li></ol></li></ol>
                 </div>
             </div>
         </div>
