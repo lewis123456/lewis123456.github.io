@@ -173,16 +173,26 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="判断对象是否已死"><a href="#判断对象是否已死" class="headerlink" title="判断对象是否已死"></a>判断对象是否已死</h3><h5 id="1-引用计数"><a href="#1-引用计数" class="headerlink" title="1. 引用计数"></a>1. 引用计数</h5><h5 id="2-可达性分析（根搜索法）"><a href="#2-可达性分析（根搜索法）" class="headerlink" title="2. 可达性分析（根搜索法）"></a>2. 可达性分析（根搜索法）</h5><ol>
-<li><p>哪些对象可以作为根</p>
+                <h3 id="Java运行时的数据区域"><a href="#Java运行时的数据区域" class="headerlink" title="Java运行时的数据区域"></a>Java运行时的数据区域</h3><blockquote>
 <ul>
-<li>jvm栈对象</li>
-<li>静态常量对象（方法区）</li>
-<li>本地方法栈对象</li>
+<li>线程私有：jvm虚拟机栈，程序计数器，本地方法栈</li>
+<li>线程公有：堆，方法区（常量，静态变量等），执行引擎，本地库的接口</li>
+<li>堆外内存，利用NIO</li>
+</ul>
+</blockquote>
+<h3 id="判断对象是否已死"><a href="#判断对象是否已死" class="headerlink" title="判断对象是否已死"></a>判断对象是否已死</h3><h5 id="1-引用计数"><a href="#1-引用计数" class="headerlink" title="1. 引用计数"></a>1. 引用计数</h5><blockquote>
+<p>记录对象的引用次数，当对象被引用时，记录加1，当对象失效时，记录减1，当记录为0时，代表记录已死，可以被回收。<br>存在的一个问题是循环引用，例如A引用B，B又引用A。</p>
+</blockquote>
+<h5 id="2-可达性分析（根搜索法）"><a href="#2-可达性分析（根搜索法）" class="headerlink" title="2. 可达性分析（根搜索法）"></a>2. 可达性分析（根搜索法）</h5><blockquote>
+<ol>
+<li>哪些对象可以作为根  <ul>
+<li>jvm栈中引用的对象</li>
+<li>方法区中类静态属性引用的对象</li>
+<li>方法区中常量引用的对象</li>
+<li>本地方法栈中引用的对象</li>
 </ul>
 </li>
-<li><p>强引用，软引用，弱引用，虚引用</p>
-<ul>
+<li>强引用，软引用，弱引用，虚引用<ul>
 <li>new出来的对象是强引用</li>
 <li>SoftReference来实现软引用，当内存不够用时，濒临逸出的情况下，gc就会把软引用的对象回收</li>
 <li>WeakReference来实现弱引用，弱引用的对象将会在下一次的gc被回收</li>
@@ -190,7 +200,78 @@
 </ul>
 </li>
 </ol>
-<p>### </p>
+</blockquote>
+<h3 id="垃圾回收算法"><a href="#垃圾回收算法" class="headerlink" title="垃圾回收算法"></a>垃圾回收算法</h3><h5 id="1-标记清除"><a href="#1-标记清除" class="headerlink" title="1. 标记清除"></a>1. 标记清除</h5><blockquote>
+<p>标记已死的对象，并清除掉，缺点是效率低并造成内存碎片</p>
+</blockquote>
+<h5 id="2-标记整理"><a href="#2-标记整理" class="headerlink" title="2. 标记整理"></a>2. 标记整理</h5><blockquote>
+<p>标记存活的对象，并把它们移到一端，清除掉边界以外的内存</p>
+</blockquote>
+<h5 id="3-复制算法"><a href="#3-复制算法" class="headerlink" title="3. 复制算法"></a>3. 复制算法</h5><blockquote>
+<p>将内存分为相等的两块A，B。首先只在A区块分配内存给对象，当A区块满了的时候，<br>将A区块中存活的对象复制到B区块，清理到A区块。然后在B区块中分配内存给对象，当B<br>区块满了的时候，将B区块中存活的对象复制到A区块，清理到B区块，依次循环。<br>实际在HotSpot中，分为8:1:1的三块即Eden，SurvivorFrom，SurvivorTo，具体执行<br>流程如下：</p>
+<ol>
+<li>Eden第一次GC，将Eden中存活的对象复制到SurvivorFrom中，清空Eden</li>
+<li>Eden第二次GC，将Eden和SurvivorFrom中存活的对象复制到SurvivorTo中，清空<br>Eden和SurvivorFrom</li>
+<li>Eden第三次GC，将Eden和SurvivorTo中存活的对象复制到SurvivorFrom中，清空<br>Eden和SurvivorTo</li>
+<li>后续SurvivorFrom和SurvivorTo依次交换</li>
+</ol>
+</blockquote>
+<h3 id="垃圾收集器"><a href="#垃圾收集器" class="headerlink" title="垃圾收集器"></a>垃圾收集器</h3><h5 id="Serial"><a href="#Serial" class="headerlink" title="Serial"></a>Serial</h5><blockquote>
+<p>单线程，暂停用户线程<br>新生代采用复制算法，老年代采用标记整理算法</p>
+</blockquote>
+<h5 id="ParNew"><a href="#ParNew" class="headerlink" title="ParNew"></a>ParNew</h5><blockquote>
+<p>多线程，暂停用户线程<br>新生代采用复制算法，老年代采用标记整理算法</p>
+</blockquote>
+<h5 id="Parallel-Scavenge"><a href="#Parallel-Scavenge" class="headerlink" title="Parallel Scavenge"></a>Parallel Scavenge</h5><blockquote>
+<p>吞吐量优先</p>
+</blockquote>
+<h5 id="Serial-Old"><a href="#Serial-Old" class="headerlink" title="Serial Old"></a>Serial Old</h5><blockquote>
+<p>Serial的老年代版本</p>
+</blockquote>
+<h5 id="Parallel-Old"><a href="#Parallel-Old" class="headerlink" title="Parallel Old"></a>Parallel Old</h5><blockquote>
+<p>Parallel Scavenge的老年代版本</p>
+</blockquote>
+<h5 id="CMS"><a href="#CMS" class="headerlink" title="CMS"></a>CMS</h5><blockquote>
+<p>最短回收停顿时间</p>
+<ul>
+<li>初始标记（耗时极短，暂停用户线程）</li>
+<li>并发标记（耗时长，不暂停用户线程）</li>
+<li>重新标记（耗时极短，暂停用户线程，修正并发标记期间的变化）</li>
+<li>并发清除（耗时长，不暂停用户线程）</li>
+</ul>
+</blockquote>
+<h5 id="G1"><a href="#G1" class="headerlink" title="G1"></a>G1</h5><blockquote>
+<p>把堆栈分为多个域，每次仅从一个域收集垃圾，也可理解为把堆栈分成一小块一小块，每次仅对某一个块进行垃圾收集。这会造成较小的应用程序中断时间，使得用户一般不能觉察到垃圾收集器正在工作。</p>
+<ul>
+<li>初始标记</li>
+<li>并发标记</li>
+<li>最终标记标记</li>
+<li>筛选回收</li>
+</ul>
+</blockquote>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h5 id="GC触发的条件"><a href="#GC触发的条件" class="headerlink" title="GC触发的条件"></a>GC触发的条件</h5><blockquote>
+<ul>
+<li>minor gc<ul>
+<li>当Eden区满了的时候</li>
+</ul>
+</li>
+<li>full gc<ul>
+<li>minor gc时，Eden区和SurvivorFrom中存活的对象大于SurvivorTo，把<br>该对象转移到老年代，但是老年代的可用空间也小于这些对象</li>
+<li>方法区空间不足</li>
+<li>老年代空间不足</li>
+<li>系统调用System.gc时有可能会full gc</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h5 id="finalize"><a href="#finalize" class="headerlink" title="finalize()"></a>finalize()</h5><blockquote>
+<ul>
+<li>每个对象的finalize只能被调用一次</li>
+<li>如果在finalize中有引用该对象，则该对象被复活，但下次回收时，仍然被回收，因为finalize只能被调用一次</li>
+<li>任何地方都可以调用finalize，但是其结果未知</li>
+<li>System.gc可以执行垃圾回收</li>
+</ul>
+</blockquote>
 
                 <hr>
                 
@@ -217,7 +298,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#判断对象是否已死"><span class="toc-text">判断对象是否已死</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-引用计数"><span class="toc-text">1. 引用计数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-可达性分析（根搜索法）"><span class="toc-text">2. 可达性分析（根搜索法）</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java运行时的数据区域"><span class="toc-text">Java运行时的数据区域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#判断对象是否已死"><span class="toc-text">判断对象是否已死</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-引用计数"><span class="toc-text">1. 引用计数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-可达性分析（根搜索法）"><span class="toc-text">2. 可达性分析（根搜索法）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#垃圾回收算法"><span class="toc-text">垃圾回收算法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-标记清除"><span class="toc-text">1. 标记清除</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-标记整理"><span class="toc-text">2. 标记整理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-复制算法"><span class="toc-text">3. 复制算法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#垃圾收集器"><span class="toc-text">垃圾收集器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Serial"><span class="toc-text">Serial</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ParNew"><span class="toc-text">ParNew</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Parallel-Scavenge"><span class="toc-text">Parallel Scavenge</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Serial-Old"><span class="toc-text">Serial Old</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Parallel-Old"><span class="toc-text">Parallel Old</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CMS"><span class="toc-text">CMS</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#G1"><span class="toc-text">G1</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他"><span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#GC触发的条件"><span class="toc-text">GC触发的条件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#finalize"><span class="toc-text">finalize()</span></a></li></ol></li></ol></li></ol>
                 </div>
             </div>
         </div>
