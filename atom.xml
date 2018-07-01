@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>longman</title>
+  <icon>https://www.gravatar.com/avatar/b7e2ba3f68bd206134b3d41535be01b0</icon>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://longman.kim/"/>
+  <updated>2018-07-01T15:32:02.989Z</updated>
+  <id>http://longman.kim/</id>
+  
+  <author>
+    <name>lewis longman</name>
+    <email>2328811532@qq.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>剧本20180701</title>
+    <link href="http://longman.kim/2018/07/01/%E5%89%A7%E6%9C%AC20180701/"/>
+    <id>http://longman.kim/2018/07/01/剧本20180701/</id>
+    <published>2018-07-01T15:12:57.000Z</published>
+    <updated>2018-07-01T15:32:02.989Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-Guava-Cache的原理与实现"><a href="#1-Guava-Cache的原理与实现" class="headerlink" title="1. Guava Cache的原理与实现"></a>1. Guava Cache的原理与实现</h3><h3 id="2-BCOS的架构，技术原理，启动流程"><a href="#2-BCOS的架构，技术原理，启动流程" class="headerlink" title="2. BCOS的架构，技术原理，启动流程"></a>2. BCOS的架构，技术原理，启动流程</h3><h3 id="3-分布式理论BASE-CAP"><a href="#3-分布式理论BASE-CAP" class="headerlink" title="3. 分布式理论BASE, CAP"></a>3. 分布式理论BASE, CAP</h3><h3 id="4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT"><a href="#4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT" class="headerlink" title="4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT"></a>4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT</h3><h3 id="5-挖矿算法POW-POS-DPOS-Leader-BFT"><a href="#5-挖矿算法POW-POS-DPOS-Leader-BFT" class="headerlink" title="5. 挖矿算法POW, POS, DPOS, Leader, BFT"></a>5. 挖矿算法POW, POS, DPOS, Leader, BFT</h3><h3 id="6-消息中间件及RocketMQ模块分解"><a href="#6-消息中间件及RocketMQ模块分解" class="headerlink" title="6. 消息中间件及RocketMQ模块分解"></a>6. 消息中间件及RocketMQ模块分解</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-Guava-Cache的原理与实现&quot;&gt;&lt;a href=&quot;#1-Guava-Cache的原理与实现&quot; class=&quot;headerlink&quot; title=&quot;1. Guava Cache的原理与实现&quot;&gt;&lt;/a&gt;1. Guava Cache的原理与实现&lt;/h3&gt;&lt;h3
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>netty</title>
+    <link href="http://longman.kim/2018/07/01/netty/"/>
+    <id>http://longman.kim/2018/07/01/netty/</id>
+    <published>2018-07-01T09:08:31.000Z</published>
+    <updated>2018-07-01T09:08:31.454Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Golang</title>
+    <link href="http://longman.kim/2018/07/01/Golang/"/>
+    <id>http://longman.kim/2018/07/01/Golang/</id>
+    <published>2018-07-01T08:51:02.000Z</published>
+    <updated>2018-07-01T08:51:02.784Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Docker</title>
+    <link href="http://longman.kim/2018/07/01/Docker/"/>
+    <id>http://longman.kim/2018/07/01/Docker/</id>
+    <published>2018-07-01T08:50:44.000Z</published>
+    <updated>2018-07-01T08:50:44.697Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>BCOS</title>
+    <link href="http://longman.kim/2018/07/01/BCOS/"/>
+    <id>http://longman.kim/2018/07/01/BCOS/</id>
+    <published>2018-07-01T08:50:23.000Z</published>
+    <updated>2018-07-01T08:50:23.201Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>超级账本</title>
+    <link href="http://longman.kim/2018/07/01/%E8%B6%85%E7%BA%A7%E8%B4%A6%E6%9C%AC/"/>
+    <id>http://longman.kim/2018/07/01/超级账本/</id>
+    <published>2018-07-01T08:50:09.000Z</published>
+    <updated>2018-07-01T08:50:09.308Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>以太坊</title>
+    <link href="http://longman.kim/2018/07/01/%E4%BB%A5%E5%A4%AA%E5%9D%8A/"/>
+    <id>http://longman.kim/2018/07/01/以太坊/</id>
+    <published>2018-07-01T08:49:54.000Z</published>
+    <updated>2018-07-01T08:49:54.152Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>比特币</title>
+    <link href="http://longman.kim/2018/07/01/%E6%AF%94%E7%89%B9%E5%B8%81/"/>
+    <id>http://longman.kim/2018/07/01/比特币/</id>
+    <published>2018-07-01T08:49:40.000Z</published>
+    <updated>2018-07-01T08:49:40.763Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RPC框架Dubbo, Motan, SpringCloud</title>
+    <link href="http://longman.kim/2018/07/01/RPC%E6%A1%86%E6%9E%B6Dubbo-Motan-SpringCloud/"/>
+    <id>http://longman.kim/2018/07/01/RPC框架Dubbo-Motan-SpringCloud/</id>
+    <published>2018-07-01T08:49:17.000Z</published>
+    <updated>2018-07-01T08:49:17.814Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>分布式协调服务zookeeper</title>
+    <link href="http://longman.kim/2018/07/01/%E5%88%86%E5%B8%83%E5%BC%8F%E5%8D%8F%E8%B0%83%E6%9C%8D%E5%8A%A1zookeeper/"/>
+    <id>http://longman.kim/2018/07/01/分布式协调服务zookeeper/</id>
+    <published>2018-07-01T08:48:47.000Z</published>
+    <updated>2018-07-01T08:48:47.113Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>分布式消息订阅系统Kafka</title>
+    <link href="http://longman.kim/2018/07/01/%E5%88%86%E5%B8%83%E5%BC%8F%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85%E7%B3%BB%E7%BB%9FKafka/"/>
+    <id>http://longman.kim/2018/07/01/分布式消息订阅系统Kafka/</id>
+    <published>2018-07-01T08:48:16.000Z</published>
+    <updated>2018-07-01T08:48:16.595Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>加入开源项目nutz</title>
+    <link href="http://longman.kim/2018/07/01/%E5%8A%A0%E5%85%A5%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AEnutz/"/>
+    <id>http://longman.kim/2018/07/01/加入开源项目nutz/</id>
+    <published>2018-07-01T08:47:23.000Z</published>
+    <updated>2018-07-01T08:47:23.519Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java之外的世界</title>
+    <link href="http://longman.kim/2018/07/01/Java%E4%B9%8B%E5%A4%96%E7%9A%84%E4%B8%96%E7%95%8C/"/>
+    <id>http://longman.kim/2018/07/01/Java之外的世界/</id>
+    <published>2018-07-01T08:45:19.000Z</published>
+    <updated>2018-07-01T09:12:53.138Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="1-消息中间件的两种模式：点对点的消息队列，发布-订阅的topic"><a href="#1-消息中间件的两种模式：点对点的消息队列，发布-订阅的topic" class="headerlink" title="1. 消息中间件的两种模式：点对点的消息队列，发布/订阅的topic"></a>1. 消息中间件的两种模式：点对点的消息队列，发布/订阅的topic</h5><h5 id="2-消息中间件message消费失败怎么办？"><a href="#2-消息中间件message消费失败怎么办？" class="headerlink" title="2. 消息中间件message消费失败怎么办？"></a>2. 消息中间件message消费失败怎么办？</h5><h5 id="3-hbase与mysql的区别"><a href="#3-hbase与mysql的区别" class="headerlink" title="3. hbase与mysql的区别"></a>3. hbase与mysql的区别</h5><h5 id="4-mysql的事务隔离级别"><a href="#4-mysql的事务隔离级别" class="headerlink" title="4. mysql的事务隔离级别"></a>4. mysql的事务隔离级别</h5><h5 id="5-跨越多个数据库的事务"><a href="#5-跨越多个数据库的事务" class="headerlink" title="5. 跨越多个数据库的事务"></a>5. 跨越多个数据库的事务</h5><h5 id="6-如何保证数据一致性，缓存与DB的更新"><a href="#6-如何保证数据一致性，缓存与DB的更新" class="headerlink" title="6. 如何保证数据一致性，缓存与DB的更新"></a>6. 如何保证数据一致性，缓存与DB的更新</h5><h5 id="7-分布式发布订阅消息系统kafka"><a href="#7-分布式发布订阅消息系统kafka" class="headerlink" title="7. 分布式发布订阅消息系统kafka"></a>7. 分布式发布订阅消息系统kafka</h5><h5 id="8-分布式协调服务zookeeper"><a href="#8-分布式协调服务zookeeper" class="headerlink" title="8. 分布式协调服务zookeeper"></a>8. 分布式协调服务zookeeper</h5><h5 id="9-RPC框架dubbo-dubbox-motan-thrift-grpc-avro-SpringCloud"><a href="#9-RPC框架dubbo-dubbox-motan-thrift-grpc-avro-SpringCloud" class="headerlink" title="9. RPC框架dubbo, dubbox, motan, thrift, grpc, avro, SpringCloud"></a>9. RPC框架dubbo, dubbox, motan, thrift, grpc, avro, SpringCloud</h5><h5 id="10-消息中间件RabbitMQ-ActiveMQ-RocketMQ-Redis-Kafka-ZeroMQ"><a href="#10-消息中间件RabbitMQ-ActiveMQ-RocketMQ-Redis-Kafka-ZeroMQ" class="headerlink" title="10. 消息中间件RabbitMQ, ActiveMQ, RocketMQ, Redis, Kafka, ZeroMQ"></a>10. 消息中间件RabbitMQ, ActiveMQ, RocketMQ, Redis, Kafka, ZeroMQ</h5><h5 id="11-分布式常见问题"><a href="#11-分布式常见问题" class="headerlink" title="11. 分布式常见问题"></a>11. 分布式常见问题</h5><h5 id="12-如何做异常的监控"><a href="#12-如何做异常的监控" class="headerlink" title="12. 如何做异常的监控"></a>12. 如何做异常的监控</h5><h5 id="13-go语言的协程与c-和python的对比"><a href="#13-go语言的协程与c-和python的对比" class="headerlink" title="13. go语言的协程与c++和python的对比"></a>13. go语言的协程与c++和python的对比</h5><h5 id="14-区块链技术的介绍"><a href="#14-区块链技术的介绍" class="headerlink" title="14. 区块链技术的介绍"></a>14. 区块链技术的介绍</h5><h5 id="15-过去一年最自豪的一件事情"><a href="#15-过去一年最自豪的一件事情" class="headerlink" title="15. 过去一年最自豪的一件事情"></a>15. 过去一年最自豪的一件事情</h5>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h5 id=&quot;1-消息中间件的两种模式：点对点的消息队列，发布-订阅的topic&quot;&gt;&lt;a href=&quot;#1-消息中间件的两种模式：点对点的消息队列，发布-订阅的topic&quot; class=&quot;headerlink&quot; title=&quot;1. 消息中间件的两种模式：点对点的消息队列，发布/
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>剧本1</title>
+    <link href="http://longman.kim/2018/06/30/%E5%89%A7%E6%9C%AC1/"/>
+    <id>http://longman.kim/2018/06/30/剧本1/</id>
+    <published>2018-06-30T13:33:08.000Z</published>
+    <updated>2018-07-01T04:02:58.102Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-人生如戏"><a href="#1-人生如戏" class="headerlink" title="1. 人生如戏"></a>1. 人生如戏</h3><p>&emsp;&emsp;有人说一生很长，有人说一生很短，但长短真的那么重要吗？人终究会死，死了就什么也没有了。没有烦恼，没有快乐。衡量人生的长短是没有任何意义的，有人活着他已经死了，有人死了他还活着。关键是人的价值，在历史中的价值，那才是人应该去追求的真谛。让我们静下心想想应该怎么过完自己的一生，是庸庸碌碌，还是人生如戏。没有梦想，人和咸鱼有什么区别？但现实情况是，我们大多数人就是咸鱼。我们的梦想是赚钱，赚很多的钱，让自己买得起车买得起房。然后呢，我们没有然后。钱，成为了生存下来的唯一目标。天下熙熙皆为利来，天下攘攘皆为利往。我们有问过自己，到底自己想要什么吗？没有，时间推着我们走，走到哪里算哪里。人生本不该如此，人生如戏，我们要做自己的主宰，做设计人生的导演，做表演人生的演员。这是一场戏，没有NG，所有的镜头必须一次过。这场戏中，我们无法自欺欺人，唯有亲身示范。</p><h3 id="2-优秀的导演"><a href="#2-优秀的导演" class="headerlink" title="2. 优秀的导演"></a>2. 优秀的导演</h3><p>&emsp;&emsp;每一个人生都有自己的主题，有的是喜剧，有的是悲剧，有的是无厘头。里面的主角也各不相同，他们在各自的圈子里演绎自己的人生。在这出戏里，一个关键的人物就是导演。他要构思剧本，调整灯光，整理道具，搭建舞台。他是这出戏的总设计师，是这出戏唯一的领班人。没有其他人可以，但不能没有导演。那作为一个导演应该怎么做呢？每一出戏，导完了，导演的作用也就消失了。戏只有一部，成败在此一举。所以，导演要给自己的戏定性。剧情究竟是一波三折呢，还是全局开挂？什么时候能看到戏的高潮？戏里的每一分每一秒，导演都需要精雕细琢，容不得半点放水。导演的职责是什么呢？设计好台词，把灯光调的切合剧情氛围一些，让舞台变得更大，清除外界的干扰。<br>&emsp;&emsp;如果我是导演，我该怎么设计好人生的这场大戏呢？一个出生贫苦的乡下孩子，在少年时代享受了成绩优秀带来的快感。当他的圈子慢慢变大后，他的优秀变得不那么明显。不过在小圈子内，他还是可以自我陶醉，因为他的部分优秀。在他进入大学后，他的人生没有明确的目标，但他延续了之前的部分努力，所以在糊里糊涂中读了研究生。大学4年，研究生3年，在这7年的时间里，他始终认为自己像小学时候一样优秀。直到他在名企实习，但却没有被最终留用后，他发现了自己的落后。他想改，可以蹉跎的7年，懒惰的惯性让我总是无法走出困境。工作两年，当领导在他的评语上留下了不能胜任工作的时候，他开始恐慌。他突然发现，自己真的落后了，并且他已经30岁了，然而还是无法一技压身。他开始痛苦，开始彷徨，开始自我怀疑，以为自己的人生就这样完了。<br>&emsp;&emsp;然而，生活的挫折并没有将他打到。他改变了自己，给自己设定了明确的目标。从外在的发型，眼镜，着装，走路的姿势，说话的语气，面部的表情，待人的真诚，到内在的价值观，人生观，知识面等等。他喜欢公开表达自己对时事的观点，对政策的目的进行了分析，喜欢和别人进行深入的沟通，待人接物更加礼貌更加友善。他每天笑脸迎人，充满阳光与活力，身上散发着睿智的气息。他深知人性，能化尴尬为幽默，让他人在与他相处时，开心快乐。他精通数学与英语，能够快速心算。同时，对高等数学十分热爱，喜欢抽象生活中的小细节。他能讲一口流利的英语，在和外国人的交流时能够侃侃而谈，自然亲切。他拥有深厚的专业知识，对自己领域的每个小细节都清清楚楚。对所有的专业知识，都烂熟于心。在不断的实践过程中，他努力总结，总能做到举一反三，触类旁通。对国内外最新的专业动态，他都时刻关注，并尽早使用。同时，他在不断构建自己的技术壁垒。从参与新事物，到自己能够创造新事物。在这个自我不断改变的过程中，他收获了金钱，职称。他的心态有了明显的变化，自己在社会上有一定的地位了，生活有了保障了。但他总感觉缺少什么似的，他发现自己努力的结果，最终还是让自己过上富足的生活。而他的初衷是让自己在历史的长河中流芳千古呀，当发现自己无力改变这个现实时，他突然变得沮丧。他突然对天发问，这一切究竟是否是他想要的。时间还是不停流转，慢慢他发现人是渺小的，是否伟大也没有那么有意义。人都死了，被后人称赞伟大又有什么用呢？难道在九泉之下，就会因为后人的歌颂而复活吗？人生没有那么复杂，只是人把它想复杂了。简简单单，做自己喜欢做的事情，然后做到专业。开开心心，幸福快乐的活着。</p><h3 id="3-优秀的演员"><a href="#3-优秀的演员" class="headerlink" title="3. 优秀的演员"></a>3. 优秀的演员</h3><p>&emsp;&emsp;优秀的演员是可以练出来的，伟大的演员依靠天赋。只有十年如一日的练习，才能做到剧本台词烂熟于心，表情动作轻车熟路。有了导演的指导，演员只需要不断的修行自己。在导演构建的大框架之下，运用自己的才能在细微之处做创新。具体如何实施呢，让自己回到高三时代。拥有明确的目标，规律的作息，合理的运动，持之以恒的学习。作为一个执行者，没有捷径可走，唯一的路就是持之以恒，不断学习。</p><h3 id="4-精彩的人生"><a href="#4-精彩的人生" class="headerlink" title="4. 精彩的人生"></a>4. 精彩的人生</h3><p>&emsp;&emsp;精彩的人生应该是什么样子的，是争斗的快乐，与人争斗的快乐。是智慧的博弈，是肉体的厮杀。是对弱者的碾压，是对强者的崇拜。人性的完全释放，不在压抑，让自己的情绪改变世界。成为世界的主宰，掌握生命的权利。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-人生如戏&quot;&gt;&lt;a href=&quot;#1-人生如戏&quot; class=&quot;headerlink&quot; title=&quot;1. 人生如戏&quot;&gt;&lt;/a&gt;1. 人生如戏&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;有人说一生很长，有人说一生很短，但长短真的那么重要吗？人终究会死，死了就什么也没
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java基础知识点</title>
+    <link href="http://longman.kim/2018/06/28/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <id>http://longman.kim/2018/06/28/Java基础知识点/</id>
+    <published>2018-06-27T17:02:04.000Z</published>
+    <updated>2018-06-30T02:53:27.369Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Java基础知识点"><a href="#Java基础知识点" class="headerlink" title="Java基础知识点"></a>Java基础知识点</h3><h5 id="1-ThreadPoolExecutor线程池"><a href="#1-ThreadPoolExecutor线程池" class="headerlink" title="1. ThreadPoolExecutor线程池"></a>1. ThreadPoolExecutor线程池</h5><h5 id="2-HashTable-TreeMap-LinkedHashMap-HashMap-HashSet-ArraryList-CurrentHashMap"><a href="#2-HashTable-TreeMap-LinkedHashMap-HashMap-HashSet-ArraryList-CurrentHashMap" class="headerlink" title="2. HashTable, TreeMap, LinkedHashMap, HashMap, HashSet, ArraryList, CurrentHashMap"></a>2. HashTable, TreeMap, LinkedHashMap, HashMap, HashSet, ArraryList, CurrentHashMap</h5><blockquote><p>HashTable不支持null键和null值，HashMap支持<br>HashTable和HashMap都是用哈希表，采用链地址法解决冲突<br>HashTable容量扩充时2n+1,为奇数使得数据分布均匀。HashMap容量扩充时2的幂次方，采用位运算，效率高，但增加了哈希冲突。为了减少哈希冲突，在计算hashcode时，HashMap做了位运算打散数据。在JDK8中，如果链表的长度大于8，将采用红黑树来存储。<br>HashTable是线程安全的，HashMap是线程不安全的，CurrentHashMap是线程安全的，HashTable已经被淘汰了<br>ConcurrentHashMap常用于缓存，在读操作多于写操作时，更加合适<br>HashMap在并发编程中会造成链中出现环，导致死循环。HashTable用的syncronized是互斥锁，效率下降很严重。ConcurrentHashMap采用分段锁技术，不同段争抢不同的锁，充分利用volatile的可见性，get不需要锁，put需要锁。<br>LinkedHashMap是有序的，它保存了记录的插入顺序，在用Iterator遍历LinkedHashMap时，先得到的记录肯定是先插入的。也可以在构造时带参数，按照应用次数排序。场景，输出的顺序与输入的顺序相同。<br>TreeMap实现SortMap接口，能够把它保存的记录根据键排序。默认是按键值的升序排序，也可以指定排序的比较器，当用Iterator 遍历TreeMap时，得到的记录是排过序的。场景，按自然顺序或者自定义顺序遍历。<br>HashSet是Set的一个实现类，以对象作为元素，不允许相同的元素。<br>ArraryList和Vector都是通过数组实现，但Vector支持线程同步，LinkedList是通过链表实现  </p></blockquote><h5 id="3-String-StringBuilder-StringBuffer"><a href="#3-String-StringBuilder-StringBuffer" class="headerlink" title="3. String, StringBuilder, StringBuffer"></a>3. String, StringBuilder, StringBuffer</h5><blockquote><p>String类是final类，final类是不能被继承的，而且final类中的方法都是final的。String中用char数组保存字符串，String一旦被创建就是固定不变的了，任何对String的修改都将生成新的String对象。<br>静态常量池是指.class中保存的字面量，运行时常量池保存在方法区中。String a = “ok”;String b = “ok”; String c = new String(“ok”), 在这里a,b执行方法区常量池中的对象，而c指向堆中的对象，只要是new出来的，在堆中就会有一份对象，所以a = b != c。再举个例子String a = “helloworld”; String b = “helloworld”; String c = “hello” + “world”. 在这里a = b = c, 因为当一个字符串是由多个字符串常量连接而成时，它本身也是字符串常量。字面量”+”拼接在编译期间进行，拼接后的字符串放在常量池中，而字符串引用的”+”拼接在运行时创建，新创建的字符串放在堆中。<br>intern方法的使用，对于任意两个字符串s和t, 当且仅当s.equals(t)为true时，s.intern()==t.intern()才为true.当一个String实例调用intern方法时，java会在常量池中找是否有相同的字符串常量，如果有，则返回其引用。如果没有，就在常量池中创建一个，然后返回其引用。<br>==用于基本数据类型的比较，equals用于对象的比较。如果equals没有重写，比较是引用。如果equals重写了，比较的是内容。String, Double, Date, Integer都进行了重写，比较的是内容。<br>运行速度方面StringBuilder>StringBuffer>String，因为添加字符串String涉及重新分配内存及回收内存。StringBuffer是线程安全的，在操作上加了syncronized, StringBuilder不是线程安全的。<br>String适用于少量的字符串操作，StringBuilder适用于单线程下在字符缓冲区进行大量的操作，StringBuffer适用于多线程下在字符缓冲区进行大量操作。  </p></blockquote><h5 id="4-ThreadLocal"><a href="#4-ThreadLocal" class="headerlink" title="4. ThreadLocal"></a>4. ThreadLocal</h5><blockquote><p>ThreadLocal为每个线程创建变量的副本，方式是每个线程内部有一个ThreadLocal.ThreadLocalMap。使用的应用场景数据库连接，Session管理。</p></blockquote><h5 id="5-CopyOnWrite机制，线程安全，CopyOnWriteArrayList-CopyOnWriteArrarySet"><a href="#5-CopyOnWrite机制，线程安全，CopyOnWriteArrayList-CopyOnWriteArrarySet" class="headerlink" title="5. CopyOnWrite机制，线程安全，CopyOnWriteArrayList, CopyOnWriteArrarySet"></a>5. CopyOnWrite机制，线程安全，CopyOnWriteArrayList, CopyOnWriteArrarySet</h5><blockquote><p>写时复制技术，每个修改之前都加ReentrantLock使并发写互斥。读写分离，读写可能不一致，不保证实时一致性，保证最终一致性。</p></blockquote><h5 id="6-volatile-syncronized-偏向锁，自旋锁，ReentrantLock-Condition-CountDownLatch-CycliBarrier-Semaphore-ReentrantReadAndWriteLock-Timer-乐观锁，悲观锁，可重入锁"><a href="#6-volatile-syncronized-偏向锁，自旋锁，ReentrantLock-Condition-CountDownLatch-CycliBarrier-Semaphore-ReentrantReadAndWriteLock-Timer-乐观锁，悲观锁，可重入锁" class="headerlink" title="6. volatile, syncronized, 偏向锁，自旋锁，ReentrantLock, Condition, CountDownLatch, CycliBarrier, Semaphore, ReentrantReadAndWriteLock, Timer, 乐观锁，悲观锁，可重入锁"></a>6. volatile, syncronized, 偏向锁，自旋锁，ReentrantLock, Condition, CountDownLatch, CycliBarrier, Semaphore, ReentrantReadAndWriteLock, Timer, 乐观锁，悲观锁，可重入锁</h5><blockquote><ol><li>自旋锁，正常情况下，如果线程没有抢到锁，它的线程状态会变成阻塞。如果使用自旋锁，则线程不阻塞，它会一种循环等待（在另外一个核上，所以需要多核处理器）锁被其他线程释放，被称为忙等。自旋锁比较适合竞争不激烈的情况，缺点是浪费CPU资源。<strong><em>自适应自旋锁</em></strong>是指自旋等待的时间不固定，它会偏向给之前获得过该锁的线程更多的自旋等待时间。  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class SpinLock &#123;  </span><br><span class="line">private AutomicReference&lt;Thread&gt; sign = new AutomicReference&lt;&gt;();</span><br><span class="line">public void lock() &#123;</span><br><span class="line">Thread current = Thread.currentThread();</span><br><span class="line">while (!sign.compareAndSet(null, current))&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">public void unlock() &#123;</span><br><span class="line">Thread current = Thread.currentThread();</span><br><span class="line">sign.compareAndSet(current, null);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol></blockquote><blockquote><ol start="2"><li>重入锁  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Reentrant &#123;</span><br><span class="line">public syncronized void outer() &#123;</span><br><span class="line">inner();</span><br><span class="line">&#125;</span><br><span class="line">public syncronized void inner() &#123;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol></blockquote><blockquote><ol start="3"><li>偏向锁，它会偏向第一个访问锁的线程。运行过程中，如果同步锁只有一个线程访问，不存在多线程争用的情况，则会给该线程一个偏向锁。如果遇到其他线程抢占锁，则偏向锁被挂起，锁被恢复为标准的轻量锁。适合只有一个线程访问同步块的场景。  </li><li>乐观锁，乐观的思想，认为读多写少。更新的时候判断下是否被别人更新过，过程是读-&gt;比较-&gt;写，一般采用版本号的方法。java中乐观锁的实现是通过CAS。  </li><li>悲观锁，认为写多，每次读写都会上锁，其他线程想读写数据会被阻塞。java中的悲观锁就是Syncronize，在使用AQS框架下的锁时，会先尝试使用CAS乐观锁去获取锁，获取不到，才会转换为悲观锁，例如ReentrantLock就是这种策略。  </li><li>重量级锁syncronized，追求吞吐量，适合同步块执行时间长的场景。  </li><li>轻量级锁</li></ol></blockquote><h5 id="7-Java的并发包current中的AQS-CAS-ArrayBlockingQueue-LinkedBlockingQueue-Unsafe-Locksupport"><a href="#7-Java的并发包current中的AQS-CAS-ArrayBlockingQueue-LinkedBlockingQueue-Unsafe-Locksupport" class="headerlink" title="7. Java的并发包current中的AQS, CAS, ArrayBlockingQueue, LinkedBlockingQueue, Unsafe, Locksupport"></a>7. Java的并发包current中的AQS, CAS, ArrayBlockingQueue, LinkedBlockingQueue, Unsafe, Locksupport</h5><blockquote><p>下面四种锁都是通过AQS实现  </p><ol><li>ReentrantLock，记录当前线程获得原子状态的次数，大于0获得了重进入的效果，其他线程被park，等于0代表释放了原子状态。ReentrantLock是可重入的。  </li><li>Semaphore记录当前还有多少次许可可以使用，为0时就需要等待了，实现了并发量的控制。  </li><li>CountDownLatch闭锁要保持其状态，在这个状态达到终止态之前，所有线程park，闭锁设置初始值，这个值就是闭锁需要被countDown()的次数。只有初始值变为0时，等待的所有线程才通过。  </li><li>FutureTask  </li></ol></blockquote><h5 id="8-线程生命周期，wait-sleep"><a href="#8-线程生命周期，wait-sleep" class="headerlink" title="8. 线程生命周期，wait(), sleep()"></a>8. 线程生命周期，wait(), sleep()</h5><h5 id="9-Java-IO-Java-NIO-NIO的底层实现-Selector-Channel-ByteBuffer"><a href="#9-Java-IO-Java-NIO-NIO的底层实现-Selector-Channel-ByteBuffer" class="headerlink" title="9. Java IO, Java NIO, NIO的底层实现, Selector, Channel, ByteBuffer"></a>9. Java IO, Java NIO, NIO的底层实现, Selector, Channel, ByteBuffer</h5><h5 id="10-Java代理Proxy-CLIB代理，ASM"><a href="#10-Java代理Proxy-CLIB代理，ASM" class="headerlink" title="10. Java代理Proxy, CLIB代理，ASM"></a>10. Java代理Proxy, CLIB代理，ASM</h5><h5 id="11-反射的作用与原理"><a href="#11-反射的作用与原理" class="headerlink" title="11. 反射的作用与原理"></a>11. 反射的作用与原理</h5><blockquote><p>Java在运行时能够动态获取类的信息并调用类的方法称为Java的反射，它的原理主要是通过分析.class文件中的字节码，得到类，类的属性和方法。使用反射主要借助下面四个类：Class, Constructor, Field, Method</p></blockquote><h5 id="12-Java异常的层次结构"><a href="#12-Java异常的层次结构" class="headerlink" title="12. Java异常的层次结构"></a>12. Java异常的层次结构</h5><h5 id="13-类的加载机制，可能出现的问题"><a href="#13-类的加载机制，可能出现的问题" class="headerlink" title="13. 类的加载机制，可能出现的问题"></a>13. 类的加载机制，可能出现的问题</h5><blockquote><ol><li>Bootstrap Classloader由C++写类加载器，它加载java核心类库以及bootclasspath指定路径下的jar包，主要是以java, javax, sun开头的类。Extension Classloader用来加载扩展类，主要是ext及ext.dirs指定路径下的jar包。Application Classloader是标准的系统加载类，它加载classpath指定路径下的jar包，也是系统默认的类加载器。  </li><li>双亲委派机制，当一个类加载器收到加载请求时，它首先会让父类去加载（父类会将请求传递到它自己的父类，直到Bootstrap Classloader），直到父类不能加载时，它才去尝试加载。好处是具备了一种带优先级的的层次关系，保证java程序的稳定运行。  </li><li>类加载器加载类的顺序：检查该类是否已经被加载了，如果没有被加载，首先调用父类加载器，如果父类加载器不能加载这个类，则尝试加载这个类  </li><li>类加载过程：加载-&gt;验证-&gt;准备-&gt;解析-&gt;初始化-&gt;使用-&gt;卸载</li></ol></blockquote><h5 id="14-序列化与反序列化"><a href="#14-序列化与反序列化" class="headerlink" title="14. 序列化与反序列化"></a>14. 序列化与反序列化</h5><h5 id="15-hashcode-equals"><a href="#15-hashcode-equals" class="headerlink" title="15. hashcode, equals"></a>15. hashcode, equals</h5><h5 id="16-Java强引用，软引用，弱引用，虚引用"><a href="#16-Java强引用，软引用，弱引用，虚引用" class="headerlink" title="16. Java强引用，软引用，弱引用，虚引用"></a>16. Java强引用，软引用，弱引用，虚引用</h5><h5 id="17-Java垃圾回收，可达性分析，标记清除-整理，复制，分代收集，Serial-Parallel-CMS-G1"><a href="#17-Java垃圾回收，可达性分析，标记清除-整理，复制，分代收集，Serial-Parallel-CMS-G1" class="headerlink" title="17. Java垃圾回收，可达性分析，标记清除/整理，复制，分代收集，Serial, Parallel, CMS, G1"></a>17. Java垃圾回收，可达性分析，标记清除/整理，复制，分代收集，Serial, Parallel, CMS, G1</h5><h5 id="18-Callable-CompletableFuture-Future-FutureTask"><a href="#18-Callable-CompletableFuture-Future-FutureTask" class="headerlink" title="18. Callable, CompletableFuture, Future, FutureTask"></a>18. Callable, CompletableFuture, Future, FutureTask</h5><h5 id="19-分布式锁的实现"><a href="#19-分布式锁的实现" class="headerlink" title="19. 分布式锁的实现"></a>19. 分布式锁的实现</h5><h5 id="20-限流，降级"><a href="#20-限流，降级" class="headerlink" title="20. 限流，降级"></a>20. 限流，降级</h5><h5 id="21-负载均衡-全局域名解析，局部域名解析，4层负载LVS，7层负载均衡HAProxy-Nginx"><a href="#21-负载均衡-全局域名解析，局部域名解析，4层负载LVS，7层负载均衡HAProxy-Nginx" class="headerlink" title="21. 负载均衡(全局域名解析，局部域名解析，4层负载LVS，7层负载均衡HAProxy/Nginx)"></a>21. 负载均衡(全局域名解析，局部域名解析，4层负载LVS，7层负载均衡HAProxy/Nginx)</h5><h5 id="22-Spring-SpringMVC-SpringBoot原理与流程，IOC-AOP"><a href="#22-Spring-SpringMVC-SpringBoot原理与流程，IOC-AOP" class="headerlink" title="22. Spring, SpringMVC, SpringBoot原理与流程，IOC, AOP"></a>22. Spring, SpringMVC, SpringBoot原理与流程，IOC, AOP</h5><h5 id="23-netty-rocketmq"><a href="#23-netty-rocketmq" class="headerlink" title="23. netty, rocketmq"></a>23. netty, rocketmq</h5><h5 id="24-秒杀系统的设计，微信红包的社交，海量数据的分析"><a href="#24-秒杀系统的设计，微信红包的社交，海量数据的分析" class="headerlink" title="24. 秒杀系统的设计，微信红包的社交，海量数据的分析"></a>24. 秒杀系统的设计，微信红包的社交，海量数据的分析</h5><h5 id="25-redis-mysql，事务，索引，2PC-3PC，ACID，一致性哈希"><a href="#25-redis-mysql，事务，索引，2PC-3PC，ACID，一致性哈希" class="headerlink" title="25. redis, mysql，事务，索引，2PC/3PC，ACID，一致性哈希"></a>25. redis, mysql，事务，索引，2PC/3PC，ACID，一致性哈希</h5><h5 id="26-TCP三次握手四次挥手，滑动窗口"><a href="#26-TCP三次握手四次挥手，滑动窗口" class="headerlink" title="26. TCP三次握手四次挥手，滑动窗口"></a>26. TCP三次握手四次挥手，滑动窗口</h5><h5 id="27-linux命令grep-awk-sed-top-jstat-jstack-free-jmap"><a href="#27-linux命令grep-awk-sed-top-jstat-jstack-free-jmap" class="headerlink" title="27. linux命令grep, awk, sed, top, jstat, jstack, free, jmap"></a>27. linux命令grep, awk, sed, top, jstat, jstack, free, jmap</h5><h5 id="28-常用设计模式"><a href="#28-常用设计模式" class="headerlink" title="28. 常用设计模式"></a>28. 常用设计模式</h5><h5 id="29-Servlet与容器，Servlet生命周期，JSP"><a href="#29-Servlet与容器，Servlet生命周期，JSP" class="headerlink" title="29. Servlet与容器，Servlet生命周期，JSP"></a>29. Servlet与容器，Servlet生命周期，JSP</h5><h5 id="30-通用算法"><a href="#30-通用算法" class="headerlink" title="30. 通用算法"></a>30. 通用算法</h5><h5 id="31-C-对象模型，虚函数表"><a href="#31-C-对象模型，虚函数表" class="headerlink" title="31. C++对象模型，虚函数表"></a>31. C++对象模型，虚函数表</h5><h5 id="32-SimpleDateFormat线程不安全"><a href="#32-SimpleDateFormat线程不安全" class="headerlink" title="32. SimpleDateFormat线程不安全"></a>32. SimpleDateFormat线程不安全</h5><blockquote><p>当多个线程共享一个SimpleDateFormat对象时，由于SimpleDateFormat执行format, parse操作时，是使用自己的成员变量Calendar，也就意味着多个线程共享该Calendar。这个Calendar的初始化是由调用方决定的，A线程设置Calendar为1990, 在A执行parse或者format之前，B线程设置Calendar为2018，这时A再执行parse或者format会报错。</p></blockquote><h5 id="33-如何权衡可用性和一致性"><a href="#33-如何权衡可用性和一致性" class="headerlink" title="33. 如何权衡可用性和一致性"></a>33. 如何权衡可用性和一致性</h5><h5 id="34-C-中的模板和Java中泛型有何异同？"><a href="#34-C-中的模板和Java中泛型有何异同？" class="headerlink" title="34. C++中的模板和Java中泛型有何异同？"></a>34. C++中的模板和Java中泛型有何异同？</h5><h5 id="35-Java的泛型如何在运行时识别类型，多态中如何区分父类和子类？"><a href="#35-Java的泛型如何在运行时识别类型，多态中如何区分父类和子类？" class="headerlink" title="35. Java的泛型如何在运行时识别类型，多态中如何区分父类和子类？"></a>35. Java的泛型如何在运行时识别类型，多态中如何区分父类和子类？</h5><h5 id="36-SpringBoot原理机制和启动流程"><a href="#36-SpringBoot原理机制和启动流程" class="headerlink" title="36. SpringBoot原理机制和启动流程"></a>36. SpringBoot原理机制和启动流程</h5><h5 id="37-Java中的阻塞队列"><a href="#37-Java中的阻塞队列" class="headerlink" title="37. Java中的阻塞队列"></a>37. Java中的阻塞队列</h5><blockquote></blockquote><h5 id="38-select-poll-epool"><a href="#38-select-poll-epool" class="headerlink" title="38. select, poll, epool"></a>38. select, poll, epool</h5><blockquote><p>都是同步非阻塞的IO多路复用方式，都会在select操作上阻塞。select/poll会顺序扫描fd是否就绪，而且支持的fd数量有限。epool基于事件驱动的方式，不是采用顺序扫描，当fd就绪时，立即回调函数rollback。</p></blockquote><h5 id="39-BeanFactory和FactoryBean"><a href="#39-BeanFactory和FactoryBean" class="headerlink" title="39. BeanFactory和FactoryBean"></a>39. BeanFactory和FactoryBean</h5><blockquote><p>BeanFactory是一个Bean工厂，作用就是配置，新建，管理各种Bean。FactoryBean是一个Bean，类型是工厂Bean，用来管理Bean，它本身由Spring管理。   </p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Java基础知识点&quot;&gt;&lt;a href=&quot;#Java基础知识点&quot; class=&quot;headerlink&quot; title=&quot;Java基础知识点&quot;&gt;&lt;/a&gt;Java基础知识点&lt;/h3&gt;&lt;h5 id=&quot;1-ThreadPoolExecutor线程池&quot;&gt;&lt;a href=&quot;#1-
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>分布式锁的三种实现方式</title>
+    <link href="http://longman.kim/2018/06/19/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E4%B8%89%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/"/>
+    <id>http://longman.kim/2018/06/19/分布式锁的三种实现方式/</id>
+    <published>2018-06-19T14:07:51.000Z</published>
+    <updated>2018-06-19T14:07:51.993Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>全局唯一序列号的生成方法</title>
+    <link href="http://longman.kim/2018/06/19/%E5%85%A8%E5%B1%80%E5%94%AF%E4%B8%80%E5%BA%8F%E5%88%97%E5%8F%B7%E7%9A%84%E7%94%9F%E6%88%90%E6%96%B9%E6%B3%95/"/>
+    <id>http://longman.kim/2018/06/19/全局唯一序列号的生成方法/</id>
+    <published>2018-06-19T14:07:32.000Z</published>
+    <updated>2018-06-19T14:07:32.416Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java的异常处理</title>
+    <link href="http://longman.kim/2018/06/19/Java%E7%9A%84%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
+    <id>http://longman.kim/2018/06/19/Java的异常处理/</id>
+    <published>2018-06-19T14:05:26.000Z</published>
+    <updated>2018-06-19T14:05:26.685Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java的垃圾回收算法</title>
+    <link href="http://longman.kim/2018/06/19/Java%E7%9A%84%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/"/>
+    <id>http://longman.kim/2018/06/19/Java的垃圾回收算法/</id>
+    <published>2018-06-19T07:14:41.000Z</published>
+    <updated>2018-06-19T13:30:38.464Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Java运行时的数据区域"><a href="#Java运行时的数据区域" class="headerlink" title="Java运行时的数据区域"></a>Java运行时的数据区域</h3><blockquote><ul><li>线程私有：jvm虚拟机栈，程序计数器，本地方法栈</li><li>线程公有：堆，方法区（常量，静态变量等），执行引擎，本地库的接口</li><li>堆外内存，利用NIO</li></ul></blockquote><h3 id="判断对象是否已死"><a href="#判断对象是否已死" class="headerlink" title="判断对象是否已死"></a>判断对象是否已死</h3><h5 id="1-引用计数"><a href="#1-引用计数" class="headerlink" title="1. 引用计数"></a>1. 引用计数</h5><blockquote><p>记录对象的引用次数，当对象被引用时，记录加1，当对象失效时，记录减1，当记录为0时，代表记录已死，可以被回收。<br>存在的一个问题是循环引用，例如A引用B，B又引用A。</p></blockquote><h5 id="2-可达性分析（根搜索法）"><a href="#2-可达性分析（根搜索法）" class="headerlink" title="2. 可达性分析（根搜索法）"></a>2. 可达性分析（根搜索法）</h5><blockquote><ol><li>哪些对象可以作为根  <ul><li>jvm栈中引用的对象</li><li>方法区中类静态属性引用的对象</li><li>方法区中常量引用的对象</li><li>本地方法栈中引用的对象</li></ul></li><li>强引用，软引用，弱引用，虚引用<ul><li>new出来的对象是强引用</li><li>SoftReference来实现软引用，当内存不够用时，濒临逸出的情况下，gc就会把软引用的对象回收</li><li>WeakReference来实现弱引用，弱引用的对象将会在下一次的gc被回收</li><li>PhantomReference来实现虚引用，虚引用没有办法访问对象实例</li></ul></li></ol></blockquote><h3 id="垃圾回收算法"><a href="#垃圾回收算法" class="headerlink" title="垃圾回收算法"></a>垃圾回收算法</h3><h5 id="1-标记清除"><a href="#1-标记清除" class="headerlink" title="1. 标记清除"></a>1. 标记清除</h5><blockquote><p>标记已死的对象，并清除掉，缺点是效率低并造成内存碎片</p></blockquote><h5 id="2-标记整理"><a href="#2-标记整理" class="headerlink" title="2. 标记整理"></a>2. 标记整理</h5><blockquote><p>标记存活的对象，并把它们移到一端，清除掉边界以外的内存</p></blockquote><h5 id="3-复制算法"><a href="#3-复制算法" class="headerlink" title="3. 复制算法"></a>3. 复制算法</h5><blockquote><p>将内存分为相等的两块A，B。首先只在A区块分配内存给对象，当A区块满了的时候，<br>将A区块中存活的对象复制到B区块，清理到A区块。然后在B区块中分配内存给对象，当B<br>区块满了的时候，将B区块中存活的对象复制到A区块，清理到B区块，依次循环。<br>实际在HotSpot中，分为8:1:1的三块即Eden，SurvivorFrom，SurvivorTo，具体执行<br>流程如下：</p><ol><li>Eden第一次GC，将Eden中存活的对象复制到SurvivorFrom中，清空Eden</li><li>Eden第二次GC，将Eden和SurvivorFrom中存活的对象复制到SurvivorTo中，清空<br>Eden和SurvivorFrom</li><li>Eden第三次GC，将Eden和SurvivorTo中存活的对象复制到SurvivorFrom中，清空<br>Eden和SurvivorTo</li><li>后续SurvivorFrom和SurvivorTo依次交换</li></ol></blockquote><h3 id="垃圾收集器"><a href="#垃圾收集器" class="headerlink" title="垃圾收集器"></a>垃圾收集器</h3><h5 id="Serial"><a href="#Serial" class="headerlink" title="Serial"></a>Serial</h5><blockquote><p>单线程，暂停用户线程<br>新生代采用复制算法，老年代采用标记整理算法</p></blockquote><h5 id="ParNew"><a href="#ParNew" class="headerlink" title="ParNew"></a>ParNew</h5><blockquote><p>多线程，暂停用户线程<br>新生代采用复制算法，老年代采用标记整理算法</p></blockquote><h5 id="Parallel-Scavenge"><a href="#Parallel-Scavenge" class="headerlink" title="Parallel Scavenge"></a>Parallel Scavenge</h5><blockquote><p>吞吐量优先</p></blockquote><h5 id="Serial-Old"><a href="#Serial-Old" class="headerlink" title="Serial Old"></a>Serial Old</h5><blockquote><p>Serial的老年代版本</p></blockquote><h5 id="Parallel-Old"><a href="#Parallel-Old" class="headerlink" title="Parallel Old"></a>Parallel Old</h5><blockquote><p>Parallel Scavenge的老年代版本</p></blockquote><h5 id="CMS"><a href="#CMS" class="headerlink" title="CMS"></a>CMS</h5><blockquote><p>最短回收停顿时间</p><ul><li>初始标记（耗时极短，暂停用户线程）</li><li>并发标记（耗时长，不暂停用户线程）</li><li>重新标记（耗时极短，暂停用户线程，修正并发标记期间的变化）</li><li>并发清除（耗时长，不暂停用户线程）</li></ul></blockquote><h5 id="G1"><a href="#G1" class="headerlink" title="G1"></a>G1</h5><blockquote><p>把堆栈分为多个域，每次仅从一个域收集垃圾，也可理解为把堆栈分成一小块一小块，每次仅对某一个块进行垃圾收集。这会造成较小的应用程序中断时间，使得用户一般不能觉察到垃圾收集器正在工作。</p><ul><li>初始标记</li><li>并发标记</li><li>最终标记标记</li><li>筛选回收</li></ul></blockquote><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h5 id="GC触发的条件"><a href="#GC触发的条件" class="headerlink" title="GC触发的条件"></a>GC触发的条件</h5><blockquote><ul><li>minor gc<ul><li>当Eden区满了的时候</li></ul></li><li>full gc<ul><li>minor gc时，Eden区和SurvivorFrom中存活的对象大于SurvivorTo，把<br>该对象转移到老年代，但是老年代的可用空间也小于这些对象</li><li>方法区空间不足</li><li>老年代空间不足</li><li>系统调用System.gc时有可能会full gc</li></ul></li></ul></blockquote><h5 id="finalize"><a href="#finalize" class="headerlink" title="finalize()"></a>finalize()</h5><blockquote><ul><li>每个对象的finalize只能被调用一次</li><li>如果在finalize中有引用该对象，则该对象被复活，但下次回收时，仍然被回收，因为finalize只能被调用一次</li><li>任何地方都可以调用finalize，但是其结果未知</li><li>System.gc可以执行垃圾回收</li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Java运行时的数据区域&quot;&gt;&lt;a href=&quot;#Java运行时的数据区域&quot; class=&quot;headerlink&quot; title=&quot;Java运行时的数据区域&quot;&gt;&lt;/a&gt;Java运行时的数据区域&lt;/h3&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;线程私有：jvm虚拟机
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo常用命令</title>
+    <link href="http://longman.kim/2018/06/19/hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://longman.kim/2018/06/19/hexo常用命令/</id>
+    <published>2018-06-19T06:59:04.000Z</published>
+    <updated>2018-06-19T07:06:09.904Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h3><p>清空缓存</p><h3 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h3><p>开启服务预览</p><h3 id="hexo-new"><a href="#hexo-new" class="headerlink" title="hexo new"></a>hexo new</h3><p>新建文章</p><h3 id="hexo-new-page"><a href="#hexo-new-page" class="headerlink" title="hexo new page"></a>hexo new page</h3><p>新建页面</p><h3 id="hexo-g"><a href="#hexo-g" class="headerlink" title="hexo g"></a>hexo g</h3><p>生成静态文件到public</p><h3 id="hexo-d"><a href="#hexo-d" class="headerlink" title="hexo d"></a>hexo d</h3><p>将.deploy部署到github</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;hexo-clean&quot;&gt;&lt;a href=&quot;#hexo-clean&quot; class=&quot;headerlink&quot; title=&quot;hexo clean&quot;&gt;&lt;/a&gt;hexo clean&lt;/h3&gt;&lt;p&gt;清空缓存&lt;/p&gt;
+&lt;h3 id=&quot;hexo-s&quot;&gt;&lt;a href=&quot;#hex
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于OpenResty</title>
+    <link href="http://longman.kim/2018/06/18/%E5%85%B3%E4%BA%8EOpenResty/"/>
+    <id>http://longman.kim/2018/06/18/关于OpenResty/</id>
+    <published>2018-06-17T17:03:15.000Z</published>
+    <updated>2018-06-17T17:03:15.954Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx的常见配置</title>
+    <link href="http://longman.kim/2018/06/18/Nginx%E7%9A%84%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE/"/>
+    <id>http://longman.kim/2018/06/18/Nginx的常见配置/</id>
+    <published>2018-06-17T17:02:55.000Z</published>
+    <updated>2018-06-17T17:02:55.192Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Go的协程</title>
+    <link href="http://longman.kim/2018/06/18/Go%E7%9A%84%E5%8D%8F%E7%A8%8B/"/>
+    <id>http://longman.kim/2018/06/18/Go的协程/</id>
+    <published>2018-06-17T17:02:31.000Z</published>
+    <updated>2018-06-17T17:02:31.799Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java动态代理</title>
+    <link href="http://longman.kim/2018/06/18/Java%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/"/>
+    <id>http://longman.kim/2018/06/18/Java动态代理/</id>
+    <published>2018-06-17T17:02:04.000Z</published>
+    <updated>2018-06-21T06:11:00.892Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Spring最重要的一个特点就是AOP，面向切面编程。它以织入的方式向系统中添加非业务功能的代码，例如参数检验，安全验证等。这个功能使得代码的逻辑变得更加清晰，它的底层实现方式正是Java的动态代理。举个例子，在Spring中如果我们定义了一个类，然后类中有一个@Async修饰的方法，在Spring启动时会为这个类生成一个代理类。在Spring AOP中，当拦截对象实现了接口时，使用的是JDK的Proxy类，如果没有实现接口则使用GCLIB生成拦截类的子类。<br>首先看看下面两个接口User和Client，以及实现了两个接口的CommonImpl，我们现在要实现CommonImpl的代理，在CommonImpl中某些方法的前后添加一些功能。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public interface User &#123;</span><br><span class="line">    void insert();</span><br><span class="line">    void update();</span><br><span class="line">    void delete();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public interface Client &#123;</span><br><span class="line">    void one();</span><br><span class="line">    void two();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class CommonImpl implements User, Client &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void insert() &#123;</span><br><span class="line">        System.out.println(&quot;insert&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    publid void update() &#123;</span><br><span class="line">        System.out.println(&quot;update&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void delete() &#123;</span><br><span class="line">        System.out.println(&quot;delete&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void one() &#123;</span><br><span class="line">        System.out.println(&quot;one&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void two() &#123;</span><br><span class="line">        System.out.println(&quot;two&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h3 id="装饰器模式"><a href="#装饰器模式" class="headerlink" title="装饰器模式"></a>装饰器模式</h3><p>静态代理可以理解为设计模式中的装饰器模式。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class DecorateCommon implements User, Client &#123;</span><br><span class="line">    private CommonImpl common;</span><br><span class="line">    </span><br><span class="line">    public DecorateCommon(CommonImpl common) &#123;</span><br><span class="line">        this.common = common;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void insert() &#123;</span><br><span class="line">        System.out.println(&quot;before&quot;);</span><br><span class="line">        common.insert();</span><br><span class="line">        System.out.println(&quot;after&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void update() &#123;</span><br><span class="line">        System.out.println(&quot;before&quot;);</span><br><span class="line">        common.update();</span><br><span class="line">        System.out.println(&quot;after&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void delete() &#123;</span><br><span class="line">        System.out.println(&quot;delete&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override </span><br><span class="line">    public void one() &#123;</span><br><span class="line">        System.out.println(&quot;hello&quot;);</span><br><span class="line">        common.one();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void two() &#123;</span><br><span class="line">        common.two();</span><br><span class="line">        System.out.println(&quot;world&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        DecorateCommon decorateCommon = new DecorateCommon(new CommonImpl());</span><br><span class="line">        decorateCommon.insert();</span><br><span class="line">        decorateCommon.update();</span><br><span class="line">        decorateCommon.delete();</span><br><span class="line">        decorateCommon.one();</span><br><span class="line">        decorateCommon.two();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h3 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h3><h5 id="1-使用JDK中的Proxy和InvocationHandler"><a href="#1-使用JDK中的Proxy和InvocationHandler" class="headerlink" title="1. 使用JDK中的Proxy和InvocationHandler"></a>1. 使用JDK中的Proxy和InvocationHandler</h5><p>CommonImpl的代理类，其中CommonImpl必须实现某些接口。<br>重点关注Proxy的方法<code>public static Object newProxyInstance(ClassLoader loader, Class&lt;?&gt;[] interfaces, InvocationHandler h)</code><br>loader: 被代理类的类加载器<br>interfaces: 被代理类实现的接口<br>h: 被代理类关联的handler<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class ProxyCommon implements InvocationHandler &#123;</span><br><span class="line">    private Object obj;</span><br><span class="line">    </span><br><span class="line">    public ProxyCommon(Object obj) &#123;</span><br><span class="line">        this.obj = obj;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public Object invoke(Object proxy, Method method, Object[] args) throw Throwable &#123;</span><br><span class="line">        String methodName = method.getName();</span><br><span class="line">        </span><br><span class="line">        if (&quot;insert&quot;.equalsIgnoreCase(methodName) || &quot;update&quot;.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            System.out.println(&quot;before&quot;);</span><br><span class="line">            Object result = method.invoke(obj, args);</span><br><span class="line">            System.out.println(&quot;after&quot;);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        if (&quot;one&quot;.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            System.out.println(&quot;hello&quot;);</span><br><span class="line">            Object result = method.invoke(obj, args);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        if (&quot;two&quot;.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            Object result = method.invoke(obj, args);</span><br><span class="line">            System.out.println(&quot;world&quot;);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        return method.invoke(obj, args);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        InvocationHandler handler = new ProxyCommon(new CommonImpl());</span><br><span class="line">        ClassLoader classLoader = CommonImpl.class.getClassLoader();</span><br><span class="line">        Class&lt;?&gt;[] interfaces = new Class[] &#123;User.class, Client.class&#125;;</span><br><span class="line">        Object object = Proxy.newProxyInstance(classLoader, interfaces, handler);</span><br><span class="line">        </span><br><span class="line">        User user = (User)object;</span><br><span class="line">        user.insert();</span><br><span class="line">        user.update();</span><br><span class="line">        user.delete();</span><br><span class="line">        </span><br><span class="line">        Client client = (Client)client;</span><br><span class="line">        client.one();</span><br><span class="line">        client.two();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h5 id="2-使用cglib库"><a href="#2-使用cglib库" class="headerlink" title="2. 使用cglib库"></a>2. 使用cglib库</h5><p>CommonImpl的代理类，不论CommonImpl实现接口与否</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class CglibCommon implements MethodInterceptor &#123;</span><br><span class="line">    private static CglibCommon cglibCommon = new CglibCommon();</span><br><span class="line">    private CglibCommon();</span><br><span class="line">    </span><br><span class="line">    public static CglibCommon getInstance() &#123;</span><br><span class="line">        return cglibCommon;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public Object intercept(Object obj, Method method, Object[] args, MethodProxy methodProxy) throws Throwable &#123;</span><br><span class="line">        String methodName = method.getName();</span><br><span class="line">                </span><br><span class="line">        if (&quot;insert&quot;.equalsIgnoreCase(methodName) || &quot;update&quot;.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            System.out.println(&quot;before&quot;);</span><br><span class="line">            Object result = methodProxy.invokeSuper(obj, args);</span><br><span class="line">            System.out.println(&quot;after&quot;);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">                </span><br><span class="line">        if (&quot;one&quot;.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            System.out.println(&quot;hello&quot;);</span><br><span class="line">            Object result = methodProxy.invokeSuper(obj, args);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">                </span><br><span class="line">        if (&quot;two&quot;.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            Object result = methodProxy.invokeSuper(obj, args);</span><br><span class="line">            System.out.println(&quot;world&quot;);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">                </span><br><span class="line">        return methodProxy.invokeSuper(obj, args);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        CommonImpl common = (CommonImpl)Enhancer.create(CommonImpl.class, CglibCommon.getInstance());</span><br><span class="line">        common.insert();</span><br><span class="line">        common.update();</span><br><span class="line">        common.delete();</span><br><span class="line">        common.one();</span><br><span class="line">        common.two();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;Spring最重要的一个特点就是AOP，面向切面编程。它以织入的方式向系统中添加非业务功能的代码，例如参数检验，安全验证等。这个功能使得代码
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>深度优先搜索与广度优先搜索</title>
+    <link href="http://longman.kim/2018/06/18/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/"/>
+    <id>http://longman.kim/2018/06/18/深度优先搜索与广度优先搜索/</id>
+    <published>2018-06-17T17:01:04.000Z</published>
+    <updated>2018-06-17T17:01:04.887Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>线段树</title>
+    <link href="http://longman.kim/2018/06/18/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    <id>http://longman.kim/2018/06/18/线段树/</id>
+    <published>2018-06-17T17:00:23.000Z</published>
+    <updated>2018-06-17T17:00:23.564Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>动态规划</title>
+    <link href="http://longman.kim/2018/06/18/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    <id>http://longman.kim/2018/06/18/动态规划/</id>
+    <published>2018-06-17T17:00:11.000Z</published>
+    <updated>2018-06-17T17:00:11.430Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>跳跃表</title>
+    <link href="http://longman.kim/2018/06/18/%E8%B7%B3%E8%B7%83%E8%A1%A8/"/>
+    <id>http://longman.kim/2018/06/18/跳跃表/</id>
+    <published>2018-06-17T16:59:55.000Z</published>
+    <updated>2018-06-17T16:59:55.129Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>查找算法</title>
+    <link href="http://longman.kim/2018/06/18/%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/"/>
+    <id>http://longman.kim/2018/06/18/查找算法/</id>
+    <published>2018-06-17T16:59:29.000Z</published>
+    <updated>2018-06-17T16:59:29.487Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>排序算法</title>
+    <link href="http://longman.kim/2018/06/18/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <id>http://longman.kim/2018/06/18/排序算法/</id>
+    <published>2018-06-17T16:59:13.000Z</published>
+    <updated>2018-06-17T16:59:13.941Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>负载均衡</title>
+    <link href="http://longman.kim/2018/06/18/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/"/>
+    <id>http://longman.kim/2018/06/18/负载均衡/</id>
+    <published>2018-06-17T16:58:27.000Z</published>
+    <updated>2018-06-17T16:58:27.787Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java对异步的支持</title>
+    <link href="http://longman.kim/2018/06/18/Java%E5%AF%B9%E5%BC%82%E6%AD%A5%E7%9A%84%E6%94%AF%E6%8C%81/"/>
+    <id>http://longman.kim/2018/06/18/Java对异步的支持/</id>
+    <published>2018-06-17T16:57:59.000Z</published>
+    <updated>2018-06-17T16:57:59.276Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java的线程池</title>
+    <link href="http://longman.kim/2018/06/18/Java%E7%9A%84%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
+    <id>http://longman.kim/2018/06/18/Java的线程池/</id>
+    <published>2018-06-17T16:57:29.000Z</published>
+    <updated>2018-06-21T14:17:15.747Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="线程池的作用及其应用场景"><a href="#线程池的作用及其应用场景" class="headerlink" title="线程池的作用及其应用场景"></a>线程池的作用及其应用场景</h4><blockquote><p>1.同一个线程可以多次使用，减少线程创建与销毁的开销  </p><pre><code>2. 根据系统的承受能力，调整线程池的大小，可以防止消耗系统过多的资源，在Java中一个线程大约需要1M的内存</code></pre></blockquote><blockquote><p>适合那些需要处理很多请求，同时每个请求的执行时间很短（执行时间短，线程创建和销毁的时间占比就高）的系统</p></blockquote><h3 id="Executor框架"><a href="#Executor框架" class="headerlink" title="Executor框架"></a>Executor框架</h3><p><img src="Java的线程池/executor框架.jpg" alt="exutor框架"></p><blockquote><p>Executor接口提供了一个执行任务的方法executor(Runnable command)<br>ExecutorService接口继承了Executor，并提供了管理线程池生命周期的接口<br>ScheduledExecutorService接口可以定时调度任务<br>ThreadPoolExecutor线程池，可以使用Executors的静态工程方法返回不同类型的线程池</p></blockquote><h3 id="ThreadPoolExecutor类"><a href="#ThreadPoolExecutor类" class="headerlink" title="ThreadPoolExecutor类"></a>ThreadPoolExecutor类</h3><p><code>public ThreadPoolExecutor(int corePoolSize,                            int maximumPoolSize,                            long keepAliveTime,                            TimeUnit unit,                            BlockingQueue&lt;Runnable&gt; workQueue,                            ThreadFactory threadFactory,                            RejectExecutionHandler handler)</code></p><blockquote><p>corePoolSize: 核心线程数<br>maximumPoolSize: 线程池允许的最大线程数<br>keepAliveTime: 超过核心线程数的线程，空闲的最长时间，时间过后线程销毁<br>unit: keepAliveTime的单位，秒/毫秒<br>workQueue: 保存等待执行任务的阻塞队列  </p><pre><code>+ ArraryBlockingQueue+ LinkedBlockingQueue+ SynchronousQueue</code></pre><p>threadFactory: 创建线程的线程工厂<br>handler: 拒绝任务时的策略</p><pre><code>+ ThreadPoolExecutor.AbortPolicy:丢弃任务并抛出RejectedExecutionException异常。 + ThreadPoolExecutor.DiscardPolicy：也是丢弃任务，但是不抛出异常。 + ThreadPoolExecutor.DiscardOldestPolicy：丢弃队列最前面的任务，然后重新尝试执行任务（重复此过程）+ ThreadPoolExecutor.CallerRunsPolicy：由调用线程处理该任务</code></pre></blockquote><h3 id="四种线程池的用法"><a href="#四种线程池的用法" class="headerlink" title="四种线程池的用法"></a>四种线程池的用法</h3><h5 id="1-newSingleThreadExecutor-单任务线程池"><a href="#1-newSingleThreadExecutor-单任务线程池" class="headerlink" title="1. newSingleThreadExecutor 单任务线程池"></a>1. newSingleThreadExecutor 单任务线程池</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static ExecutorService newSingleThreadExecutor() &#123;</span><br><span class="line">    return new FinalizableDelegatedExecutorService(</span><br><span class="line">    new ThreadPoolExecutor(1, 1, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue&lt;Runnable&gt;()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>corePoolSize = maximumPoolSize = 1<br>在线程池中只有一个工作线程，所以任务可以按照添加顺序执行</p></blockquote><h5 id="2-newCachedThreadPool-可变大小线程池"><a href="#2-newCachedThreadPool-可变大小线程池" class="headerlink" title="2. newCachedThreadPool 可变大小线程池"></a>2. newCachedThreadPool 可变大小线程池</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static ExecutorService newCachedThreadPool() &#123;</span><br><span class="line">    return new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS, new SynchronousQueue&lt;Runnable&gt;());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>corePoolSize = 0, maximumPoolSize = Integer.MAX_VALUE<br>根据需要来创建线程，空闲的线程最多可以等待任务60秒，否则将被回收。<br>1.首先执行SynchronousQueue.offer(Runnable task)。如果在当前的线程池中有空闲的线程正在执行SynchronousQueue.poll()，那么主线程执行的offer操作与空闲线程执行的poll操作配对成功，主线程把任务交给空闲线程执行。execute()方法执行成功，否则执行步骤2<br>2.当线程池为空(初始maximumPool为空)或没有空闲线程时，配对失败，将没有线程执行SynchronousQueue.poll操作。这种情况下，线程池会创建一个新的线程执行任务。<br>3.在创建完新的线程以后，将会执行poll操作。当步骤2的线程执行完成后，将等待60秒，如果此时主线程提交了一个新任务，那么这个空闲线程将执行新任务，否则被回收。因此长时间不提交任务的CachedThreadPool不会占用系统资源。<br>SynchronousQueue是一个不存储元素阻塞队列，每次要进行offer操作时必须等待poll操作，否则不能继续添加元素。</p></blockquote><h5 id="3-newFixedThreadPool-固定大小线程池"><a href="#3-newFixedThreadPool-固定大小线程池" class="headerlink" title="3. newFixedThreadPool 固定大小线程池"></a>3. newFixedThreadPool 固定大小线程池</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static ExecutorService newFixedThreadPool(int nThreads) &#123;</span><br><span class="line">    return new ThreadPoolExecutor(nThreads, nThreads, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>corePoolSize = maximumPoolSize</p><pre><code>1. poolSize &lt; corePoolSize，创建新线程执行新任务2. poolSize = corePoolSize，新任务加入LinkedBlockingQueue3. 线程执行完1中的任务后从队列中取任务执行</code></pre><p>由于LinkedBlockingQueuu是无界队列，所以可以向队列中添加新任务，线程池大小完全依赖于操作系统（或者说JVM）能够创建的最大线程大小</p></blockquote><h5 id="4-newScheduledThreadPool-延迟线程池"><a href="#4-newScheduledThreadPool-延迟线程池" class="headerlink" title="4. newScheduledThreadPool 延迟线程池"></a>4. newScheduledThreadPool 延迟线程池</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public ExecutorService newScheduledThreadPool() &#123;</span><br><span class="line">    return new DelegatedScheduledExecutorService(new ThreadPoolExecutor(1, </span><br><span class="line">    Integer.MAX_VALUE, 0, NANOSECONDS, new DelayedWorkQueue()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>corePoolSize = 1, maximumPoolSize = Integer.MAX_VALUE,<br>keepAliveTime = 0, workQueue = DelayedWorkQueue<br>一个大小无限的线程池，支持定时以及周期性执行任务的需求。</p></blockquote><h3 id="如何配置线程池参数"><a href="#如何配置线程池参数" class="headerlink" title="如何配置线程池参数"></a>如何配置线程池参数</h3><blockquote><ol><li>计算密集型: N+1    </li><li>I/O密集型: 2*N+1 </li><li>混合型<br>最佳线程数目 = （线程等待时间与线程CPU时间之比 + 1）* CPU数目<br>线程等待时间所占比例越高，需要越多线程。线程CPU时间所占比例越高，需要越少线程。 </li></ol></blockquote><h3 id="深入理解线程池的工作原理"><a href="#深入理解线程池的工作原理" class="headerlink" title="深入理解线程池的工作原理"></a>深入理解线程池的工作原理</h3><p><a href="https://www.cnblogs.com/dolphin0520/p/3932921.html" target="_blank" rel="noopener">https://www.cnblogs.com/dolphin0520/p/3932921.html</a></p><h3 id="使用ThreadGroup自己实现线程池"><a href="#使用ThreadGroup自己实现线程池" class="headerlink" title="使用ThreadGroup自己实现线程池"></a>使用ThreadGroup自己实现线程池</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;线程池的作用及其应用场景&quot;&gt;&lt;a href=&quot;#线程池的作用及其应用场景&quot; class=&quot;headerlink&quot; title=&quot;线程池的作用及其应用场景&quot;&gt;&lt;/a&gt;线程池的作用及其应用场景&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;1.同一个线程可以多次使用，减少线
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java的锁机制</title>
+    <link href="http://longman.kim/2018/06/18/Java%E7%9A%84%E9%94%81%E6%9C%BA%E5%88%B6/"/>
+    <id>http://longman.kim/2018/06/18/Java的锁机制/</id>
+    <published>2018-06-17T16:57:14.000Z</published>
+    <updated>2018-06-17T16:57:14.384Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SpringMVC框架</title>
+    <link href="http://longman.kim/2018/06/18/SpringMVC%E6%A1%86%E6%9E%B6/"/>
+    <id>http://longman.kim/2018/06/18/SpringMVC框架/</id>
+    <published>2018-06-17T16:56:52.000Z</published>
+    <updated>2018-06-17T16:56:52.688Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown基本使用命令</title>
+    <link href="http://longman.kim/2018/06/18/Markdown%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://longman.kim/2018/06/18/Markdown基本使用命令/</id>
+    <published>2018-06-17T16:55:36.000Z</published>
+    <updated>2018-06-18T14:09:55.095Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><hr><p>按照维基百科的解释，Markdown和html一样，也是一种标记语言，专注于可读可写。相比html，Markdown更加轻量，同时它能够很容易被转换成html或者其他格式。Markdown经常被使用在readme文件中，它有很多的实现版本，扩展并丰富了它的功能。</p><h3 id="标题，段落，区块引用，列表"><a href="#标题，段落，区块引用，列表" class="headerlink" title="标题，段落，区块引用，列表"></a>标题，段落，区块引用，列表</h3><hr><ol><li><p>在html中标题使用h1, h2, h3, h4, h5, h6等表示，在Markdown中使用#开头来标识，其对于关系如下：  </p><blockquote><p># 这是h1<br> ## 这是h2<br> ###### 这是h6 </p></blockquote><p> 用#的个数表示标题的阶数。在Markdown中h1，h2还可以用下面这种方法表示：  </p><blockquote><h1 id="这是h1"><a href="#这是h1" class="headerlink" title="这是h1  "></a>这是h1  </h1><p> 这是h2<br> -—–  </p></blockquote><p> 其中=表示最高阶，-表示第二高阶，任何数量的=和-都有效果。</p></li><li><p>段落由一行或多个连续的行组成，段落通过一个或者多个空白行（只包含空格，制表符的行也算空白行）来分隔。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;普通段落不能使用空格或者制表符来进行缩进，如果一定要缩进，则使用\&amp;nbsp插入空格。在段落内<strong>换行</strong>是在行尾插入两个或两个以上的空格，然后再插入回车来实现。</p><blockquote><p>区块引用是另外一种组织文本的形式，它相比段落根据方便，因为它能直接换行。使用区块引用只需要在文本的开头插入>即可，</p><blockquote><p>区块引用允许嵌套，即使用>&gt;嵌套在>里面，并且区块里面还可以使用标题，列表，代码块等其他Markdown语法。 </p></blockquote></blockquote></li><li><p>列表分为无序列表和有序列表，无序列表可以在行的开头使用*或者+或者-号，如下:  </p><blockquote><p>* one<br> * two<br> * three</p></blockquote><blockquote><p>+ one<br> + two<br> + three</p></blockquote><blockquote><p>- one<br> - two<br> - three</p></blockquote><p> 有序列表使用数字加一个英文句点：  </p><blockquote><p>1. one<br> 2. two<br> 3. three  </p></blockquote></li><li><p>如果每个列表项内部有多个段落，则每个段落必须缩进4个空格或一个制表符。如果列表项<br>里有引用，则&lt;必须缩进。如果列表项里有代码区块，则代码区块要缩进两次，即两个制表符。  </p><blockquote><ul><li>one 列表里有多个段落<br>   第一个段落<br>   第二个段落</li><li>two 列表里有区块引用<br>区块应用</li><li>three 列表里有代码区块<pre><code>if (2 == 1) {   printf(&quot;hello&quot;);} else {    printf(&quot;world&quot;);}</code></pre></li></ul></blockquote></li></ol><h3 id="链接和图片"><a href="#链接和图片" class="headerlink" title="链接和图片"></a>链接和图片</h3><hr><ol><li><p>链接分为行内链接和参考式链接。行内链接是直接在需要链接的地方插入链接网址即可，<br>参考式链接是先插入一个链接id，然后在其他地方定义id对应的网址。  </p><blockquote><ol><li>行内链接<br>  这是一个行内链接，[点我](<a href="http://www.sina.com" target="_blank" rel="noopener">http://www.sina.com</a> “新浪”)吧</li><li>参考式链接<br>  这是一个参考式链接，[点我][345]吧<br>  [345]: <a href="http://www.sina.com" target="_blank" rel="noopener">http://www.sina.com</a> “新浪”  </li></ol></blockquote><p> 参考式链接相比行内链接，更具有可读性，将与内容无关的链接放在其他位置。  </p></li><li><p>插入图片的方法和链接的方法类似，也分为行内式和参考式：  </p><blockquote><ol><li>行内式<br>  语法是 ![alt text](<a href="https://longman.kim/img/header-img.jpg">https://longman.kim/img/header-img.jpg</a> “不二周助”)  </li><li>参考式<br>  语法是 ![Alt text][id]<br>  [id]: url/to/image  “Optional title attribute” </li></ol></blockquote><p> 其中alt text表示图片不能显示时出现的文字</p></li></ol><h3 id="代码区块，代码，强调，分割线"><a href="#代码区块，代码，强调，分割线" class="headerlink" title="代码区块，代码，强调，分割线"></a>代码区块，代码，强调，分割线</h3><hr><ol><li>代码区块的建立很简单，只需要简单地缩进4个空格或者一个制表符  </li><li>小段代码要被标记可以直接使用反引号`把它们包起来  </li><li>斜体强调可以使用*或者_包裹，粗体强调可以使用**或者__包裹  </li><li>分割线可以使用三个以上的*或者_，即***或者___</li></ol><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><hr><blockquote><p>表格的简单写法<br>  |id|name|<br>  |:-|:-|<br>  |1|A1|<br>  |2|A2|<br>  |3|A3|  </p></blockquote><p>效果如下  </p><table><thead><tr><th style="text-align:left">id</th><th style="text-align:left">name</th></tr></thead><tbody><tr><td style="text-align:left">1</td><td style="text-align:left">A1</td></tr><tr><td style="text-align:left">2</td><td style="text-align:left">A2</td></tr><tr><td style="text-align:left">3</td><td style="text-align:left">A3</td></tr></tbody></table><h3 id="自定义CSS"><a href="#自定义CSS" class="headerlink" title="自定义CSS"></a>自定义CSS</h3><hr><p>Markdown的展示效果可以自定义，或者网上已存在的css</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;按照维基百科的解释，Markdown和html一样，也是一种标记语言，专注于可读可写。相比html，Markdown更加轻量，同时
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://longman.kim/2018/06/14/hello-world/"/>
+    <id>http://longman.kim/2018/06/14/hello-world/</id>
+    <published>2018-06-14T15:28:52.421Z</published>
+    <updated>2018-06-14T14:43:33.739Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
