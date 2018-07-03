@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        剧本20180701｜longman&#39;s blog
+        剧本20180703｜longman&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://longman.kim/2018/07/01/剧本20180701/">
+    <link rel="canonical" href="http://longman.kim/2018/07/03/剧本20180703/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>剧本20180701</h1>
+                    <h1>剧本20180703</h1>
                     
                     <span class="meta">
                          作者 lewis longman
                         <span>
-                          日期 2018-07-01
+                          日期 2018-07-03
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -162,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            剧本20180701
+            剧本20180703
         </span>
     </div>
 </header>
@@ -173,30 +173,26 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="1-Guava-Cache的原理与实现"><a href="#1-Guava-Cache的原理与实现" class="headerlink" title="1. Guava Cache的原理与实现"></a>1. Guava Cache的原理与实现</h3><blockquote>
-<p>单机缓存，比较简单的方法是自己用ConcurrentHashMap去实现。Guava Cache实现了自动回收，如果自己采用ConcurrentHashMap需要手动显示回收。Guava Cache提供三种缓存回收方法：基于容量回收，定时回收和基于引用回收。</p>
+                <h3 id="1-如何体现技术能力？"><a href="#1-如何体现技术能力？" class="headerlink" title="1. 如何体现技术能力？"></a>1. 如何体现技术能力？</h3><blockquote>
+<p>今天看了刘未鹏的文章《怎样花两年时间去面试一个人》，总的感触就是识别一个优秀技术候选人是非常困难的。在学校与教育严重脱节的情况下，技术人员的甄别可以通过以下方法：  </p>
+<ol>
+<li>学历  </li>
+<li>读过的书  </li>
+<li>博客  </li>
+<li>github的提交频率，别人的点赞  </li>
+<li>算法<br>学历方面我在国内已经读了硕士，如果要提升的话，我理解进步的空间应该是去国外的top大学读个博士。如果想往这方面发展，英语是个大关卡。在读的书方面，工作之后读书少了，而且也没有完全理解。因此，我得给自己列个书单。<br><strong>基础书单</strong><br>《深入理解计算机系统》<br>《代码大全》<br>《编程珠玑》/《编程之美》<br>《计算机程序的构造和解释》<br>《设计模式》<br>《重构》<br>《程序员修理之道》<br>《深入理解Linux内核》<br>《TCP/IP详解》<br>《软件随想录》<br>《黑客与画家》<br>《重来》<br>《编程人生》<br>《UNIX编程艺术》<br>《算法导论》<br>《盛田昭夫》<br>《杰克韦尔奇自传》<br><strong>语言</strong><br>《Effective C++》<br>《深度探索C++对象模型》<br>《C专家编程》<br>《Lua程序设计》<br>《Java编程思想》<br>《深入理解Java虚拟机》<br>《Java并发编程实战》<br><strong>前端</strong><br>《JavaScript高级程序设计》<br>《JavaScript权威指南》<br>《锋利的jQuery》<br><strong>架构</strong><br>《大型网站系统与Java中间件实践》<br>《Redis设计与实现》<br>《MySQL技术内幕 : InnoDB存储引擎》<br>《微服务设计》<br>《大规模分布式存储系统》<br>《大型网站技术架构:核心原理与案例分析》<br>《从Paxos到Zookeeper》<br>《Netty权威指南 第2版》<br>《Docker: 容器与容器云》<br>《Head First设计模式》<br>《Java性能优化权威指南》<br>我的博客也开始启动了，虽然不知道能坚持多久，但我还是会努力写下去。一个人在社会中很容易迷茫，只有列出清晰的目标，才能一步一个脚印的向前走。github的确是个好东西，可以自己写些小项目练手。可以自己给自己定需求，画设计，前端开发，后台开发，数据库管理等等。项目的形式可以从小到大，然后分享问题。也可以提供一些基础组件（轮子），让别人使用，打造自己的名气。算法的话，国外很重视，国内未来也会跟着国外走。</li>
+</ol>
 </blockquote>
-<h3 id="2-BCOS的架构，技术原理，启动流程"><a href="#2-BCOS的架构，技术原理，启动流程" class="headerlink" title="2. BCOS的架构，技术原理，启动流程"></a>2. BCOS的架构，技术原理，启动流程</h3><blockquote>
-<p>联盟链，参与者（PKI, CA证书，记账者，观察者，白名单，黑名单），共识机制（PBFT, RAFT），多链和跨链，分布式存储leveldb。</p>
-</blockquote>
-<h3 id="3-分布式理论CAP-BASE"><a href="#3-分布式理论CAP-BASE" class="headerlink" title="3. 分布式理论CAP,BASE"></a>3. 分布式理论CAP,BASE</h3><blockquote>
-<p>一致性（C），可用性（A），分区容错性（P），三者不能够被同时满足。BASE代表基本可用，软状态，最终一致性。</p>
-</blockquote>
-<h3 id="4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT"><a href="#4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT" class="headerlink" title="4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT"></a>4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT</h3><h3 id="5-挖矿算法POW-POS-DPOS-Leader-BFT"><a href="#5-挖矿算法POW-POS-DPOS-Leader-BFT" class="headerlink" title="5. 挖矿算法POW, POS, DPOS, Leader, BFT"></a>5. 挖矿算法POW, POS, DPOS, Leader, BFT</h3><h3 id="6-消息中间件及RocketMQ模块分解"><a href="#6-消息中间件及RocketMQ模块分解" class="headerlink" title="6. 消息中间件及RocketMQ模块分解"></a>6. 消息中间件及RocketMQ模块分解</h3>
+
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2018/07/03/剧本20180703/" data-toggle="tooltip" data-placement="top"
-                           title="剧本20180703">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2018/07/01/netty/" data-toggle="tooltip" data-placement="top"
-                           title="netty">Next Post &rarr;</a>
+                        <a href="/2018/07/01/剧本20180701/" data-toggle="tooltip" data-placement="top"
+                           title="剧本20180701">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -213,7 +209,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Guava-Cache的原理与实现"><span class="toc-text">1. Guava Cache的原理与实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-BCOS的架构，技术原理，启动流程"><span class="toc-text">2. BCOS的架构，技术原理，启动流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-分布式理论CAP-BASE"><span class="toc-text">3. 分布式理论CAP,BASE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT"><span class="toc-text">4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-挖矿算法POW-POS-DPOS-Leader-BFT"><span class="toc-text">5. 挖矿算法POW, POS, DPOS, Leader, BFT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-消息中间件及RocketMQ模块分解"><span class="toc-text">6. 消息中间件及RocketMQ模块分解</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-如何体现技术能力？"><span class="toc-text">1. 如何体现技术能力？</span></a></li></ol>
                 </div>
             </div>
         </div>
