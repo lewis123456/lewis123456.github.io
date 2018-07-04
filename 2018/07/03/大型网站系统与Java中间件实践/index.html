@@ -260,7 +260,8 @@
 <p>4.3 服务治理</p>
 <blockquote>
 <ol>
-<li>管理服务<blockquote>
+<li><p>管理服务</p>
+<blockquote>
 <ol>
 <li>服务上下线  </li>
 <li>服务路由</li>
@@ -272,11 +273,8 @@
 </ol>
 </blockquote>
 </li>
-</ol>
-</blockquote>
+<li><p>查看服务</p>
 <blockquote>
-<ol start="2">
-<li>查看服务<blockquote>
 <ol>
 <li>服务信息（服务编码）</li>
 <li>服务质量（出错率、响应时间）</li>
@@ -293,11 +291,57 @@
 </li>
 </ol>
 </blockquote>
-<h3 id="5-数据访问层"><a href="#5-数据访问层" class="headerlink" title="5. 数据访问层"></a>5. 数据访问层</h3><h3 id="6-消息中间件"><a href="#6-消息中间件" class="headerlink" title="6. 消息中间件"></a>6. 消息中间件</h3><h3 id="7-软负载中心与集中配置管理"><a href="#7-软负载中心与集中配置管理" class="headerlink" title="7. 软负载中心与集中配置管理"></a>7. 软负载中心与集中配置管理</h3><h3 id="8-构建大型网站的其他要素"><a href="#8-构建大型网站的其他要素" class="headerlink" title="8. 构建大型网站的其他要素"></a>8. 构建大型网站的其他要素</h3>
+<h3 id="5-数据访问层"><a href="#5-数据访问层" class="headerlink" title="5. 数据访问层"></a>5. 数据访问层</h3><ol>
+<li>分布式事务<blockquote>
+<ol>
+<li>2PC  </li>
+</ol>
+</blockquote>
+</li>
+<li>3PC  </li>
+<li>PAXOS   </li>
+<li><p>CAP, BASE </p>
+</li>
+<li><p>Join</p>
+<blockquote>
+<ol>
+<li>把Join操作分成多次的数据库操作</li>
+<li>通过信息冗余变成单表查询</li>
+<li>外部系统（例如搜索引擎）解决</li>
+</ol>
+</blockquote>
+</li>
+<li><p>外键</p>
+</li>
+<li><p>自增序列</p>
+<blockquote>
+<ol>
+<li>UUID的生成方式</li>
+<li></li>
+</ol>
+</blockquote>
+</li>
+<li><p>查询跨库</p>
+</li>
+<li><p>确定执行SQL的目标库</p>
+<blockquote>
+<ol>
+<li>固定哈希算法  </li>
+<li>一致性哈希算法</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h3 id="6-消息中间件"><a href="#6-消息中间件" class="headerlink" title="6. 消息中间件"></a>6. 消息中间件</h3><h3 id="7-软负载中心与集中配置管理"><a href="#7-软负载中心与集中配置管理" class="headerlink" title="7. 软负载中心与集中配置管理"></a>7. 软负载中心与集中配置管理</h3><h3 id="8-构建大型网站的其他要素"><a href="#8-构建大型网站的其他要素" class="headerlink" title="8. 构建大型网站的其他要素"></a>8. 构建大型网站的其他要素</h3>
                 <hr>
                 
 
                 <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2018/07/04/剧本20180705/" data-toggle="tooltip" data-placement="top"
+                           title="剧本20180705">&larr; Previous Post</a>
+                    </li>
                     
                     
                     <li class="next">
