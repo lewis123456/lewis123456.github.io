@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-07-04T14:11:05.147Z</updated>
+  <updated>2018-07-06T13:06:06.706Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>程序员国外面试流程（同事口述）</title>
+    <link href="http://longman.kim/2018/07/06/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%9B%BD%E5%A4%96%E9%9D%A2%E8%AF%95%E6%B5%81%E7%A8%8B%EF%BC%88%E5%90%8C%E4%BA%8B%E5%8F%A3%E8%BF%B0%EF%BC%89/"/>
+    <id>http://longman.kim/2018/07/06/程序员国外面试流程（同事口述）/</id>
+    <published>2018-07-06T12:54:55.000Z</published>
+    <updated>2018-07-06T13:06:06.706Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-面试准备"><a href="#1-面试准备" class="headerlink" title="1. 面试准备"></a>1. 面试准备</h3><ol><li><p>英语<br>口语，可以找网上一对一的私教</p></li><li><p>算法<br>ACM类型的算法题目，刷leetcode，打比赛</p></li><li><p>项目  </p></li></ol><ol start="4"><li><p>面向对象设计，设计模式<br>面向对象的思想，设计模式</p></li><li><p>架构<br>AWS的一些架构</p></li></ol><h3 id="2-面试流程"><a href="#2-面试流程" class="headerlink" title="2. 面试流程"></a>2. 面试流程</h3><ol><li>在线做题（一个小时左右网上完成一份试卷）  </li><li>三轮电面（2轮在线编程，1轮项目介绍）  </li><li>一天之内6轮现场面试（白板手写算法，面向对象设计，架构）</li></ol><h3 id="3-机会"><a href="#3-机会" class="headerlink" title="3. 机会"></a>3. 机会</h3><p>使用linkedin，吸引国外公司的HR，多加群</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-面试准备&quot;&gt;&lt;a href=&quot;#1-面试准备&quot; class=&quot;headerlink&quot; title=&quot;1. 面试准备&quot;&gt;&lt;/a&gt;1. 面试准备&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;英语&lt;br&gt;口语，可以找网上一对一的私教&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;算法&lt;br
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>剧本20180705</title>
@@ -640,27 +664,6 @@
       
         &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;hr&gt;
 &lt;p&gt;按照维基百科的解释，Markdown和html一样，也是一种标记语言，专注于可读可写。相比html，Markdown更加轻量，同时
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://longman.kim/2018/06/14/hello-world/"/>
-    <id>http://longman.kim/2018/06/14/hello-world/</id>
-    <published>2018-06-14T15:28:52.421Z</published>
-    <updated>2018-06-14T14:43:33.739Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
       
     
     </summary>
