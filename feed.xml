@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-07-08T15:41:35.538Z</updated>
+  <updated>2018-07-08T17:24:59.670Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>七周七并发模型</title>
+    <link href="http://longman.kim/2018/07/09/%E4%B8%83%E5%91%A8%E4%B8%83%E5%B9%B6%E5%8F%91%E6%A8%A1%E5%9E%8B/"/>
+    <id>http://longman.kim/2018/07/09/七周七并发模型/</id>
+    <published>2018-07-08T17:24:59.000Z</published>
+    <updated>2018-07-08T17:24:59.670Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>七周七数据库</title>
+    <link href="http://longman.kim/2018/07/09/%E4%B8%83%E5%91%A8%E4%B8%83%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>http://longman.kim/2018/07/09/七周七数据库/</id>
+    <published>2018-07-08T17:23:10.000Z</published>
+    <updated>2018-07-08T17:24:21.363Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-PostgreSQL"><a href="#1-PostgreSQL" class="headerlink" title="1. PostgreSQL"></a>1. PostgreSQL</h3><h3 id="2-Riak"><a href="#2-Riak" class="headerlink" title="2. Riak"></a>2. Riak</h3><h3 id="3-Hbase"><a href="#3-Hbase" class="headerlink" title="3. Hbase"></a>3. Hbase</h3><h3 id="4-mongodb"><a href="#4-mongodb" class="headerlink" title="4. mongodb"></a>4. mongodb</h3><h3 id="5-CouchDB"><a href="#5-CouchDB" class="headerlink" title="5. CouchDB"></a>5. CouchDB</h3><h3 id="6-Neo4j"><a href="#6-Neo4j" class="headerlink" title="6. Neo4j"></a>6. Neo4j</h3><h3 id="7-Redis"><a href="#7-Redis" class="headerlink" title="7. Redis"></a>7. Redis</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-PostgreSQL&quot;&gt;&lt;a href=&quot;#1-PostgreSQL&quot; class=&quot;headerlink&quot; title=&quot;1. PostgreSQL&quot;&gt;&lt;/a&gt;1. PostgreSQL&lt;/h3&gt;&lt;h3 id=&quot;2-Riak&quot;&gt;&lt;a href=&quot;#2-Ria
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>AWS认证考试（云技术架构师）</title>
+    <link href="http://longman.kim/2018/07/09/AWS%E8%AE%A4%E8%AF%81%E8%80%83%E8%AF%95%EF%BC%88%E4%BA%91%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84%E5%B8%88%EF%BC%89/"/>
+    <id>http://longman.kim/2018/07/09/AWS认证考试（云技术架构师）/</id>
+    <published>2018-07-08T17:03:18.000Z</published>
+    <updated>2018-07-08T17:03:18.590Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Zookeeper</title>
@@ -612,56 +661,6 @@
     <id>http://longman.kim/2018/06/18/负载均衡/</id>
     <published>2018-06-17T16:58:27.000Z</published>
     <updated>2018-06-17T16:58:27.787Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Java对异步的支持</title>
-    <link href="http://longman.kim/2018/06/18/Java%E5%AF%B9%E5%BC%82%E6%AD%A5%E7%9A%84%E6%94%AF%E6%8C%81/"/>
-    <id>http://longman.kim/2018/06/18/Java对异步的支持/</id>
-    <published>2018-06-17T16:57:59.000Z</published>
-    <updated>2018-06-17T16:57:59.276Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Java的线程池</title>
-    <link href="http://longman.kim/2018/06/18/Java%E7%9A%84%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
-    <id>http://longman.kim/2018/06/18/Java的线程池/</id>
-    <published>2018-06-17T16:57:29.000Z</published>
-    <updated>2018-06-21T14:17:15.747Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="线程池的作用及其应用场景"><a href="#线程池的作用及其应用场景" class="headerlink" title="线程池的作用及其应用场景"></a>线程池的作用及其应用场景</h4><blockquote><p>1.同一个线程可以多次使用，减少线程创建与销毁的开销  </p><pre><code>2. 根据系统的承受能力，调整线程池的大小，可以防止消耗系统过多的资源，在Java中一个线程大约需要1M的内存</code></pre></blockquote><blockquote><p>适合那些需要处理很多请求，同时每个请求的执行时间很短（执行时间短，线程创建和销毁的时间占比就高）的系统</p></blockquote><h3 id="Executor框架"><a href="#Executor框架" class="headerlink" title="Executor框架"></a>Executor框架</h3><p><img src="Java的线程池/executor框架.jpg" alt="exutor框架"></p><blockquote><p>Executor接口提供了一个执行任务的方法executor(Runnable command)<br>ExecutorService接口继承了Executor，并提供了管理线程池生命周期的接口<br>ScheduledExecutorService接口可以定时调度任务<br>ThreadPoolExecutor线程池，可以使用Executors的静态工程方法返回不同类型的线程池</p></blockquote><h3 id="ThreadPoolExecutor类"><a href="#ThreadPoolExecutor类" class="headerlink" title="ThreadPoolExecutor类"></a>ThreadPoolExecutor类</h3><p><code>public ThreadPoolExecutor(int corePoolSize,                            int maximumPoolSize,                            long keepAliveTime,                            TimeUnit unit,                            BlockingQueue&lt;Runnable&gt; workQueue,                            ThreadFactory threadFactory,                            RejectExecutionHandler handler)</code></p><blockquote><p>corePoolSize: 核心线程数<br>maximumPoolSize: 线程池允许的最大线程数<br>keepAliveTime: 超过核心线程数的线程，空闲的最长时间，时间过后线程销毁<br>unit: keepAliveTime的单位，秒/毫秒<br>workQueue: 保存等待执行任务的阻塞队列  </p><pre><code>+ ArraryBlockingQueue+ LinkedBlockingQueue+ SynchronousQueue</code></pre><p>threadFactory: 创建线程的线程工厂<br>handler: 拒绝任务时的策略</p><pre><code>+ ThreadPoolExecutor.AbortPolicy:丢弃任务并抛出RejectedExecutionException异常。 + ThreadPoolExecutor.DiscardPolicy：也是丢弃任务，但是不抛出异常。 + ThreadPoolExecutor.DiscardOldestPolicy：丢弃队列最前面的任务，然后重新尝试执行任务（重复此过程）+ ThreadPoolExecutor.CallerRunsPolicy：由调用线程处理该任务</code></pre></blockquote><h3 id="四种线程池的用法"><a href="#四种线程池的用法" class="headerlink" title="四种线程池的用法"></a>四种线程池的用法</h3><h5 id="1-newSingleThreadExecutor-单任务线程池"><a href="#1-newSingleThreadExecutor-单任务线程池" class="headerlink" title="1. newSingleThreadExecutor 单任务线程池"></a>1. newSingleThreadExecutor 单任务线程池</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static ExecutorService newSingleThreadExecutor() &#123;</span><br><span class="line">    return new FinalizableDelegatedExecutorService(</span><br><span class="line">    new ThreadPoolExecutor(1, 1, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue&lt;Runnable&gt;()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>corePoolSize = maximumPoolSize = 1<br>在线程池中只有一个工作线程，所以任务可以按照添加顺序执行</p></blockquote><h5 id="2-newCachedThreadPool-可变大小线程池"><a href="#2-newCachedThreadPool-可变大小线程池" class="headerlink" title="2. newCachedThreadPool 可变大小线程池"></a>2. newCachedThreadPool 可变大小线程池</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static ExecutorService newCachedThreadPool() &#123;</span><br><span class="line">    return new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS, new SynchronousQueue&lt;Runnable&gt;());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>corePoolSize = 0, maximumPoolSize = Integer.MAX_VALUE<br>根据需要来创建线程，空闲的线程最多可以等待任务60秒，否则将被回收。<br>1.首先执行SynchronousQueue.offer(Runnable task)。如果在当前的线程池中有空闲的线程正在执行SynchronousQueue.poll()，那么主线程执行的offer操作与空闲线程执行的poll操作配对成功，主线程把任务交给空闲线程执行。execute()方法执行成功，否则执行步骤2<br>2.当线程池为空(初始maximumPool为空)或没有空闲线程时，配对失败，将没有线程执行SynchronousQueue.poll操作。这种情况下，线程池会创建一个新的线程执行任务。<br>3.在创建完新的线程以后，将会执行poll操作。当步骤2的线程执行完成后，将等待60秒，如果此时主线程提交了一个新任务，那么这个空闲线程将执行新任务，否则被回收。因此长时间不提交任务的CachedThreadPool不会占用系统资源。<br>SynchronousQueue是一个不存储元素阻塞队列，每次要进行offer操作时必须等待poll操作，否则不能继续添加元素。</p></blockquote><h5 id="3-newFixedThreadPool-固定大小线程池"><a href="#3-newFixedThreadPool-固定大小线程池" class="headerlink" title="3. newFixedThreadPool 固定大小线程池"></a>3. newFixedThreadPool 固定大小线程池</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static ExecutorService newFixedThreadPool(int nThreads) &#123;</span><br><span class="line">    return new ThreadPoolExecutor(nThreads, nThreads, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>corePoolSize = maximumPoolSize</p><pre><code>1. poolSize &lt; corePoolSize，创建新线程执行新任务2. poolSize = corePoolSize，新任务加入LinkedBlockingQueue3. 线程执行完1中的任务后从队列中取任务执行</code></pre><p>由于LinkedBlockingQueuu是无界队列，所以可以向队列中添加新任务，线程池大小完全依赖于操作系统（或者说JVM）能够创建的最大线程大小</p></blockquote><h5 id="4-newScheduledThreadPool-延迟线程池"><a href="#4-newScheduledThreadPool-延迟线程池" class="headerlink" title="4. newScheduledThreadPool 延迟线程池"></a>4. newScheduledThreadPool 延迟线程池</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public ExecutorService newScheduledThreadPool() &#123;</span><br><span class="line">    return new DelegatedScheduledExecutorService(new ThreadPoolExecutor(1, </span><br><span class="line">    Integer.MAX_VALUE, 0, NANOSECONDS, new DelayedWorkQueue()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>corePoolSize = 1, maximumPoolSize = Integer.MAX_VALUE,<br>keepAliveTime = 0, workQueue = DelayedWorkQueue<br>一个大小无限的线程池，支持定时以及周期性执行任务的需求。</p></blockquote><h3 id="如何配置线程池参数"><a href="#如何配置线程池参数" class="headerlink" title="如何配置线程池参数"></a>如何配置线程池参数</h3><blockquote><ol><li>计算密集型: N+1    </li><li>I/O密集型: 2*N+1 </li><li>混合型<br>最佳线程数目 = （线程等待时间与线程CPU时间之比 + 1）* CPU数目<br>线程等待时间所占比例越高，需要越多线程。线程CPU时间所占比例越高，需要越少线程。 </li></ol></blockquote><h3 id="深入理解线程池的工作原理"><a href="#深入理解线程池的工作原理" class="headerlink" title="深入理解线程池的工作原理"></a>深入理解线程池的工作原理</h3><p><a href="https://www.cnblogs.com/dolphin0520/p/3932921.html" target="_blank" rel="noopener">https://www.cnblogs.com/dolphin0520/p/3932921.html</a></p><h3 id="使用ThreadGroup自己实现线程池"><a href="#使用ThreadGroup自己实现线程池" class="headerlink" title="使用ThreadGroup自己实现线程池"></a>使用ThreadGroup自己实现线程池</h3>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;线程池的作用及其应用场景&quot;&gt;&lt;a href=&quot;#线程池的作用及其应用场景&quot; class=&quot;headerlink&quot; title=&quot;线程池的作用及其应用场景&quot;&gt;&lt;/a&gt;线程池的作用及其应用场景&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;1.同一个线程可以多次使用，减少线
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Java的锁机制</title>
-    <link href="http://longman.kim/2018/06/18/Java%E7%9A%84%E9%94%81%E6%9C%BA%E5%88%B6/"/>
-    <id>http://longman.kim/2018/06/18/Java的锁机制/</id>
-    <published>2018-06-17T16:57:14.000Z</published>
-    <updated>2018-06-17T16:57:14.384Z</updated>
     
     <summary type="html">
     
