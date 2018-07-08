@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        程序员国外面试流程（同事口述）｜longman&#39;s blog
+        Zookeeper｜longman&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://longman.kim/2018/07/06/程序员国外面试流程（同事口述）/">
+    <link rel="canonical" href="http://longman.kim/2018/07/08/Zookeeper/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>程序员国外面试流程（同事口述）</h1>
+                    <h1>Zookeeper</h1>
                     
                     <span class="meta">
                          作者 lewis longman
                         <span>
-                          日期 2018-07-06
+                          日期 2018-07-08
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -162,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            程序员国外面试流程（同事口述）
+            Zookeeper
         </span>
     </div>
 </header>
@@ -173,41 +173,23 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="1-面试准备"><a href="#1-面试准备" class="headerlink" title="1. 面试准备"></a>1. 面试准备</h3><ol>
-<li><p>英语<br>口语，可以找网上一对一的私教</p>
-</li>
-<li><p>算法<br>ACM类型的算法题目，刷leetcode，打比赛</p>
-</li>
-<li><p>项目  </p>
-</li>
+                <h3 id="1-Zookeeper是什么？"><a href="#1-Zookeeper是什么？" class="headerlink" title="1. Zookeeper是什么？"></a>1. Zookeeper是什么？</h3><p>Zookeeper是一个分布式的分布式应用程序协调服务，它为分布式应用提供一致性服务，功能包括：配置维护、域名服务、分布式同步、组服务等，提供的接口主要有分布式独享锁、选举、队列。</p>
+<h3 id="2-Zookeeper的架构与组成"><a href="#2-Zookeeper的架构与组成" class="headerlink" title="2. Zookeeper的架构与组成"></a>2. Zookeeper的架构与组成</h3><ol>
+<li>类似于文件系统，多叉树的结构，每个节点znode的大小&lt;1M。Zookeeper服务由多个互相通信的Server构成，其中有一个Server是leader。当leader挂了之后，会重新选择一个新的leader。</li>
+<li>普通的Server能处理read和watch请求，只有leader能处理write请求。因此，当普通Server收到write请求时，它会将请求重定向到leader.Client配置所有Server的列表，但只会选择其中的一个Server进行连接。</li>
+<li>当Client连接的Server挂了之后，Client会重新选择一个Server，建立新的会话。</li>
+<li>update操作必须严格有序执行，对每一个操作都有对应的交易ID。</li>
 </ol>
-<ol start="4">
-<li><p>面向对象设计，设计模式<br>面向对象的思想，设计模式</p>
-</li>
-<li><p>架构<br>AWS的一些架构</p>
-</li>
-</ol>
-<h3 id="2-面试流程"><a href="#2-面试流程" class="headerlink" title="2. 面试流程"></a>2. 面试流程</h3><ol>
-<li>在线做题（一个小时左右网上完成一份试卷）  </li>
-<li>三轮电面（2轮在线编程，1轮项目介绍）  </li>
-<li>一天之内6轮现场面试（白板手写算法，面向对象设计，架构）</li>
-</ol>
-<h3 id="3-机会"><a href="#3-机会" class="headerlink" title="3. 机会"></a>3. 机会</h3><p>使用linkedin，吸引国外公司的HR，多加群</p>
-
+<h3 id="3-Fast-Paxos算法，ZAB算法"><a href="#3-Fast-Paxos算法，ZAB算法" class="headerlink" title="3. Fast Paxos算法，ZAB算法"></a>3. Fast Paxos算法，ZAB算法</h3><h3 id="4-动物园管理员（Zookeeper）的故事"><a href="#4-动物园管理员（Zookeeper）的故事" class="headerlink" title="4. 动物园管理员（Zookeeper）的故事"></a>4. 动物园管理员（Zookeeper）的故事</h3><h3 id="5-优点与缺点"><a href="#5-优点与缺点" class="headerlink" title="5. 优点与缺点"></a>5. 优点与缺点</h3>
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2018/07/08/Kafka/" data-toggle="tooltip" data-placement="top"
-                           title="Kafka">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2018/07/04/剧本20180705/" data-toggle="tooltip" data-placement="top"
-                           title="剧本20180705">Next Post &rarr;</a>
+                        <a href="/2018/07/08/Kafka/" data-toggle="tooltip" data-placement="top"
+                           title="Kafka">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -224,7 +206,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-面试准备"><span class="toc-text">1. 面试准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-面试流程"><span class="toc-text">2. 面试流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-机会"><span class="toc-text">3. 机会</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Zookeeper是什么？"><span class="toc-text">1. Zookeeper是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Zookeeper的架构与组成"><span class="toc-text">2. Zookeeper的架构与组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Fast-Paxos算法，ZAB算法"><span class="toc-text">3. Fast Paxos算法，ZAB算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-动物园管理员（Zookeeper）的故事"><span class="toc-text">4. 动物园管理员（Zookeeper）的故事</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-优点与缺点"><span class="toc-text">5. 优点与缺点</span></a></li></ol>
                 </div>
             </div>
         </div>
