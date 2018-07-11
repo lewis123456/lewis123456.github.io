@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        七周七并发模型｜longman&#39;s blog
+        大型网站技术架构-核心原理与案例分析｜longman&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://longman.kim/2018/07/09/七周七并发模型/">
+    <link rel="canonical" href="http://longman.kim/2018/07/11/大型网站技术架构-核心原理与案例分析/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>七周七并发模型</h1>
+                    <h1>大型网站技术架构-核心原理与案例分析</h1>
                     
                     <span class="meta">
                          作者 lewis longman
                         <span>
-                          日期 2018-07-09
+                          日期 2018-07-11
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -162,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            七周七并发模型
+            大型网站技术架构-核心原理与案例分析
         </span>
     </div>
 </header>
@@ -173,21 +173,161 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                
+                <h3 id="1-大型网站架构演进"><a href="#1-大型网站架构演进" class="headerlink" title="1. 大型网站架构演进"></a>1. 大型网站架构演进</h3><ol>
+<li><p>大型网站软件系统的特点</p>
+<blockquote>
+<p>高并发，大流量，高可用，海量数据，用户分布广泛，网络情况复杂，安全环境恶劣，需求快速变更，发布频繁，渐进式发展  </p>
+</blockquote>
+</li>
+<li><p>大型网站架构演化发展历程</p>
+<blockquote>
+<ol>
+<li>初始阶段<br>LAMP单机</li>
+<li>应用服务和数据服务分离  </li>
+<li>使用缓存改善网站性能  </li>
+<li>使用应用服务器集群改善网站的并发处理能力</li>
+<li>数据库读写分离</li>
+<li>使用反向代理和CDN加速网站响应  </li>
+<li>使用分布式文件系统和分布式数据库系统</li>
+<li>使用NoSQL和搜索引擎</li>
+<li>业务拆分</li>
+<li>分布式服务</li>
+</ol>
+</blockquote>
+</li>
+<li><p>大型网站架构演化的价值观</p>
+<blockquote>
+<ol>
+<li>网站所需灵活应对</li>
+<li>业务发展是驱动力</li>
+</ol>
+</blockquote>
+</li>
+<li><p>网站架构设计误区</p>
+<blockquote>
+<ol>
+<li>一味追求大公司的解决方案</li>
+<li>为了技术而技术</li>
+<li>企图用技术解决所有问题</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h3 id="2-大型网站结构模式"><a href="#2-大型网站结构模式" class="headerlink" title="2. 大型网站结构模式"></a>2. 大型网站结构模式</h3><ol>
+<li><p>网站架构模式</p>
+<blockquote>
+<ol>
+<li>分层<br>应用层，服务层，数据层  </li>
+<li>分割  </li>
+<li>分布式<br>分布式应用和服务，分布式静态资源，分布式数据和存储，分布式计算，分布式配置，分布式锁，分布式文件系统</li>
+<li>集群</li>
+<li>缓存<br>CDN，反向代理，本地缓存，分布式缓存</li>
+<li>异步<br>解耦，异步模式，生产者消费者，提高可用性，加快响应速度，消除并发访问高峰</li>
+<li>冗余<br>冷备份，热备份，灾备数据中心</li>
+<li>自动化<br>发布过程自动化，自动化代码管理，自动化测试，自动化安全检测，自动化部署，自动化监控，自动化报警，自动化失效转移，自动化失效恢复，自动化降级，自动化资源分配</li>
+<li>安全<br>密码，手机校验码，加密，XSS攻击，SQL注入，信息过滤，风险控制</li>
+</ol>
+</blockquote>
+</li>
+<li><p>架构模式在新浪微博的应用</p>
+<blockquote>
+<ol>
+<li>LAMP</li>
+<li>基础服务层：数据库，缓存，存储，搜索</li>
+<li>平台服务和应用服务</li>
+<li>API和业务层</li>
+<li>分布式部署，集群，异步推拉结合，多级缓存，冗余，自动化，安全</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h3 id="3-大型网站核心架构要素"><a href="#3-大型网站核心架构要素" class="headerlink" title="3. 大型网站核心架构要素"></a>3. 大型网站核心架构要素</h3><p>最高层次的规划，难以改变的决定</p>
+<ol>
+<li>性能<blockquote>
+<ol>
+<li>浏览器端，浏览器缓存，页面压缩，合理布局，减少cookie传输</li>
+<li>CDN，动静分离，部署反向代理，缓存热点文件</li>
+<li>服务端，本地缓存，分布式缓存，异步消息队列，集群，多线程，改善内存管理</li>
+<li>数据库，索引，缓存，SQL优化，NoSQL</li>
+<li>响应时间，TPS</li>
+</ol>
+</blockquote>
+</li>
+<li>可用性<blockquote>
+<ol>
+<li>7*24小时可用，4个9即99.99%可用</li>
+<li>主要是手段是冗余</li>
+<li>应用服务器，负载均衡，集群</li>
+<li>存储服务器，实时备份</li>
+</ol>
+</blockquote>
+</li>
+<li>伸缩性<blockquote>
+<ol>
+<li>应用服务器用合适的负载均衡器向集群中加机器</li>
+<li>缓存服务器，改进缓存路由算法，保证缓存的可访问性</li>
+<li>关系数据库支持数据复制，主从热备等机制，但很难保证大规模的伸缩性。主要通过路由分区将多个数据库的服务器组成一个集群。NoSQL比较好扩展。</li>
+</ol>
+</blockquote>
+</li>
+<li>扩展性<blockquote>
+<p>如何设计网站的架构使其能够快速响应需求的变化。</p>
+<ol>
+<li>事件驱动架构<br>消息队列</li>
+<li>分布式服务<br>将业务和可复用服务分离，通过分布式服务框架调用。</li>
+</ol>
+</blockquote>
+</li>
+<li>安全性<blockquote>
+<p>保护数据</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="4-瞬时响应：网站的高性能架构"><a href="#4-瞬时响应：网站的高性能架构" class="headerlink" title="4. 瞬时响应：网站的高性能架构"></a>4. 瞬时响应：网站的高性能架构</h3><ol>
+<li>网站性能测试<blockquote>
+<ol>
+<li>响应时间，请求开始到收到响应所需的时间</li>
+<li>并发数，系统能够同时处理请求的数目</li>
+<li>吞吐量，TPS（每秒事务数），QPS（每秒查询数），HPS（每秒HTTP请求数）</li>
+<li>性能技术器<br>系统负载，对象与线程数，内存使用，CPU使用，磁盘与网络I/O</li>
+<li>性能测试方法<br>性能测试，负载测试（直到处理能力下降），压力测试（直到系统崩溃或不能处理任何请求），稳定性测试（不同环境）</li>
+</ol>
+</blockquote>
+</li>
+<li>Web前端性能优化<blockquote>
+<ol>
+<li>减少http请求</li>
+<li>使用浏览器缓存</li>
+<li>启用压缩</li>
+<li>css放在页面最上面，javasript放在页面最下面</li>
+<li>减少cookie传输</li>
+<li>CDN缓存静态资源</li>
+<li>反向代理缓存</li>
+</ol>
+</blockquote>
+</li>
+<li>应用服务器性能优化<blockquote>
+<ol>
+<li>分布式缓存<br>Hash表，读多写少，二八定律</li>
+<li>合理使用缓存<br>频繁修改的数据不适合缓存，非热点数据不适合缓存，可能存在数据不一致和脏读，缓存的可用性，缓存利用LRU(最近最久未用算法)，缓存预热，缓存穿透</li>
+<li>分布式缓存架构<br>更新同步的缓存（与应用部署在一起），互不通信的缓存（与应用部署在不同的服务器，采用Hash一致性算法可伸缩）</li>
+<li>异步操作</li>
+</ol>
+</blockquote>
+</li>
+<li>存储性能优化</li>
+<li></li>
+</ol>
+
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2018/07/11/大型网站技术架构-核心原理与案例分析/" data-toggle="tooltip" data-placement="top"
-                           title="大型网站技术架构-核心原理与案例分析">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2018/07/09/七周七数据库/" data-toggle="tooltip" data-placement="top"
-                           title="七周七数据库">Next Post &rarr;</a>
+                        <a href="/2018/07/09/七周七并发模型/" data-toggle="tooltip" data-placement="top"
+                           title="七周七并发模型">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -204,7 +344,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-大型网站架构演进"><span class="toc-text">1. 大型网站架构演进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-大型网站结构模式"><span class="toc-text">2. 大型网站结构模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-大型网站核心架构要素"><span class="toc-text">3. 大型网站核心架构要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-瞬时响应：网站的高性能架构"><span class="toc-text">4. 瞬时响应：网站的高性能架构</span></a></li></ol>
                 </div>
             </div>
         </div>
