@@ -179,12 +179,15 @@
 <li>普通的Server能处理read和watch请求，只有leader能处理write请求。因此，当普通Server收到write请求时，它会将请求重定向到leader。Client配置所有Server的列表，但只会选择其中的一个Server进行连接。</li>
 <li>当Client连接的Server挂了之后，Client会重新选择一个Server，建立新的会话。</li>
 <li>update操作必须严格有序执行，对每一个操作都有对应的交易ID。</li>
-</ol>
-<h3 id="3-Fast-Paxos算法，ZAB算法"><a href="#3-Fast-Paxos算法，ZAB算法" class="headerlink" title="3. Fast Paxos算法，ZAB算法"></a>3. Fast Paxos算法，ZAB算法</h3><ol>
+<li>Zookeeper中的数据保存在内存，写操作先写磁盘再写内存，更新操作先写更新记录到磁盘再更新内存。</li>
+<li>读写比是10:1时，zookeeper表现最好。  </li>
+<li>zookeeper中不使用相对路径。</li>
+<li>znode中有修改的版本号，ACL的版本号，时间戳等。修改znode时，要对版本号进行核对。</li>
+<li>Zookeeper中ACL控制不是递归的，能访问父节点不一定能访问子节点。<h3 id="3-Fast-Paxos算法，ZAB算法"><a href="#3-Fast-Paxos算法，ZAB算法" class="headerlink" title="3. Fast Paxos算法，ZAB算法"></a>3. Fast Paxos算法，ZAB算法</h3></li>
 <li><strong><em>数据修改</em></strong><br>ZAB(Zookeeper Atomic Broadcast)原子广播协议，是2PC(两阶段提交)协议的变体。<br>1.1  follower收到write请求后，将请求重定向到leader。<br>1.2  leader将write请求（携带序列号64位，前32位SID（服务器的唯一标识）和后32位ZXID（事务ID））广播给follower。<br>1.3  follower将write请求放在history队列里面，然后回复ACK给leader。<br>1.4  leader收到一半的ACK后，广播commit给follower。<br>1.5  follower收到commit请求后，如果发现这个交易的序列号在history队列里面是最小的，就执行该请求。如果发现这个交易的序列号不是最小的，需要等待小的序列号执行commmit后，才执行这个大序列号的交易。</li>
 <li><strong><em>leader挂了后的选举</em></strong><br>服务器如果无法和leader连接时进入leader选举状态，称为looking状态。looking状态的机器会向集群中所有的机器发起投票。投票包含该服务器最近的序列号(sid, zxid)和选举轮次。最开始都投自己，然后比较接收到的序列号（先比较zxid，再比较sid），投给最大序列号对应的服务器，两轮就能确定。</li>
 <li><strong><em>初始化数据恢复</em></strong><br>确保那些在leader服务器上提交的事务最终被执行，丢弃那些只在leader服务器被提出的事务。选择leader完成后，followers发送自己接收的最大zxid的epoch给leader。leader从接收到的epoch中，选择最大的并加1，发送给follower。follower接收到epoch之后，更新自己的epoch。然后将自己的history历史事务集反馈给leader。leader在收到过半的反馈后，从收到的反馈中选择epoch最大，同时zxid最大的follower的事务集合作为初始化事务集合。leader将初始化集合发给follower，follower接收并处理事务集，反馈给leader，leader收到反馈后发送commit。</li>
-<li><strong><em>client挂了后的处理</em></strong><br>zookeeper允许client创建两种类型的节点：persistent, ephemeral，ephemeral类型的节点与client一起共存亡。客户端与follower连接时，会创建一个session, follower和leader都保存了session信息。client定期向follower发送ping包，证明自己活着。leader定期向follower发送ping包，检查是否有超过一半的follower还活着，同时follower会返回session，告诉leader哪些client还活着，这样leader就可以删除不错在客户端的ephemeral节点。</li>
+<li><strong><em>client挂了后的处理</em></strong><br>zookeeper允许client创建两种类型的节点：persistent, ephemeral，ephemeral类型的节点与client一起共存亡。客户端与follower连接时，会创建一个session, follower和leader都保存了session信息。client定期向follower发送ping包，证明自己活着。leader定期向follower发送ping包，检查是否有超过一半的follower还活着，同时follower会返回session，告诉leader哪些client还活着，这样leader就可以删除不错在客户端的ephemeral节点，ephemeral不允许有children。</li>
 </ol>
 <h3 id="4-动物园管理员（Zookeeper）的故事"><a href="#4-动物园管理员（Zookeeper）的故事" class="headerlink" title="4. 动物园管理员（Zookeeper）的故事"></a>4. 动物园管理员（Zookeeper）的故事</h3><h3 id="5-优点与缺点"><a href="#5-优点与缺点" class="headerlink" title="5. 优点与缺点"></a>5. 优点与缺点</h3>
                 <hr>
