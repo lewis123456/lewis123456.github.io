@@ -173,7 +173,47 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                
+                <h3 id="1-RPC服务框架"><a href="#1-RPC服务框架" class="headerlink" title="1. RPC服务框架"></a>1. RPC服务框架</h3><ol>
+<li><p>Dubbo(阿里)</p>
+<blockquote>
+<ol>
+<li>架构<br>Provider(Container), Conumer, Registry, Monitor</li>
+<li>通讯协议<br>2.1 dubbo的特性是连接个数单连接，连接方式长连接，传输协议TCP，传输方式NIO异步通讯，序列化Hessian二进制序列化，适用范围数据包小，消费者比提供者个数多，dubbo不适合传输大数据量的服务。<br>2.2 rmi的特性是多连接，短连接，TCP，同步传输，Java标准二进制序列化，数据包大小混合，消费者和提供者个数差不多。<br>2.3 hessian的特性是多连接，短连接，http，同步传输，hessian二进制序列化，数据包较大，提供者比消费者个数多，可传文件。<br>2.4 http的特性是多连接，短连接，http，同步传输，表单序列化，数据包大小混合，提供者比消费者个数多，不支持传文件。<br>2.5 webservice的特性是多连接，短连接，http，同步传输，SOAP文本序列化。<br>2.6 其他协议thrift、memcached、redis、rest</li>
+<li>注册中心<br>3.1 Zookeeper,临时节点原理<br>3.2 Multicast<br>3.3 Redis<br>3.4 Simple</li>
+<li>集群容错<br>4.1 FailOver<br>读操作的默认方式，失败自动切换，重试其他服务。<br>4.2 FailFast<br>写操作的默认方法，快速失败，只发起一次调用，失败立即报错。<br>4.3 FailBack<br>消息通知，失败自动恢复，记录失败请求，定时重发。<br>4.4 Forking<br>并行调用多个服务器，只要一个成功即可。<br>4.5 Broadcast<br>广播调用所有提供者，任意一台报错则报错。<br>4.6 Failsafe<br>失败安全，出现异常时，直接忽略，常用在写审计日志。</li>
+<li>其他特点<br>5.1 使用微内核+插件技术，利用SPI(ServiceProviderInterface)技术+策略模式，使得Dubbo扩展性极强。<br>5.2 常用配置<br>dubbo:application, dubbo:registry, dubbo:protocol, dubbo:service, dubbo:reference  </li>
+<li>启动流程<br>6.1 服务容器负责启动，加载，运行服务提供者。<br>6.2 服务提供者在启动时，向注册中心注册自己提供的服务。<br>6.3 服务消费者在启动时，向注册中心订阅自己所需的服务。<br>6.4 注册中心返回服务提供者地址列表给消费者，如果有变更，注册中心将基于长连接推送变更数据给消费者。<br>6.5 服务消费者，从提供者地址列表中，基于软负载均衡算法，选一台提供者调用，如果调用失败，再选另一台。<br>6.6 服务消费者和提供者，在内存中累计调用次数和调用时间，定时每分钟发一次统计数据到监控中心。  </li>
+</ol>
+</blockquote>
+</li>
+<li><p>HSF(阿里)</p>
+</li>
+<li>pigeon(美团点评)</li>
+<li>rdsn(小米)</li>
+<li>motan(微博)</li>
+<li>gRPC(谷歌)</li>
+<li>thrift(脸书)</li>
+<li>tars(腾讯)</li>
+<li>brpc(百度)</li>
+<li>SpringCloud</li>
+</ol>
+<h3 id="2-MOM消息中间件"><a href="#2-MOM消息中间件" class="headerlink" title="2. MOM消息中间件"></a>2. MOM消息中间件</h3><ol>
+<li>RocketMQ(阿里)</li>
+<li>QService(微博)</li>
+<li>Kafka</li>
+<li><p>RabbitMQ</p>
+<blockquote>
+<ol>
+<li></li>
+</ol>
+</blockquote>
+</li>
+<li><p>ActiveMQ</p>
+</li>
+<li>ZeroMQ</li>
+<li>Redis</li>
+</ol>
+
                 <hr>
                 
 
@@ -199,7 +239,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-RPC服务框架"><span class="toc-text">1. RPC服务框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-MOM消息中间件"><span class="toc-text">2. MOM消息中间件</span></a></li></ol>
                 </div>
             </div>
         </div>
