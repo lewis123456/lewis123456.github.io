@@ -486,10 +486,15 @@
 </ol>
 </blockquote>
 </li>
-<li>电子商务风险控制</li>
-<li></li>
+<li>电子商务风险控制<blockquote>
+<ol>
+<li>风险<br>账户风险，买家风险，卖家风险，交易风险</li>
+<li>风控<br>规则引擎，统计模型</li>
 </ol>
-
+</blockquote>
+</li>
+</ol>
+<h3 id="9-淘宝网的架构演化案例分析"><a href="#9-淘宝网的架构演化案例分析" class="headerlink" title="9. 淘宝网的架构演化案例分析"></a>9. 淘宝网的架构演化案例分析</h3><h3 id="10-维基百科的高性能架构设计分析"><a href="#10-维基百科的高性能架构设计分析" class="headerlink" title="10. 维基百科的高性能架构设计分析"></a>10. 维基百科的高性能架构设计分析</h3><h3 id="11-海量分布式存储系统Doris的高可用架构设计分析"><a href="#11-海量分布式存储系统Doris的高可用架构设计分析" class="headerlink" title="11. 海量分布式存储系统Doris的高可用架构设计分析"></a>11. 海量分布式存储系统Doris的高可用架构设计分析</h3><h3 id="12-网购秒杀系统架构设计案例分析"><a href="#12-网购秒杀系统架构设计案例分析" class="headerlink" title="12. 网购秒杀系统架构设计案例分析"></a>12. 网购秒杀系统架构设计案例分析</h3><h3 id="13-大型网站典型故障案例分析"><a href="#13-大型网站典型故障案例分析" class="headerlink" title="13. 大型网站典型故障案例分析"></a>13. 大型网站典型故障案例分析</h3><h3 id="14-架构师领导艺术"><a href="#14-架构师领导艺术" class="headerlink" title="14. 架构师领导艺术"></a>14. 架构师领导艺术</h3><h3 id="15-网站架构师职场攻略"><a href="#15-网站架构师职场攻略" class="headerlink" title="15. 网站架构师职场攻略"></a>15. 网站架构师职场攻略</h3><h3 id="16-漫话网站架构师"><a href="#16-漫话网站架构师" class="headerlink" title="16. 漫话网站架构师"></a>16. 漫话网站架构师</h3><h3 id="附录A-大型网站架构技术一览"><a href="#附录A-大型网站架构技术一览" class="headerlink" title="附录A 大型网站架构技术一览"></a>附录A 大型网站架构技术一览</h3><h3 id="附录B-Web开发技术发展历程"><a href="#附录B-Web开发技术发展历程" class="headerlink" title="附录B Web开发技术发展历程"></a>附录B Web开发技术发展历程</h3>
                 <hr>
                 
 
@@ -520,7 +525,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-大型网站架构演进"><span class="toc-text">1. 大型网站架构演进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-大型网站结构模式"><span class="toc-text">2. 大型网站结构模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-大型网站核心架构要素"><span class="toc-text">3. 大型网站核心架构要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-瞬时响应：网站的高性能架构"><span class="toc-text">4. 瞬时响应：网站的高性能架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-网站的高可用架构"><span class="toc-text">5. 网站的高可用架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-永无止境：网站的伸缩性架构"><span class="toc-text">6. 永无止境：网站的伸缩性架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-随需应变：网站的可扩展架构"><span class="toc-text">7. 随需应变：网站的可扩展架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-固若金汤：网站的安全架构"><span class="toc-text">8. 固若金汤：网站的安全架构</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-大型网站架构演进"><span class="toc-text">1. 大型网站架构演进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-大型网站结构模式"><span class="toc-text">2. 大型网站结构模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-大型网站核心架构要素"><span class="toc-text">3. 大型网站核心架构要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-瞬时响应：网站的高性能架构"><span class="toc-text">4. 瞬时响应：网站的高性能架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-网站的高可用架构"><span class="toc-text">5. 网站的高可用架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-永无止境：网站的伸缩性架构"><span class="toc-text">6. 永无止境：网站的伸缩性架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-随需应变：网站的可扩展架构"><span class="toc-text">7. 随需应变：网站的可扩展架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-固若金汤：网站的安全架构"><span class="toc-text">8. 固若金汤：网站的安全架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-淘宝网的架构演化案例分析"><span class="toc-text">9. 淘宝网的架构演化案例分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-维基百科的高性能架构设计分析"><span class="toc-text">10. 维基百科的高性能架构设计分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-海量分布式存储系统Doris的高可用架构设计分析"><span class="toc-text">11. 海量分布式存储系统Doris的高可用架构设计分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-网购秒杀系统架构设计案例分析"><span class="toc-text">12. 网购秒杀系统架构设计案例分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-大型网站典型故障案例分析"><span class="toc-text">13. 大型网站典型故障案例分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-架构师领导艺术"><span class="toc-text">14. 架构师领导艺术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-网站架构师职场攻略"><span class="toc-text">15. 网站架构师职场攻略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-漫话网站架构师"><span class="toc-text">16. 漫话网站架构师</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#附录A-大型网站架构技术一览"><span class="toc-text">附录A 大型网站架构技术一览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#附录B-Web开发技术发展历程"><span class="toc-text">附录B Web开发技术发展历程</span></a></li></ol>
                 </div>
             </div>
         </div>
