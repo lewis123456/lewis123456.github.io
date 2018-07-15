@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        计算机行业职业发展路线的一些思考｜longman&#39;s blog
+        从Paxos到Zookeeper分布式一致性原理与实践｜longman&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://longman.kim/2018/07/15/计算机行业职业发展路线的一些思考/">
+    <link rel="canonical" href="http://longman.kim/2018/07/15/从Paxos到Zookeeper分布式一致性原理与实践/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,7 +145,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>计算机行业职业发展路线的一些思考</h1>
+                    <h1>从Paxos到Zookeeper分布式一致性原理与实践</h1>
                     
                     <span class="meta">
                          作者 lewis longman
@@ -162,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            计算机行业职业发展路线的一些思考
+            从Paxos到Zookeeper分布式一致性原理与实践
         </span>
     </div>
 </header>
@@ -173,38 +173,74 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>想想自己在计算机行业待了快9年了（本科4年，研究生3年，工作2年），对这个行业却只能说是初步了解。读书期间很抵触做网站，但自己却一个网站都没有搭起来过。那时候很崇拜算法，但没有深入学习，算法也是普通人的水平。现在我工作2年了，从事网站后台开发，却依然是菜鸟级别。技术水平菜，为人处世又不成熟，所以过得让自己不开心，也让身边的人不开心。自命清高，眼高手低，也许说的就是我这种人吧。努力想改变这种状态，却依然在网络上寻找灵丹妙药。其实网上有很多建议，但可能只针对部分人有用，因为每个人自身的情况，所处的环境都不相同。小人常立志，圣人立长志，这句话是从亲人身上学到的。人应该有个目标，然后有自制力的执行自己的目标。有志者，事竟成，破釜沉舟，百二秦关终属楚，苦心人，天不负，卧薪尝胆，三千越甲可吞吴。</p>
-<h3 id="2-行业的预见"><a href="#2-行业的预见" class="headerlink" title="2. 行业的预见"></a>2. 行业的预见</h3><p>我预见计算机行业未来将只会存在设计师、全栈开发工程师、算法工程师、硬件工程师。  </p>
+                <h3 id="1-分布式架构"><a href="#1-分布式架构" class="headerlink" title="1. 分布式架构"></a>1. 分布式架构</h3><ol>
+<li>从集中式到分布式<blockquote>
 <ol>
-<li><strong><em>设计师</em></strong><br>人，希望自己独一无二，希望自己美丽漂亮。对美的追求植根于所有人的心中，设计师是将思想化为现实的桥梁，他们需要灵感。设计师就是艺术家，艺术家是为了洗涤人的精神世界，无形而威力巨大。  </li>
-<li><strong><em>全栈开发</em></strong><br>随着技术的不断发展，网站开发的需求量会逐渐减少。到最后，会被云计算公司，类似于亚马逊、微软、阿里巴巴这样的公司所垄断。普通的前端后端开发工程师将会非常被动，因为普通公司的网站都交给那些大型巨头做了，中小型公司不需要自己的IT部门。以后对于普通网站开发的需求，应该是中大型公司，他们要求全栈开发并且对某个行业业务深入了解的人，即会IT技能的业务专家。  </li>
-<li><strong><em>算法工程师</em></strong><br>程序=算法+数据结构，算法是计算机的精髓。从通用的算法（排序，查找等），到AI算法（推荐、学习），算法一直阐述着计算机科学的未来发展之路。  </li>
-<li><strong><em>硬件工程师</em></strong><br>软硬结合，传感器，物联网。从芯片，到外围电路，未来是软硬结合的世界。</li>
+<li>集中式的特点<br>IBM的System/360系列大型主机是集中式计算机系统架构的代表，部署结构简单，单机性能卓越。  </li>
+<li>分布式的特点<br>分布性，多台计算机在空间上随意分布，且机器的分布情况也会随时变动。<br>对等性，计算机之间没有主从之分，都是对等的。副本是分布式系统对数据和服务提供的一种冗余方式，数据副本解决数据丢失问题，服务副本使每个节点都能处理请求。<br>并发性，并发操作共享资源。缺乏全局时钟，很难定义两个事件究竟谁先谁后。故障总是会发生，一条黄金定理是设计时考虑到的异常情况一定会发生。    </li>
+<li>分布式环境的各种问题<br>通信异常，网络光纤、路由器和DNS等硬件设备不可用导致通信异常，系统之间存在延时等。<br>网络分区，分布式系统中只有部分节点能够正常通信，而另一些节点不能，俗称脑裂，存在分布式一致性问题。<br>三态，成功、失败与超时，其中超时情况下无法确定请求是否成功。<br>节点故障，组成分布式系统的服务器节点出现的宕机或者僵死现象。</li>
 </ol>
-<h3 id="3-个人的发展之路"><a href="#3-个人的发展之路" class="headerlink" title="3. 个人的发展之路"></a>3. 个人的发展之路</h3><ol>
-<li>初级开发工程师  </li>
-<li>中级开发工程师</li>
-<li>高级开发工程师  </li>
-<li>组长  </li>
-<li>室经理  </li>
-<li>部门经理</li>
-<li>CTO  </li>
+</blockquote>
+</li>
 </ol>
-
+<ol start="2">
+<li>从ACID到CAP/BASE  <blockquote>
+<ol>
+<li>ACID<br>事务的四个特性。原子性，要么全部成功执行，要么全部不执行。一致性，数据库必须从一个一致性状态转变到另一个一致性状态，不存在事务对数据库的修改一部分已写入另一部没有。隔离性，并发的事务不能相互干扰。持久性，即事务一旦提交，对数据库中对于数据的状态变更就应该是永久性的。</li>
+<li>事务的隔离性<br>未授权读取，最低级别，允许脏读。A事务对数据做了一系列修改但未提交，B事务可以看到数据这一系列的中间值。<br>授权读取，与未授权读取的区别是只允许获取已经被提交的数据，授权读取允许不可重复读。<br>可重复读取，保证在事务的处理过程中，多次读取同一个数据，其值都和事务开始时刻一致的，禁止了不可重复读取(一个事务中多次读取的数据不一样)和脏读（提交前读取，读取后发生回滚），但会出现幻读（读取之后另个一事务插入了新数据）。<br>串行化，要求所有的事务都被串行化执行，不能并发。<br>一般的做法是设置成授权读取，加上乐观锁或者悲观锁。    </li>
+<li>分布式事务<br>事务的参与者、支持事务的服务器、资源服务器以及事务管理器分别位于分布式系统的不同节点之上。  </li>
+<li>CAP和BASE理论<br>CAP理论告诉我们一个分布式系统不可能同时满足一致性（所有的数据都能都得到最新的值）、可用性（在有限时间内返回结果）和分区容错性（任何网络分区有故障仍然能提供一致性和可用性服务），最多只能同时满足其中的两项，其中分区容错性是必须保证的，只需要在一致性和可用性之间寻求平衡。<br>BASE，基本可用（损失部分功能，损失响应时间），弱状态（存在中间状态），最终一致性（经过一段时间后数据一致）。最终一致性的5类变体，因果一致性、读己之所写、会话一致性、单调读一致性、单调写一致性。</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h3 id="2-一致性协议"><a href="#2-一致性协议" class="headerlink" title="2. 一致性协议"></a>2. 一致性协议</h3><ol>
+<li>2PC与3PC<blockquote>
+<ol>
+<li>2PC  </li>
+<li>3PC  </li>
+</ol>
+</blockquote>
+</li>
+<li>Paxos算法</li>
+</ol>
+<h3 id="3-Paxos的工程实践"><a href="#3-Paxos的工程实践" class="headerlink" title="3. Paxos的工程实践"></a>3. Paxos的工程实践</h3><ol>
+<li>Chubby</li>
+<li>Hypertable</li>
+</ol>
+<h3 id="4-Zookeeper与Paxos"><a href="#4-Zookeeper与Paxos" class="headerlink" title="4. Zookeeper与Paxos"></a>4. Zookeeper与Paxos</h3><ol>
+<li>初识Zookeeper</li>
+<li>Zookeeper的ZAB协议</li>
+</ol>
+<h3 id="5-使用Zookeeper"><a href="#5-使用Zookeeper" class="headerlink" title="5. 使用Zookeeper"></a>5. 使用Zookeeper</h3><h3 id="6-Zookeeper的典型应用场景"><a href="#6-Zookeeper的典型应用场景" class="headerlink" title="6. Zookeeper的典型应用场景"></a>6. Zookeeper的典型应用场景</h3><h3 id="7-Zookeeper技术内幕"><a href="#7-Zookeeper技术内幕" class="headerlink" title="7. Zookeeper技术内幕"></a>7. Zookeeper技术内幕</h3><ol>
+<li>系统模型  </li>
+<li>序列化与协议</li>
+<li>客户端</li>
+<li>会话</li>
+<li>服务器启动</li>
+<li>Leader选举<blockquote>
+<ol>
+<li>Leader  </li>
+<li>Follower  </li>
+<li>Observer  </li>
+<li>集群间消息通信  </li>
+</ol>
+</blockquote>
+</li>
+<li>各服务器角色介绍</li>
+<li>请求处理</li>
+<li>数据与存储</li>
+</ol>
+<h3 id="8-Zookeeper运维"><a href="#8-Zookeeper运维" class="headerlink" title="8. Zookeeper运维"></a>8. Zookeeper运维</h3>
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2018/07/15/从Paxos到Zookeeper分布式一致性原理与实践/" data-toggle="tooltip" data-placement="top"
-                           title="从Paxos到Zookeeper分布式一致性原理与实践">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2018/07/12/国内主流互联网公司的RPC和MOM/" data-toggle="tooltip" data-placement="top"
-                           title="国内主流互联网公司的RPC和MOM">Next Post &rarr;</a>
+                        <a href="/2018/07/15/计算机行业职业发展路线的一些思考/" data-toggle="tooltip" data-placement="top"
+                           title="计算机行业职业发展路线的一些思考">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -221,7 +257,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-前言"><span class="toc-text">1. 前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-行业的预见"><span class="toc-text">2. 行业的预见</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-个人的发展之路"><span class="toc-text">3. 个人的发展之路</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-分布式架构"><span class="toc-text">1. 分布式架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-一致性协议"><span class="toc-text">2. 一致性协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Paxos的工程实践"><span class="toc-text">3. Paxos的工程实践</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Zookeeper与Paxos"><span class="toc-text">4. Zookeeper与Paxos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-使用Zookeeper"><span class="toc-text">5. 使用Zookeeper</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Zookeeper的典型应用场景"><span class="toc-text">6. Zookeeper的典型应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Zookeeper技术内幕"><span class="toc-text">7. Zookeeper技术内幕</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-Zookeeper运维"><span class="toc-text">8. Zookeeper运维</span></a></li></ol>
                 </div>
             </div>
         </div>
