@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        国内主流互联网公司的RPC和MOM｜longman&#39;s blog
+        计算机行业职业发展路线的一些思考｜longman&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://longman.kim/2018/07/12/国内主流互联网公司的RPC和MOM/">
+    <link rel="canonical" href="http://longman.kim/2018/07/15/计算机行业职业发展路线的一些思考/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>国内主流互联网公司的RPC和MOM</h1>
+                    <h1>计算机行业职业发展路线的一些思考</h1>
                     
                     <span class="meta">
                          作者 lewis longman
                         <span>
-                          日期 2018-07-12
+                          日期 2018-07-15
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -162,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            国内主流互联网公司的RPC和MOM
+            计算机行业职业发展路线的一些思考
         </span>
     </div>
 </header>
@@ -173,45 +173,22 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="1-RPC服务框架"><a href="#1-RPC服务框架" class="headerlink" title="1. RPC服务框架"></a>1. RPC服务框架</h3><ol>
-<li><p>Dubbo(阿里)</p>
-<blockquote>
+                <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>想想自己在计算机行业待了快9年了（本科4年，研究生3年，工作2年），对这个行业却只能说是初步了解。读书期间很抵触做网站，但自己却一个网站都没有搭起来过。那时候很崇拜算法，但没有深入学习，算法也是普通人的水平。现在我工作2年了，从事网站后台开发，却依然是菜鸟级别。技术水平菜，为人处世又不成熟，所以过得让自己不开心，也让身边的人不开心。自命清高，眼高手低，也许说的就是我这种人吧。努力想改变这种状态，却依然在网络上寻找灵丹妙药。其实网上有很多建议，但可能只针对部分人有用，因为每个人自身的情况，所处的环境都不相同。小人常立志，圣人立长志，这句话是从亲人身上学到的。人应该有个目标，然后有自制力的执行自己的目标。有志者，事竟成，破釜沉舟，百二秦关终属楚，苦心人，天不负，卧薪尝胆，三千越甲可吞吴。</p>
+<h3 id="2-行业的预见"><a href="#2-行业的预见" class="headerlink" title="2. 行业的预见"></a>2. 行业的预见</h3><p>我预见计算机行业未来将只会存在设计师、全栈开发工程师、算法工程师、硬件工程师。  </p>
 <ol>
-<li>架构<br>Provider(Container), Conumer, Registry, Monitor</li>
-<li>通讯协议<br>2.1 dubbo的特性是连接个数单连接，连接方式长连接，传输协议TCP，传输方式NIO异步通讯，序列化Hessian二进制序列化，适用范围数据包小，消费者比提供者个数多，dubbo不适合传输大数据量的服务。<br>2.2 rmi的特性是多连接，短连接，TCP，同步传输，Java标准二进制序列化，数据包大小混合，消费者和提供者个数差不多。<br>2.3 hessian的特性是多连接，短连接，http，同步传输，hessian二进制序列化，数据包较大，提供者比消费者个数多，可传文件。<br>2.4 http的特性是多连接，短连接，http，同步传输，表单序列化，数据包大小混合，提供者比消费者个数多，不支持传文件。<br>2.5 webservice的特性是多连接，短连接，http，同步传输，SOAP文本序列化。<br>2.6 其他协议thrift、memcached、redis、rest</li>
-<li>注册中心<br>3.1 Zookeeper,临时节点原理<br>3.2 Multicast<br>3.3 Redis<br>3.4 Simple</li>
-<li>集群容错<br>4.1 FailOver<br>读操作的默认方式，失败自动切换，重试其他服务。<br>4.2 FailFast<br>写操作的默认方法，快速失败，只发起一次调用，失败立即报错。<br>4.3 FailBack<br>消息通知，失败自动恢复，记录失败请求，定时重发。<br>4.4 Forking<br>并行调用多个服务器，只要一个成功即可。<br>4.5 Broadcast<br>广播调用所有提供者，任意一台报错则报错。<br>4.6 Failsafe<br>失败安全，出现异常时，直接忽略，常用在写审计日志。</li>
-<li>其他特点<br>5.1 使用微内核+插件技术，利用SPI(ServiceProviderInterface)技术+策略模式，使得Dubbo扩展性极强。<br>5.2 常用配置<br>dubbo:application, dubbo:registry, dubbo:protocol, dubbo:service, dubbo:reference  </li>
-<li>启动流程<br>6.1 服务容器负责启动，加载，运行服务提供者。<br>6.2 服务提供者在启动时，向注册中心注册自己提供的服务。<br>6.3 服务消费者在启动时，向注册中心订阅自己所需的服务。<br>6.4 注册中心返回服务提供者地址列表给消费者，如果有变更，注册中心将基于长连接推送变更数据给消费者。<br>6.5 服务消费者，从提供者地址列表中，基于软负载均衡算法，选一台提供者调用，如果调用失败，再选另一台。<br>6.6 服务消费者和提供者，在内存中累计调用次数和调用时间，定时每分钟发一次统计数据到监控中心。  </li>
+<li><strong><em>设计师</em></strong><br>人，希望自己独一无二，希望自己美丽漂亮。对美的追求植根于所有人的心中，设计师是将思想化为现实的桥梁，他们需要灵感。设计师就是艺术家，艺术家是为了洗涤人的精神世界，无形而威力巨大。  </li>
+<li><strong><em>全栈开发</em></strong><br>随着技术的不断发展，网站开发的需求量会逐渐减少。到最后，会被云计算公司，类似于亚马逊、微软、阿里巴巴这样的公司所垄断。普通的前端后端开发工程师将会非常被动，因为普通公司的网站都交给那些大型巨头做了，中小型公司不需要自己的IT部门。以后对于普通网站开发的需求，应该是中大型公司，他们要求全栈开发并且对某个行业业务深入了解的人，即会IT技能的业务专家。  </li>
+<li><strong><em>算法工程师</em></strong><br>程序=算法+数据结构，算法是计算机的精髓。从通用的算法（排序，查找等），到AI算法（推荐、学习），算法一直阐述着计算机科学的未来发展之路。  </li>
+<li><strong><em>硬件工程师</em></strong><br>软硬结合，传感器，物联网。从芯片，到外围电路，未来是软硬结合的世界。</li>
 </ol>
-</blockquote>
-</li>
-<li><p>HSF(阿里)</p>
-</li>
-<li>pigeon(美团点评)</li>
-<li>rdsn(小米)</li>
-<li>motan(微博)</li>
-<li>gRPC(谷歌)</li>
-<li>thrift(脸书)</li>
-<li>tars(腾讯)</li>
-<li>brpc(百度)</li>
-<li>SpringCloud</li>
-</ol>
-<h3 id="2-MOM消息中间件"><a href="#2-MOM消息中间件" class="headerlink" title="2. MOM消息中间件"></a>2. MOM消息中间件</h3><ol>
-<li>RocketMQ(阿里)</li>
-<li>QService(微博)</li>
-<li>Kafka</li>
-<li><p>RabbitMQ</p>
-<blockquote>
-<ol>
-<li></li>
-</ol>
-</blockquote>
-</li>
-<li><p>ActiveMQ</p>
-</li>
-<li>ZeroMQ</li>
-<li>Redis</li>
+<h3 id="3-个人的发展之路"><a href="#3-个人的发展之路" class="headerlink" title="3. 个人的发展之路"></a>3. 个人的发展之路</h3><ol>
+<li>初级开发工程师  </li>
+<li>中级开发工程师</li>
+<li>高级开发工程师  </li>
+<li>组长  </li>
+<li>室经理  </li>
+<li>部门经理</li>
+<li>CTO  </li>
 </ol>
 
                 <hr>
@@ -219,15 +196,10 @@
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2018/07/15/计算机行业职业发展路线的一些思考/" data-toggle="tooltip" data-placement="top"
-                           title="计算机行业职业发展路线的一些思考">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2018/07/11/大型网站技术架构-核心原理与案例分析/" data-toggle="tooltip" data-placement="top"
-                           title="大型网站技术架构-核心原理与案例分析">Next Post &rarr;</a>
+                        <a href="/2018/07/12/国内主流互联网公司的RPC和MOM/" data-toggle="tooltip" data-placement="top"
+                           title="国内主流互联网公司的RPC和MOM">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -244,7 +216,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-RPC服务框架"><span class="toc-text">1. RPC服务框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-MOM消息中间件"><span class="toc-text">2. MOM消息中间件</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-前言"><span class="toc-text">1. 前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-行业的预见"><span class="toc-text">2. 行业的预见</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-个人的发展之路"><span class="toc-text">3. 个人的发展之路</span></a></li></ol>
                 </div>
             </div>
         </div>
