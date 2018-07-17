@@ -173,58 +173,163 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="1-源码分析"><a href="#1-源码分析" class="headerlink" title="1. 源码分析"></a>1. 源码分析</h3><h4 id="1-常用设计模式"><a href="#1-常用设计模式" class="headerlink" title="1. 常用设计模式"></a>1. 常用设计模式</h4><ol>
-<li>Proxy代理模式</li>
-<li>Factory工厂模式</li>
-<li>Singleton单例模式</li>
-<li>Delegate委派模式</li>
-<li>Strategy策略模式</li>
-<li>Prototype原型模式</li>
-<li>Template模板模式</li>
-</ol>
-<h4 id="2-Spring"><a href="#2-Spring" class="headerlink" title="2. Spring"></a>2. Spring</h4><ol>
-<li><p>Beans</p>
+                <h3 id="1-源码分析"><a href="#1-源码分析" class="headerlink" title="1. 源码分析"></a>1. 源码分析</h3><h5 id="1-常用设计模式"><a href="#1-常用设计模式" class="headerlink" title="1. 常用设计模式"></a>1. 常用设计模式</h5><ol>
+<li><p>Proxy代理模式</p>
 <blockquote>
-<p>1 接口实例化<br>2 代理Bean操作</p>
+<p>为其他对象提供一种代理以控制对这个对象的访问，例如Spring AOP。</p>
 </blockquote>
 </li>
-<li><p>Context</p>
+<li><p>Factory工厂模式</p>
 <blockquote>
-<p>1 IOC容器设计原理及高级特性<br>2 AOP设计原理<br>3 FactoryBean与BeanFactory</p>
+<p>定义一个创建对象的接口，让其子类自己决定实例化哪一个工厂类，工厂模式使其创建过程延迟到子类进行，例如数据库访问。</p>
 </blockquote>
 </li>
-<li><p>Transaction</p>
+<li><p>Singleton单例模式</p>
 <blockquote>
-<p>1 声明式事务底层原理<br>2 Spring事务处理机制<br>3 事务的传播与监控<br>4 基于Springjdbc手写orm框架</p>
-</blockquote>
-</li>
-<li><p>MVC</p>
-<blockquote>
-<p>1 MVC原理<br>2 与IOC容器整合的原理<br>3 HandlerMapping实现原理<br>4 HandlerAdapter实现原理<br>5 ViewResolver实现原理<br>6 Controller调用原理<br>7 动态参数匹配原理<br>8 手写实现SpringMVC框架</p>
+<p>保证一个类仅有一个实例，并提供一个访问它的全局访问点。</p>
 </blockquote>
 </li>
 </ol>
-<h4 id="3-Mybatis"><a href="#3-Mybatis" class="headerlink" title="3. Mybatis"></a>3. Mybatis</h4><ol>
+<ol start="4">
+<li><p>Delegate委派模式</p>
+<blockquote>
+</blockquote>
+</li>
+<li><p>Strategy策略模式</p>
+<blockquote>
+<p>定义一系列的算法，把它们一个个封装起来，并且使它们可互相替换。</p>
+</blockquote>
+</li>
+<li><p>Prototype原型模式</p>
+<blockquote>
+<p>用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。</p>
+</blockquote>
+</li>
+<li><p>Template模板模式</p>
+<blockquote>
+<p>定义一个操作中的算法的骨架，而将一些步骤延迟到子类。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。</p>
+</blockquote>
+</li>
+</ol>
+<h5 id="2-Spring"><a href="#2-Spring" class="headerlink" title="2. Spring"></a>2. Spring</h5><ol>
+<li>Beans<blockquote>
+<p>1 接口实例化<br>构造函数、静态工厂、实例工厂<br>BeanFactory getBean() -&gt; 默认构造函数 -&gt; 属性值注入 -&gt; 实现了InitializingBean接口调用afterPropertiesSet() -&gt; init-method</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>2 代理Bean操作<br>JDK的Proxy代理类，CGLIB</p>
+</blockquote>
+<ol start="2">
+<li>Context<blockquote>
+<p>1 IOC容器设计原理及高级特性<br>所有的类都会在spring容器中登记，告诉spring你是个什么东西，你需要什么东西，然后spring会在系统运行到适当的时候，把你要的东西主动给你，同时也把你交给其他需要你的东西。所有的类的创建、销毁都由 spring来控制，也就是说控制对象生存周期的不再是引用它的对象，而是spring。对于某个具体的对象而言，以前是它控制其他对象，现在是所有对象都被spring控制，所以这叫控制反转。IoC的一个重点是在系统运行中，动态的向某个对象提供它所需要的其他对象。这一点是通过DI（Dependency Injection，依赖注入）来实现的。反射（reflection）允许程序在运行的时候动态的生成对象、执行对象的方法、改变对象的属性，spring就是通过反射来实现注入的。</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>2 AOP设计原理<br>JDK的Proxy代理类，CGLIB</p>
+</blockquote>
+<blockquote>
+<p>3 FactoryBean与BeanFactory<br>BeanFactory是IOC最基本的容器，负责生产和管理bean，例如DefaultListableBeanFactory。<br>FactoryBean是一个接口，当容器实现了FactoryBean之后，通过getBean获取到的Bean对象，是实现类中的getObject方法返回的对象。</p>
+</blockquote>
+<ol start="3">
+<li>Transaction<blockquote>
+<p>1 声明式事务底层原理<br>@Transaction注解，传播行为，隔离级别，是否只读，事务超时，回滚规则。事务管理的切面属于<a href="aop:around" target="_blank" rel="noopener">aop:around</a>即AOP环绕类型的切面。</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>2 Spring事务处理机制</p>
+</blockquote>
+<blockquote>
+<p>3 事务的传播与监控<br>PROPAGATION_REQUIRED<br>默认传播机制，支持当前事务，如果没有，则新建一个事务。<br>PROPAGATION_REQUIRED_NEW<br>新建事务，如果当前存在事务，把当前事务挂起。新建的事务与被挂起的事务没有任何关系，是独立的两个事务，外层事务失败回滚之后，不能回滚内层事务执行的结果，内层事务失败抛出异常，外层事务捕获，也可以不处理回滚操作。<br>PROPAGATION_SUPPORTS<br>支持当前事务，如果没有事务，就以非事务方式执行。<br>PROPAGATION_MANDATORY<br>支持当前事务，如果当前没有事务，就抛出异常。<br>PROPAGATION_NOT_SUPPORTED<br>以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。<br>PROPAGATION_NEVER<br>以非事务方式执行操作，如果当前存在事务，则抛出异常。<br>PROPAGATION_NESTED<br>如果一个事务存在，则运行在一个嵌套的事务中。</p>
+</blockquote>
+<blockquote>
+<p>4 基于Springjdbc手写orm框架</p>
+</blockquote>
+<ol start="4">
+<li>MVC<blockquote>
+<p>1 MVC原理<br>模型，视图，控制器。</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>2 与IOC容器整合的原理</p>
+</blockquote>
+<blockquote>
+<p>3 HandlerMapping实现原理<br>负责定位</p>
+</blockquote>
+<blockquote>
+<p>4 HandlerAdapter实现原理<br>负责调用</p>
+</blockquote>
+<blockquote>
+<p>5 ViewResolver实现原理<br>视图解析</p>
+</blockquote>
+<blockquote>
+<p>6 Controller调用原理</p>
+</blockquote>
+<blockquote>
+<p>7 动态参数匹配原理</p>
+</blockquote>
+<blockquote>
+<p>8 手写实现SpringMVC框架<br>请求-&gt;DispatcherServlet-&gt;处理器映射-&gt;控制器-&gt;模式及逻辑视图名-&gt;视图解析器-&gt;视图-&gt;响应</p>
+</blockquote>
+<h5 id="3-Mybatis"><a href="#3-Mybatis" class="headerlink" title="3. Mybatis"></a>3. Mybatis</h5><ol>
 <li>代码自动生成器：Generator</li>
-<li>Mybatis下1对多、多对多嵌套结果、嵌套查询</li>
-<li>一级缓存、二级缓存使用场景及选择策略</li>
-<li>Mybatis与Spring集成Spring-Mybatis分析</li>
-<li>Spring集成下的SqlSession与Mapper</li>
-<li>Mybatis的事务</li>
-<li>分析Mybatis的动态代理的真正实现</li>
-<li>一步一步手写实现Mybatis1.0到2.0</li>
+<li><p>Mybatis下1对多、多对多嵌套结果、嵌套查询</p>
+</li>
+<li><p>一级缓存、二级缓存使用场景及选择策略</p>
+<blockquote>
+<p>在同一个sqlSession中两次执行相同的sql语句，第一次执行完毕会将数据库中查询的数据写到缓存（内存），第二次会从缓存中获取数据将不再从数据库查询，从而提高查询效率。Mybatis默认开启一级缓存。二级缓存是mapper级别的缓存，多个SqlSession去操作同一个Mapper的sql语句，多个SqlSession去操作数据库得到数据会存在二级缓存区域，多个SqlSession可以共用二级缓存，二级缓存是跨SqlSession的。如果sqlSession去执行commit操作（执行插入、更新、删除），清空SqlSession中的一级缓存。二级缓存与一级缓存区别，二级缓存的范围更大，多个sqlSession可以共享一个Mapper的二级缓存区域。</p>
+</blockquote>
+</li>
+<li><p>Mybatis与Spring集成Spring-Mybatis分析</p>
+</li>
+<li><p>Spring集成下的SqlSession与Mapper</p>
+</li>
+<li><p>Mybatis的事务</p>
+</li>
+<li><p>分析Mybatis的动态代理的真正实现</p>
+</li>
+<li><p>一步一步手写实现Mybatis1.0到2.0</p>
+</li>
 </ol>
-<h3 id="2-并发编程"><a href="#2-并发编程" class="headerlink" title="2. 并发编程"></a>2. 并发编程</h3><h4 id="1-Java内存模型"><a href="#1-Java内存模型" class="headerlink" title="1. Java内存模型"></a>1. Java内存模型</h4><ol>
-<li>线程通信</li>
+<p>###2. 并发编程</p>
+<h5 id="1-Java内存模型"><a href="#1-Java内存模型" class="headerlink" title="1. Java内存模型"></a>1. Java内存模型</h5><ol>
+<li>线程通信<blockquote>
+<ol>
+<li>共享内存<br>线程之间通过写-读内存中的公共状态  </li>
 <li>消息传递</li>
 </ol>
-<h4 id="2-内存模型"><a href="#2-内存模型" class="headerlink" title="2. 内存模型"></a>2. 内存模型</h4><ol>
-<li>重排序</li>
-<li>顺序一致性</li>
-<li>Happen-Before</li>
-<li>As-If-Serial</li>
+</blockquote>
+</li>
 </ol>
-<h4 id="3-Synchronized"><a href="#3-Synchronized" class="headerlink" title="3. Synchronized"></a>3. Synchronized</h4><ol>
+<h5 id="2-内存模型"><a href="#2-内存模型" class="headerlink" title="2. 内存模型"></a>2. 内存模型</h5><ol>
+<li><p>重排序</p>
+<blockquote>
+<ol>
+<li>编译器优化的重排序</li>
+<li>处理器重排序，指令级并行技术ILP</li>
+<li>内存系统的重排序</li>
+</ol>
+</blockquote>
+</li>
+<li><p>顺序一致性</p>
+</li>
+</ol>
+<ol start="3">
+<li><p>Happen-Before</p>
+<blockquote>
+<p>如果一个操作执行的结果需要对另一个操作可见，那么这两个操作之间必须存在happens-before关系。两个操作之间具有happens-before关系，并不意味着前一个操作必须要在后一个操作之前执行！happens-before仅仅要求前一个操作（执行的结果）对后一个操作可见，且前一个操作按顺序排在第二个操作之前。</p>
+</blockquote>
+</li>
+<li><p>As-If-Serial</p>
+<blockquote>
+<p>不管怎么重排序（编译器和处理器为了提高并行度），（单线程）程序的执行结果不会改变。</p>
+</blockquote>
+</li>
+</ol>
+<h5 id="3-Synchronized"><a href="#3-Synchronized" class="headerlink" title="3. Synchronized"></a>3. Synchronized</h5><ol>
 <li>同步、重量级锁</li>
 <li>Syncronized原理</li>
 <li>锁优化<blockquote>
@@ -237,17 +342,17 @@
 </blockquote>
 </li>
 </ol>
-<h4 id="4-Volatile"><a href="#4-Volatile" class="headerlink" title="4. Volatile"></a>4. Volatile</h4><ol>
+<h5 id="4-Volatile"><a href="#4-Volatile" class="headerlink" title="4. Volatile"></a>4. Volatile</h5><ol>
 <li>Volatile实现机制</li>
 <li>内存语义</li>
 <li>内存模型</li>
 </ol>
-<h4 id="5-DCL"><a href="#5-DCL" class="headerlink" title="5. DCL"></a>5. DCL</h4><ol>
+<h5 id="5-DCL"><a href="#5-DCL" class="headerlink" title="5. DCL"></a>5. DCL</h5><ol>
 <li>单例模式</li>
 <li>DCL</li>
 <li>解决方案</li>
 </ol>
-<h4 id="6-并发基础"><a href="#6-并发基础" class="headerlink" title="6. 并发基础"></a>6. 并发基础</h4><ol>
+<h5 id="6-并发基础"><a href="#6-并发基础" class="headerlink" title="6. 并发基础"></a>6. 并发基础</h5><ol>
 <li><p>AQS</p>
 <blockquote>
 <ol>
@@ -267,21 +372,21 @@
 </blockquote>
 </li>
 </ol>
-<h4 id="7-锁"><a href="#7-锁" class="headerlink" title="7. 锁"></a>7. 锁</h4><ol>
+<h5 id="7-锁"><a href="#7-锁" class="headerlink" title="7. 锁"></a>7. 锁</h5><ol>
 <li>ReentrantLock</li>
 <li>ReentrantReadWriteLock</li>
 <li>Condition</li>
 </ol>
-<h4 id="8-并发工具类"><a href="#8-并发工具类" class="headerlink" title="8. 并发工具类"></a>8. 并发工具类</h4><ol>
+<h5 id="8-并发工具类"><a href="#8-并发工具类" class="headerlink" title="8. 并发工具类"></a>8. 并发工具类</h5><ol>
 <li>CyclicBarrier</li>
 <li>CountdownLatch</li>
 <li>Semphore</li>
 </ol>
-<h4 id="9-并发集合"><a href="#9-并发集合" class="headerlink" title="9. 并发集合"></a>9. 并发集合</h4><ol>
+<h5 id="9-并发集合"><a href="#9-并发集合" class="headerlink" title="9. 并发集合"></a>9. 并发集合</h5><ol>
 <li>ConcurrentHashMap</li>
 <li>ConcurrentLinkedQueue</li>
 </ol>
-<h4 id="10-原子操作"><a href="#10-原子操作" class="headerlink" title="10. 原子操作"></a>10. 原子操作</h4><ol>
+<h5 id="10-原子操作"><a href="#10-原子操作" class="headerlink" title="10. 原子操作"></a>10. 原子操作</h5><ol>
 <li><p>基本类型</p>
 <blockquote>
 <ol>
@@ -309,17 +414,19 @@
 </blockquote>
 </li>
 </ol>
-<h4 id="11-线程池"><a href="#11-线程池" class="headerlink" title="11. 线程池"></a>11. 线程池</h4><ol>
+<h5 id="11-线程池"><a href="#11-线程池" class="headerlink" title="11. 线程池"></a>11. 线程池</h5><ol>
 <li>Executor</li>
 <li>ThreadPoolExecutor</li>
 <li>Callable和Future</li>
 <li>ScheduledExecutorService</li>
 </ol>
-<h4 id="12-其他"><a href="#12-其他" class="headerlink" title="12. 其他"></a>12. 其他</h4><ol>
+<h5 id="12-其他"><a href="#12-其他" class="headerlink" title="12. 其他"></a>12. 其他</h5><ol>
 <li>ThreadLocal</li>
 <li>Fork/Join</li>
 </ol>
-<h3 id="3-性能调优"><a href="#3-性能调优" class="headerlink" title="3. 性能调优"></a>3. 性能调优</h3><h3 id="4-分布式架构"><a href="#4-分布式架构" class="headerlink" title="4. 分布式架构"></a>4. 分布式架构</h3><h4 id="1-漫谈分布式架构"><a href="#1-漫谈分布式架构" class="headerlink" title="1. 漫谈分布式架构"></a>1. 漫谈分布式架构</h4><ol>
+<p>###3. 性能调优</p>
+<p>###4. 分布式架构</p>
+<h5 id="1-漫谈分布式架构"><a href="#1-漫谈分布式架构" class="headerlink" title="1. 漫谈分布式架构"></a>1. 漫谈分布式架构</h5><ol>
 <li>初识分布式架构及意义</li>
 <li>如何把应用从单机扩展到分布式</li>
 <li><p>构建分布式架构最重要因素</p>
@@ -347,7 +454,7 @@
 </blockquote>
 </li>
 </ol>
-<h4 id="2-分布式架构策略-分而治之"><a href="#2-分布式架构策略-分而治之" class="headerlink" title="2. 分布式架构策略-分而治之"></a>2. 分布式架构策略-分而治之</h4><ol>
+<h5 id="2-分布式架构策略-分而治之"><a href="#2-分布式架构策略-分而治之" class="headerlink" title="2. 分布式架构策略-分而治之"></a>2. 分布式架构策略-分而治之</h5><ol>
 <li>从简到难，从网络通信探究分布式通信的原理</li>
 <li>基于消息方式的系统间通信</li>
 <li>理解通信协议传输过程中的序列化与反序列化机制</li>
@@ -391,7 +498,7 @@
 </blockquote>
 </li>
 </ol>
-<h4 id="3-分布式架构-中间件"><a href="#3-分布式架构-中间件" class="headerlink" title="3. 分布式架构-中间件"></a>3. 分布式架构-中间件</h4><ol>
+<h5 id="3-分布式架构-中间件"><a href="#3-分布式架构-中间件" class="headerlink" title="3. 分布式架构-中间件"></a>3. 分布式架构-中间件</h5><ol>
 <li><p>分布式消息通信</p>
 <blockquote>
 <ol>
@@ -483,7 +590,7 @@
 </blockquote>
 </li>
 </ol>
-<h4 id="4-分布式解决方案"><a href="#4-分布式解决方案" class="headerlink" title="4. 分布式解决方案"></a>4. 分布式解决方案</h4><ol>
+<h5 id="4-分布式解决方案"><a href="#4-分布式解决方案" class="headerlink" title="4. 分布式解决方案"></a>4. 分布式解决方案</h5><ol>
 <li>分布式全局ID生成方案</li>
 <li>Session跨域共享及企业级单点登录解决方案实战</li>
 <li>分布式事务解决方案实战</li>
@@ -491,7 +598,8 @@
 <li>基于分布式架构下分布式锁的解决方案实战</li>
 <li>分布式架构下实现分布式定时调度</li>
 </ol>
-<h3 id="5-微服务架构"><a href="#5-微服务架构" class="headerlink" title="5. 微服务架构"></a>5. 微服务架构</h3><h4 id="1-微框架"><a href="#1-微框架" class="headerlink" title="1. 微框架"></a>1. 微框架</h4><ol>
+<p>###5. 微服务架构</p>
+<h5 id="1-微框架"><a href="#1-微框架" class="headerlink" title="1. 微框架"></a>1. 微框架</h5><ol>
 <li>Spring Boot与微服务之间的关系</li>
 <li>Spring Boot热部署实战</li>
 <li>核心组件之Starter、Actuator、Auto-Configuration、Cli</li>
@@ -501,7 +609,7 @@
 <li>Spring Boot集成Swagger2构建API管理及测试体系</li>
 <li>Spring Boot实现多环境配置动态解析</li>
 </ol>
-<h4 id="2-SpringCloud"><a href="#2-SpringCloud" class="headerlink" title="2. SpringCloud"></a>2. SpringCloud</h4><ol>
+<h5 id="2-SpringCloud"><a href="#2-SpringCloud" class="headerlink" title="2. SpringCloud"></a>2. SpringCloud</h5><ol>
 <li>Eureka注册中心</li>
 <li>Ribbon集成Rest实现负载均衡</li>
 <li>Fegion声明式服务调用</li>
@@ -513,7 +621,7 @@
 <li>基于Hystrix实现接口降级实战</li>
 <li>Spring Boot集成Spring Cloud实现统一整合方案</li>
 </ol>
-<h4 id="3-Docker虚拟化"><a href="#3-Docker虚拟化" class="headerlink" title="3. Docker虚拟化"></a>3. Docker虚拟化</h4><ol>
+<h5 id="3-Docker虚拟化"><a href="#3-Docker虚拟化" class="headerlink" title="3. Docker虚拟化"></a>3. Docker虚拟化</h5><ol>
 <li>了解Docker的镜像、仓库、容器</li>
 <li>Dockerfile构建lnmp环境部署个人博客wordpress</li>
 <li>Docker Compose构建lnmp环境部署个人博客wordpress</li>
@@ -521,14 +629,15 @@
 <li>基于Swarm构建Docker集群实战</li>
 <li>Kubernetes简介</li>
 </ol>
-<h4 id="4-漫谈微服务架构"><a href="#4-漫谈微服务架构" class="headerlink" title="4. 漫谈微服务架构"></a>4. 漫谈微服务架构</h4><ol>
+<h5 id="4-漫谈微服务架构"><a href="#4-漫谈微服务架构" class="headerlink" title="4. 漫谈微服务架构"></a>4. 漫谈微服务架构</h5><ol>
 <li>SOA架构和微服务架构之间的区别和联系</li>
 <li>如何设计微服务及其设计原则</li>
 <li>解惑Spring Boot流行因素及能够解决什么问题</li>
 <li>什么事Spring Cloud，为何选择Spring Cloud</li>
 <li>基于全局分析Spring Cloud各个组件所解决的问题</li>
 </ol>
-<h3 id="6-电商项目实战"><a href="#6-电商项目实战" class="headerlink" title="6. 电商项目实战"></a>6. 电商项目实战</h3><h4 id="1-用户认证系统（Passport）"><a href="#1-用户认证系统（Passport）" class="headerlink" title="1. 用户认证系统（Passport）"></a>1. 用户认证系统（Passport）</h4><ol>
+<p>###6. 电商项目实战</p>
+<h5 id="1-用户认证系统（Passport）"><a href="#1-用户认证系统（Passport）" class="headerlink" title="1. 用户认证系统（Passport）"></a>1. 用户认证系统（Passport）</h5><ol>
 <li><p>用户注册</p>
 </li>
 <li><p>用户登录</p>
@@ -548,7 +657,7 @@
 </blockquote>
 </li>
 </ol>
-<h4 id="2-搜索模块（大数据）"><a href="#2-搜索模块（大数据）" class="headerlink" title="2. 搜索模块（大数据）"></a>2. 搜索模块（大数据）</h4><h4 id="3-商品管理系统（Item）"><a href="#3-商品管理系统（Item）" class="headerlink" title="3. 商品管理系统（Item）"></a>3. 商品管理系统（Item）</h4><h4 id="4-订单系统（Order）"><a href="#4-订单系统（Order）" class="headerlink" title="4. 订单系统（Order）"></a>4. 订单系统（Order）</h4><h4 id="5-支付系统（Pay）"><a href="#5-支付系统（Pay）" class="headerlink" title="5. 支付系统（Pay）"></a>5. 支付系统（Pay）</h4><h4 id="6-数据统计分析系统（Anal）"><a href="#6-数据统计分析系统（Anal）" class="headerlink" title="6. 数据统计分析系统（Anal）"></a>6. 数据统计分析系统（Anal）</h4><h4 id="7-通知推送系统"><a href="#7-通知推送系统" class="headerlink" title="7. 通知推送系统"></a>7. 通知推送系统</h4><ol>
+<h5 id="2-搜索模块（大数据）"><a href="#2-搜索模块（大数据）" class="headerlink" title="2. 搜索模块（大数据）"></a>2. 搜索模块（大数据）</h5><h5 id="3-商品管理系统（Item）"><a href="#3-商品管理系统（Item）" class="headerlink" title="3. 商品管理系统（Item）"></a>3. 商品管理系统（Item）</h5><h5 id="4-订单系统（Order）"><a href="#4-订单系统（Order）" class="headerlink" title="4. 订单系统（Order）"></a>4. 订单系统（Order）</h5><h5 id="5-支付系统（Pay）"><a href="#5-支付系统（Pay）" class="headerlink" title="5. 支付系统（Pay）"></a>5. 支付系统（Pay）</h5><h5 id="6-数据统计分析系统（Anal）"><a href="#6-数据统计分析系统（Anal）" class="headerlink" title="6. 数据统计分析系统（Anal）"></a>6. 数据统计分析系统（Anal）</h5><h5 id="7-通知推送系统"><a href="#7-通知推送系统" class="headerlink" title="7. 通知推送系统"></a>7. 通知推送系统</h5><ol>
 <li><p>融云推送</p>
 <blockquote>
 <ol>
@@ -567,12 +676,13 @@
 </blockquote>
 </li>
 </ol>
-<h4 id="8-聊天系统"><a href="#8-聊天系统" class="headerlink" title="8. 聊天系统"></a>8. 聊天系统</h4><ol>
+<h5 id="8-聊天系统"><a href="#8-聊天系统" class="headerlink" title="8. 聊天系统"></a>8. 聊天系统</h5><ol>
 <li>用户群聊</li>
 <li>点对点聊天</li>
 <li>文件断点续传</li>
 </ol>
-<h3 id="7-团队协作效率"><a href="#7-团队协作效率" class="headerlink" title="7. 团队协作效率"></a>7. 团队协作效率</h3><h4 id="1-Maven-Gradle"><a href="#1-Maven-Gradle" class="headerlink" title="1. Maven/Gradle"></a>1. Maven/Gradle</h4><h4 id="2-Jenkins"><a href="#2-Jenkins" class="headerlink" title="2. Jenkins"></a>2. Jenkins</h4><h4 id="3-Sonar"><a href="#3-Sonar" class="headerlink" title="3. Sonar"></a>3. Sonar</h4><h4 id="4-Git"><a href="#4-Git" class="headerlink" title="4. Git"></a>4. Git</h4>
+<p>###7. 团队协作效率</p>
+<h5 id="1-Maven-Gradle"><a href="#1-Maven-Gradle" class="headerlink" title="1. Maven/Gradle"></a>1. Maven/Gradle</h5><h5 id="2-Jenkins"><a href="#2-Jenkins" class="headerlink" title="2. Jenkins"></a>2. Jenkins</h5><h5 id="3-Sonar"><a href="#3-Sonar" class="headerlink" title="3. Sonar"></a>3. Sonar</h5><h5 id="4-Git"><a href="#4-Git" class="headerlink" title="4. Git"></a>4. Git</h5>
                 <hr>
                 
 
@@ -598,7 +708,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-源码分析"><span class="toc-text">1. 源码分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-常用设计模式"><span class="toc-text">1. 常用设计模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Spring"><span class="toc-text">2. Spring</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Mybatis"><span class="toc-text">3. Mybatis</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-并发编程"><span class="toc-text">2. 并发编程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Java内存模型"><span class="toc-text">1. Java内存模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-内存模型"><span class="toc-text">2. 内存模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Synchronized"><span class="toc-text">3. Synchronized</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-Volatile"><span class="toc-text">4. Volatile</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-DCL"><span class="toc-text">5. DCL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-并发基础"><span class="toc-text">6. 并发基础</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-锁"><span class="toc-text">7. 锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-并发工具类"><span class="toc-text">8. 并发工具类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-并发集合"><span class="toc-text">9. 并发集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-原子操作"><span class="toc-text">10. 原子操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-线程池"><span class="toc-text">11. 线程池</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-其他"><span class="toc-text">12. 其他</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-性能调优"><span class="toc-text">3. 性能调优</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-分布式架构"><span class="toc-text">4. 分布式架构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-漫谈分布式架构"><span class="toc-text">1. 漫谈分布式架构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-分布式架构策略-分而治之"><span class="toc-text">2. 分布式架构策略-分而治之</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-分布式架构-中间件"><span class="toc-text">3. 分布式架构-中间件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-分布式解决方案"><span class="toc-text">4. 分布式解决方案</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-微服务架构"><span class="toc-text">5. 微服务架构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-微框架"><span class="toc-text">1. 微框架</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-SpringCloud"><span class="toc-text">2. SpringCloud</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Docker虚拟化"><span class="toc-text">3. Docker虚拟化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-漫谈微服务架构"><span class="toc-text">4. 漫谈微服务架构</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-电商项目实战"><span class="toc-text">6. 电商项目实战</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-用户认证系统（Passport）"><span class="toc-text">1. 用户认证系统（Passport）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-搜索模块（大数据）"><span class="toc-text">2. 搜索模块（大数据）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-商品管理系统（Item）"><span class="toc-text">3. 商品管理系统（Item）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-订单系统（Order）"><span class="toc-text">4. 订单系统（Order）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-支付系统（Pay）"><span class="toc-text">5. 支付系统（Pay）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-数据统计分析系统（Anal）"><span class="toc-text">6. 数据统计分析系统（Anal）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-通知推送系统"><span class="toc-text">7. 通知推送系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-聊天系统"><span class="toc-text">8. 聊天系统</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-团队协作效率"><span class="toc-text">7. 团队协作效率</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Maven-Gradle"><span class="toc-text">1. Maven/Gradle</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Jenkins"><span class="toc-text">2. Jenkins</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Sonar"><span class="toc-text">3. Sonar</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-Git"><span class="toc-text">4. Git</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-源码分析"><span class="toc-text">1. 源码分析</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-常用设计模式"><span class="toc-text">1. 常用设计模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Spring"><span class="toc-text">2. Spring</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-Mybatis"><span class="toc-text">3. Mybatis</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-Java内存模型"><span class="toc-text">1. Java内存模型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-内存模型"><span class="toc-text">2. 内存模型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-Synchronized"><span class="toc-text">3. Synchronized</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-Volatile"><span class="toc-text">4. Volatile</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-DCL"><span class="toc-text">5. DCL</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-并发基础"><span class="toc-text">6. 并发基础</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-锁"><span class="toc-text">7. 锁</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-并发工具类"><span class="toc-text">8. 并发工具类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-并发集合"><span class="toc-text">9. 并发集合</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-原子操作"><span class="toc-text">10. 原子操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-线程池"><span class="toc-text">11. 线程池</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#12-其他"><span class="toc-text">12. 其他</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-漫谈分布式架构"><span class="toc-text">1. 漫谈分布式架构</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-分布式架构策略-分而治之"><span class="toc-text">2. 分布式架构策略-分而治之</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-分布式架构-中间件"><span class="toc-text">3. 分布式架构-中间件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-分布式解决方案"><span class="toc-text">4. 分布式解决方案</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-微框架"><span class="toc-text">1. 微框架</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-SpringCloud"><span class="toc-text">2. SpringCloud</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-Docker虚拟化"><span class="toc-text">3. Docker虚拟化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-漫谈微服务架构"><span class="toc-text">4. 漫谈微服务架构</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-用户认证系统（Passport）"><span class="toc-text">1. 用户认证系统（Passport）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-搜索模块（大数据）"><span class="toc-text">2. 搜索模块（大数据）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-商品管理系统（Item）"><span class="toc-text">3. 商品管理系统（Item）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-订单系统（Order）"><span class="toc-text">4. 订单系统（Order）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-支付系统（Pay）"><span class="toc-text">5. 支付系统（Pay）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-数据统计分析系统（Anal）"><span class="toc-text">6. 数据统计分析系统（Anal）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-通知推送系统"><span class="toc-text">7. 通知推送系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-聊天系统"><span class="toc-text">8. 聊天系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-Maven-Gradle"><span class="toc-text">1. Maven/Gradle</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Jenkins"><span class="toc-text">2. Jenkins</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-Sonar"><span class="toc-text">3. Sonar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-Git"><span class="toc-text">4. Git</span></a></li></ol></li></ol></li></ol>
                 </div>
             </div>
         </div>
