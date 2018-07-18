@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        杂味｜longman&#39;s blog
+        大数据开发工程师｜longman&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://longman.kim/2018/07/18/杂味/">
+    <link rel="canonical" href="http://longman.kim/2018/07/19/大数据开发工程师/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>杂味</h1>
+                    <h1>大数据开发工程师</h1>
                     
                     <span class="meta">
                          作者 lewis longman
                         <span>
-                          日期 2018-07-18
+                          日期 2018-07-19
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -162,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            杂味
+            大数据开发工程师
         </span>
     </div>
 </header>
@@ -173,96 +173,21 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h5 id="1-MySQL主从同步的实现方式"><a href="#1-MySQL主从同步的实现方式" class="headerlink" title="1. MySQL主从同步的实现方式"></a>1. MySQL主从同步的实现方式</h5><blockquote>
-<p>MySQL的复制是异步实时，具体步骤是：主服务器把数据更改记录写到binlog中，从服务器把binlog复制到自己的中继日志relay log中，然后重做中继日志，把更改应用到自己的数据库。</p>
-</blockquote>
-<h5 id="2-MySQL存储引擎的对比"><a href="#2-MySQL存储引擎的对比" class="headerlink" title="2. MySQL存储引擎的对比"></a>2. MySQL存储引擎的对比</h5><ol>
-<li><p>Innodb</p>
-<blockquote>
-<p>支持事务、OLTP、行锁、支持外键、缓存索引缓存数据、MVCC(多版本并发控制)</p>
-</blockquote>
-</li>
-<li><p>MyISAM</p>
-<blockquote>
-<p>不支持事务、OLAP、表锁、只缓存索引不缓存数据</p>
-</blockquote>
-</li>
-</ol>
-<h5 id="3-MySQL索引的实现"><a href="#3-MySQL索引的实现" class="headerlink" title="3. MySQL索引的实现"></a>3. MySQL索引的实现</h5><ol>
-<li><p>B+树索引  </p>
-<blockquote>
-<p>记录节点按键值的大小顺序存放在同一层的叶子节点上，由各叶子节点指针进行连接。B树中的关键字分布在整棵树中，叶子节点不包含任何关键字信息，而B+树关键字集合分布在叶子节点中，非叶子节点只是叶子节点中关键字的索引。B树中任何一个关键字只出现在一个节点中，而B+树中的关键字必须出现在叶节点中，也可能在非叶节点中重复出现。<br>B+树比B树更适合做文件索引和数据库索引。B树只适合随机检索，B+树同时支持随机检索和顺序检索。B+树的磁盘读写代价更低。B+树的查询效率更加稳定。数据库中基于范围的查询是非常频繁的。<br>B+树索引支持 like ‘xxx%’和 like ‘%xxx’</p>
-</blockquote>
-</li>
-<li><p>全文检索  </p>
-<blockquote>
-<p>倒排索引<br>全文索引支持 like ‘%xxx%’</p>
-</blockquote>
-</li>
-</ol>
-<h5 id="4-处理内存泄漏的经验"><a href="#4-处理内存泄漏的经验" class="headerlink" title="4. 处理内存泄漏的经验"></a>4. 处理内存泄漏的经验</h5><h5 id="5-长连接，离线推送，在线推送，及时通信IM，直播"><a href="#5-长连接，离线推送，在线推送，及时通信IM，直播" class="headerlink" title="5. 长连接，离线推送，在线推送，及时通信IM，直播"></a>5. 长连接，离线推送，在线推送，及时通信IM，直播</h5><ol>
-<li><p>长连接</p>
-<blockquote>
-<p> HTTP的长连接和短连接本质上是TCP长连接和短连接。HTTP/1.0默认使用短连接，一次HTTP操作，就建立一次连接，任务结束就中断连接。HTTP/1.1默认使用长连接Connection:keep-alive，保持一定的时间，没有请求再断开。TCP长连接的保活功能主要由服务器应用提供，在给定的连接两个小时内没有任何动作，服务器就会向客户端发送一个探测报文。长连接多用户操作频繁，点对点的通讯，而且连接数不能太多。</p>
-</blockquote>
-</li>
-<li><p>即时通讯IM</p>
-<blockquote>
-<p>C1,C2登录时即时服务IM验证用户名和密码，并登记各自的IP和PORT，并从服务器上拉取好友列表（包括好友的IP和PORT）给C1,C2。C1和C2通讯的方式有两种，一种是C1和C2之间采用TCP连接通讯。一种是C1和Server, C2和Server进行TCP连接，即使用Server中转通讯。<br>如果C1,C2都在内网，需要进行路由器进行NAT才能出去。使用STUN隧道技术，完成透明NAT，受限NAT，端口受限圆锥型NAT，对称型NAT（双向NAT，大公司使用）。<br>同时需要客户端给服务器发送心跳，如果没有响应，就断开长连接。还需要考虑重连机制、双向PingPong机制（ping对方，如果没有在约定的时间内返回就断开socket）、QOS机制（服务质量保证通讯延迟和阻塞）。<br>聊天协议：原生Socket(代表框架CocoAsyncSocket)、WebSocket(代表框架SocketRocket)、MQTT(代表框架MQTTKit)、XMPP(代表框架XMPPFramework)</p>
-</blockquote>
-</li>
-</ol>
-<h5 id="6-https的步骤"><a href="#6-https的步骤" class="headerlink" title="6. https的步骤"></a>6. https的步骤</h5><ol>
-<li>client发送连接请求给server</li>
-<li>server返回服务端证书给client</li>
-<li>client通过浏览器内置根证书对服务端证书CA进行校验</li>
-<li>client通过证书中的公钥加密对称密钥发送给server</li>
-<li>双方通过对称密钥加密数据开始通信</li>
-</ol>
-<h5 id="7-ACCS-阿里云通道服务"><a href="#7-ACCS-阿里云通道服务" class="headerlink" title="7. ACCS(阿里云通道服务)"></a>7. ACCS(阿里云通道服务)</h5><h5 id="8-构建高性能的分布式系统"><a href="#8-构建高性能的分布式系统" class="headerlink" title="8. 构建高性能的分布式系统"></a>8. 构建高性能的分布式系统</h5><ol>
-<li>分布式服务治理框架Dubbo</li>
-<li>分布式消息中间件RocketMQ</li>
-<li>数据库连接池Druid和JSON库Fastjson</li>
-<li>云数据库Redis分支ApasaraCache</li>
-<li>自研富容器技术Pouch和文件分发系统Dragonfly</li>
-<li>开源数据看看AliSQL</li>
-<li>分布式文件系统FastDFS</li>
-<li>分布式数据库OceanBase</li>
-<li>Web服务器Tengine</li>
-<li>Redis缓存服务器AliRedis</li>
-<li>分布式数据库同步系统otter</li>
-<li>系统信息采集和监控工具Tsar</li>
-<li>非侵入式运行期AOP框架Dexposed</li>
-</ol>
-<h5 id="9-互联网时代的用户端"><a href="#9-互联网时代的用户端" class="headerlink" title="9. 互联网时代的用户端"></a>9. 互联网时代的用户端</h5><ol>
-<li>Ant Design，前端的美好呈现</li>
-<li>企业级Web基础框架Egg</li>
-<li>灵活的Android开发框架Atlas</li>
-<li>跨平台移动开发工具Weex </li>
-</ol>
-<h5 id="10-源自最佳实践的参考规范"><a href="#10-源自最佳实践的参考规范" class="headerlink" title="10. 源自最佳实践的参考规范"></a>10. 源自最佳实践的参考规范</h5><ol>
-<li>阿里巴巴Java开发规范</li>
-<li>分布式消息领域的国际标准OpenMessaging</li>
-</ol>
-<h5 id="11-物联网时代"><a href="#11-物联网时代" class="headerlink" title="11. 物联网时代"></a>11. 物联网时代</h5><ol>
-<li>新一代物联网操作系统AliOS Things</li>
-<li>轻量化操作系统AliOS Lite</li>
-</ol>
-
+                <h3 id="1-Hadoop生态"><a href="#1-Hadoop生态" class="headerlink" title="1. Hadoop生态"></a>1. Hadoop生态</h3><h5 id="1-对大量数据进行分布式处理的软件框架Hadoop"><a href="#1-对大量数据进行分布式处理的软件框架Hadoop" class="headerlink" title="1. 对大量数据进行分布式处理的软件框架Hadoop"></a>1. 对大量数据进行分布式处理的软件框架Hadoop</h5><h5 id="2-分布式存储系统HDFS"><a href="#2-分布式存储系统HDFS" class="headerlink" title="2. 分布式存储系统HDFS"></a>2. 分布式存储系统HDFS</h5><h5 id="3-分布式计算框架MapReduce"><a href="#3-分布式计算框架MapReduce" class="headerlink" title="3. 分布式计算框架MapReduce"></a>3. 分布式计算框架MapReduce</h5><h5 id="4-分布式计算框架YARN"><a href="#4-分布式计算框架YARN" class="headerlink" title="4. 分布式计算框架YARN"></a>4. 分布式计算框架YARN</h5><h5 id="5-分布式数据库Hbase"><a href="#5-分布式数据库Hbase" class="headerlink" title="5. 分布式数据库Hbase"></a>5. 分布式数据库Hbase</h5><h5 id="6-分布式协调服务Zookeeper"><a href="#6-分布式协调服务Zookeeper" class="headerlink" title="6. 分布式协调服务Zookeeper"></a>6. 分布式协调服务Zookeeper</h5><h5 id="7-工作流引擎Pig-Pig2"><a href="#7-工作流引擎Pig-Pig2" class="headerlink" title="7. 工作流引擎Pig, Pig2"></a>7. 工作流引擎Pig, Pig2</h5><h5 id="8-数据仓库Hive-Hive2"><a href="#8-数据仓库Hive-Hive2" class="headerlink" title="8. 数据仓库Hive, Hive2"></a>8. 数据仓库Hive, Hive2</h5><h5 id="9-日志收集Flume"><a href="#9-日志收集Flume" class="headerlink" title="9. 日志收集Flume"></a>9. 日志收集Flume</h5><h5 id="10-作业流调度系统Oozie"><a href="#10-作业流调度系统Oozie" class="headerlink" title="10. 作业流调度系统Oozie"></a>10. 作业流调度系统Oozie</h5><h5 id="11-数据库TEL工具Sqoop"><a href="#11-数据库TEL工具Sqoop" class="headerlink" title="11. 数据库TEL工具Sqoop"></a>11. 数据库TEL工具Sqoop</h5><h5 id="12-安装部署工具Ambari"><a href="#12-安装部署工具Ambari" class="headerlink" title="12. 安装部署工具Ambari"></a>12. 安装部署工具Ambari</h5><h3 id="2-大数据处理框架Spark"><a href="#2-大数据处理框架Spark" class="headerlink" title="2. 大数据处理框架Spark"></a>2. 大数据处理框架Spark</h3><h3 id="3-基于数据流的实时处理系统Storm"><a href="#3-基于数据流的实时处理系统Storm" class="headerlink" title="3. 基于数据流的实时处理系统Storm"></a>3. 基于数据流的实时处理系统Storm</h3><h3 id="4-开源流处理平台Kafka"><a href="#4-开源流处理平台Kafka" class="headerlink" title="4. 开源流处理平台Kafka"></a>4. 开源流处理平台Kafka</h3><h3 id="5-面向分布式数据流处理和批量数据处理的开源计算平台Flink"><a href="#5-面向分布式数据流处理和批量数据处理的开源计算平台Flink" class="headerlink" title="5. 面向分布式数据流处理和批量数据处理的开源计算平台Flink"></a>5. 面向分布式数据流处理和批量数据处理的开源计算平台Flink</h3><h3 id="6-基于Lucence的搜索服务器Elasticsearch"><a href="#6-基于Lucence的搜索服务器Elasticsearch" class="headerlink" title="6. 基于Lucence的搜索服务器Elasticsearch"></a>6. 基于Lucence的搜索服务器Elasticsearch</h3><h3 id="7-MapReduce"><a href="#7-MapReduce" class="headerlink" title="7. MapReduce"></a>7. MapReduce</h3><h3 id="8-系统Debug-Profiling能力和经验"><a href="#8-系统Debug-Profiling能力和经验" class="headerlink" title="8. 系统Debug/Profiling能力和经验"></a>8. 系统Debug/Profiling能力和经验</h3>
                 <hr>
                 
 
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2018/07/19/大数据开发工程师/" data-toggle="tooltip" data-placement="top"
-                           title="大数据开发工程师">&larr; Previous Post</a>
+                        <a href="/2018/07/19/算法工程师/" data-toggle="tooltip" data-placement="top"
+                           title="算法工程师">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2018/07/17/Java程序性能优化/" data-toggle="tooltip" data-placement="top"
-                           title="Java程序性能优化">Next Post &rarr;</a>
+                        <a href="/2018/07/18/杂味/" data-toggle="tooltip" data-placement="top"
+                           title="杂味">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -279,7 +204,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-MySQL主从同步的实现方式"><span class="toc-text">1. MySQL主从同步的实现方式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-MySQL存储引擎的对比"><span class="toc-text">2. MySQL存储引擎的对比</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-MySQL索引的实现"><span class="toc-text">3. MySQL索引的实现</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-处理内存泄漏的经验"><span class="toc-text">4. 处理内存泄漏的经验</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-长连接，离线推送，在线推送，及时通信IM，直播"><span class="toc-text">5. 长连接，离线推送，在线推送，及时通信IM，直播</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-https的步骤"><span class="toc-text">6. https的步骤</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-ACCS-阿里云通道服务"><span class="toc-text">7. ACCS(阿里云通道服务)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-构建高性能的分布式系统"><span class="toc-text">8. 构建高性能的分布式系统</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-互联网时代的用户端"><span class="toc-text">9. 互联网时代的用户端</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-源自最佳实践的参考规范"><span class="toc-text">10. 源自最佳实践的参考规范</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-物联网时代"><span class="toc-text">11. 物联网时代</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Hadoop生态"><span class="toc-text">1. Hadoop生态</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-对大量数据进行分布式处理的软件框架Hadoop"><span class="toc-text">1. 对大量数据进行分布式处理的软件框架Hadoop</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-分布式存储系统HDFS"><span class="toc-text">2. 分布式存储系统HDFS</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-分布式计算框架MapReduce"><span class="toc-text">3. 分布式计算框架MapReduce</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-分布式计算框架YARN"><span class="toc-text">4. 分布式计算框架YARN</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-分布式数据库Hbase"><span class="toc-text">5. 分布式数据库Hbase</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-分布式协调服务Zookeeper"><span class="toc-text">6. 分布式协调服务Zookeeper</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-工作流引擎Pig-Pig2"><span class="toc-text">7. 工作流引擎Pig, Pig2</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-数据仓库Hive-Hive2"><span class="toc-text">8. 数据仓库Hive, Hive2</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-日志收集Flume"><span class="toc-text">9. 日志收集Flume</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-作业流调度系统Oozie"><span class="toc-text">10. 作业流调度系统Oozie</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-数据库TEL工具Sqoop"><span class="toc-text">11. 数据库TEL工具Sqoop</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#12-安装部署工具Ambari"><span class="toc-text">12. 安装部署工具Ambari</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-大数据处理框架Spark"><span class="toc-text">2. 大数据处理框架Spark</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-基于数据流的实时处理系统Storm"><span class="toc-text">3. 基于数据流的实时处理系统Storm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-开源流处理平台Kafka"><span class="toc-text">4. 开源流处理平台Kafka</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-面向分布式数据流处理和批量数据处理的开源计算平台Flink"><span class="toc-text">5. 面向分布式数据流处理和批量数据处理的开源计算平台Flink</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-基于Lucence的搜索服务器Elasticsearch"><span class="toc-text">6. 基于Lucence的搜索服务器Elasticsearch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-MapReduce"><span class="toc-text">7. MapReduce</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-系统Debug-Profiling能力和经验"><span class="toc-text">8. 系统Debug/Profiling能力和经验</span></a></li></ol>
                 </div>
             </div>
         </div>
