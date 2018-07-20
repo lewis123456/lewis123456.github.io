@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-07-20T08:08:46.510Z</updated>
+  <updated>2018-07-20T10:45:50.777Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -21,9 +21,16 @@
     <link href="http://longman.kim/2018/07/20/Netty%E5%AE%9E%E6%88%98/"/>
     <id>http://longman.kim/2018/07/20/Netty实战/</id>
     <published>2018-07-20T08:08:46.000Z</published>
-    <updated>2018-07-20T08:08:46.510Z</updated>
+    <updated>2018-07-20T10:45:50.777Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-Netty——异步和事件驱动"><a href="#1-Netty——异步和事件驱动" class="headerlink" title="1. Netty——异步和事件驱动"></a>1. Netty——异步和事件驱动</h3><h3 id="2-你的第一款Netty应用程序"><a href="#2-你的第一款Netty应用程序" class="headerlink" title="2. 你的第一款Netty应用程序"></a>2. 你的第一款Netty应用程序</h3><h3 id="3-Netty的组件和设计"><a href="#3-Netty的组件和设计" class="headerlink" title="3. Netty的组件和设计"></a>3. Netty的组件和设计</h3><h3 id="4-传输"><a href="#4-传输" class="headerlink" title="4. 传输"></a>4. 传输</h3><h3 id="5-ByteBuf"><a href="#5-ByteBuf" class="headerlink" title="5. ByteBuf"></a>5. ByteBuf</h3><h3 id="6-ChannelHandler和ChannelPipeline"><a href="#6-ChannelHandler和ChannelPipeline" class="headerlink" title="6. ChannelHandler和ChannelPipeline"></a>6. ChannelHandler和ChannelPipeline</h3><h3 id="7-Eventloop和线程模型"><a href="#7-Eventloop和线程模型" class="headerlink" title="7. Eventloop和线程模型"></a>7. Eventloop和线程模型</h3><h3 id="8-引导"><a href="#8-引导" class="headerlink" title="8. 引导"></a>8. 引导</h3><h3 id="9-单元测试"><a href="#9-单元测试" class="headerlink" title="9. 单元测试"></a>9. 单元测试</h3><h3 id="10-编解码器框架"><a href="#10-编解码器框架" class="headerlink" title="10. 编解码器框架"></a>10. 编解码器框架</h3><h3 id="11-预置的ChannelHandler和编解码器"><a href="#11-预置的ChannelHandler和编解码器" class="headerlink" title="11. 预置的ChannelHandler和编解码器"></a>11. 预置的ChannelHandler和编解码器</h3><h3 id="12-WebSocket"><a href="#12-WebSocket" class="headerlink" title="12. WebSocket"></a>12. WebSocket</h3><h3 id="13-使用UDP广播事件"><a href="#13-使用UDP广播事件" class="headerlink" title="13. 使用UDP广播事件"></a>13. 使用UDP广播事件</h3><h3 id="14-案例研究，第一部分"><a href="#14-案例研究，第一部分" class="headerlink" title="14. 案例研究，第一部分"></a>14. 案例研究，第一部分</h3><h3 id="15-案例研究，第二部分"><a href="#15-案例研究，第二部分" class="headerlink" title="15. 案例研究，第二部分"></a>15. 案例研究，第二部分</h3><h3 id="附录-Maven介绍"><a href="#附录-Maven介绍" class="headerlink" title="附录 Maven介绍"></a>附录 Maven介绍</h3>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-Netty——异步和事件驱动&quot;&gt;&lt;a href=&quot;#1-Netty——异步和事件驱动&quot; class=&quot;headerlink&quot; title=&quot;1. Netty——异步和事件驱动&quot;&gt;&lt;/a&gt;1. Netty——异步和事件驱动&lt;/h3&gt;&lt;h3 id=&quot;2-你的第一款
+      
     
     </summary>
     
