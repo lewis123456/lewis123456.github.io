@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        算法工程师｜longman&#39;s blog
+        分布式事务与秒杀技巧｜longman&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://longman.kim/2018/07/19/算法工程师/">
+    <link rel="canonical" href="http://longman.kim/2018/07/20/分布式事务与秒杀技巧/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>算法工程师</h1>
+                    <h1>分布式事务与秒杀技巧</h1>
                     
                     <span class="meta">
                          作者 lewis longman
                         <span>
-                          日期 2018-07-19
+                          日期 2018-07-20
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -162,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            算法工程师
+            分布式事务与秒杀技巧
         </span>
     </div>
 </header>
@@ -173,21 +173,65 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="1-分类"><a href="#1-分类" class="headerlink" title="1. 分类"></a>1. 分类</h3><h3 id="2-回归"><a href="#2-回归" class="headerlink" title="2. 回归"></a>2. 回归</h3><h3 id="3-推荐"><a href="#3-推荐" class="headerlink" title="3. 推荐"></a>3. 推荐</h3><h3 id="4-深度学习"><a href="#4-深度学习" class="headerlink" title="4. 深度学习"></a>4. 深度学习</h3><h3 id="5-强化学习"><a href="#5-强化学习" class="headerlink" title="5. 强化学习"></a>5. 强化学习</h3><h3 id="6-NLP自然语言处理"><a href="#6-NLP自然语言处理" class="headerlink" title="6. NLP自然语言处理"></a>6. NLP自然语言处理</h3><h3 id="7-机器人定位算法"><a href="#7-机器人定位算法" class="headerlink" title="7. 机器人定位算法"></a>7. 机器人定位算法</h3><h3 id="8-多传感器融合算法"><a href="#8-多传感器融合算法" class="headerlink" title="8. 多传感器融合算法"></a>8. 多传感器融合算法</h3><h3 id="9-SLAM地图构建算法"><a href="#9-SLAM地图构建算法" class="headerlink" title="9. SLAM地图构建算法"></a>9. SLAM地图构建算法</h3><h3 id="10-路径规划算法"><a href="#10-路径规划算法" class="headerlink" title="10. 路径规划算法"></a>10. 路径规划算法</h3><h3 id="11-视觉算法（检测，跟踪）"><a href="#11-视觉算法（检测，跟踪）" class="headerlink" title="11. 视觉算法（检测，跟踪）"></a>11. 视觉算法（检测，跟踪）</h3><h3 id="12-TensorFlow"><a href="#12-TensorFlow" class="headerlink" title="12. TensorFlow"></a>12. TensorFlow</h3><h3 id="13-Caffe"><a href="#13-Caffe" class="headerlink" title="13. Caffe"></a>13. Caffe</h3><h3 id="14-有监督学习"><a href="#14-有监督学习" class="headerlink" title="14. 有监督学习"></a>14. 有监督学习</h3><h3 id="15-无监督学习"><a href="#15-无监督学习" class="headerlink" title="15. 无监督学习"></a>15. 无监督学习</h3><h3 id="16-卡尔曼滤波、粒子滤波"><a href="#16-卡尔曼滤波、粒子滤波" class="headerlink" title="16. 卡尔曼滤波、粒子滤波"></a>16. 卡尔曼滤波、粒子滤波</h3><h3 id="17-马尔科夫决策过程"><a href="#17-马尔科夫决策过程" class="headerlink" title="17. 马尔科夫决策过程"></a>17. 马尔科夫决策过程</h3>
+                <h3 id="1-分布式事务的解法"><a href="#1-分布式事务的解法" class="headerlink" title="1. 分布式事务的解法"></a>1. 分布式事务的解法</h3><ol>
+<li><p>一个系统操作多个数据库</p>
+<blockquote>
+<p>XA协议（数据库要支持XA协议）<br>基本功能：数据库功能+开源组件（atomikos）实现</p>
+</blockquote>
+</li>
+<li><p>多系统操作多数据库</p>
+<blockquote>
+<p>MQ消息队列（生产者消费者模型），优点是解耦，缺点是不能保证实时性（需要结合业务场景进行规避）  </p>
+</blockquote>
+</li>
+<li><p>TCC补偿机制</p>
+<blockquote>
+<p>可逆操作，编程式分布式事务，一种解决方案<br>atomikos的论文《Tcc For Rest》<br>TCC三要素try(预留资源，临时状态), canfirm(确认操作), cancel(操作回滚)<br>bytetcc</p>
+</blockquote>
+</li>
+<li><p>TOC</p>
+<blockquote>
+<p>未知异常：人工干预</p>
+</blockquote>
+</li>
+<li><p>CAP,BASE</p>
+<blockquote>
+<p>取舍一致性和可用性</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="2-秒杀系统架构分析与实现"><a href="#2-秒杀系统架构分析与实现" class="headerlink" title="2. 秒杀系统架构分析与实现"></a>2. 秒杀系统架构分析与实现</h3><ol>
+<li><p>超卖，解决方案是使用数据库的乐观锁</p>
+</li>
+<li><p>用户重复提交，前端控制防止重复提交，后台限流</p>
+</li>
+<li><p>超过服务器单台机器承受能力，解决方案nginx负载均衡多台机器</p>
+</li>
+<li><p>码农通过脚本攻击，redis(性能每秒10w，用pipeline每秒55w)针对userId限制操作频率</p>
+</li>
+<li><p>超过数据库最大连接数，采用令牌机制，预先生成令牌放在reids中，拿到令牌的可以操作数据库</p>
+</li>
+<li><p>其他方法</p>
+<blockquote>
+<p>采用消息队列，异步执行SQL<br>数据库分库分表<br>微服务架构独立秒杀系统，Docker实现快速扩容</p>
+</blockquote>
+</li>
+</ol>
+
                 <hr>
                 
 
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2018/07/20/分布式事务与秒杀技巧/" data-toggle="tooltip" data-placement="top"
-                           title="分布式事务与秒杀技巧">&larr; Previous Post</a>
+                        <a href="/2018/07/20/Netty实战/" data-toggle="tooltip" data-placement="top"
+                           title="Netty实战">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2018/07/19/大数据开发工程师/" data-toggle="tooltip" data-placement="top"
-                           title="大数据开发工程师">Next Post &rarr;</a>
+                        <a href="/2018/07/19/算法工程师/" data-toggle="tooltip" data-placement="top"
+                           title="算法工程师">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -204,7 +248,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-分类"><span class="toc-text">1. 分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-回归"><span class="toc-text">2. 回归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-推荐"><span class="toc-text">3. 推荐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-深度学习"><span class="toc-text">4. 深度学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-强化学习"><span class="toc-text">5. 强化学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-NLP自然语言处理"><span class="toc-text">6. NLP自然语言处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-机器人定位算法"><span class="toc-text">7. 机器人定位算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-多传感器融合算法"><span class="toc-text">8. 多传感器融合算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-SLAM地图构建算法"><span class="toc-text">9. SLAM地图构建算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-路径规划算法"><span class="toc-text">10. 路径规划算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-视觉算法（检测，跟踪）"><span class="toc-text">11. 视觉算法（检测，跟踪）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-TensorFlow"><span class="toc-text">12. TensorFlow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-Caffe"><span class="toc-text">13. Caffe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-有监督学习"><span class="toc-text">14. 有监督学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-无监督学习"><span class="toc-text">15. 无监督学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-卡尔曼滤波、粒子滤波"><span class="toc-text">16. 卡尔曼滤波、粒子滤波</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-马尔科夫决策过程"><span class="toc-text">17. 马尔科夫决策过程</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-分布式事务的解法"><span class="toc-text">1. 分布式事务的解法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-秒杀系统架构分析与实现"><span class="toc-text">2. 秒杀系统架构分析与实现</span></a></li></ol>
                 </div>
             </div>
         </div>

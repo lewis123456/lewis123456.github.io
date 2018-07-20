@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-07-18T17:48:25.962Z</updated>
+  <updated>2018-07-20T08:08:46.510Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Netty实战</title>
+    <link href="http://longman.kim/2018/07/20/Netty%E5%AE%9E%E6%88%98/"/>
+    <id>http://longman.kim/2018/07/20/Netty实战/</id>
+    <published>2018-07-20T08:08:46.000Z</published>
+    <updated>2018-07-20T08:08:46.510Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>分布式事务与秒杀技巧</title>
+    <link href="http://longman.kim/2018/07/20/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1%E4%B8%8E%E7%A7%92%E6%9D%80%E6%8A%80%E5%B7%A7/"/>
+    <id>http://longman.kim/2018/07/20/分布式事务与秒杀技巧/</id>
+    <published>2018-07-20T08:07:51.000Z</published>
+    <updated>2018-07-20T08:08:21.684Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-分布式事务的解法"><a href="#1-分布式事务的解法" class="headerlink" title="1. 分布式事务的解法"></a>1. 分布式事务的解法</h3><ol><li><p>一个系统操作多个数据库</p><blockquote><p>XA协议（数据库要支持XA协议）<br>基本功能：数据库功能+开源组件（atomikos）实现</p></blockquote></li><li><p>多系统操作多数据库</p><blockquote><p>MQ消息队列（生产者消费者模型），优点是解耦，缺点是不能保证实时性（需要结合业务场景进行规避）  </p></blockquote></li><li><p>TCC补偿机制</p><blockquote><p>可逆操作，编程式分布式事务，一种解决方案<br>atomikos的论文《Tcc For Rest》<br>TCC三要素try(预留资源，临时状态), canfirm(确认操作), cancel(操作回滚)<br>bytetcc</p></blockquote></li><li><p>TOC</p><blockquote><p>未知异常：人工干预</p></blockquote></li><li><p>CAP,BASE</p><blockquote><p>取舍一致性和可用性</p></blockquote></li></ol><h3 id="2-秒杀系统架构分析与实现"><a href="#2-秒杀系统架构分析与实现" class="headerlink" title="2. 秒杀系统架构分析与实现"></a>2. 秒杀系统架构分析与实现</h3><ol><li><p>超卖，解决方案是使用数据库的乐观锁</p></li><li><p>用户重复提交，前端控制防止重复提交，后台限流</p></li><li><p>超过服务器单台机器承受能力，解决方案nginx负载均衡多台机器</p></li><li><p>码农通过脚本攻击，redis(性能每秒10w，用pipeline每秒55w)针对userId限制操作频率</p></li><li><p>超过数据库最大连接数，采用令牌机制，预先生成令牌放在reids中，拿到令牌的可以操作数据库</p></li><li><p>其他方法</p><blockquote><p>采用消息队列，异步执行SQL<br>数据库分库分表<br>微服务架构独立秒杀系统，Docker实现快速扩容</p></blockquote></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-分布式事务的解法&quot;&gt;&lt;a href=&quot;#1-分布式事务的解法&quot; class=&quot;headerlink&quot; title=&quot;1. 分布式事务的解法&quot;&gt;&lt;/a&gt;1. 分布式事务的解法&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;一个系统操作多个数据库&lt;/p&gt;
+&lt;blockquote
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>算法工程师</title>
@@ -700,34 +737,6 @@
         &lt;h3 id=&quot;hexo-clean&quot;&gt;&lt;a href=&quot;#hexo-clean&quot; class=&quot;headerlink&quot; title=&quot;hexo clean&quot;&gt;&lt;/a&gt;hexo clean&lt;/h3&gt;&lt;p&gt;清空缓存&lt;/p&gt;
 &lt;h3 id=&quot;hexo-s&quot;&gt;&lt;a href=&quot;#hex
       
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>关于OpenResty</title>
-    <link href="http://longman.kim/2018/06/18/%E5%85%B3%E4%BA%8EOpenResty/"/>
-    <id>http://longman.kim/2018/06/18/关于OpenResty/</id>
-    <published>2018-06-17T17:03:15.000Z</published>
-    <updated>2018-06-17T17:03:15.954Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Nginx的常见配置</title>
-    <link href="http://longman.kim/2018/06/18/Nginx%E7%9A%84%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE/"/>
-    <id>http://longman.kim/2018/06/18/Nginx的常见配置/</id>
-    <published>2018-06-17T17:02:55.000Z</published>
-    <updated>2018-06-17T17:02:55.192Z</updated>
-    
-    <summary type="html">
     
     </summary>
     
