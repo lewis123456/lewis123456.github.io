@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        ELK搭建网站监控系统｜longman&#39;s blog
+        Spring中的事务（传播机制、隔离级别、回滚、超时）｜longman&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://longman.kim/2018/07/23/ELK搭建网站监控系统/">
+    <link rel="canonical" href="http://longman.kim/2018/07/24/Spring中的事务（传播机制、隔离级别、回滚、超时）/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>ELK搭建网站监控系统</h1>
+                    <h1>Spring中的事务（传播机制、隔离级别、回滚、超时）</h1>
                     
                     <span class="meta">
                          作者 lewis longman
                         <span>
-                          日期 2018-07-23
+                          日期 2018-07-24
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -162,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            ELK搭建网站监控系统
+            Spring中的事务（传播机制、隔离级别、回滚、超时）
         </span>
     </div>
 </header>
@@ -173,27 +173,21 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="网站流量监控系统"><a href="#网站流量监控系统" class="headerlink" title=". 网站流量监控系统"></a>. 网站流量监控系统</h3><h3 id="1-Logstash"><a href="#1-Logstash" class="headerlink" title="1. Logstash"></a>1. Logstash</h3><p>矿工，日志收集，日志来自于业务系统，业务系统由不同的语言编写，过滤日志格式。Logstash采用Ruby语法，自定义日志格式过滤器，将格式化后的数据输出到ElasticSearch。它的可靠性低，占用CPU和内存的比率很高。</p>
-<h3 id="2-ElasticSearch"><a href="#2-ElasticSearch" class="headerlink" title="2. ElasticSearch"></a>2. ElasticSearch</h3><p>日志仓库，提供全文检索，快速检索，分布式存储。ElasticSearch采用主备部署。</p>
-<h3 id="3-Kibana"><a href="#3-Kibana" class="headerlink" title="3. Kibana"></a>3. Kibana</h3><p>可视化，数据来源于ES，实时读取数据变化。</p>
-<h3 id="4-Filebeat"><a href="#4-Filebeat" class="headerlink" title="4. Filebeat"></a>4. Filebeat</h3><p>承担数据采集的角色</p>
-<h3 id="6-ELK海量日志监控的部署"><a href="#6-ELK海量日志监控的部署" class="headerlink" title="6. ELK海量日志监控的部署"></a>6. ELK海量日志监控的部署</h3><p>利用Kafka将同步改成异步</p>
-<h3 id="7-场景"><a href="#7-场景" class="headerlink" title="7. 场景"></a>7. 场景</h3><p>监控、统计、分析、检索</p>
-
+                <h3 id="1-传播机制"><a href="#1-传播机制" class="headerlink" title="1. 传播机制"></a>1. 传播机制</h3><h3 id="2-隔离级别"><a href="#2-隔离级别" class="headerlink" title="2. 隔离级别"></a>2. 隔离级别</h3><h3 id="3-回滚"><a href="#3-回滚" class="headerlink" title="3. 回滚"></a>3. 回滚</h3><h3 id="4-超时"><a href="#4-超时" class="headerlink" title="4. 超时"></a>4. 超时</h3>
                 <hr>
                 
 
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2018/07/24/Spring中的事务（传播机制、隔离级别、回滚、超时）/" data-toggle="tooltip" data-placement="top"
-                           title="Spring中的事务（传播机制、隔离级别、回滚、超时）">&larr; Previous Post</a>
+                        <a href="/2018/07/26/《代码的未来》/" data-toggle="tooltip" data-placement="top"
+                           title="《代码的未来》">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2018/07/23/MongoDB/" data-toggle="tooltip" data-placement="top"
-                           title="MongoDB">Next Post &rarr;</a>
+                        <a href="/2018/07/23/ELK搭建网站监控系统/" data-toggle="tooltip" data-placement="top"
+                           title="ELK搭建网站监控系统">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -210,7 +204,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#网站流量监控系统"><span class="toc-text">. 网站流量监控系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Logstash"><span class="toc-text">1. Logstash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-ElasticSearch"><span class="toc-text">2. ElasticSearch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Kibana"><span class="toc-text">3. Kibana</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Filebeat"><span class="toc-text">4. Filebeat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-ELK海量日志监控的部署"><span class="toc-text">6. ELK海量日志监控的部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-场景"><span class="toc-text">7. 场景</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-传播机制"><span class="toc-text">1. 传播机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-隔离级别"><span class="toc-text">2. 隔离级别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-回滚"><span class="toc-text">3. 回滚</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-超时"><span class="toc-text">4. 超时</span></a></li></ol>
                 </div>
             </div>
         </div>
