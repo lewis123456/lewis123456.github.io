@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-07-26T14:02:26.850Z</updated>
+  <updated>2018-07-26T14:12:51.744Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一致性算法</title>
+    <link href="http://longman.kim/2018/07/26/%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95/"/>
+    <id>http://longman.kim/2018/07/26/一致性算法/</id>
+    <published>2018-07-26T14:09:06.000Z</published>
+    <updated>2018-07-26T14:12:51.744Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-2PC"><a href="#1-2PC" class="headerlink" title="1. 2PC"></a>1. 2PC</h3><h3 id="2-3PC"><a href="#2-3PC" class="headerlink" title="2. 3PC"></a>2. 3PC</h3><h3 id="3-拜占庭问题"><a href="#3-拜占庭问题" class="headerlink" title="3. 拜占庭问题"></a>3. 拜占庭问题</h3><h3 id="4-PAXOS"><a href="#4-PAXOS" class="headerlink" title="4. PAXOS"></a>4. PAXOS</h3><h3 id="5-RAFT"><a href="#5-RAFT" class="headerlink" title="5. RAFT"></a>5. RAFT</h3><h3 id="6-ZAB"><a href="#6-ZAB" class="headerlink" title="6. ZAB"></a>6. ZAB</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-2PC&quot;&gt;&lt;a href=&quot;#1-2PC&quot; class=&quot;headerlink&quot; title=&quot;1. 2PC&quot;&gt;&lt;/a&gt;1. 2PC&lt;/h3&gt;&lt;h3 id=&quot;2-3PC&quot;&gt;&lt;a href=&quot;#2-3PC&quot; class=&quot;headerlink&quot; title=&quot;2
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>《代码的未来》</title>
@@ -746,20 +767,6 @@
       
         &lt;h3 id=&quot;Java基础知识点&quot;&gt;&lt;a href=&quot;#Java基础知识点&quot; class=&quot;headerlink&quot; title=&quot;Java基础知识点&quot;&gt;&lt;/a&gt;Java基础知识点&lt;/h3&gt;&lt;h5 id=&quot;1-ThreadPoolExecutor线程池&quot;&gt;&lt;a href=&quot;#1-
       
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>分布式锁的三种实现方式</title>
-    <link href="http://longman.kim/2018/06/19/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E4%B8%89%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/"/>
-    <id>http://longman.kim/2018/06/19/分布式锁的三种实现方式/</id>
-    <published>2018-06-19T14:07:51.000Z</published>
-    <updated>2018-06-19T14:07:51.993Z</updated>
-    
-    <summary type="html">
     
     </summary>
     

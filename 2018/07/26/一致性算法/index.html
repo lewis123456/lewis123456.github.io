@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        《代码的未来》｜longman&#39;s blog
+        一致性算法｜longman&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://longman.kim/2018/07/26/《代码的未来》/">
+    <link rel="canonical" href="http://longman.kim/2018/07/26/一致性算法/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,7 +145,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>《代码的未来》</h1>
+                    <h1>一致性算法</h1>
                     
                     <span class="meta">
                          作者 lewis longman
@@ -162,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            《代码的未来》
+            一致性算法
         </span>
     </div>
 </header>
@@ -173,21 +173,16 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="1-编程的时间和空间"><a href="#1-编程的时间和空间" class="headerlink" title="1. 编程的时间和空间"></a>1. 编程的时间和空间</h3><h3 id="2-编程语言的过去、现在和未来"><a href="#2-编程语言的过去、现在和未来" class="headerlink" title="2. 编程语言的过去、现在和未来"></a>2. 编程语言的过去、现在和未来</h3><h3 id="3-编程语言的新潮流"><a href="#3-编程语言的新潮流" class="headerlink" title="3. 编程语言的新潮流"></a>3. 编程语言的新潮流</h3><h3 id="4-云计算时代的编程"><a href="#4-云计算时代的编程" class="headerlink" title="4. 云计算时代的编程"></a>4. 云计算时代的编程</h3><h3 id="5-支撑大数据的数据存储技术"><a href="#5-支撑大数据的数据存储技术" class="headerlink" title="5. 支撑大数据的数据存储技术"></a>5. 支撑大数据的数据存储技术</h3><h3 id="6-多核时代的编程"><a href="#6-多核时代的编程" class="headerlink" title="6. 多核时代的编程"></a>6. 多核时代的编程</h3>
+                <h3 id="1-2PC"><a href="#1-2PC" class="headerlink" title="1. 2PC"></a>1. 2PC</h3><h3 id="2-3PC"><a href="#2-3PC" class="headerlink" title="2. 3PC"></a>2. 3PC</h3><h3 id="3-拜占庭问题"><a href="#3-拜占庭问题" class="headerlink" title="3. 拜占庭问题"></a>3. 拜占庭问题</h3><h3 id="4-PAXOS"><a href="#4-PAXOS" class="headerlink" title="4. PAXOS"></a>4. PAXOS</h3><h3 id="5-RAFT"><a href="#5-RAFT" class="headerlink" title="5. RAFT"></a>5. RAFT</h3><h3 id="6-ZAB"><a href="#6-ZAB" class="headerlink" title="6. ZAB"></a>6. ZAB</h3>
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2018/07/26/一致性算法/" data-toggle="tooltip" data-placement="top"
-                           title="一致性算法">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2018/07/24/Spring中的事务（传播机制、隔离级别、回滚、超时）/" data-toggle="tooltip" data-placement="top"
-                           title="Spring中的事务（传播机制、隔离级别、回滚、超时）">Next Post &rarr;</a>
+                        <a href="/2018/07/26/《代码的未来》/" data-toggle="tooltip" data-placement="top"
+                           title="《代码的未来》">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -204,7 +199,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-编程的时间和空间"><span class="toc-text">1. 编程的时间和空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-编程语言的过去、现在和未来"><span class="toc-text">2. 编程语言的过去、现在和未来</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-编程语言的新潮流"><span class="toc-text">3. 编程语言的新潮流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-云计算时代的编程"><span class="toc-text">4. 云计算时代的编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-支撑大数据的数据存储技术"><span class="toc-text">5. 支撑大数据的数据存储技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-多核时代的编程"><span class="toc-text">6. 多核时代的编程</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2PC"><span class="toc-text">1. 2PC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3PC"><span class="toc-text">2. 3PC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-拜占庭问题"><span class="toc-text">3. 拜占庭问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-PAXOS"><span class="toc-text">4. PAXOS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-RAFT"><span class="toc-text">5. RAFT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-ZAB"><span class="toc-text">6. ZAB</span></a></li></ol>
                 </div>
             </div>
         </div>
