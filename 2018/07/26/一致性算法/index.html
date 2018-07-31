@@ -173,7 +173,73 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="1-2PC"><a href="#1-2PC" class="headerlink" title="1. 2PC"></a>1. 2PC</h3><h3 id="2-3PC"><a href="#2-3PC" class="headerlink" title="2. 3PC"></a>2. 3PC</h3><h3 id="3-拜占庭问题"><a href="#3-拜占庭问题" class="headerlink" title="3. 拜占庭问题"></a>3. 拜占庭问题</h3><h3 id="4-PAXOS"><a href="#4-PAXOS" class="headerlink" title="4. PAXOS"></a>4. PAXOS</h3><h3 id="5-RAFT"><a href="#5-RAFT" class="headerlink" title="5. RAFT"></a>5. RAFT</h3><h3 id="6-ZAB"><a href="#6-ZAB" class="headerlink" title="6. ZAB"></a>6. ZAB</h3>
+                <h3 id="1-2PC"><a href="#1-2PC" class="headerlink" title="1. 2PC"></a>1. 2PC</h3><ol>
+<li>投票阶段<blockquote>
+<p>协调者向所有参与者发送事务内容，等待参与者的响应；<br>参与者执行事务，并将undo和redo信息记入事务日志；<br>参与者向协调者反馈事务的响应YES或者NO；  </p>
+</blockquote>
+</li>
+</ol>
+<ol start="2">
+<li><p>提交阶段</p>
+<blockquote>
+<p>如果所有参与者都反馈YES，则协调者向所有参与者发出提交请求，参与者完成事务提交后，向协调者发送ACK信息，协调者收到所有参与者的ACK信息后，完成事务。<br>任何一个参与者反馈NO，或者等待超时后，协调者会中断事务。协调者向所有参与者发送回滚请求，参与者收到回滚请求后，会利用undo信息进行事务回滚，并在完成回滚之后释放整个事务执行期间所占用的资源。参与者完成事务回滚之后，答复ACK信息。协调者收到所有的ACK信息后，完成事务中断。</p>
+</blockquote>
+</li>
+<li><p>优缺点</p>
+<blockquote>
+<p>优点：原理简单、实现方便<br>确定：同步阻塞（执行2PC过程中所有参与该事务操作的逻辑都是阻塞状态）、单点问题（如果协调者挂了，2PC将无法运转，如果在提交阶段挂了，参与者将一直处于锁定事务资源的状态）、数据不一致（在提交阶段如果由于网络等问题导致commit请求没有到达部分参与者，则会出现数据不一致）、太过保守（如果参与者出现故障，协调者只能通过超时来判断是否需要中断事务）。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="2-3PC（解决2PC的阻塞，但数据还可能不一致）"><a href="#2-3PC（解决2PC的阻塞，但数据还可能不一致）" class="headerlink" title="2. 3PC（解决2PC的阻塞，但数据还可能不一致）"></a>2. 3PC（解决2PC的阻塞，但数据还可能不一致）</h3><ol>
+<li><p>询问阶段</p>
+<blockquote>
+<p>协调者向参与者发送询问是否能执行该事务的请求，并等待。<br>参与者收到询问后，正常情况下，反馈YES，否则反馈NO。  </p>
+</blockquote>
+</li>
+<li><p>预提交阶段</p>
+<blockquote>
+<p>如果询问阶段协调者收到的响应都是YES，那么事务进入预提交。<br>协调者向所有参与者发送预提交请求。<br>参与者收到预提交请求后，执行该事务，并记录undo和redo到事务日记中。<br>参与者向协调者反馈预提交的结果，并等待最终指令，提交commit或者终止abort。<br>如果询问阶段任何一个参与者反馈了No，或者协调者等待超时，那么就会执行中断事务。<br>协调者向所有参与者发送中断请求。<br>无论是收到协调者的中断请求还是等待超时，参与者都执行中断事务。  </p>
+</blockquote>
+</li>
+<li><p>提交阶段</p>
+<blockquote>
+<p>假设协调者正常工作，接收到了所有参与者的ACK响应，它将从预提交阶段进入提交状态，并向所有参与者发送提交请求。<br>参与者收到提交请求后，正式提交事务，在事务完成后释放资源<br>参与者完成事务提交后，向协调者发送ACK<br>协调者收到所有ACK信息，完成事务<br>假设协调者正常工作，任一参与者反馈No，或者等待超时后，协调者都会中断事务。<br>协调者向所有参与者发送中断请求<br>参与者接收到中断请求后，利用undo日志执行事务回滚，并在完成事务回滚后释放资源。<br>参与者在完成事务回滚后，向协调者发送ACK信息。<br>协调者收到所有参与者的ACK信息后，中断事务。  </p>
+</blockquote>
+</li>
+<li><p>优缺点</p>
+<blockquote>
+<p>优点：降低参与者阻塞范围，能够在出现单点故障后继续达成一致。解决了2PC的阻塞问题，引入了预提交阶段，当所有参与者收到预提交请求后，不执行动作，直到收到提交请求或者超时。<br>缺点：引入预提交阶段，在这个阶段如果出现网络分区，协调者无法与参与者正常通信，参与者依然会进行事务提交，造成数据不一致。  </p>
+</blockquote>
+</li>
+</ol>
+<h3 id="3-拜占庭问题"><a href="#3-拜占庭问题" class="headerlink" title="3. 拜占庭问题"></a>3. 拜占庭问题</h3><p>消息不完整或者被篡改。  </p>
+<h3 id="4-PAXOS（解决单点问题）"><a href="#4-PAXOS（解决单点问题）" class="headerlink" title="4. PAXOS（解决单点问题）"></a>4. PAXOS（解决单点问题）</h3><ol>
+<li>Prepare阶段<blockquote>
+<p>提案号，任何结点在Prepare阶段时都会拒绝其值小于当前提案号的请求。如果接收结点收到的提案号n大于其他结点发过来的提案号，这个结点会回应YES（本结点上最新的被批准提案号），并保证不接收其他&lt;n的提案号。</p>
+</blockquote>
+</li>
+</ol>
+<ol start="2">
+<li>Accept阶段<blockquote>
+<p>如果提案者收到了超过半数的结点返回YES，它就会向所有的结点发布Accept Request，如果没有半数的话，那就返回失败。<br>当结点收到的Accept Request后，如果对于该结点来说n是最大的，它就通过request。如果发现自己有一个更大的提案号，结点就会拒绝request。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="5-RAFT"><a href="#5-RAFT" class="headerlink" title="5. RAFT"></a>5. RAFT</h3><p>follower、candidate、leader三个角色。<br>最开始大家都是follower，当follower监听不到leader时，自己成为candidate，并发起投票。</p>
+<ol>
+<li><p>leader的选举</p>
+<blockquote>
+<p>选举的timeout。follower随机等待一定时间成为candidate，看谁先成为candidate，它会先投自己一票，然后向其他结点发起投票邀请。如果得到大多数的投票就成为leader，之后定期向follower发送心跳。如果两个follower同时成为candidate，并且最后的投票相同，则等待其他的follower的选择超时后，开始新一轮的选举。</p>
+</blockquote>
+</li>
+<li><p>log复制</p>
+<blockquote>
+<p>leader把变动的log借助心跳同步给follower，过半回复之后才成功提交，之后再下一次心跳之后，follower也commit变动，在自己的node上生效。  </p>
+</blockquote>
+</li>
+</ol>
+<h3 id="6-ZAB"><a href="#6-ZAB" class="headerlink" title="6. ZAB"></a>6. ZAB</h3>
                 <hr>
                 
 
@@ -199,7 +265,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2PC"><span class="toc-text">1. 2PC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3PC"><span class="toc-text">2. 3PC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-拜占庭问题"><span class="toc-text">3. 拜占庭问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-PAXOS"><span class="toc-text">4. PAXOS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-RAFT"><span class="toc-text">5. RAFT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-ZAB"><span class="toc-text">6. ZAB</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2PC"><span class="toc-text">1. 2PC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3PC（解决2PC的阻塞，但数据还可能不一致）"><span class="toc-text">2. 3PC（解决2PC的阻塞，但数据还可能不一致）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-拜占庭问题"><span class="toc-text">3. 拜占庭问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-PAXOS（解决单点问题）"><span class="toc-text">4. PAXOS（解决单点问题）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-RAFT"><span class="toc-text">5. RAFT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-ZAB"><span class="toc-text">6. ZAB</span></a></li></ol>
                 </div>
             </div>
         </div>
