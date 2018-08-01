@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-08-01T01:40:12.271Z</updated>
+  <updated>2018-08-01T01:45:30.574Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://longman.kim/2018/08/01/%E4%B8%B4%E6%97%B6/"/>
     <id>http://longman.kim/2018/08/01/临时/</id>
     <published>2018-08-01T01:37:48.000Z</published>
-    <updated>2018-08-01T01:40:12.271Z</updated>
+    <updated>2018-08-01T01:45:30.574Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="零拷贝"><a href="#零拷贝" class="headerlink" title="零拷贝"></a>零拷贝</h3><h3 id="Netty的ChannelPipeline"><a href="#Netty的ChannelPipeline" class="headerlink" title="Netty的ChannelPipeline"></a>Netty的ChannelPipeline</h3><h3 id="2PC，3PC"><a href="#2PC，3PC" class="headerlink" title="2PC，3PC"></a>2PC，3PC</h3><h3 id="redis选举"><a href="#redis选举" class="headerlink" title="redis选举"></a>redis选举</h3><h3 id="CAP中的P"><a href="#CAP中的P" class="headerlink" title="CAP中的P"></a>CAP中的P</h3><h3 id="HBase与MySQL的对比"><a href="#HBase与MySQL的对比" class="headerlink" title="HBase与MySQL的对比"></a>HBase与MySQL的对比</h3><h3 id="POW挖矿，POF-DPOF-RAFT"><a href="#POW挖矿，POF-DPOF-RAFT" class="headerlink" title="POW挖矿，POF, DPOF, RAFT"></a>POW挖矿，POF, DPOF, RAFT</h3><h3 id="行内的架构"><a href="#行内的架构" class="headerlink" title="行内的架构"></a>行内的架构</h3><h3 id="消息中间件需要解决的问题"><a href="#消息中间件需要解决的问题" class="headerlink" title="消息中间件需要解决的问题"></a>消息中间件需要解决的问题</h3>]]></content>
+    <content type="html"><![CDATA[<h3 id="1-零拷贝"><a href="#1-零拷贝" class="headerlink" title="1. 零拷贝"></a>1. 零拷贝</h3><h3 id="2-Netty的ChannelPipeline"><a href="#2-Netty的ChannelPipeline" class="headerlink" title="2. Netty的ChannelPipeline"></a>2. Netty的ChannelPipeline</h3><h3 id="3-2PC，3PC"><a href="#3-2PC，3PC" class="headerlink" title="3. 2PC，3PC"></a>3. 2PC，3PC</h3><h3 id="4-redis选举"><a href="#4-redis选举" class="headerlink" title="4. redis选举"></a>4. redis选举</h3><h3 id="5-CAP中的P"><a href="#5-CAP中的P" class="headerlink" title="5. CAP中的P"></a>5. CAP中的P</h3><h3 id="6-HBase与MySQL的对比"><a href="#6-HBase与MySQL的对比" class="headerlink" title="6. HBase与MySQL的对比"></a>6. HBase与MySQL的对比</h3><h3 id="7-POW挖矿，POF-DPOF-RAFT"><a href="#7-POW挖矿，POF-DPOF-RAFT" class="headerlink" title="7. POW挖矿，POF, DPOF, RAFT"></a>7. POW挖矿，POF, DPOF, RAFT</h3><h3 id="8-行内的架构"><a href="#8-行内的架构" class="headerlink" title="8. 行内的架构"></a>8. 行内的架构</h3><h3 id="9-消息中间件需要解决的问题"><a href="#9-消息中间件需要解决的问题" class="headerlink" title="9. 消息中间件需要解决的问题"></a>9. 消息中间件需要解决的问题</h3><h3 id="10-BloomFilter-布隆过滤器"><a href="#10-BloomFilter-布隆过滤器" class="headerlink" title="10. BloomFilter 布隆过滤器"></a>10. BloomFilter 布隆过滤器</h3><h3 id="11-MySQL-流式查询"><a href="#11-MySQL-流式查询" class="headerlink" title="11. MySQL 流式查询"></a>11. MySQL 流式查询</h3>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;零拷贝&quot;&gt;&lt;a href=&quot;#零拷贝&quot; class=&quot;headerlink&quot; title=&quot;零拷贝&quot;&gt;&lt;/a&gt;零拷贝&lt;/h3&gt;&lt;h3 id=&quot;Netty的ChannelPipeline&quot;&gt;&lt;a href=&quot;#Netty的ChannelPipeline&quot; class
+        &lt;h3 id=&quot;1-零拷贝&quot;&gt;&lt;a href=&quot;#1-零拷贝&quot; class=&quot;headerlink&quot; title=&quot;1. 零拷贝&quot;&gt;&lt;/a&gt;1. 零拷贝&lt;/h3&gt;&lt;h3 id=&quot;2-Netty的ChannelPipeline&quot;&gt;&lt;a href=&quot;#2-Netty的ChannelP
       
     
     </summary>
