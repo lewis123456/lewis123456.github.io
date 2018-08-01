@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="张凡在 Github 上的个人博客">
+    <meta name="keyword" content="软件，算法，机器人">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="img/header-img.jpg">
+    <link rel="alternate" type="application/atom+xml" title="longman" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        《Java虚拟机规范》｜longman&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="http://longman.kim/2018/08/01/《Java虚拟机规范》/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('img/post-default-img.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    longman
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+							
+						
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="img/post-default-img.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('img/post-default-img.jpg')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>《Java虚拟机规范》</h1>
+                    
+                    <span class="meta">
+                         作者 lewis longman
+                        <span>
+                          日期 2018-08-01
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            《Java虚拟机规范》
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><h5 id="1-1-历史简介"><a href="#1-1-历史简介" class="headerlink" title="1.1 历史简介"></a>1.1 历史简介</h5><h5 id="1-2-Java虚拟机"><a href="#1-2-Java虚拟机" class="headerlink" title="1.2 Java虚拟机"></a>1.2 Java虚拟机</h5><h5 id="1-3-规范制定的组织"><a href="#1-3-规范制定的组织" class="headerlink" title="1.3 规范制定的组织"></a>1.3 规范制定的组织</h5><h5 id="1-4-标记"><a href="#1-4-标记" class="headerlink" title="1.4 标记"></a>1.4 标记</h5><h5 id="1-5-反馈"><a href="#1-5-反馈" class="headerlink" title="1.5 反馈"></a>1.5 反馈</h5><h3 id="2-Java虚拟机的结构"><a href="#2-Java虚拟机的结构" class="headerlink" title="2. Java虚拟机的结构"></a>2. Java虚拟机的结构</h3><h5 id="2-1-class文件的格式"><a href="#2-1-class文件的格式" class="headerlink" title="2.1 class文件的格式"></a>2.1 class文件的格式</h5><h5 id="2-2-数据类型"><a href="#2-2-数据类型" class="headerlink" title="2.2 数据类型"></a>2.2 数据类型</h5><h5 id="2-3-基本类型和值"><a href="#2-3-基本类型和值" class="headerlink" title="2.3 基本类型和值"></a>2.3 基本类型和值</h5><h5 id="2-4-引用类型和值"><a href="#2-4-引用类型和值" class="headerlink" title="2.4 引用类型和值"></a>2.4 引用类型和值</h5><h5 id="2-5-运行时数据区域"><a href="#2-5-运行时数据区域" class="headerlink" title="2.5 运行时数据区域"></a>2.5 运行时数据区域</h5><h5 id="2-6-帧"><a href="#2-6-帧" class="headerlink" title="2.6 帧"></a>2.6 帧</h5><h5 id="2-7-对象的表示"><a href="#2-7-对象的表示" class="headerlink" title="2.7 对象的表示"></a>2.7 对象的表示</h5><h5 id="2-8-浮点类型的计算"><a href="#2-8-浮点类型的计算" class="headerlink" title="2.8 浮点类型的计算"></a>2.8 浮点类型的计算</h5><h5 id="2-9-特别的方法"><a href="#2-9-特别的方法" class="headerlink" title="2.9 特别的方法"></a>2.9 特别的方法</h5><h5 id="2-10-异常"><a href="#2-10-异常" class="headerlink" title="2.10 异常"></a>2.10 异常</h5><h5 id="2-11-命令集总结"><a href="#2-11-命令集总结" class="headerlink" title="2.11 命令集总结"></a>2.11 命令集总结</h5><h5 id="2-12-类库"><a href="#2-12-类库" class="headerlink" title="2.12 类库"></a>2.12 类库</h5><h5 id="2-13-公共、私有的实现"><a href="#2-13-公共、私有的实现" class="headerlink" title="2.13 公共、私有的实现"></a>2.13 公共、私有的实现</h5><h3 id="3-编译Java虚拟机"><a href="#3-编译Java虚拟机" class="headerlink" title="3. 编译Java虚拟机"></a>3. 编译Java虚拟机</h3><h5 id="3-1-例子的格式"><a href="#3-1-例子的格式" class="headerlink" title="3.1 例子的格式"></a>3.1 例子的格式</h5><h5 id="3-2-常量，局部变量，构造函数的使用"><a href="#3-2-常量，局部变量，构造函数的使用" class="headerlink" title="3.2 常量，局部变量，构造函数的使用"></a>3.2 常量，局部变量，构造函数的使用</h5><h5 id="3-3-算术运算"><a href="#3-3-算术运算" class="headerlink" title="3.3 算术运算"></a>3.3 算术运算</h5><h5 id="3-4-访问运行时的常量池"><a href="#3-4-访问运行时的常量池" class="headerlink" title="3.4 访问运行时的常量池"></a>3.4 访问运行时的常量池</h5><h5 id="3-5-更多控制的例子"><a href="#3-5-更多控制的例子" class="headerlink" title="3.5 更多控制的例子"></a>3.5 更多控制的例子</h5><h5 id="3-6-接收参数"><a href="#3-6-接收参数" class="headerlink" title="3.6 接收参数"></a>3.6 接收参数</h5><h5 id="3-7-调用方法"><a href="#3-7-调用方法" class="headerlink" title="3.7 调用方法"></a>3.7 调用方法</h5><h5 id="3-8-类实例的使用"><a href="#3-8-类实例的使用" class="headerlink" title="3.8 类实例的使用"></a>3.8 类实例的使用</h5><h5 id="3-9-数组"><a href="#3-9-数组" class="headerlink" title="3.9 数组"></a>3.9 数组</h5><h5 id="3-10-编译切换"><a href="#3-10-编译切换" class="headerlink" title="3.10 编译切换"></a>3.10 编译切换</h5><h5 id="3-11-栈操作符"><a href="#3-11-栈操作符" class="headerlink" title="3.11 栈操作符"></a>3.11 栈操作符</h5><h5 id="3-12-异常的抛出与处理"><a href="#3-12-异常的抛出与处理" class="headerlink" title="3.12 异常的抛出与处理"></a>3.12 异常的抛出与处理</h5><h5 id="3-13-finally的编译"><a href="#3-13-finally的编译" class="headerlink" title="3.13 finally的编译"></a>3.13 finally的编译</h5><h5 id="3-14-同步Synchronization"><a href="#3-14-同步Synchronization" class="headerlink" title="3.14 同步Synchronization"></a>3.14 同步Synchronization</h5><h5 id="3-15-注解"><a href="#3-15-注解" class="headerlink" title="3.15 注解"></a>3.15 注解</h5><h3 id="4-类class文件的格式"><a href="#4-类class文件的格式" class="headerlink" title="4. 类class文件的格式"></a>4. 类class文件的格式</h3><h5 id="4-1-类文件的结构"><a href="#4-1-类文件的结构" class="headerlink" title="4.1 类文件的结构"></a>4.1 类文件的结构</h5><h5 id="4-2-名字的内部格式"><a href="#4-2-名字的内部格式" class="headerlink" title="4.2 名字的内部格式"></a>4.2 名字的内部格式</h5><h5 id="4-3-描述符"><a href="#4-3-描述符" class="headerlink" title="4.3 描述符"></a>4.3 描述符</h5><h5 id="4-4-常量池"><a href="#4-4-常量池" class="headerlink" title="4.4 常量池"></a>4.4 常量池</h5><h5 id="4-5-域"><a href="#4-5-域" class="headerlink" title="4.5 域"></a>4.5 域</h5><h5 id="4-6-方法"><a href="#4-6-方法" class="headerlink" title="4.6 方法"></a>4.6 方法</h5><h5 id="4-7-属性"><a href="#4-7-属性" class="headerlink" title="4.7 属性"></a>4.7 属性</h5><h5 id="4-8-格式检查"><a href="#4-8-格式检查" class="headerlink" title="4.8 格式检查"></a>4.8 格式检查</h5><h5 id="4-9-Java虚拟机代码的限制"><a href="#4-9-Java虚拟机代码的限制" class="headerlink" title="4.9 Java虚拟机代码的限制"></a>4.9 Java虚拟机代码的限制</h5><h5 id="4-10-类文件的验证"><a href="#4-10-类文件的验证" class="headerlink" title="4.10 类文件的验证"></a>4.10 类文件的验证</h5><h5 id="4-11-Java虚拟机的限制"><a href="#4-11-Java虚拟机的限制" class="headerlink" title="4.11 Java虚拟机的限制"></a>4.11 Java虚拟机的限制</h5><h3 id="5-加载、链接、初始化"><a href="#5-加载、链接、初始化" class="headerlink" title="5 加载、链接、初始化"></a>5 加载、链接、初始化</h3><h5 id="5-1-运行时常量池"><a href="#5-1-运行时常量池" class="headerlink" title="5.1 运行时常量池"></a>5.1 运行时常量池</h5><h5 id="5-2-Java虚拟机的启动"><a href="#5-2-Java虚拟机的启动" class="headerlink" title="5.2 Java虚拟机的启动"></a>5.2 Java虚拟机的启动</h5><h5 id="5-3-创建和加载"><a href="#5-3-创建和加载" class="headerlink" title="5.3 创建和加载"></a>5.3 创建和加载</h5><h5 id="5-4-链接"><a href="#5-4-链接" class="headerlink" title="5.4 链接"></a>5.4 链接</h5><h5 id="5-5-初始化"><a href="#5-5-初始化" class="headerlink" title="5.5 初始化"></a>5.5 初始化</h5><h5 id="5-6-绑定本地方法的实现"><a href="#5-6-绑定本地方法的实现" class="headerlink" title="5.6 绑定本地方法的实现"></a>5.6 绑定本地方法的实现</h5><h5 id="5-7-Java虚拟机的退出"><a href="#5-7-Java虚拟机的退出" class="headerlink" title="5.7 Java虚拟机的退出"></a>5.7 Java虚拟机的退出</h5><h3 id="6-Java虚拟机指令集"><a href="#6-Java虚拟机指令集" class="headerlink" title="6. Java虚拟机指令集"></a>6. Java虚拟机指令集</h3><h5 id="6-1-假设：“必须”的意义"><a href="#6-1-假设：“必须”的意义" class="headerlink" title="6.1 假设：“必须”的意义"></a>6.1 假设：“必须”的意义</h5><h5 id="6-2-保留的Opcodes"><a href="#6-2-保留的Opcodes" class="headerlink" title="6.2 保留的Opcodes"></a>6.2 保留的Opcodes</h5><h5 id="6-3-虚拟机错误"><a href="#6-3-虚拟机错误" class="headerlink" title="6.3 虚拟机错误"></a>6.3 虚拟机错误</h5><h5 id="6-4-指令描述的格式"><a href="#6-4-指令描述的格式" class="headerlink" title="6.4 指令描述的格式"></a>6.4 指令描述的格式</h5><h5 id="6-5-指令集"><a href="#6-5-指令集" class="headerlink" title="6.5 指令集"></a>6.5 指令集</h5><h3 id="7-Opcode"><a href="#7-Opcode" class="headerlink" title="7. Opcode"></a>7. Opcode</h3>
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2018/08/01/openjdk-8浏览总结/" data-toggle="tooltip" data-placement="top"
+                           title="openjdk-8浏览总结">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-简介"><span class="toc-text">1. 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-历史简介"><span class="toc-text">1.1 历史简介</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-Java虚拟机"><span class="toc-text">1.2 Java虚拟机</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-规范制定的组织"><span class="toc-text">1.3 规范制定的组织</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-标记"><span class="toc-text">1.4 标记</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-反馈"><span class="toc-text">1.5 反馈</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Java虚拟机的结构"><span class="toc-text">2. Java虚拟机的结构</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-class文件的格式"><span class="toc-text">2.1 class文件的格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-数据类型"><span class="toc-text">2.2 数据类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3-基本类型和值"><span class="toc-text">2.3 基本类型和值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4-引用类型和值"><span class="toc-text">2.4 引用类型和值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-5-运行时数据区域"><span class="toc-text">2.5 运行时数据区域</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-6-帧"><span class="toc-text">2.6 帧</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-7-对象的表示"><span class="toc-text">2.7 对象的表示</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-8-浮点类型的计算"><span class="toc-text">2.8 浮点类型的计算</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-9-特别的方法"><span class="toc-text">2.9 特别的方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-10-异常"><span class="toc-text">2.10 异常</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-11-命令集总结"><span class="toc-text">2.11 命令集总结</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-12-类库"><span class="toc-text">2.12 类库</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-13-公共、私有的实现"><span class="toc-text">2.13 公共、私有的实现</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-编译Java虚拟机"><span class="toc-text">3. 编译Java虚拟机</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-例子的格式"><span class="toc-text">3.1 例子的格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-常量，局部变量，构造函数的使用"><span class="toc-text">3.2 常量，局部变量，构造函数的使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-算术运算"><span class="toc-text">3.3 算术运算</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-访问运行时的常量池"><span class="toc-text">3.4 访问运行时的常量池</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-5-更多控制的例子"><span class="toc-text">3.5 更多控制的例子</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-接收参数"><span class="toc-text">3.6 接收参数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-7-调用方法"><span class="toc-text">3.7 调用方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-8-类实例的使用"><span class="toc-text">3.8 类实例的使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-9-数组"><span class="toc-text">3.9 数组</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-10-编译切换"><span class="toc-text">3.10 编译切换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-11-栈操作符"><span class="toc-text">3.11 栈操作符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-12-异常的抛出与处理"><span class="toc-text">3.12 异常的抛出与处理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-13-finally的编译"><span class="toc-text">3.13 finally的编译</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-14-同步Synchronization"><span class="toc-text">3.14 同步Synchronization</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-15-注解"><span class="toc-text">3.15 注解</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-类class文件的格式"><span class="toc-text">4. 类class文件的格式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-类文件的结构"><span class="toc-text">4.1 类文件的结构</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-2-名字的内部格式"><span class="toc-text">4.2 名字的内部格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-3-描述符"><span class="toc-text">4.3 描述符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-4-常量池"><span class="toc-text">4.4 常量池</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-5-域"><span class="toc-text">4.5 域</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-6-方法"><span class="toc-text">4.6 方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-7-属性"><span class="toc-text">4.7 属性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-8-格式检查"><span class="toc-text">4.8 格式检查</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-9-Java虚拟机代码的限制"><span class="toc-text">4.9 Java虚拟机代码的限制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-10-类文件的验证"><span class="toc-text">4.10 类文件的验证</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-11-Java虚拟机的限制"><span class="toc-text">4.11 Java虚拟机的限制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-加载、链接、初始化"><span class="toc-text">5 加载、链接、初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#5-1-运行时常量池"><span class="toc-text">5.1 运行时常量池</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-2-Java虚拟机的启动"><span class="toc-text">5.2 Java虚拟机的启动</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-3-创建和加载"><span class="toc-text">5.3 创建和加载</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-4-链接"><span class="toc-text">5.4 链接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-5-初始化"><span class="toc-text">5.5 初始化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-6-绑定本地方法的实现"><span class="toc-text">5.6 绑定本地方法的实现</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-7-Java虚拟机的退出"><span class="toc-text">5.7 Java虚拟机的退出</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Java虚拟机指令集"><span class="toc-text">6. Java虚拟机指令集</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#6-1-假设：“必须”的意义"><span class="toc-text">6.1 假设：“必须”的意义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-2-保留的Opcodes"><span class="toc-text">6.2 保留的Opcodes</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-3-虚拟机错误"><span class="toc-text">6.3 虚拟机错误</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-4-指令描述的格式"><span class="toc-text">6.4 指令描述的格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-5-指令集"><span class="toc-text">6.5 指令集</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Opcode"><span class="toc-text">7. Opcode</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; longman 2018
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://longman.kim/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="img/header-img.jpg">
+</body>
+
+</html>

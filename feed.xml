@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-08-01T01:45:30.574Z</updated>
+  <updated>2018-08-01T13:14:14.891Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《Java虚拟机规范》</title>
+    <link href="http://longman.kim/2018/08/01/%E3%80%8AJava%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A7%84%E8%8C%83%E3%80%8B/"/>
+    <id>http://longman.kim/2018/08/01/《Java虚拟机规范》/</id>
+    <published>2018-08-01T12:10:25.000Z</published>
+    <updated>2018-08-01T13:14:14.891Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><h5 id="1-1-历史简介"><a href="#1-1-历史简介" class="headerlink" title="1.1 历史简介"></a>1.1 历史简介</h5><h5 id="1-2-Java虚拟机"><a href="#1-2-Java虚拟机" class="headerlink" title="1.2 Java虚拟机"></a>1.2 Java虚拟机</h5><h5 id="1-3-规范制定的组织"><a href="#1-3-规范制定的组织" class="headerlink" title="1.3 规范制定的组织"></a>1.3 规范制定的组织</h5><h5 id="1-4-标记"><a href="#1-4-标记" class="headerlink" title="1.4 标记"></a>1.4 标记</h5><h5 id="1-5-反馈"><a href="#1-5-反馈" class="headerlink" title="1.5 反馈"></a>1.5 反馈</h5><h3 id="2-Java虚拟机的结构"><a href="#2-Java虚拟机的结构" class="headerlink" title="2. Java虚拟机的结构"></a>2. Java虚拟机的结构</h3><h5 id="2-1-class文件的格式"><a href="#2-1-class文件的格式" class="headerlink" title="2.1 class文件的格式"></a>2.1 class文件的格式</h5><h5 id="2-2-数据类型"><a href="#2-2-数据类型" class="headerlink" title="2.2 数据类型"></a>2.2 数据类型</h5><h5 id="2-3-基本类型和值"><a href="#2-3-基本类型和值" class="headerlink" title="2.3 基本类型和值"></a>2.3 基本类型和值</h5><h5 id="2-4-引用类型和值"><a href="#2-4-引用类型和值" class="headerlink" title="2.4 引用类型和值"></a>2.4 引用类型和值</h5><h5 id="2-5-运行时数据区域"><a href="#2-5-运行时数据区域" class="headerlink" title="2.5 运行时数据区域"></a>2.5 运行时数据区域</h5><h5 id="2-6-帧"><a href="#2-6-帧" class="headerlink" title="2.6 帧"></a>2.6 帧</h5><h5 id="2-7-对象的表示"><a href="#2-7-对象的表示" class="headerlink" title="2.7 对象的表示"></a>2.7 对象的表示</h5><h5 id="2-8-浮点类型的计算"><a href="#2-8-浮点类型的计算" class="headerlink" title="2.8 浮点类型的计算"></a>2.8 浮点类型的计算</h5><h5 id="2-9-特别的方法"><a href="#2-9-特别的方法" class="headerlink" title="2.9 特别的方法"></a>2.9 特别的方法</h5><h5 id="2-10-异常"><a href="#2-10-异常" class="headerlink" title="2.10 异常"></a>2.10 异常</h5><h5 id="2-11-命令集总结"><a href="#2-11-命令集总结" class="headerlink" title="2.11 命令集总结"></a>2.11 命令集总结</h5><h5 id="2-12-类库"><a href="#2-12-类库" class="headerlink" title="2.12 类库"></a>2.12 类库</h5><h5 id="2-13-公共、私有的实现"><a href="#2-13-公共、私有的实现" class="headerlink" title="2.13 公共、私有的实现"></a>2.13 公共、私有的实现</h5><h3 id="3-编译Java虚拟机"><a href="#3-编译Java虚拟机" class="headerlink" title="3. 编译Java虚拟机"></a>3. 编译Java虚拟机</h3><h5 id="3-1-例子的格式"><a href="#3-1-例子的格式" class="headerlink" title="3.1 例子的格式"></a>3.1 例子的格式</h5><h5 id="3-2-常量，局部变量，构造函数的使用"><a href="#3-2-常量，局部变量，构造函数的使用" class="headerlink" title="3.2 常量，局部变量，构造函数的使用"></a>3.2 常量，局部变量，构造函数的使用</h5><h5 id="3-3-算术运算"><a href="#3-3-算术运算" class="headerlink" title="3.3 算术运算"></a>3.3 算术运算</h5><h5 id="3-4-访问运行时的常量池"><a href="#3-4-访问运行时的常量池" class="headerlink" title="3.4 访问运行时的常量池"></a>3.4 访问运行时的常量池</h5><h5 id="3-5-更多控制的例子"><a href="#3-5-更多控制的例子" class="headerlink" title="3.5 更多控制的例子"></a>3.5 更多控制的例子</h5><h5 id="3-6-接收参数"><a href="#3-6-接收参数" class="headerlink" title="3.6 接收参数"></a>3.6 接收参数</h5><h5 id="3-7-调用方法"><a href="#3-7-调用方法" class="headerlink" title="3.7 调用方法"></a>3.7 调用方法</h5><h5 id="3-8-类实例的使用"><a href="#3-8-类实例的使用" class="headerlink" title="3.8 类实例的使用"></a>3.8 类实例的使用</h5><h5 id="3-9-数组"><a href="#3-9-数组" class="headerlink" title="3.9 数组"></a>3.9 数组</h5><h5 id="3-10-编译切换"><a href="#3-10-编译切换" class="headerlink" title="3.10 编译切换"></a>3.10 编译切换</h5><h5 id="3-11-栈操作符"><a href="#3-11-栈操作符" class="headerlink" title="3.11 栈操作符"></a>3.11 栈操作符</h5><h5 id="3-12-异常的抛出与处理"><a href="#3-12-异常的抛出与处理" class="headerlink" title="3.12 异常的抛出与处理"></a>3.12 异常的抛出与处理</h5><h5 id="3-13-finally的编译"><a href="#3-13-finally的编译" class="headerlink" title="3.13 finally的编译"></a>3.13 finally的编译</h5><h5 id="3-14-同步Synchronization"><a href="#3-14-同步Synchronization" class="headerlink" title="3.14 同步Synchronization"></a>3.14 同步Synchronization</h5><h5 id="3-15-注解"><a href="#3-15-注解" class="headerlink" title="3.15 注解"></a>3.15 注解</h5><h3 id="4-类class文件的格式"><a href="#4-类class文件的格式" class="headerlink" title="4. 类class文件的格式"></a>4. 类class文件的格式</h3><h5 id="4-1-类文件的结构"><a href="#4-1-类文件的结构" class="headerlink" title="4.1 类文件的结构"></a>4.1 类文件的结构</h5><h5 id="4-2-名字的内部格式"><a href="#4-2-名字的内部格式" class="headerlink" title="4.2 名字的内部格式"></a>4.2 名字的内部格式</h5><h5 id="4-3-描述符"><a href="#4-3-描述符" class="headerlink" title="4.3 描述符"></a>4.3 描述符</h5><h5 id="4-4-常量池"><a href="#4-4-常量池" class="headerlink" title="4.4 常量池"></a>4.4 常量池</h5><h5 id="4-5-域"><a href="#4-5-域" class="headerlink" title="4.5 域"></a>4.5 域</h5><h5 id="4-6-方法"><a href="#4-6-方法" class="headerlink" title="4.6 方法"></a>4.6 方法</h5><h5 id="4-7-属性"><a href="#4-7-属性" class="headerlink" title="4.7 属性"></a>4.7 属性</h5><h5 id="4-8-格式检查"><a href="#4-8-格式检查" class="headerlink" title="4.8 格式检查"></a>4.8 格式检查</h5><h5 id="4-9-Java虚拟机代码的限制"><a href="#4-9-Java虚拟机代码的限制" class="headerlink" title="4.9 Java虚拟机代码的限制"></a>4.9 Java虚拟机代码的限制</h5><h5 id="4-10-类文件的验证"><a href="#4-10-类文件的验证" class="headerlink" title="4.10 类文件的验证"></a>4.10 类文件的验证</h5><h5 id="4-11-Java虚拟机的限制"><a href="#4-11-Java虚拟机的限制" class="headerlink" title="4.11 Java虚拟机的限制"></a>4.11 Java虚拟机的限制</h5><h3 id="5-加载、链接、初始化"><a href="#5-加载、链接、初始化" class="headerlink" title="5 加载、链接、初始化"></a>5 加载、链接、初始化</h3><h5 id="5-1-运行时常量池"><a href="#5-1-运行时常量池" class="headerlink" title="5.1 运行时常量池"></a>5.1 运行时常量池</h5><h5 id="5-2-Java虚拟机的启动"><a href="#5-2-Java虚拟机的启动" class="headerlink" title="5.2 Java虚拟机的启动"></a>5.2 Java虚拟机的启动</h5><h5 id="5-3-创建和加载"><a href="#5-3-创建和加载" class="headerlink" title="5.3 创建和加载"></a>5.3 创建和加载</h5><h5 id="5-4-链接"><a href="#5-4-链接" class="headerlink" title="5.4 链接"></a>5.4 链接</h5><h5 id="5-5-初始化"><a href="#5-5-初始化" class="headerlink" title="5.5 初始化"></a>5.5 初始化</h5><h5 id="5-6-绑定本地方法的实现"><a href="#5-6-绑定本地方法的实现" class="headerlink" title="5.6 绑定本地方法的实现"></a>5.6 绑定本地方法的实现</h5><h5 id="5-7-Java虚拟机的退出"><a href="#5-7-Java虚拟机的退出" class="headerlink" title="5.7 Java虚拟机的退出"></a>5.7 Java虚拟机的退出</h5><h3 id="6-Java虚拟机指令集"><a href="#6-Java虚拟机指令集" class="headerlink" title="6. Java虚拟机指令集"></a>6. Java虚拟机指令集</h3><h5 id="6-1-假设：“必须”的意义"><a href="#6-1-假设：“必须”的意义" class="headerlink" title="6.1 假设：“必须”的意义"></a>6.1 假设：“必须”的意义</h5><h5 id="6-2-保留的Opcodes"><a href="#6-2-保留的Opcodes" class="headerlink" title="6.2 保留的Opcodes"></a>6.2 保留的Opcodes</h5><h5 id="6-3-虚拟机错误"><a href="#6-3-虚拟机错误" class="headerlink" title="6.3 虚拟机错误"></a>6.3 虚拟机错误</h5><h5 id="6-4-指令描述的格式"><a href="#6-4-指令描述的格式" class="headerlink" title="6.4 指令描述的格式"></a>6.4 指令描述的格式</h5><h5 id="6-5-指令集"><a href="#6-5-指令集" class="headerlink" title="6.5 指令集"></a>6.5 指令集</h5><h3 id="7-Opcode"><a href="#7-Opcode" class="headerlink" title="7. Opcode"></a>7. Opcode</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot; title=&quot;1. 简介&quot;&gt;&lt;/a&gt;1. 简介&lt;/h3&gt;&lt;h5 id=&quot;1-1-历史简介&quot;&gt;&lt;a href=&quot;#1-1-历史简介&quot; class=&quot;headerlink&quot; title=
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>openjdk-8浏览总结</title>
+    <link href="http://longman.kim/2018/08/01/openjdk-8%E6%B5%8F%E8%A7%88%E6%80%BB%E7%BB%93/"/>
+    <id>http://longman.kim/2018/08/01/openjdk-8浏览总结/</id>
+    <published>2018-08-01T08:22:22.000Z</published>
+    <updated>2018-08-01T12:02:28.693Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-模块介绍"><a href="#1-模块介绍" class="headerlink" title="1. 模块介绍"></a>1. 模块介绍</h3><ul><li><p>common  </p></li><li><p>corba<br>Common Object Request Broker Architecture(通用对象请求代理架构), 基于对象-服务机制设计，类似于JavaBean和微软的COM技术。  </p><blockquote><ol><li>RPC<br>支持xml和json两种格式的消息，使用http作为其传输协议。  </li><li>CORBA<br>使用IDL作为消息，使用tcp作为传输协议，使用JNDI查找服务。CORBA是OMG(Object Management Group)对象管理组织提出的方案，解决分布式环境中软硬件系统的互联。现在已经用的比较少了，基本被Web Service替代，只有一些大型的电信项目还在用CORBA。</li><li>Web Service<br>包含AXIS, XFire, CFX   </li><li>SOAP<br>使用xml作为消息，使用http作为传输协议。  </li><li>RMI<br>使用JRMP作为消息，可以使用http, tcp等作为传输协议，使用JNDI查找服务。</li></ol></blockquote></li><li><p>hotspot<br>JVM的实现之一</p><blockquote><ol><li>cms</li><li>g1</li><li>parallel scavenge</li></ol></blockquote></li><li><p>jaxp<br>Java API for XML Processing, 解析与校验xml文件，提供了3种接口来处理XML文档。</p><blockquote><p>DOM接口(文档对象模型解析)<br>SAX接口(XML简单API解析)<br>StAX接口(XML流API)</p></blockquote></li><li><p>jaxws<br>XML Web Services的Java API, 全称Java API for Web Services，允许开发者选择面向RPC(RPC-oriented)或是面向消息(Message-oriented)的方式来实现自己的Web Services。</p></li><li><p>jdk<br>JDK的实现  </p><blockquote><ol><li>ThreadLocal</li><li>BlockingQueue</li><li>EnumMap</li><li>EnumSet</li><li>HashMap</li><li>CurrentHashMap</li><li>ArraryList</li><li>HashSet</li><li>TreeSet</li><li>LinkedHashMap</li><li>TreeMap</li><li>LinkedList</li><li>HashTable</li><li>Vector</li></ol></blockquote></li><li><p>langtools<br>Java语言工具，包含javac, javap等实用程序的源码。</p></li><li><p>make</p></li><li><p>nashorn<br>JVM上的JavaScript运行时</p></li><li><p>test</p></li></ul><h3 id="2-辅助书籍"><a href="#2-辅助书籍" class="headerlink" title="2. 辅助书籍"></a>2. 辅助书籍</h3><ol><li>《Java虚拟机规范》</li><li>《深入理解Java虚拟机》</li><li>《Hotspot实战》</li></ol><h3 id="3-其他建议"><a href="#3-其他建议" class="headerlink" title="3. 其他建议"></a>3. 其他建议</h3><ol><li><p>精读源码<br>java.util<br>java.lang<br>java.io  </p></li><li><p>深刻理解<br>java.lang.reflect<br>java.net<br>java.net.<em><br>java.nio<br>java.util.concurrent.</em></p></li><li><p>会用即可<br>java.lang.annotation<br>javax.annotation.<em><br>java.lang.ref<br>java.math<br>java.rmi.</em><br>javax.rmi.<em><br>java.security.</em><br>javax.security.<em><br>java.sql<br>javax.sql.</em><br>javax.transaction.<em><br>java.text<br>javax.xml.</em><br>org.w3c.dom.<em><br>org.xml.sax.</em><br>javax.crypto.<em><br>javax.imageio.</em><br>javax.jws.*<br>java.util.jar<br>java.util.logging<br>java.util.prefs<br>java.util.regex<br>java.util.zip  </p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-模块介绍&quot;&gt;&lt;a href=&quot;#1-模块介绍&quot; class=&quot;headerlink&quot; title=&quot;1. 模块介绍&quot;&gt;&lt;/a&gt;1. 模块介绍&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;common  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;corba&lt;br&gt;Common O
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>临时</title>
@@ -107,15 +152,15 @@
     <link href="http://longman.kim/2018/07/23/ELK%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F/"/>
     <id>http://longman.kim/2018/07/23/ELK搭建网站监控系统/</id>
     <published>2018-07-23T12:36:53.000Z</published>
-    <updated>2018-07-23T13:46:58.650Z</updated>
+    <updated>2018-08-01T12:53:46.390Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="网站流量监控系统"><a href="#网站流量监控系统" class="headerlink" title=". 网站流量监控系统"></a>. 网站流量监控系统</h3><h3 id="1-Logstash"><a href="#1-Logstash" class="headerlink" title="1. Logstash"></a>1. Logstash</h3><p>矿工，日志收集，日志来自于业务系统，业务系统由不同的语言编写，过滤日志格式。Logstash采用Ruby语法，自定义日志格式过滤器，将格式化后的数据输出到ElasticSearch。它的可靠性低，占用CPU和内存的比率很高。</p><h3 id="2-ElasticSearch"><a href="#2-ElasticSearch" class="headerlink" title="2. ElasticSearch"></a>2. ElasticSearch</h3><p>日志仓库，提供全文检索，快速检索，分布式存储。ElasticSearch采用主备部署。</p><h3 id="3-Kibana"><a href="#3-Kibana" class="headerlink" title="3. Kibana"></a>3. Kibana</h3><p>可视化，数据来源于ES，实时读取数据变化。</p><h3 id="4-Filebeat"><a href="#4-Filebeat" class="headerlink" title="4. Filebeat"></a>4. Filebeat</h3><p>承担数据采集的角色</p><h3 id="6-ELK海量日志监控的部署"><a href="#6-ELK海量日志监控的部署" class="headerlink" title="6. ELK海量日志监控的部署"></a>6. ELK海量日志监控的部署</h3><p>利用Kafka将同步改成异步</p><h3 id="7-场景"><a href="#7-场景" class="headerlink" title="7. 场景"></a>7. 场景</h3><p>监控、统计、分析、检索</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="网站流量监控系统"><a href="#网站流量监控系统" class="headerlink" title=". 网站流量监控系统"></a>. 网站流量监控系统</h3><h3 id="1-Logstash-JRuby编写"><a href="#1-Logstash-JRuby编写" class="headerlink" title="1. Logstash(JRuby编写)"></a>1. Logstash(JRuby编写)</h3><p>矿工，日志收集，日志来自于业务系统，业务系统由不同的语言编写，过滤日志格式。Logstash采用Ruby语法，自定义日志格式过滤器，将格式化后的数据输出到ElasticSearch。它的可靠性低，占用CPU和内存的比率很高。</p><h3 id="2-ElasticSearch-Java编写"><a href="#2-ElasticSearch-Java编写" class="headerlink" title="2. ElasticSearch(Java编写)"></a>2. ElasticSearch(Java编写)</h3><p>日志仓库，提供全文检索，快速检索，分布式存储。ElasticSearch采用主备部署。<br>插件elasticsearch-head。</p><h3 id="3-Kibana-javascript编写"><a href="#3-Kibana-javascript编写" class="headerlink" title="3. Kibana(javascript编写)"></a>3. Kibana(javascript编写)</h3><p>可视化，数据来源于ES，实时读取数据变化。</p><h3 id="4-Filebeat"><a href="#4-Filebeat" class="headerlink" title="4. Filebeat"></a>4. Filebeat</h3><p>承担数据采集的角色</p><h3 id="6-ELK海量日志监控的部署"><a href="#6-ELK海量日志监控的部署" class="headerlink" title="6. ELK海量日志监控的部署"></a>6. ELK海量日志监控的部署</h3><p>利用Kafka将同步改成异步</p><h3 id="7-场景"><a href="#7-场景" class="headerlink" title="7. 场景"></a>7. 场景</h3><p>监控、统计、分析、检索</p><hr><h3 id="8-咕泡学院"><a href="#8-咕泡学院" class="headerlink" title="8. 咕泡学院"></a>8. 咕泡学院</h3><h5 id="8-1-日志的级别"><a href="#8-1-日志的级别" class="headerlink" title="8.1 日志的级别"></a>8.1 日志的级别</h5><p>DEBUG, INFO, WARN, ERROR</p><h5 id="8-2-系统监控"><a href="#8-2-系统监控" class="headerlink" title="8.2 系统监控"></a>8.2 系统监控</h5><p>日志、APO、心跳监控、数据库监控、Filter、Trace</p><h5 id="8-3-集中式监控"><a href="#8-3-集中式监控" class="headerlink" title="8.3 集中式监控"></a>8.3 集中式监控</h5><h5 id="8-4-ELK"><a href="#8-4-ELK" class="headerlink" title="8.4 ELK"></a>8.4 ELK</h5>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;网站流量监控系统&quot;&gt;&lt;a href=&quot;#网站流量监控系统&quot; class=&quot;headerlink&quot; title=&quot;. 网站流量监控系统&quot;&gt;&lt;/a&gt;. 网站流量监控系统&lt;/h3&gt;&lt;h3 id=&quot;1-Logstash&quot;&gt;&lt;a href=&quot;#1-Logstash&quot; cla
+        &lt;h3 id=&quot;网站流量监控系统&quot;&gt;&lt;a href=&quot;#网站流量监控系统&quot; class=&quot;headerlink&quot; title=&quot;. 网站流量监控系统&quot;&gt;&lt;/a&gt;. 网站流量监控系统&lt;/h3&gt;&lt;h3 id=&quot;1-Logstash-JRuby编写&quot;&gt;&lt;a href=&quot;#1-Logst
       
     
     </summary>
@@ -552,9 +597,9 @@
     <link href="http://longman.kim/2018/07/01/%E5%89%A7%E6%9C%AC20180701/"/>
     <id>http://longman.kim/2018/07/01/剧本20180701/</id>
     <published>2018-07-01T15:12:57.000Z</published>
-    <updated>2018-07-03T11:19:20.003Z</updated>
+    <updated>2018-08-01T15:04:59.903Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="1-Guava-Cache的原理与实现"><a href="#1-Guava-Cache的原理与实现" class="headerlink" title="1. Guava Cache的原理与实现"></a>1. Guava Cache的原理与实现</h3><blockquote><p>单机缓存，比较简单的方法是自己用ConcurrentHashMap去实现。Guava Cache实现了自动回收，如果自己采用ConcurrentHashMap需要手动显示回收。Guava Cache提供三种缓存回收方法：基于容量回收，定时回收和基于引用回收。</p></blockquote><h3 id="2-BCOS的架构，技术原理，启动流程"><a href="#2-BCOS的架构，技术原理，启动流程" class="headerlink" title="2. BCOS的架构，技术原理，启动流程"></a>2. BCOS的架构，技术原理，启动流程</h3><blockquote><p>联盟链，参与者（PKI, CA证书，记账者，观察者，白名单，黑名单），共识机制（PBFT, RAFT），多链和跨链，分布式存储leveldb。</p></blockquote><h3 id="3-分布式理论CAP-BASE"><a href="#3-分布式理论CAP-BASE" class="headerlink" title="3. 分布式理论CAP,BASE"></a>3. 分布式理论CAP,BASE</h3><blockquote><p>一致性（C），可用性（A），分区容错性（P），三者不能够被同时满足。BASE代表基本可用，软状态，最终一致性。</p></blockquote><h3 id="4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT"><a href="#4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT" class="headerlink" title="4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT"></a>4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT</h3><h3 id="5-挖矿算法POW-POS-DPOS-Leader-BFT"><a href="#5-挖矿算法POW-POS-DPOS-Leader-BFT" class="headerlink" title="5. 挖矿算法POW, POS, DPOS, Leader, BFT"></a>5. 挖矿算法POW, POS, DPOS, Leader, BFT</h3><h3 id="6-消息中间件及RocketMQ模块分解"><a href="#6-消息中间件及RocketMQ模块分解" class="headerlink" title="6. 消息中间件及RocketMQ模块分解"></a>6. 消息中间件及RocketMQ模块分解</h3>]]></content>
+    <content type="html"><![CDATA[<h3 id="1-Guava-Cache的原理与实现"><a href="#1-Guava-Cache的原理与实现" class="headerlink" title="1. Guava Cache的原理与实现"></a>1. Guava Cache的原理与实现</h3><blockquote><p>单机缓存，比较简单的方法是自己用ConcurrentHashMap去实现。Guava Cache实现了自动回收，如果自己采用ConcurrentHashMap需要手动显示回收。Guava Cache提供三种缓存回收方法：基于容量回收，定时回收和基于引用回收。</p></blockquote><h3 id="2-BCOS的架构，技术原理，启动流程"><a href="#2-BCOS的架构，技术原理，启动流程" class="headerlink" title="2. BCOS的架构，技术原理，启动流程"></a>2. BCOS的架构，技术原理，启动流程</h3><blockquote><p>联盟链，参与者（PKI, CA证书，记账者，观察者，白名单，黑名单），共识机制（PBFT, RAFT），多链和跨链，分布式存储leveldb。</p></blockquote><h3 id="3-分布式理论CAP-BASE"><a href="#3-分布式理论CAP-BASE" class="headerlink" title="3. 分布式理论CAP,BASE"></a>3. 分布式理论CAP,BASE</h3><blockquote><p>一致性（C），可用性（A），分区容错性（P），三者不能够被同时满足。<br>一致性指更新操作成功并返回客户端完成后，分布式的所有节点在同一时间的数据完全一致。<br>可用性指读和写操作都能成功。<br>分区容错性指在出现网络故障导致分布式节点不能通行时，系统能否继续服务。<br>BASE代表基本可用，软状态，最终一致性。</p></blockquote><h3 id="4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT"><a href="#4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT" class="headerlink" title="4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT"></a>4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT</h3><h3 id="5-挖矿算法POW-POS-DPOS-Leader-BFT"><a href="#5-挖矿算法POW-POS-DPOS-Leader-BFT" class="headerlink" title="5. 挖矿算法POW, POS, DPOS, Leader, BFT"></a>5. 挖矿算法POW, POS, DPOS, Leader, BFT</h3><h3 id="6-消息中间件及RocketMQ模块分解"><a href="#6-消息中间件及RocketMQ模块分解" class="headerlink" title="6. 消息中间件及RocketMQ模块分解"></a>6. 消息中间件及RocketMQ模块分解</h3>]]></content>
     
     <summary type="html">
     
@@ -696,9 +741,20 @@
     <link href="http://longman.kim/2018/07/01/%E5%88%86%E5%B8%83%E5%BC%8F%E5%8D%8F%E8%B0%83%E6%9C%8D%E5%8A%A1zookeeper/"/>
     <id>http://longman.kim/2018/07/01/分布式协调服务zookeeper/</id>
     <published>2018-07-01T08:48:47.000Z</published>
-    <updated>2018-07-01T08:48:47.113Z</updated>
+    <updated>2018-08-01T15:43:27.068Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-应用场景"><a href="#1-应用场景" class="headerlink" title="1. 应用场景"></a>1. 应用场景</h3><ol><li>统一命名服务</li></ol><ol start="2"><li>分布式锁服务</li></ol><ol start="3"><li>配置管理</li></ol><ol start="4"><li>分布式系统故障修复</li></ol><h3 id="2-总体架构"><a href="#2-总体架构" class="headerlink" title="2. 总体架构"></a>2. 总体架构</h3><h3 id="3-数据模型"><a href="#3-数据模型" class="headerlink" title="3. 数据模型"></a>3. 数据模型</h3><h3 id="4-主要功能"><a href="#4-主要功能" class="headerlink" title="4. 主要功能"></a>4. 主要功能</h3><ol><li>领导者选举</li><li>配置管理</li><li>成员管理</li><li>任务分配</li><li>锁服务</li><li>双向故障同步</li></ol><h3 id="5-ZAB-Zookeeper原子广播协议"><a href="#5-ZAB-Zookeeper原子广播协议" class="headerlink" title="5. ZAB Zookeeper原子广播协议"></a>5. ZAB Zookeeper原子广播协议</h3>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-应用场景&quot;&gt;&lt;a href=&quot;#1-应用场景&quot; class=&quot;headerlink&quot; title=&quot;1. 应用场景&quot;&gt;&lt;/a&gt;1. 应用场景&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;统一命名服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;分布式锁服务&lt;/l
+      
     
     </summary>
     
@@ -727,48 +783,6 @@
     <updated>2018-07-01T08:47:23.519Z</updated>
     
     <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Java之外的世界</title>
-    <link href="http://longman.kim/2018/07/01/Java%E4%B9%8B%E5%A4%96%E7%9A%84%E4%B8%96%E7%95%8C/"/>
-    <id>http://longman.kim/2018/07/01/Java之外的世界/</id>
-    <published>2018-07-01T08:45:19.000Z</published>
-    <updated>2018-07-01T09:12:53.138Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="1-消息中间件的两种模式：点对点的消息队列，发布-订阅的topic"><a href="#1-消息中间件的两种模式：点对点的消息队列，发布-订阅的topic" class="headerlink" title="1. 消息中间件的两种模式：点对点的消息队列，发布/订阅的topic"></a>1. 消息中间件的两种模式：点对点的消息队列，发布/订阅的topic</h5><h5 id="2-消息中间件message消费失败怎么办？"><a href="#2-消息中间件message消费失败怎么办？" class="headerlink" title="2. 消息中间件message消费失败怎么办？"></a>2. 消息中间件message消费失败怎么办？</h5><h5 id="3-hbase与mysql的区别"><a href="#3-hbase与mysql的区别" class="headerlink" title="3. hbase与mysql的区别"></a>3. hbase与mysql的区别</h5><h5 id="4-mysql的事务隔离级别"><a href="#4-mysql的事务隔离级别" class="headerlink" title="4. mysql的事务隔离级别"></a>4. mysql的事务隔离级别</h5><h5 id="5-跨越多个数据库的事务"><a href="#5-跨越多个数据库的事务" class="headerlink" title="5. 跨越多个数据库的事务"></a>5. 跨越多个数据库的事务</h5><h5 id="6-如何保证数据一致性，缓存与DB的更新"><a href="#6-如何保证数据一致性，缓存与DB的更新" class="headerlink" title="6. 如何保证数据一致性，缓存与DB的更新"></a>6. 如何保证数据一致性，缓存与DB的更新</h5><h5 id="7-分布式发布订阅消息系统kafka"><a href="#7-分布式发布订阅消息系统kafka" class="headerlink" title="7. 分布式发布订阅消息系统kafka"></a>7. 分布式发布订阅消息系统kafka</h5><h5 id="8-分布式协调服务zookeeper"><a href="#8-分布式协调服务zookeeper" class="headerlink" title="8. 分布式协调服务zookeeper"></a>8. 分布式协调服务zookeeper</h5><h5 id="9-RPC框架dubbo-dubbox-motan-thrift-grpc-avro-SpringCloud"><a href="#9-RPC框架dubbo-dubbox-motan-thrift-grpc-avro-SpringCloud" class="headerlink" title="9. RPC框架dubbo, dubbox, motan, thrift, grpc, avro, SpringCloud"></a>9. RPC框架dubbo, dubbox, motan, thrift, grpc, avro, SpringCloud</h5><h5 id="10-消息中间件RabbitMQ-ActiveMQ-RocketMQ-Redis-Kafka-ZeroMQ"><a href="#10-消息中间件RabbitMQ-ActiveMQ-RocketMQ-Redis-Kafka-ZeroMQ" class="headerlink" title="10. 消息中间件RabbitMQ, ActiveMQ, RocketMQ, Redis, Kafka, ZeroMQ"></a>10. 消息中间件RabbitMQ, ActiveMQ, RocketMQ, Redis, Kafka, ZeroMQ</h5><h5 id="11-分布式常见问题"><a href="#11-分布式常见问题" class="headerlink" title="11. 分布式常见问题"></a>11. 分布式常见问题</h5><h5 id="12-如何做异常的监控"><a href="#12-如何做异常的监控" class="headerlink" title="12. 如何做异常的监控"></a>12. 如何做异常的监控</h5><h5 id="13-go语言的协程与c-和python的对比"><a href="#13-go语言的协程与c-和python的对比" class="headerlink" title="13. go语言的协程与c++和python的对比"></a>13. go语言的协程与c++和python的对比</h5><h5 id="14-区块链技术的介绍"><a href="#14-区块链技术的介绍" class="headerlink" title="14. 区块链技术的介绍"></a>14. 区块链技术的介绍</h5><h5 id="15-过去一年最自豪的一件事情"><a href="#15-过去一年最自豪的一件事情" class="headerlink" title="15. 过去一年最自豪的一件事情"></a>15. 过去一年最自豪的一件事情</h5>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h5 id=&quot;1-消息中间件的两种模式：点对点的消息队列，发布-订阅的topic&quot;&gt;&lt;a href=&quot;#1-消息中间件的两种模式：点对点的消息队列，发布-订阅的topic&quot; class=&quot;headerlink&quot; title=&quot;1. 消息中间件的两种模式：点对点的消息队列，发布/
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>剧本1</title>
-    <link href="http://longman.kim/2018/06/30/%E5%89%A7%E6%9C%AC1/"/>
-    <id>http://longman.kim/2018/06/30/剧本1/</id>
-    <published>2018-06-30T13:33:08.000Z</published>
-    <updated>2018-07-01T04:02:58.102Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="1-人生如戏"><a href="#1-人生如戏" class="headerlink" title="1. 人生如戏"></a>1. 人生如戏</h3><p>&emsp;&emsp;有人说一生很长，有人说一生很短，但长短真的那么重要吗？人终究会死，死了就什么也没有了。没有烦恼，没有快乐。衡量人生的长短是没有任何意义的，有人活着他已经死了，有人死了他还活着。关键是人的价值，在历史中的价值，那才是人应该去追求的真谛。让我们静下心想想应该怎么过完自己的一生，是庸庸碌碌，还是人生如戏。没有梦想，人和咸鱼有什么区别？但现实情况是，我们大多数人就是咸鱼。我们的梦想是赚钱，赚很多的钱，让自己买得起车买得起房。然后呢，我们没有然后。钱，成为了生存下来的唯一目标。天下熙熙皆为利来，天下攘攘皆为利往。我们有问过自己，到底自己想要什么吗？没有，时间推着我们走，走到哪里算哪里。人生本不该如此，人生如戏，我们要做自己的主宰，做设计人生的导演，做表演人生的演员。这是一场戏，没有NG，所有的镜头必须一次过。这场戏中，我们无法自欺欺人，唯有亲身示范。</p><h3 id="2-优秀的导演"><a href="#2-优秀的导演" class="headerlink" title="2. 优秀的导演"></a>2. 优秀的导演</h3><p>&emsp;&emsp;每一个人生都有自己的主题，有的是喜剧，有的是悲剧，有的是无厘头。里面的主角也各不相同，他们在各自的圈子里演绎自己的人生。在这出戏里，一个关键的人物就是导演。他要构思剧本，调整灯光，整理道具，搭建舞台。他是这出戏的总设计师，是这出戏唯一的领班人。没有其他人可以，但不能没有导演。那作为一个导演应该怎么做呢？每一出戏，导完了，导演的作用也就消失了。戏只有一部，成败在此一举。所以，导演要给自己的戏定性。剧情究竟是一波三折呢，还是全局开挂？什么时候能看到戏的高潮？戏里的每一分每一秒，导演都需要精雕细琢，容不得半点放水。导演的职责是什么呢？设计好台词，把灯光调的切合剧情氛围一些，让舞台变得更大，清除外界的干扰。<br>&emsp;&emsp;如果我是导演，我该怎么设计好人生的这场大戏呢？一个出生贫苦的乡下孩子，在少年时代享受了成绩优秀带来的快感。当他的圈子慢慢变大后，他的优秀变得不那么明显。不过在小圈子内，他还是可以自我陶醉，因为他的部分优秀。在他进入大学后，他的人生没有明确的目标，但他延续了之前的部分努力，所以在糊里糊涂中读了研究生。大学4年，研究生3年，在这7年的时间里，他始终认为自己像小学时候一样优秀。直到他在名企实习，但却没有被最终留用后，他发现了自己的落后。他想改，可以蹉跎的7年，懒惰的惯性让我总是无法走出困境。工作两年，当领导在他的评语上留下了不能胜任工作的时候，他开始恐慌。他突然发现，自己真的落后了，并且他已经30岁了，然而还是无法一技压身。他开始痛苦，开始彷徨，开始自我怀疑，以为自己的人生就这样完了。<br>&emsp;&emsp;然而，生活的挫折并没有将他打到。他改变了自己，给自己设定了明确的目标。从外在的发型，眼镜，着装，走路的姿势，说话的语气，面部的表情，待人的真诚，到内在的价值观，人生观，知识面等等。他喜欢公开表达自己对时事的观点，对政策的目的进行了分析，喜欢和别人进行深入的沟通，待人接物更加礼貌更加友善。他每天笑脸迎人，充满阳光与活力，身上散发着睿智的气息。他深知人性，能化尴尬为幽默，让他人在与他相处时，开心快乐。他精通数学与英语，能够快速心算。同时，对高等数学十分热爱，喜欢抽象生活中的小细节。他能讲一口流利的英语，在和外国人的交流时能够侃侃而谈，自然亲切。他拥有深厚的专业知识，对自己领域的每个小细节都清清楚楚。对所有的专业知识，都烂熟于心。在不断的实践过程中，他努力总结，总能做到举一反三，触类旁通。对国内外最新的专业动态，他都时刻关注，并尽早使用。同时，他在不断构建自己的技术壁垒。从参与新事物，到自己能够创造新事物。在这个自我不断改变的过程中，他收获了金钱，职称。他的心态有了明显的变化，自己在社会上有一定的地位了，生活有了保障了。但他总感觉缺少什么似的，他发现自己努力的结果，最终还是让自己过上富足的生活。而他的初衷是让自己在历史的长河中流芳千古呀，当发现自己无力改变这个现实时，他突然变得沮丧。他突然对天发问，这一切究竟是否是他想要的。时间还是不停流转，慢慢他发现人是渺小的，是否伟大也没有那么有意义。人都死了，被后人称赞伟大又有什么用呢？难道在九泉之下，就会因为后人的歌颂而复活吗？人生没有那么复杂，只是人把它想复杂了。简简单单，做自己喜欢做的事情，然后做到专业。开开心心，幸福快乐的活着。</p><h3 id="3-优秀的演员"><a href="#3-优秀的演员" class="headerlink" title="3. 优秀的演员"></a>3. 优秀的演员</h3><p>&emsp;&emsp;优秀的演员是可以练出来的，伟大的演员依靠天赋。只有十年如一日的练习，才能做到剧本台词烂熟于心，表情动作轻车熟路。有了导演的指导，演员只需要不断的修行自己。在导演构建的大框架之下，运用自己的才能在细微之处做创新。具体如何实施呢，让自己回到高三时代。拥有明确的目标，规律的作息，合理的运动，持之以恒的学习。作为一个执行者，没有捷径可走，唯一的路就是持之以恒，不断学习。</p><h3 id="4-精彩的人生"><a href="#4-精彩的人生" class="headerlink" title="4. 精彩的人生"></a>4. 精彩的人生</h3><p>&emsp;&emsp;精彩的人生应该是什么样子的，是争斗的快乐，与人争斗的快乐。是智慧的博弈，是肉体的厮杀。是对弱者的碾压，是对强者的崇拜。人性的完全释放，不在压抑，让自己的情绪改变世界。成为世界的主宰，掌握生命的权利。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;1-人生如戏&quot;&gt;&lt;a href=&quot;#1-人生如戏&quot; class=&quot;headerlink&quot; title=&quot;1. 人生如戏&quot;&gt;&lt;/a&gt;1. 人生如戏&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;有人说一生很长，有人说一生很短，但长短真的那么重要吗？人终究会死，死了就什么也没
-      
     
     </summary>
     

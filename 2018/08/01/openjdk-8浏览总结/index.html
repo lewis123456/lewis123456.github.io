@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        临时｜longman&#39;s blog
+        openjdk-8浏览总结｜longman&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://longman.kim/2018/08/01/临时/">
+    <link rel="canonical" href="http://longman.kim/2018/08/01/openjdk-8浏览总结/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,7 +145,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>临时</h1>
+                    <h1>openjdk-8浏览总结</h1>
                     
                     <span class="meta">
                          作者 lewis longman
@@ -162,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            临时
+            openjdk-8浏览总结
         </span>
     </div>
 </header>
@@ -173,21 +173,93 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="1-零拷贝"><a href="#1-零拷贝" class="headerlink" title="1. 零拷贝"></a>1. 零拷贝</h3><h3 id="2-Netty的ChannelPipeline"><a href="#2-Netty的ChannelPipeline" class="headerlink" title="2. Netty的ChannelPipeline"></a>2. Netty的ChannelPipeline</h3><h3 id="3-2PC，3PC"><a href="#3-2PC，3PC" class="headerlink" title="3. 2PC，3PC"></a>3. 2PC，3PC</h3><h3 id="4-redis选举"><a href="#4-redis选举" class="headerlink" title="4. redis选举"></a>4. redis选举</h3><h3 id="5-CAP中的P"><a href="#5-CAP中的P" class="headerlink" title="5. CAP中的P"></a>5. CAP中的P</h3><h3 id="6-HBase与MySQL的对比"><a href="#6-HBase与MySQL的对比" class="headerlink" title="6. HBase与MySQL的对比"></a>6. HBase与MySQL的对比</h3><h3 id="7-POW挖矿，POF-DPOF-RAFT"><a href="#7-POW挖矿，POF-DPOF-RAFT" class="headerlink" title="7. POW挖矿，POF, DPOF, RAFT"></a>7. POW挖矿，POF, DPOF, RAFT</h3><h3 id="8-行内的架构"><a href="#8-行内的架构" class="headerlink" title="8. 行内的架构"></a>8. 行内的架构</h3><h3 id="9-消息中间件需要解决的问题"><a href="#9-消息中间件需要解决的问题" class="headerlink" title="9. 消息中间件需要解决的问题"></a>9. 消息中间件需要解决的问题</h3><h3 id="10-BloomFilter-布隆过滤器"><a href="#10-BloomFilter-布隆过滤器" class="headerlink" title="10. BloomFilter 布隆过滤器"></a>10. BloomFilter 布隆过滤器</h3><h3 id="11-MySQL-流式查询"><a href="#11-MySQL-流式查询" class="headerlink" title="11. MySQL 流式查询"></a>11. MySQL 流式查询</h3>
+                <h3 id="1-模块介绍"><a href="#1-模块介绍" class="headerlink" title="1. 模块介绍"></a>1. 模块介绍</h3><ul>
+<li><p>common  </p>
+</li>
+<li><p>corba<br>Common Object Request Broker Architecture(通用对象请求代理架构), 基于对象-服务机制设计，类似于JavaBean和微软的COM技术。  </p>
+<blockquote>
+<ol>
+<li>RPC<br>支持xml和json两种格式的消息，使用http作为其传输协议。  </li>
+<li>CORBA<br>使用IDL作为消息，使用tcp作为传输协议，使用JNDI查找服务。CORBA是OMG(Object Management Group)对象管理组织提出的方案，解决分布式环境中软硬件系统的互联。现在已经用的比较少了，基本被Web Service替代，只有一些大型的电信项目还在用CORBA。</li>
+<li>Web Service<br>包含AXIS, XFire, CFX   </li>
+<li>SOAP<br>使用xml作为消息，使用http作为传输协议。  </li>
+<li>RMI<br>使用JRMP作为消息，可以使用http, tcp等作为传输协议，使用JNDI查找服务。</li>
+</ol>
+</blockquote>
+</li>
+<li><p>hotspot<br>JVM的实现之一</p>
+<blockquote>
+<ol>
+<li>cms</li>
+<li>g1</li>
+<li>parallel scavenge</li>
+</ol>
+</blockquote>
+</li>
+<li><p>jaxp<br>Java API for XML Processing, 解析与校验xml文件，提供了3种接口来处理XML文档。</p>
+<blockquote>
+<p>DOM接口(文档对象模型解析)<br>SAX接口(XML简单API解析)<br>StAX接口(XML流API)</p>
+</blockquote>
+</li>
+<li><p>jaxws<br>XML Web Services的Java API, 全称Java API for Web Services，允许开发者选择面向RPC(RPC-oriented)或是面向消息(Message-oriented)的方式来实现自己的Web Services。</p>
+</li>
+<li><p>jdk<br>JDK的实现  </p>
+<blockquote>
+<ol>
+<li>ThreadLocal</li>
+<li>BlockingQueue</li>
+<li>EnumMap</li>
+<li>EnumSet</li>
+<li>HashMap</li>
+<li>CurrentHashMap</li>
+<li>ArraryList</li>
+<li>HashSet</li>
+<li>TreeSet</li>
+<li>LinkedHashMap</li>
+<li>TreeMap</li>
+<li>LinkedList</li>
+<li>HashTable</li>
+<li>Vector</li>
+</ol>
+</blockquote>
+</li>
+<li><p>langtools<br>Java语言工具，包含javac, javap等实用程序的源码。</p>
+</li>
+<li><p>make</p>
+</li>
+<li><p>nashorn<br>JVM上的JavaScript运行时</p>
+</li>
+<li><p>test</p>
+</li>
+</ul>
+<h3 id="2-辅助书籍"><a href="#2-辅助书籍" class="headerlink" title="2. 辅助书籍"></a>2. 辅助书籍</h3><ol>
+<li>《Java虚拟机规范》</li>
+<li>《深入理解Java虚拟机》</li>
+<li>《Hotspot实战》</li>
+</ol>
+<h3 id="3-其他建议"><a href="#3-其他建议" class="headerlink" title="3. 其他建议"></a>3. 其他建议</h3><ol>
+<li><p>精读源码<br>java.util<br>java.lang<br>java.io  </p>
+</li>
+<li><p>深刻理解<br>java.lang.reflect<br>java.net<br>java.net.<em><br>java.nio<br>java.util.concurrent.</em></p>
+</li>
+<li><p>会用即可<br>java.lang.annotation<br>javax.annotation.<em><br>java.lang.ref<br>java.math<br>java.rmi.</em><br>javax.rmi.<em><br>java.security.</em><br>javax.security.<em><br>java.sql<br>javax.sql.</em><br>javax.transaction.<em><br>java.text<br>javax.xml.</em><br>org.w3c.dom.<em><br>org.xml.sax.</em><br>javax.crypto.<em><br>javax.imageio.</em><br>javax.jws.*<br>java.util.jar<br>java.util.logging<br>java.util.prefs<br>java.util.regex<br>java.util.zip  </p>
+</li>
+</ol>
+
                 <hr>
                 
 
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2018/08/01/openjdk-8浏览总结/" data-toggle="tooltip" data-placement="top"
-                           title="openjdk-8浏览总结">&larr; Previous Post</a>
+                        <a href="/2018/08/01/《Java虚拟机规范》/" data-toggle="tooltip" data-placement="top"
+                           title="《Java虚拟机规范》">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2018/07/26/一致性算法/" data-toggle="tooltip" data-placement="top"
-                           title="一致性算法">Next Post &rarr;</a>
+                        <a href="/2018/08/01/临时/" data-toggle="tooltip" data-placement="top"
+                           title="临时">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -204,7 +276,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-零拷贝"><span class="toc-text">1. 零拷贝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Netty的ChannelPipeline"><span class="toc-text">2. Netty的ChannelPipeline</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2PC，3PC"><span class="toc-text">3. 2PC，3PC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-redis选举"><span class="toc-text">4. redis选举</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-CAP中的P"><span class="toc-text">5. CAP中的P</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-HBase与MySQL的对比"><span class="toc-text">6. HBase与MySQL的对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-POW挖矿，POF-DPOF-RAFT"><span class="toc-text">7. POW挖矿，POF, DPOF, RAFT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-行内的架构"><span class="toc-text">8. 行内的架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-消息中间件需要解决的问题"><span class="toc-text">9. 消息中间件需要解决的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-BloomFilter-布隆过滤器"><span class="toc-text">10. BloomFilter 布隆过滤器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-MySQL-流式查询"><span class="toc-text">11. MySQL 流式查询</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-模块介绍"><span class="toc-text">1. 模块介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-辅助书籍"><span class="toc-text">2. 辅助书籍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-其他建议"><span class="toc-text">3. 其他建议</span></a></li></ol>
                 </div>
             </div>
         </div>

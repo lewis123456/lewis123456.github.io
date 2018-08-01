@@ -173,13 +173,16 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="网站流量监控系统"><a href="#网站流量监控系统" class="headerlink" title=". 网站流量监控系统"></a>. 网站流量监控系统</h3><h3 id="1-Logstash"><a href="#1-Logstash" class="headerlink" title="1. Logstash"></a>1. Logstash</h3><p>矿工，日志收集，日志来自于业务系统，业务系统由不同的语言编写，过滤日志格式。Logstash采用Ruby语法，自定义日志格式过滤器，将格式化后的数据输出到ElasticSearch。它的可靠性低，占用CPU和内存的比率很高。</p>
-<h3 id="2-ElasticSearch"><a href="#2-ElasticSearch" class="headerlink" title="2. ElasticSearch"></a>2. ElasticSearch</h3><p>日志仓库，提供全文检索，快速检索，分布式存储。ElasticSearch采用主备部署。</p>
-<h3 id="3-Kibana"><a href="#3-Kibana" class="headerlink" title="3. Kibana"></a>3. Kibana</h3><p>可视化，数据来源于ES，实时读取数据变化。</p>
+                <h3 id="网站流量监控系统"><a href="#网站流量监控系统" class="headerlink" title=". 网站流量监控系统"></a>. 网站流量监控系统</h3><h3 id="1-Logstash-JRuby编写"><a href="#1-Logstash-JRuby编写" class="headerlink" title="1. Logstash(JRuby编写)"></a>1. Logstash(JRuby编写)</h3><p>矿工，日志收集，日志来自于业务系统，业务系统由不同的语言编写，过滤日志格式。Logstash采用Ruby语法，自定义日志格式过滤器，将格式化后的数据输出到ElasticSearch。它的可靠性低，占用CPU和内存的比率很高。</p>
+<h3 id="2-ElasticSearch-Java编写"><a href="#2-ElasticSearch-Java编写" class="headerlink" title="2. ElasticSearch(Java编写)"></a>2. ElasticSearch(Java编写)</h3><p>日志仓库，提供全文检索，快速检索，分布式存储。ElasticSearch采用主备部署。<br>插件elasticsearch-head。</p>
+<h3 id="3-Kibana-javascript编写"><a href="#3-Kibana-javascript编写" class="headerlink" title="3. Kibana(javascript编写)"></a>3. Kibana(javascript编写)</h3><p>可视化，数据来源于ES，实时读取数据变化。</p>
 <h3 id="4-Filebeat"><a href="#4-Filebeat" class="headerlink" title="4. Filebeat"></a>4. Filebeat</h3><p>承担数据采集的角色</p>
 <h3 id="6-ELK海量日志监控的部署"><a href="#6-ELK海量日志监控的部署" class="headerlink" title="6. ELK海量日志监控的部署"></a>6. ELK海量日志监控的部署</h3><p>利用Kafka将同步改成异步</p>
 <h3 id="7-场景"><a href="#7-场景" class="headerlink" title="7. 场景"></a>7. 场景</h3><p>监控、统计、分析、检索</p>
-
+<hr>
+<h3 id="8-咕泡学院"><a href="#8-咕泡学院" class="headerlink" title="8. 咕泡学院"></a>8. 咕泡学院</h3><h5 id="8-1-日志的级别"><a href="#8-1-日志的级别" class="headerlink" title="8.1 日志的级别"></a>8.1 日志的级别</h5><p>DEBUG, INFO, WARN, ERROR</p>
+<h5 id="8-2-系统监控"><a href="#8-2-系统监控" class="headerlink" title="8.2 系统监控"></a>8.2 系统监控</h5><p>日志、APO、心跳监控、数据库监控、Filter、Trace</p>
+<h5 id="8-3-集中式监控"><a href="#8-3-集中式监控" class="headerlink" title="8.3 集中式监控"></a>8.3 集中式监控</h5><h5 id="8-4-ELK"><a href="#8-4-ELK" class="headerlink" title="8.4 ELK"></a>8.4 ELK</h5>
                 <hr>
                 
 
@@ -210,7 +213,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#网站流量监控系统"><span class="toc-text">. 网站流量监控系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Logstash"><span class="toc-text">1. Logstash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-ElasticSearch"><span class="toc-text">2. ElasticSearch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Kibana"><span class="toc-text">3. Kibana</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Filebeat"><span class="toc-text">4. Filebeat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-ELK海量日志监控的部署"><span class="toc-text">6. ELK海量日志监控的部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-场景"><span class="toc-text">7. 场景</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#网站流量监控系统"><span class="toc-text">. 网站流量监控系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Logstash-JRuby编写"><span class="toc-text">1. Logstash(JRuby编写)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-ElasticSearch-Java编写"><span class="toc-text">2. ElasticSearch(Java编写)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Kibana-javascript编写"><span class="toc-text">3. Kibana(javascript编写)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Filebeat"><span class="toc-text">4. Filebeat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-ELK海量日志监控的部署"><span class="toc-text">6. ELK海量日志监控的部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-场景"><span class="toc-text">7. 场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-咕泡学院"><span class="toc-text">8. 咕泡学院</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#8-1-日志的级别"><span class="toc-text">8.1 日志的级别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-系统监控"><span class="toc-text">8.2 系统监控</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-3-集中式监控"><span class="toc-text">8.3 集中式监控</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-4-ELK"><span class="toc-text">8.4 ELK</span></a></li></ol></li></ol></li></ol>
                 </div>
             </div>
         </div>
