@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-08-01T13:14:14.891Z</updated>
+  <updated>2018-08-02T07:16:23.943Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>单例的写法</title>
+    <link href="http://longman.kim/2018/08/02/%E5%8D%95%E4%BE%8B%E7%9A%84%E5%86%99%E6%B3%95/"/>
+    <id>http://longman.kim/2018/08/02/单例的写法/</id>
+    <published>2018-08-02T06:51:25.000Z</published>
+    <updated>2018-08-02T07:16:23.943Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-懒汉"><a href="#1-懒汉" class="headerlink" title="1. 懒汉"></a>1. 懒汉</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private Singleton()&#123;&#125;</span><br><span class="line">    private static Singleton instance;</span><br><span class="line">    public static synchronized Singleton getInstance() &#123;</span><br><span class="line">        if (null == instance) &#123;</span><br><span class="line">            instance = new Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="2-饿汉"><a href="#2-饿汉" class="headerlink" title="2. 饿汉"></a>2. 饿汉</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private Singleton()&#123;&#125;</span><br><span class="line">    private static Singleton instance = new Singleton();</span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="3-双重校验锁"><a href="#3-双重校验锁" class="headerlink" title="3. 双重校验锁"></a>3. 双重校验锁</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private Singleton()&#123;&#125;</span><br><span class="line">    private static Singleton instance;</span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        if (null == instance) &#123;</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">                if (null == instance) &#123;</span><br><span class="line">                    instance = new Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="4-枚举"><a href="#4-枚举" class="headerlink" title="4. 枚举"></a>4. 枚举</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public enum Singleton &#123;</span><br><span class="line">    INSTANCE;</span><br><span class="line">    public void whatEver()&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="5-静态内部类"><a href="#5-静态内部类" class="headerlink" title="5. 静态内部类"></a>5. 静态内部类</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private Singleton()&#123;&#125;</span><br><span class="line">    public static class SingleHolder &#123;</span><br><span class="line">        public static final Singleton INSTANCE = new Singleton();</span><br><span class="line">    &#125;</span><br><span class="line">    public static final Singleton getInstance() &#123;</span><br><span class="line">        return SingleHolder.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-懒汉&quot;&gt;&lt;a href=&quot;#1-懒汉&quot; class=&quot;headerlink&quot; title=&quot;1. 懒汉&quot;&gt;&lt;/a&gt;1. 懒汉&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pr
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>《Java虚拟机规范》</title>
@@ -597,9 +618,9 @@
     <link href="http://longman.kim/2018/07/01/%E5%89%A7%E6%9C%AC20180701/"/>
     <id>http://longman.kim/2018/07/01/剧本20180701/</id>
     <published>2018-07-01T15:12:57.000Z</published>
-    <updated>2018-08-01T15:04:59.903Z</updated>
+    <updated>2018-08-02T01:45:03.634Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="1-Guava-Cache的原理与实现"><a href="#1-Guava-Cache的原理与实现" class="headerlink" title="1. Guava Cache的原理与实现"></a>1. Guava Cache的原理与实现</h3><blockquote><p>单机缓存，比较简单的方法是自己用ConcurrentHashMap去实现。Guava Cache实现了自动回收，如果自己采用ConcurrentHashMap需要手动显示回收。Guava Cache提供三种缓存回收方法：基于容量回收，定时回收和基于引用回收。</p></blockquote><h3 id="2-BCOS的架构，技术原理，启动流程"><a href="#2-BCOS的架构，技术原理，启动流程" class="headerlink" title="2. BCOS的架构，技术原理，启动流程"></a>2. BCOS的架构，技术原理，启动流程</h3><blockquote><p>联盟链，参与者（PKI, CA证书，记账者，观察者，白名单，黑名单），共识机制（PBFT, RAFT），多链和跨链，分布式存储leveldb。</p></blockquote><h3 id="3-分布式理论CAP-BASE"><a href="#3-分布式理论CAP-BASE" class="headerlink" title="3. 分布式理论CAP,BASE"></a>3. 分布式理论CAP,BASE</h3><blockquote><p>一致性（C），可用性（A），分区容错性（P），三者不能够被同时满足。<br>一致性指更新操作成功并返回客户端完成后，分布式的所有节点在同一时间的数据完全一致。<br>可用性指读和写操作都能成功。<br>分区容错性指在出现网络故障导致分布式节点不能通行时，系统能否继续服务。<br>BASE代表基本可用，软状态，最终一致性。</p></blockquote><h3 id="4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT"><a href="#4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT" class="headerlink" title="4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT"></a>4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT</h3><h3 id="5-挖矿算法POW-POS-DPOS-Leader-BFT"><a href="#5-挖矿算法POW-POS-DPOS-Leader-BFT" class="headerlink" title="5. 挖矿算法POW, POS, DPOS, Leader, BFT"></a>5. 挖矿算法POW, POS, DPOS, Leader, BFT</h3><h3 id="6-消息中间件及RocketMQ模块分解"><a href="#6-消息中间件及RocketMQ模块分解" class="headerlink" title="6. 消息中间件及RocketMQ模块分解"></a>6. 消息中间件及RocketMQ模块分解</h3>]]></content>
+    <content type="html"><![CDATA[<h3 id="1-Guava-Cache的原理与实现"><a href="#1-Guava-Cache的原理与实现" class="headerlink" title="1. Guava Cache的原理与实现"></a>1. Guava Cache的原理与实现</h3><blockquote><p>单机缓存，比较简单的方法是自己用ConcurrentHashMap去实现。Guava Cache实现了自动回收，如果自己采用ConcurrentHashMap需要手动显示回收。Guava Cache提供三种缓存回收方法：基于容量回收，定时回收和基于引用回收。</p></blockquote><h3 id="2-BCOS的架构，技术原理，启动流程"><a href="#2-BCOS的架构，技术原理，启动流程" class="headerlink" title="2. BCOS的架构，技术原理，启动流程"></a>2. BCOS的架构，技术原理，启动流程</h3><blockquote><p>联盟链，参与者（PKI, CA证书，记账者，观察者，白名单，黑名单），共识机制（PBFT, RAFT），多链和跨链，分布式存储leveldb。</p></blockquote><h3 id="3-分布式理论CAP-BASE"><a href="#3-分布式理论CAP-BASE" class="headerlink" title="3. 分布式理论CAP,BASE"></a>3. 分布式理论CAP,BASE</h3><blockquote><p>一致性（C），可用性（A），分区容错性（P），三者不能够被同时满足。<br>一致性指更新操作成功并返回客户端完成后，分布式的所有节点在同一时间的数据完全一致。<br>可用性指读和写操作都能成功。<br>分区容错性指在出现网络故障导致分布式节点不能通信时，系统能否继续服务。<br>BASE代表基本可用，软状态，最终一致性。</p></blockquote><h3 id="4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT"><a href="#4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT" class="headerlink" title="4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT"></a>4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT</h3><h3 id="5-挖矿算法POW-POS-DPOS-Leader-BFT"><a href="#5-挖矿算法POW-POS-DPOS-Leader-BFT" class="headerlink" title="5. 挖矿算法POW, POS, DPOS, Leader, BFT"></a>5. 挖矿算法POW, POS, DPOS, Leader, BFT</h3><h3 id="6-消息中间件及RocketMQ模块分解"><a href="#6-消息中间件及RocketMQ模块分解" class="headerlink" title="6. 消息中间件及RocketMQ模块分解"></a>6. 消息中间件及RocketMQ模块分解</h3>]]></content>
     
     <summary type="html">
     
@@ -767,20 +788,6 @@
     <id>http://longman.kim/2018/07/01/分布式消息订阅系统Kafka/</id>
     <published>2018-07-01T08:48:16.000Z</published>
     <updated>2018-07-01T08:48:16.595Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>加入开源项目nutz</title>
-    <link href="http://longman.kim/2018/07/01/%E5%8A%A0%E5%85%A5%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AEnutz/"/>
-    <id>http://longman.kim/2018/07/01/加入开源项目nutz/</id>
-    <published>2018-07-01T08:47:23.000Z</published>
-    <updated>2018-07-01T08:47:23.519Z</updated>
     
     <summary type="html">
     

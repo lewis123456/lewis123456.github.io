@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        剧本20180701｜longman&#39;s blog
+        单例的写法｜longman&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://longman.kim/2018/07/01/剧本20180701/">
+    <link rel="canonical" href="http://longman.kim/2018/08/02/单例的写法/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>剧本20180701</h1>
+                    <h1>单例的写法</h1>
                     
                     <span class="meta">
                          作者 lewis longman
                         <span>
-                          日期 2018-07-01
+                          日期 2018-08-02
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -162,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            剧本20180701
+            单例的写法
         </span>
     </div>
 </header>
@@ -173,30 +173,20 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="1-Guava-Cache的原理与实现"><a href="#1-Guava-Cache的原理与实现" class="headerlink" title="1. Guava Cache的原理与实现"></a>1. Guava Cache的原理与实现</h3><blockquote>
-<p>单机缓存，比较简单的方法是自己用ConcurrentHashMap去实现。Guava Cache实现了自动回收，如果自己采用ConcurrentHashMap需要手动显示回收。Guava Cache提供三种缓存回收方法：基于容量回收，定时回收和基于引用回收。</p>
-</blockquote>
-<h3 id="2-BCOS的架构，技术原理，启动流程"><a href="#2-BCOS的架构，技术原理，启动流程" class="headerlink" title="2. BCOS的架构，技术原理，启动流程"></a>2. BCOS的架构，技术原理，启动流程</h3><blockquote>
-<p>联盟链，参与者（PKI, CA证书，记账者，观察者，白名单，黑名单），共识机制（PBFT, RAFT），多链和跨链，分布式存储leveldb。</p>
-</blockquote>
-<h3 id="3-分布式理论CAP-BASE"><a href="#3-分布式理论CAP-BASE" class="headerlink" title="3. 分布式理论CAP,BASE"></a>3. 分布式理论CAP,BASE</h3><blockquote>
-<p>一致性（C），可用性（A），分区容错性（P），三者不能够被同时满足。<br>一致性指更新操作成功并返回客户端完成后，分布式的所有节点在同一时间的数据完全一致。<br>可用性指读和写操作都能成功。<br>分区容错性指在出现网络故障导致分布式节点不能通信时，系统能否继续服务。<br>BASE代表基本可用，软状态，最终一致性。</p>
-</blockquote>
-<h3 id="4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT"><a href="#4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT" class="headerlink" title="4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT"></a>4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT</h3><h3 id="5-挖矿算法POW-POS-DPOS-Leader-BFT"><a href="#5-挖矿算法POW-POS-DPOS-Leader-BFT" class="headerlink" title="5. 挖矿算法POW, POS, DPOS, Leader, BFT"></a>5. 挖矿算法POW, POS, DPOS, Leader, BFT</h3><h3 id="6-消息中间件及RocketMQ模块分解"><a href="#6-消息中间件及RocketMQ模块分解" class="headerlink" title="6. 消息中间件及RocketMQ模块分解"></a>6. 消息中间件及RocketMQ模块分解</h3>
+                <h3 id="1-懒汉"><a href="#1-懒汉" class="headerlink" title="1. 懒汉"></a>1. 懒汉</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private Singleton()&#123;&#125;</span><br><span class="line">    private static Singleton instance;</span><br><span class="line">    public static synchronized Singleton getInstance() &#123;</span><br><span class="line">        if (null == instance) &#123;</span><br><span class="line">            instance = new Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-饿汉"><a href="#2-饿汉" class="headerlink" title="2. 饿汉"></a>2. 饿汉</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private Singleton()&#123;&#125;</span><br><span class="line">    private static Singleton instance = new Singleton();</span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-双重校验锁"><a href="#3-双重校验锁" class="headerlink" title="3. 双重校验锁"></a>3. 双重校验锁</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private Singleton()&#123;&#125;</span><br><span class="line">    private static Singleton instance;</span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        if (null == instance) &#123;</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">                if (null == instance) &#123;</span><br><span class="line">                    instance = new Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-枚举"><a href="#4-枚举" class="headerlink" title="4. 枚举"></a>4. 枚举</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public enum Singleton &#123;</span><br><span class="line">    INSTANCE;</span><br><span class="line">    public void whatEver()&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-静态内部类"><a href="#5-静态内部类" class="headerlink" title="5. 静态内部类"></a>5. 静态内部类</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private Singleton()&#123;&#125;</span><br><span class="line">    public static class SingleHolder &#123;</span><br><span class="line">        public static final Singleton INSTANCE = new Singleton();</span><br><span class="line">    &#125;</span><br><span class="line">    public static final Singleton getInstance() &#123;</span><br><span class="line">        return SingleHolder.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2018/07/03/剧本20180703/" data-toggle="tooltip" data-placement="top"
-                           title="剧本20180703">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2018/07/01/netty/" data-toggle="tooltip" data-placement="top"
-                           title="netty">Next Post &rarr;</a>
+                        <a href="/2018/08/01/《Java虚拟机规范》/" data-toggle="tooltip" data-placement="top"
+                           title="《Java虚拟机规范》">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -213,7 +203,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Guava-Cache的原理与实现"><span class="toc-text">1. Guava Cache的原理与实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-BCOS的架构，技术原理，启动流程"><span class="toc-text">2. BCOS的架构，技术原理，启动流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-分布式理论CAP-BASE"><span class="toc-text">3. 分布式理论CAP,BASE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-分布式一致性算法2PC-3PC-PAXOS-ZAB-RAFT-PAFT-RBFT"><span class="toc-text">4. 分布式一致性算法2PC, 3PC, PAXOS, ZAB, RAFT, PAFT, RBFT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-挖矿算法POW-POS-DPOS-Leader-BFT"><span class="toc-text">5. 挖矿算法POW, POS, DPOS, Leader, BFT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-消息中间件及RocketMQ模块分解"><span class="toc-text">6. 消息中间件及RocketMQ模块分解</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-懒汉"><span class="toc-text">1. 懒汉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-饿汉"><span class="toc-text">2. 饿汉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-双重校验锁"><span class="toc-text">3. 双重校验锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-枚举"><span class="toc-text">4. 枚举</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-静态内部类"><span class="toc-text">5. 静态内部类</span></a></li></ol>
                 </div>
             </div>
         </div>
