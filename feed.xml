@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-08-02T14:06:00.128Z</updated>
+  <updated>2018-08-06T13:27:17.435Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SQLite</title>
+    <link href="http://longman.kim/2018/08/06/SQLite/"/>
+    <id>http://longman.kim/2018/08/06/SQLite/</id>
+    <published>2018-08-06T13:27:17.000Z</published>
+    <updated>2018-08-06T13:27:17.435Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>未来一年的规划（2018.8——2019.8）</title>
@@ -776,31 +790,6 @@
     <updated>2018-07-01T08:49:17.814Z</updated>
     
     <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>分布式协调服务zookeeper</title>
-    <link href="http://longman.kim/2018/07/01/%E5%88%86%E5%B8%83%E5%BC%8F%E5%8D%8F%E8%B0%83%E6%9C%8D%E5%8A%A1zookeeper/"/>
-    <id>http://longman.kim/2018/07/01/分布式协调服务zookeeper/</id>
-    <published>2018-07-01T08:48:47.000Z</published>
-    <updated>2018-08-01T15:43:27.068Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="1-应用场景"><a href="#1-应用场景" class="headerlink" title="1. 应用场景"></a>1. 应用场景</h3><ol><li>统一命名服务</li></ol><ol start="2"><li>分布式锁服务</li></ol><ol start="3"><li>配置管理</li></ol><ol start="4"><li>分布式系统故障修复</li></ol><h3 id="2-总体架构"><a href="#2-总体架构" class="headerlink" title="2. 总体架构"></a>2. 总体架构</h3><h3 id="3-数据模型"><a href="#3-数据模型" class="headerlink" title="3. 数据模型"></a>3. 数据模型</h3><h3 id="4-主要功能"><a href="#4-主要功能" class="headerlink" title="4. 主要功能"></a>4. 主要功能</h3><ol><li>领导者选举</li><li>配置管理</li><li>成员管理</li><li>任务分配</li><li>锁服务</li><li>双向故障同步</li></ol><h3 id="5-ZAB-Zookeeper原子广播协议"><a href="#5-ZAB-Zookeeper原子广播协议" class="headerlink" title="5. ZAB Zookeeper原子广播协议"></a>5. ZAB Zookeeper原子广播协议</h3>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;1-应用场景&quot;&gt;&lt;a href=&quot;#1-应用场景&quot; class=&quot;headerlink&quot; title=&quot;1. 应用场景&quot;&gt;&lt;/a&gt;1. 应用场景&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;统一命名服务&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;分布式锁服务&lt;/l
-      
     
     </summary>
     
