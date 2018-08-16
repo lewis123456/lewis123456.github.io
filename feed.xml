@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-08-07T02:46:40.813Z</updated>
+  <updated>2018-08-16T06:46:09.404Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微服务的难点</title>
+    <link href="http://longman.kim/2018/08/16/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9A%84%E9%9A%BE%E7%82%B9/"/>
+    <id>http://longman.kim/2018/08/16/微服务的难点/</id>
+    <published>2018-08-16T04:37:07.000Z</published>
+    <updated>2018-08-16T06:46:09.404Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-如何拆分微服务"><a href="#1-如何拆分微服务" class="headerlink" title="1. 如何拆分微服务"></a>1. 如何拆分微服务</h3><p>拆分领域数据库  </p><p>领域模型的设计概念，聚合  </p><h3 id="2-微服务和数据库"><a href="#2-微服务和数据库" class="headerlink" title="2. 微服务和数据库"></a>2. 微服务和数据库</h3><p>不同服务间跨表查询困难  </p><p>CQRS解决分布式查询问题</p><p>分布式事务，NoSQL不支持ACID，2PC  </p><p>事件驱动架构的一种技术，事件源，解决分布式事务</p><h3 id="3-DDD聚合"><a href="#3-DDD聚合" class="headerlink" title="3. DDD聚合"></a>3. DDD聚合</h3><h3 id="4-事件源"><a href="#4-事件源" class="headerlink" title="4. 事件源"></a>4. 事件源</h3><h3 id="5-CQRS命令查询责任分离"><a href="#5-CQRS命令查询责任分离" class="headerlink" title="5. CQRS命令查询责任分离"></a>5. CQRS命令查询责任分离</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-如何拆分微服务&quot;&gt;&lt;a href=&quot;#1-如何拆分微服务&quot; class=&quot;headerlink&quot; title=&quot;1. 如何拆分微服务&quot;&gt;&lt;/a&gt;1. 如何拆分微服务&lt;/h3&gt;&lt;p&gt;拆分领域数据库  &lt;/p&gt;
+&lt;p&gt;领域模型的设计概念，聚合  &lt;/p&gt;
+&lt;h3 
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>SQLite</title>
@@ -45,9 +68,9 @@
     <link href="http://longman.kim/2018/08/02/%E6%9C%AA%E6%9D%A5%E4%B8%80%E5%B9%B4%E7%9A%84%E8%A7%84%E5%88%92%EF%BC%882018-8%E2%80%94%E2%80%942019-8%EF%BC%89/"/>
     <id>http://longman.kim/2018/08/02/未来一年的规划（2018-8——2019-8）/</id>
     <published>2018-08-02T12:32:43.000Z</published>
-    <updated>2018-08-02T14:06:00.128Z</updated>
+    <updated>2018-08-07T06:33:31.686Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="1-英语"><a href="#1-英语" class="headerlink" title="1. 英语"></a>1. 英语</h3><p>雅思8分  </p><ol><li>听<br>听新闻  </li><li>说<br>注册网站，与老外视频聊天  </li><li>读<br>读短篇、长篇文章  </li><li>写<br>议论文  </li><li>练<br>做题  </li></ol><h3 id="2-数据结构与算法"><a href="#2-数据结构与算法" class="headerlink" title="2. 数据结构与算法"></a>2. 数据结构与算法</h3><p>leetcode最少2遍（Java和C++各实现一遍）<br>poj最少500题</p><ol><li><p>排序<br>冒泡排序，选择排序，插入排序，堆排序，快速排序，基数排序，桶排序， 归并排序  </p></li><li><p>查找<br>二分查找</p></li><li><p>贪心</p></li><li><p>动态规划</p></li><li><p>KMP</p></li><li><p>A*</p></li><li><p>线段树</p></li><li><p>网络流</p></li><li><p>数论</p></li><li><p>最短路径</p></li><li><p>BFS, DFS</p></li><li><p>AVL树、红黑树</p></li><li><p>B, B-, B+树</p></li></ol><h3 id="3-Java-C-源码分析"><a href="#3-Java-C-源码分析" class="headerlink" title="3. Java/C++源码分析"></a>3. Java/C++源码分析</h3><p>分析笔记  </p><ol><li>精读JDK中的util, lang, io, nio</li><li>C++ STL</li></ol><h3 id="4-架构设计"><a href="#4-架构设计" class="headerlink" title="4. 架构设计"></a>4. 架构设计</h3><p>AWS、阿里的设计方案  </p><p>给出解决方案，指出架构的优缺点，结合业务逻辑</p><h3 id="5-优化"><a href="#5-优化" class="headerlink" title="5. 优化"></a>5. 优化</h3><p>带实验的知识点笔记  </p><ol><li>架构优化</li><li>JVM优化</li><li>线程池</li><li>数据库优化</li><li>C++程序的调试和性能优化</li></ol><h3 id="6-数据库"><a href="#6-数据库" class="headerlink" title="6. 数据库"></a>6. 数据库</h3><p>画图、带实验的个人总结<br>书籍、数据结构、算法、架构、原理、源码</p><ol><li>mysql</li><li>redis</li><li>hbase</li></ol><h3 id="7-业界方案"><a href="#7-业界方案" class="headerlink" title="7. 业界方案"></a>7. 业界方案</h3><p>腾讯、阿里、百度、美团、微博、豆瓣，它们的github</p><h3 id="8-大数据"><a href="#8-大数据" class="headerlink" title="8. 大数据"></a>8. 大数据</h3><p>画图、实验<br>Hadoop生态</p><h3 id="9-源码分析"><a href="#9-源码分析" class="headerlink" title="9. 源码分析"></a>9. 源码分析</h3><p>手写，带实验的笔记  </p><ol><li>redis</li><li>mongodb</li><li>zookeeper</li><li>spring</li><li>nginx</li><li>tomcat</li><li>netty</li><li>rocketmq</li><li>dubbo</li></ol><h3 id="10-个人品牌输出"><a href="#10-个人品牌输出" class="headerlink" title="10. 个人品牌输出"></a>10. 个人品牌输出</h3><p>完整的后台服务框架需要做哪些东西-业务逻辑和服务治理（服务发现、发布、容灾、容错、扩展、链路分析、服务可降级、白名单、安全）</p><ol><li>登录注册</li><li>负载均衡</li><li>cdn加速</li><li>接入层</li><li>逻辑层</li><li>中间层</li><li>存储层</li><li>业务运营管理平台、配置管理、发布管理、监控告警上报、统计上报</li><li>项目管理、需求管理</li></ol><h3 id="11-Github"><a href="#11-Github" class="headerlink" title="11. Github"></a>11. Github</h3><p>工程实战<br>让github成为自己的名片，以项目推动自己的进步，输出代码和文档。</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="1-英语"><a href="#1-英语" class="headerlink" title="1. 英语"></a>1. 英语</h3><p>雅思8分  </p><ol><li>听<br>听新闻  </li><li>说<br>注册网站，与老外视频聊天  </li><li>读<br>读短篇、长篇文章  </li><li>写<br>议论文  </li><li>练<br>做题  </li></ol><h3 id="2-数据结构与算法"><a href="#2-数据结构与算法" class="headerlink" title="2. 数据结构与算法"></a>2. 数据结构与算法</h3><p>leetcode最少2遍（Java和C++各实现一遍）<br>poj最少500题</p><ol><li><p>排序<br>冒泡排序，选择排序，插入排序，堆排序，快速排序，基数排序，桶排序， 归并排序  </p></li><li><p>查找<br>二分查找</p></li><li><p>贪心</p></li><li><p>动态规划</p></li><li><p>KMP</p></li><li><p>A*</p></li><li><p>线段树  </p></li></ol><p>树状数组</p><ol start="8"><li><p>网络流</p></li><li><p>数论</p></li><li><p>最短路径</p></li><li><p>BFS, DFS</p></li><li><p>AVL树、红黑树</p></li><li><p>B, B-, B+树</p></li></ol><h3 id="3-Java-C-源码分析"><a href="#3-Java-C-源码分析" class="headerlink" title="3. Java/C++源码分析"></a>3. Java/C++源码分析</h3><p>分析笔记  </p><ol><li>精读JDK中的util, lang, io, nio</li><li>C++ STL</li></ol><h3 id="4-架构设计"><a href="#4-架构设计" class="headerlink" title="4. 架构设计"></a>4. 架构设计</h3><p>AWS、阿里的设计方案  </p><p>给出解决方案，指出架构的优缺点，结合业务逻辑</p><h3 id="5-优化"><a href="#5-优化" class="headerlink" title="5. 优化"></a>5. 优化</h3><p>带实验的知识点笔记  </p><ol><li>架构优化</li><li>JVM优化</li><li>线程池</li><li>数据库优化</li><li>C++程序的调试和性能优化</li></ol><h3 id="6-数据库"><a href="#6-数据库" class="headerlink" title="6. 数据库"></a>6. 数据库</h3><p>画图、带实验的个人总结<br>书籍、数据结构、算法、架构、原理、源码</p><ol><li>mysql</li><li>redis</li><li>hbase</li></ol><h3 id="7-业界方案"><a href="#7-业界方案" class="headerlink" title="7. 业界方案"></a>7. 业界方案</h3><p>腾讯、阿里、百度、美团、微博、豆瓣，它们的github</p><h3 id="8-大数据"><a href="#8-大数据" class="headerlink" title="8. 大数据"></a>8. 大数据</h3><p>画图、实验<br>Hadoop生态</p><h3 id="9-源码分析"><a href="#9-源码分析" class="headerlink" title="9. 源码分析"></a>9. 源码分析</h3><p>手写，带实验的笔记  </p><ol><li>redis</li><li>mongodb</li><li>zookeeper</li><li>spring</li><li>nginx</li><li>tomcat</li><li>netty</li><li>rocketmq</li><li>dubbo</li></ol><h3 id="10-个人品牌输出"><a href="#10-个人品牌输出" class="headerlink" title="10. 个人品牌输出"></a>10. 个人品牌输出</h3><p>完整的后台服务框架需要做哪些东西-业务逻辑和服务治理（服务发现、发布、容灾、容错、扩展、链路分析、服务可降级、白名单、安全）</p><ol><li>登录注册</li><li>负载均衡</li><li>cdn加速</li><li>接入层</li><li>逻辑层</li><li>中间层</li><li>存储层</li><li>业务运营管理平台、配置管理、发布管理、监控告警上报、统计上报</li><li>项目管理、需求管理</li></ol><h3 id="11-Github"><a href="#11-Github" class="headerlink" title="11. Github"></a>11. Github</h3><p>工程实战<br>让github成为自己的名片，以项目推动自己的进步，输出代码和文档。</p>]]></content>
     
     <summary type="html">
     
@@ -112,9 +135,9 @@
     <link href="http://longman.kim/2018/08/01/openjdk-8%E6%B5%8F%E8%A7%88%E6%80%BB%E7%BB%93/"/>
     <id>http://longman.kim/2018/08/01/openjdk-8浏览总结/</id>
     <published>2018-08-01T08:22:22.000Z</published>
-    <updated>2018-08-01T12:02:28.693Z</updated>
+    <updated>2018-08-09T12:29:54.533Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="1-模块介绍"><a href="#1-模块介绍" class="headerlink" title="1. 模块介绍"></a>1. 模块介绍</h3><ul><li><p>common  </p></li><li><p>corba<br>Common Object Request Broker Architecture(通用对象请求代理架构), 基于对象-服务机制设计，类似于JavaBean和微软的COM技术。  </p><blockquote><ol><li>RPC<br>支持xml和json两种格式的消息，使用http作为其传输协议。  </li><li>CORBA<br>使用IDL作为消息，使用tcp作为传输协议，使用JNDI查找服务。CORBA是OMG(Object Management Group)对象管理组织提出的方案，解决分布式环境中软硬件系统的互联。现在已经用的比较少了，基本被Web Service替代，只有一些大型的电信项目还在用CORBA。</li><li>Web Service<br>包含AXIS, XFire, CFX   </li><li>SOAP<br>使用xml作为消息，使用http作为传输协议。  </li><li>RMI<br>使用JRMP作为消息，可以使用http, tcp等作为传输协议，使用JNDI查找服务。</li></ol></blockquote></li><li><p>hotspot<br>JVM的实现之一</p><blockquote><ol><li>cms</li><li>g1</li><li>parallel scavenge</li></ol></blockquote></li><li><p>jaxp<br>Java API for XML Processing, 解析与校验xml文件，提供了3种接口来处理XML文档。</p><blockquote><p>DOM接口(文档对象模型解析)<br>SAX接口(XML简单API解析)<br>StAX接口(XML流API)</p></blockquote></li><li><p>jaxws<br>XML Web Services的Java API, 全称Java API for Web Services，允许开发者选择面向RPC(RPC-oriented)或是面向消息(Message-oriented)的方式来实现自己的Web Services。</p></li><li><p>jdk<br>JDK的实现  </p><blockquote><ol><li>ThreadLocal</li><li>BlockingQueue</li><li>EnumMap</li><li>EnumSet</li><li>HashMap</li><li>CurrentHashMap</li><li>ArraryList</li><li>HashSet</li><li>TreeSet</li><li>LinkedHashMap</li><li>TreeMap</li><li>LinkedList</li><li>HashTable</li><li>Vector</li></ol></blockquote></li><li><p>langtools<br>Java语言工具，包含javac, javap等实用程序的源码。</p></li><li><p>make</p></li><li><p>nashorn<br>JVM上的JavaScript运行时</p></li><li><p>test</p></li></ul><h3 id="2-辅助书籍"><a href="#2-辅助书籍" class="headerlink" title="2. 辅助书籍"></a>2. 辅助书籍</h3><ol><li>《Java虚拟机规范》</li><li>《深入理解Java虚拟机》</li><li>《Hotspot实战》</li></ol><h3 id="3-其他建议"><a href="#3-其他建议" class="headerlink" title="3. 其他建议"></a>3. 其他建议</h3><ol><li><p>精读源码<br>java.util<br>java.lang<br>java.io  </p></li><li><p>深刻理解<br>java.lang.reflect<br>java.net<br>java.net.<em><br>java.nio<br>java.util.concurrent.</em></p></li><li><p>会用即可<br>java.lang.annotation<br>javax.annotation.<em><br>java.lang.ref<br>java.math<br>java.rmi.</em><br>javax.rmi.<em><br>java.security.</em><br>javax.security.<em><br>java.sql<br>javax.sql.</em><br>javax.transaction.<em><br>java.text<br>javax.xml.</em><br>org.w3c.dom.<em><br>org.xml.sax.</em><br>javax.crypto.<em><br>javax.imageio.</em><br>javax.jws.*<br>java.util.jar<br>java.util.logging<br>java.util.prefs<br>java.util.regex<br>java.util.zip  </p></li></ol>]]></content>
+    <content type="html"><![CDATA[<h3 id="1-模块介绍"><a href="#1-模块介绍" class="headerlink" title="1. 模块介绍"></a>1. 模块介绍</h3><ul><li><p>common  </p></li><li><p>corba<br>Common Object Request Broker Architecture(通用对象请求代理架构), 基于对象-服务机制设计，类似于JavaBean和微软的COM技术。  </p><blockquote><ol><li>RPC<br>支持xml和json两种格式的消息，使用http作为其传输协议。  </li><li>CORBA<br>使用IDL作为消息，使用tcp作为传输协议，使用JNDI查找服务。CORBA是OMG(Object Management Group)对象管理组织提出的方案，解决分布式环境中软硬件系统的互联。现在已经用的比较少了，基本被Web Service替代，只有一些大型的电信项目还在用CORBA。</li><li>Web Service<br>包含AXIS, XFire, CFX   </li><li>SOAP<br>使用xml作为消息，使用http作为传输协议。  </li><li>RMI<br>使用JRMP作为消息，可以使用http, tcp等作为传输协议，使用JNDI查找服务。</li></ol></blockquote></li><li><p>hotspot<br>JVM的实现之一</p><blockquote><ol><li>cms</li><li>g1</li><li>parallel scavenge</li></ol></blockquote></li><li><p>jaxp<br>Java API for XML Processing, 解析与校验xml文件，提供了3种接口来处理XML文档。</p><blockquote><p>DOM接口(文档对象模型解析)<br>SAX接口(XML简单API解析)<br>StAX接口(XML流API)</p></blockquote></li><li><p>jaxws<br>XML Web Services的Java API, 全称Java API for Web Services，允许开发者选择面向RPC(RPC-oriented)或是面向消息(Message-oriented)的方式来实现自己的Web Services。</p></li><li><p>jdk<br>JDK的实现  </p><blockquote><ol><li>ThreadLocal</li><li>BlockingQueue</li><li>EnumMap</li><li>EnumSet</li><li>HashMap</li><li>CurrentHashMap</li><li>ArraryList</li><li>HashSet</li><li>TreeSet</li><li>LinkedHashMap</li><li>TreeMap</li><li>LinkedList</li><li>HashTable</li><li>Vector</li></ol></blockquote></li><li><p>langtools<br>Java语言工具，包含javac, javap等实用程序的源码。</p></li><li><p>make</p></li><li><p>nashorn<br>JVM上的JavaScript运行时</p></li><li><p>test</p></li></ul><h3 id="2-辅助书籍"><a href="#2-辅助书籍" class="headerlink" title="2. 辅助书籍"></a>2. 辅助书籍</h3><ol><li>《Java虚拟机规范》</li><li>《深入理解Java虚拟机》</li><li>《Hotspot实战》</li></ol><h3 id="3-其他建议"><a href="#3-其他建议" class="headerlink" title="3. 其他建议"></a>3. 其他建议</h3><ol><li><p>精读源码<br>java.util<br>java.lang<br>java.io  </p></li><li><p>深刻理解<br>java.lang.reflect<br>java.net<br>java.net.<em><br>java.nio<br>java.util.concurrent.</em></p></li><li><p>会用即可<br>java.lang.annotation<br>javax.annotation.<em><br>java.lang.ref<br>java.math<br>java.rmi.</em><br>javax.rmi.<em><br>java.security.</em><br>javax.security.<em><br>java.sql<br>javax.sql.</em><br>javax.transaction.<em><br>java.text<br>javax.xml.</em><br>org.w3c.dom.<em><br>org.xml.sax.</em><br>javax.crypto.<em><br>javax.imageio.</em><br>javax.jws.*<br>java.util.jar<br>java.util.logging<br>java.util.prefs<br>java.util.regex<br>java.util.zip  </p></li></ol><h3 id="4-java-util"><a href="#4-java-util" class="headerlink" title="4. java.util"></a>4. java.util</h3>]]></content>
     
     <summary type="html">
     
@@ -784,20 +807,6 @@
     <id>http://longman.kim/2018/07/01/比特币/</id>
     <published>2018-07-01T08:49:40.000Z</published>
     <updated>2018-07-01T08:49:40.763Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>RPC框架Dubbo, Motan, SpringCloud</title>
-    <link href="http://longman.kim/2018/07/01/RPC%E6%A1%86%E6%9E%B6Dubbo-Motan-SpringCloud/"/>
-    <id>http://longman.kim/2018/07/01/RPC框架Dubbo-Motan-SpringCloud/</id>
-    <published>2018-07-01T08:49:17.000Z</published>
-    <updated>2018-07-01T08:49:17.814Z</updated>
     
     <summary type="html">
     
