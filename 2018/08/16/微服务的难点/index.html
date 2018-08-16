@@ -179,7 +179,37 @@
 <p>CQRS解决分布式查询问题</p>
 <p>分布式事务，NoSQL不支持ACID，2PC  </p>
 <p>事件驱动架构的一种技术，事件源，解决分布式事务</p>
-<h3 id="3-DDD聚合"><a href="#3-DDD聚合" class="headerlink" title="3. DDD聚合"></a>3. DDD聚合</h3><h3 id="4-事件源"><a href="#4-事件源" class="headerlink" title="4. 事件源"></a>4. 事件源</h3><h3 id="5-CQRS命令查询责任分离"><a href="#5-CQRS命令查询责任分离" class="headerlink" title="5. CQRS命令查询责任分离"></a>5. CQRS命令查询责任分离</h3>
+<h3 id="3-DDD聚合"><a href="#3-DDD聚合" class="headerlink" title="3. DDD聚合"></a>3. DDD聚合</h3><h3 id="4-事件源"><a href="#4-事件源" class="headerlink" title="4. 事件源"></a>4. 事件源</h3><h3 id="5-CQRS命令查询责任分离"><a href="#5-CQRS命令查询责任分离" class="headerlink" title="5. CQRS命令查询责任分离"></a>5. CQRS命令查询责任分离</h3><h3 id="6-微服务架构的六种模式"><a href="#6-微服务架构的六种模式" class="headerlink" title="6. 微服务架构的六种模式"></a>6. 微服务架构的六种模式</h3><ol>
+<li>聚合器微服务设计模式</li>
+<li>代理微服务设计模式</li>
+<li>链式微服务设计模式</li>
+<li>分支微服务设计模式</li>
+<li>数据共享微服务设计模式</li>
+<li>异步消息传递微服务设计模式</li>
+</ol>
+<h3 id="7-微服务架构技术选型"><a href="#7-微服务架构技术选型" class="headerlink" title="7. 微服务架构技术选型"></a>7. 微服务架构技术选型</h3><ol>
+<li>生态：容器, PAAS, Cloud Native, gRPC, ServiceMesh, Serverless</li>
+<li>选型标准：生产级、一线互联网公司落地产品、开源社区活跃度</li>
+<li>微服务框架：Spring Boot/Cloud，Dubbo, gRPC</li>
+<li>服务注册中心：Eureka+Ribbon/Consul</li>
+<li>服务网关：Zuul, Nginx/OpenResty</li>
+<li>配置中心：携程Apollo, Spring Cloud Config</li>
+<li>日志监控：ELK</li>
+<li>调用链监控：点评CAT, Zipkin, Pinpoint</li>
+<li>Metrics监控：OpenTSDB, Sensu</li>
+<li>服务容错：Hystrix, Nginx, Kong</li>
+<li>消息系统：Kafka, RocketMQ, RabbitMQ</li>
+<li>缓存治理：CacheCloud, Twemproxy, Codis</li>
+<li>分布式数据访问层：当当shardingjdbc, 阿里mycat</li>
+<li>任务调度：xxl-job, elastic-job</li>
+<li>安全认证授权：基于OAuth和OpenID connect自我定制，Wso2</li>
+<li>集群资源调度系统：K8s, 定制Mesos</li>
+<li>镜像治理：Docker Registry, harbor</li>
+<li>资源治理：CMDB</li>
+<li>发布平台：spinnaker</li>
+<li>IAM：Apereo CAS, Keycloak，自我定制</li>
+</ol>
+
                 <hr>
                 
 
@@ -205,7 +235,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-如何拆分微服务"><span class="toc-text">1. 如何拆分微服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-微服务和数据库"><span class="toc-text">2. 微服务和数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-DDD聚合"><span class="toc-text">3. DDD聚合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-事件源"><span class="toc-text">4. 事件源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-CQRS命令查询责任分离"><span class="toc-text">5. CQRS命令查询责任分离</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-如何拆分微服务"><span class="toc-text">1. 如何拆分微服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-微服务和数据库"><span class="toc-text">2. 微服务和数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-DDD聚合"><span class="toc-text">3. DDD聚合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-事件源"><span class="toc-text">4. 事件源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-CQRS命令查询责任分离"><span class="toc-text">5. CQRS命令查询责任分离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-微服务架构的六种模式"><span class="toc-text">6. 微服务架构的六种模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-微服务架构技术选型"><span class="toc-text">7. 微服务架构技术选型</span></a></li></ol>
                 </div>
             </div>
         </div>
