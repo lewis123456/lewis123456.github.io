@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-08-16T13:48:34.974Z</updated>
+  <updated>2018-08-17T10:11:22.977Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>token, 流水号, 密码存储的设计方案</title>
+    <link href="http://longman.kim/2018/08/17/token-%E6%B5%81%E6%B0%B4%E5%8F%B7-%E5%AF%86%E7%A0%81%E5%AD%98%E5%82%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88/"/>
+    <id>http://longman.kim/2018/08/17/token-流水号-密码存储的设计方案/</id>
+    <published>2018-08-17T07:31:10.000Z</published>
+    <updated>2018-08-17T10:11:22.977Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-token设计方案"><a href="#1-token设计方案" class="headerlink" title="1. token设计方案"></a>1. token设计方案</h3><p>token=version+sha256(module+userId+ua+ip+timestamp+randKey)+timestamp<br>其中module代表业务，userId用户号，randKey系统生成的随机数<br>将token, randKey作为value，module+userId作为key缓存在redis，并设置超时时间timeout</p><ol><li>用户第一次登陆成功后，生成token返回给用户  </li><li>用户每次请求，先校验用户是否已下线或者被踢掉了，下线或者被踢掉了后，需要重新登录鉴权生成token，没有的话根据请求上带的信息生成token(需要利用redis中的randKey)，对比生成的token、redis缓存的token、客户端上带的token，三者对比一致后续期redis的超时时间</li><li>用户两次请求的间隔超过了timeout，redis的数据过期了，需要重新登录鉴权生成token  </li><li>被踢掉时，将原始module+token作为key缓存在redis，并设置超时时间，其超时间要大于timeout。每次鉴权的时候，看以module+token为key的缓存是否存在，存在的话需要重新登录鉴权生成新的token</li><li>主动下线时，删除缓存中登录信息的redis</li></ol><p>csrfToken  </p><h3 id="2-流水号"><a href="#2-流水号" class="headerlink" title="2. 流水号"></a>2. 流水号</h3><ol><li>基于实例ID</li></ol><ol start="2"><li>基于DB</li></ol><ol start="3"><li>基于Redis</li></ol><ol start="4"><li>基于Zookeeper  </li></ol><h3 id="3-密码存储方案"><a href="#3-密码存储方案" class="headerlink" title="3. 密码存储方案"></a>3. 密码存储方案</h3><h5 id="1-一种工作中设计的方案"><a href="#1-一种工作中设计的方案" class="headerlink" title="1.一种工作中设计的方案"></a>1.一种工作中设计的方案</h5><p>前端处理：  </p><ol><li>sha256(userId+password) –&gt; hashvalue  </li><li>rsa encrypt(hashvalue + random) –&gt; encrypt password  </li><li>前端把encrypt password和random上送给后台系统  </li></ol><p>后端处理：  </p><ol><li>rsa decrypt(encrypt password) –&gt; hashvalue + random  </li><li>校验前端的random和第一步解密后的random是否一致，不一致退出，一致进入第三步  </li><li>hash(hashvalue + random salt) –&gt; store password<br>数据库存储userId, salt, store password  </li></ol><h5 id="2-加密技术"><a href="#2-加密技术" class="headerlink" title="2. 加密技术"></a>2. 加密技术</h5><ol><li>哈希函数（单向加密，不可逆）</li><li>哈希函数的破解<br>查找表、反向查找表、彩虹表  </li><li>加盐<br>加盐salt能够让查找表和彩虹表都失效<br>使用相同的盐值或者盐值太短效果不好  </li><li>双重哈希和古怪的哈希函数</li><li>哈希碰撞</li><li>使密码更难破解：慢哈希函数  </li><li>不可能破解的哈希函数<br>密钥哈希（使用AES对哈希值加密、使用密钥哈希算法HMAC）<br>密码哈希设备(YubiHSM)    </li><li>哈希算法<br>建议使用精心设计的密钥扩展算法如PBKDF2、bcrypt、scrypt、crypt安全版本。不建议使用MD5、SHA1、SHA256、SHA512、RipeMD、WHIRLPOOL、SHA3等。  </li></ol><p>参考<a href="http://www.infoq.com/cn/articles/how-to-encrypt-the-user-password-correctly" target="_blank" rel="noopener">http://www.infoq.com/cn/articles/how-to-encrypt-the-user-password-correctly</a>  </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-token设计方案&quot;&gt;&lt;a href=&quot;#1-token设计方案&quot; class=&quot;headerlink&quot; title=&quot;1. token设计方案&quot;&gt;&lt;/a&gt;1. token设计方案&lt;/h3&gt;&lt;p&gt;token=version+sha256(module+user
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>OAuth和OpenId Connect</title>
     <link href="http://longman.kim/2018/08/16/OAuth%E5%92%8COpenId-Connect/"/>
     <id>http://longman.kim/2018/08/16/OAuth和OpenId-Connect/</id>
     <published>2018-08-16T12:37:13.000Z</published>
-    <updated>2018-08-16T13:48:34.974Z</updated>
+    <updated>2018-08-17T06:51:05.370Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="1-OAuth的概念"><a href="#1-OAuth的概念" class="headerlink" title="1. OAuth的概念"></a>1. OAuth的概念</h3><p>开放授权，OAuth允许用户提供一个令牌，而不是用户名和密码来访问他们存放在特定服务提供者的数据。每一个令牌授权一个特定的网站在特定的时段内访问特定的资源。</p><h3 id="2-OAuth1-0和OAuth2-0的区别"><a href="#2-OAuth1-0和OAuth2-0的区别" class="headerlink" title="2. OAuth1.0和OAuth2.0的区别"></a>2. OAuth1.0和OAuth2.0的区别</h3><h3 id="3-OAuth2-0的运行流程"><a href="#3-OAuth2-0的运行流程" class="headerlink" title="3. OAuth2.0的运行流程"></a>3. OAuth2.0的运行流程</h3><ol><li>用户打开客户端以后，客户端要求用户给予授权（火鸡APP要求用户授权微信信息）。</li><li>用户同意给予客户端授权（用户将微信发送的code和wechatAppId发送给火鸡）。</li><li>客户端使用上一步获得的授权，向认证服务器申请令牌（pmbank-mbaccomm利用code获取access_token, pmbank-mbaccomm事先保存wechatAppId和wechatAppSecret）。</li><li>认证服务器对客户端进行认证以后，确认无误，同意发放令牌（微信下发access_token）。</li><li>客户端使用令牌，向资源服务器申请获取资源（pmbank-mbaccomm利用access_token获取用户的微信信息）。</li><li>资源服务器确认令牌无误，同意向客户端开放资源（微信确认access_token后开放用户信息给pmbank-mbaccomm）。</li></ol><h3 id="4-授权的几种模式"><a href="#4-授权的几种模式" class="headerlink" title="4. 授权的几种模式"></a>4. 授权的几种模式</h3><ol><li><p>授权码模式<br>火鸡APP微信登录，有折公众号登录(code-&gt;access_token)  </p></li><li><p>简化模式<br>主要用于无服务器端的应用，其流程为<br>a Client(第三方应用)将用户导向认证服务器<br>b 用户决定是否给客户端授权<br>c 如果用户同意给客户端授权，则认证服务器将用户重定向到Client指定的redirect_url, 并在URL的hash部分包含访问令牌<br>d UA通过javascript解析URL的Hash中的访问令牌信息<br>e UA将解析得到的访问令牌发送给Client<br>f UA或Client利用访问令牌去获取资源服务器的资源<br>其中令牌对于用户和浏览器是可见的。</p></li><li><p>密码模式</p></li></ol><ol start="4"><li>客户端模式 </li></ol><p>火鸡APP手Q登录 OAuth1.0</p><p>微信更新access_token</p><h3 id="5-OpenID-Connect"><a href="#5-OpenID-Connect" class="headerlink" title="5. OpenID Connect"></a>5. OpenID Connect</h3><h3 id="6-OAuth2-0与OpenID-Connect的区别"><a href="#6-OAuth2-0与OpenID-Connect的区别" class="headerlink" title="6. OAuth2.0与OpenID Connect的区别"></a>6. OAuth2.0与OpenID Connect的区别</h3>]]></content>
+    <content type="html"><![CDATA[<h3 id="1-OAuth的概念"><a href="#1-OAuth的概念" class="headerlink" title="1. OAuth的概念"></a>1. OAuth的概念</h3><p>开放授权，OAuth允许用户提供一个令牌，而不是用户名和密码来访问他们存放在特定服务提供者的数据。每一个令牌授权一个特定的网站在特定的时段内访问特定的资源。</p><h3 id="2-OAuth1-0和OAuth2-0的区别"><a href="#2-OAuth1-0和OAuth2-0的区别" class="headerlink" title="2. OAuth1.0和OAuth2.0的区别"></a>2. OAuth1.0和OAuth2.0的区别</h3><h3 id="3-OAuth2-0的运行流程"><a href="#3-OAuth2-0的运行流程" class="headerlink" title="3. OAuth2.0的运行流程"></a>3. OAuth2.0的运行流程</h3><ol><li>用户打开客户端以后，客户端要求用户给予授权（火鸡APP要求用户授权微信信息）。</li><li>用户同意给予客户端授权（用户将微信发送的code和wechatAppId发送给火鸡）。</li><li>客户端使用上一步获得的授权，向认证服务器申请令牌（mbaccomm利用code获取access_token, mbaccomm事先保存wechatAppId和wechatAppSecret）。</li><li>认证服务器对客户端进行认证以后，确认无误，同意发放令牌（微信下发access_token）。</li><li>客户端使用令牌，向资源服务器申请获取资源（mbaccomm利用access_token获取用户的微信信息）。</li><li>资源服务器确认令牌无误，同意向客户端开放资源（微信确认access_token后开放用户信息给mbaccomm）。</li></ol><h3 id="4-授权的几种模式"><a href="#4-授权的几种模式" class="headerlink" title="4. 授权的几种模式"></a>4. 授权的几种模式</h3><ol><li><p>授权码模式<br>火鸡APP微信登录，有折公众号登录(code-&gt;access_token-&gt;资源)  </p></li><li><p>简化模式<br>主要用于无服务器端的应用，其流程为<br>a Client(第三方应用)将用户导向认证服务器<br>b 用户决定是否给客户端授权<br>c 如果用户同意给客户端授权，则认证服务器将用户重定向到Client指定的  redirect_url, 并在URL的hash部分包含访问令牌<br>d UA通过javascript解析URL的Hash中的访问令牌信息<br>e UA将解析得到的访问令牌发送给Client<br>f UA或Client利用访问令牌去获取资源服务器的资源<br>其中令牌对于用户和浏览器是可见的。</p></li><li><p>密码模式<br>用户必须把自己的密码给客户端，但是客户端不得储存密码<br>a 用户向客户端提供用户和密码<br>b 客户端将用户密码发送给认证服务器，请求令牌<br>c 认证服务器确认无误后，向客户端发放令牌access_token</p></li><li><p>客户端模式<br>用户直接向客户端注册<br>a 客户端向认证服务器进行身份证，请求令牌<br>b 认证服务器确认无误后，向客户端下发令牌  </p></li><li><p>更新令牌<br>当access_token过期时，使用refresh_token(有效期比较长)更新一个新的令牌，当refresh_token过期时，需要重新授权。</p></li></ol><p>火鸡APP手Q登录 OAuth1.0</p><h3 id="5-OpenID-Connect-OIDC身份认证授权"><a href="#5-OpenID-Connect-OIDC身份认证授权" class="headerlink" title="5. OpenID Connect(OIDC身份认证授权)"></a>5. OpenID Connect(OIDC身份认证授权)</h3><p>OIDC=(Identity, Authentication) + OAuth 2.0。它在OAuth2上构建了一个身份层，是一个基于OAuth2协议的身份认证标准协议。主要原因是因为OAuth2是一个授权协议，它无法提供完善的身份认证功能，OIDC使用OAuth2的授权服务器为第三方客户端提供用户的身份认证，并把对应的身份认证信息传递给客户端。<br>OIDC工作流程：  </p><ol><li>客户端发送一个认证请求给授权服务器  </li><li>授权服务器对用户身份进行认证，然后提供授权  </li><li>授权服务器把ID Token和Access Token返回给客户端  </li><li>客户端利用Access Token请求用户信息接口  </li><li>用户信息接口返回用户的信息  </li></ol><h3 id="6-OAuth2-0与OpenID-Connect的区别"><a href="#6-OAuth2-0与OpenID-Connect的区别" class="headerlink" title="6. OAuth2.0与OpenID Connect的区别"></a>6. OAuth2.0与OpenID Connect的区别</h3><p>OpenID是用来认证协议（我是谁），OAuth是授权协议（我能做什么），二者是互补的。</p><h3 id="7-其他"><a href="#7-其他" class="headerlink" title="7. 其他"></a>7. 其他</h3><p>微信公众平台的授权<br>阿里云的OpenID授权<br>google<br>yahoo</p>]]></content>
     
     <summary type="html">
     
@@ -800,20 +821,6 @@
     <id>http://longman.kim/2018/07/01/超级账本/</id>
     <published>2018-07-01T08:50:09.000Z</published>
     <updated>2018-07-01T08:50:09.308Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>以太坊</title>
-    <link href="http://longman.kim/2018/07/01/%E4%BB%A5%E5%A4%AA%E5%9D%8A/"/>
-    <id>http://longman.kim/2018/07/01/以太坊/</id>
-    <published>2018-07-01T08:49:54.000Z</published>
-    <updated>2018-07-01T08:49:54.152Z</updated>
     
     <summary type="html">
     
