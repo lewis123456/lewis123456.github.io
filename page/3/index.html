@@ -273,6 +273,42 @@
 
 <div class="post-preview "
      style="background-image: url('img/post-default-img.jpg')">
+    <a href="/2018/07/20/分布式事务与秒杀技巧/">
+        <h2 class="post-title">
+            分布式事务与秒杀技巧
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-07-20
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                1. 分布式事务的解法
+一个系统操作多个数据库
+
+XA协议（数据库要支持XA协议）基本功能：数据库功能+开源组件（atomikos）实现
+
+
+多系统操作多数据库
+
+MQ消息队列（生产者消费者模型），优点是解耦，缺点是不能保证实时性（需要结合业务场景进行规避）  
+
+
+TCC补偿机制
+
+可逆操作，..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview "
+     style="background-image: url('img/post-default-img.jpg')">
     <a href="/2018/07/19/算法工程师/">
         <h2 class="post-title">
             算法工程师
@@ -443,34 +479,6 @@ Singleton..
         <div class="post-content-preview">
             <p>
                 1. 前言想想自己在计算机行业待了快9年了（本科4年，研究生3年，工作2年），对这个行业却只能说是初步了解。读书期间很抵触做网站，但自己却一个网站都没有搭起来过。那时候很崇拜算法，但没有深入学习，算法也是普通人的水平。现在我工作2年了，从事网站后台开发，却依然是菜鸟级别。技术水平菜，为人处世又不..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('img/post-default-img.jpg')">
-    <a href="/2018/07/12/国内主流互联网公司的RPC和MOM/">
-        <h2 class="post-title">
-            国内主流互联网公司的RPC和MOM
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-07-12
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                1. RPC服务框架
-Dubbo(阿里)
-
-
-架构Provider(Container), Conumer, Registry, Monitor
-通讯协议2.1 dubbo的特性是连接个数单连接，连接方式长连接，传输协议TCP，传输方式NIO异步通讯，序列化Hessian二进制序列化，适用范围数..
             </p>
         </div>
     </a>

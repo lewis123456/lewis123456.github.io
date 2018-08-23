@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        token, 流水号, 密码存储的设计方案｜longman&#39;s blog
+        MySQL技巧｜longman&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://longman.kim/2018/08/17/token-流水号-密码存储的设计方案/">
+    <link rel="canonical" href="http://longman.kim/2018/08/23/MySQL技巧/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>token, 流水号, 密码存储的设计方案</h1>
+                    <h1>MySQL技巧</h1>
                     
                     <span class="meta">
                          作者 lewis longman
                         <span>
-                          日期 2018-08-17
+                          日期 2018-08-23
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -162,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            token, 流水号, 密码存储的设计方案
+            MySQL技巧
         </span>
     </div>
 </header>
@@ -173,65 +173,24 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="1-token设计方案"><a href="#1-token设计方案" class="headerlink" title="1. token设计方案"></a>1. token设计方案</h3><p>token=version+sha256(module+userId+ua+ip+timestamp+randKey)+timestamp<br>其中module代表业务，userId用户号，randKey系统生成的随机数<br>将token, randKey作为value，module+userId作为key缓存在redis，并设置超时时间timeout</p>
-<ol>
-<li>用户第一次登陆成功后，生成token返回给用户  </li>
-<li>用户每次请求，先校验用户是否已下线或者被踢掉了，下线或者被踢掉了后，需要重新登录鉴权生成token，没有的话根据请求上带的信息生成token(需要利用redis中的randKey)，对比生成的token、redis缓存的token、客户端上带的token，三者对比一致后续期redis的超时时间</li>
-<li>用户两次请求的间隔超过了timeout，redis的数据过期了，需要重新登录鉴权生成token  </li>
-<li>被踢掉时，将原始module+token作为key缓存在redis，并设置超时时间，其超时间要大于timeout。每次鉴权的时候，看以module+token为key的缓存是否存在，存在的话需要重新登录鉴权生成新的token</li>
-<li>主动下线时，删除缓存中登录信息的redis</li>
+                <ol>
+<li>默认创建时间、更新时间  </li>
 </ol>
-<p>csrfToken  </p>
-<h3 id="2-流水号"><a href="#2-流水号" class="headerlink" title="2. 流水号"></a>2. 流水号</h3><ol>
-<li>基于实例ID</li>
-</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create_time datetime default current_timestamp comment &apos;创建时间&apos;   </span><br><span class="line">update_time datetime not null default current_timestamp on update current_timestamp comment &apos;更新时间&apos;</span><br></pre></td></tr></table></figure>
 <ol start="2">
-<li>基于DB</li>
+<li>last_insert_id（功能）<br>使用last_insert_id生成全局ID分配器  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create table sequence (id int not null);</span><br><span class="line">insert into sequence values(0);</span><br><span class="line">update sequence set id=last_insert_id(id+1);</span><br><span class="line">select last_insert_id();</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<ol start="3">
-<li>基于Redis</li>
-</ol>
-<ol start="4">
-<li>基于Zookeeper  </li>
-</ol>
-<h3 id="3-密码存储方案"><a href="#3-密码存储方案" class="headerlink" title="3. 密码存储方案"></a>3. 密码存储方案</h3><h5 id="1-一种工作中设计的方案"><a href="#1-一种工作中设计的方案" class="headerlink" title="1.一种工作中设计的方案"></a>1.一种工作中设计的方案</h5><p>前端处理：  </p>
-<ol>
-<li>sha256(userId+password) –&gt; hashvalue  </li>
-<li>rsa encrypt(hashvalue + random) –&gt; encrypt password  </li>
-<li>前端把encrypt password和random上送给后台系统  </li>
-</ol>
-<p>后端处理：  </p>
-<ol>
-<li>rsa decrypt(encrypt password) –&gt; hashvalue + random  </li>
-<li>校验前端的random和第一步解密后的random是否一致，不一致退出，一致进入第三步  </li>
-<li>hash(hashvalue + random salt) –&gt; store password<br>数据库存储userId, salt, store password  </li>
-</ol>
-<h5 id="2-加密技术"><a href="#2-加密技术" class="headerlink" title="2. 加密技术"></a>2. 加密技术</h5><ol>
-<li>哈希函数（单向加密，不可逆）</li>
-<li>哈希函数的破解<br>查找表、反向查找表、彩虹表  </li>
-<li>加盐<br>加盐salt能够让查找表和彩虹表都失效<br>使用相同的盐值或者盐值太短效果不好  </li>
-<li>双重哈希和古怪的哈希函数</li>
-<li>哈希碰撞</li>
-<li>使密码更难破解：慢哈希函数  </li>
-<li>不可能破解的哈希函数<br>密钥哈希（使用AES对哈希值加密、使用密钥哈希算法HMAC）<br>密码哈希设备(YubiHSM)    </li>
-<li>哈希算法<br>建议使用精心设计的密钥扩展算法如PBKDF2、bcrypt、scrypt、crypt安全版本。不建议使用MD5、SHA1、SHA256、SHA512、RipeMD、WHIRLPOOL、SHA3等。  </li>
-</ol>
-<p>参考<a href="http://www.infoq.com/cn/articles/how-to-encrypt-the-user-password-correctly" target="_blank" rel="noopener">http://www.infoq.com/cn/articles/how-to-encrypt-the-user-password-correctly</a>  </p>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2018/08/23/MySQL技巧/" data-toggle="tooltip" data-placement="top"
-                           title="MySQL技巧">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2018/08/16/OAuth和OpenId-Connect/" data-toggle="tooltip" data-placement="top"
-                           title="OAuth和OpenId Connect">Next Post &rarr;</a>
+                        <a href="/2018/08/17/token-流水号-密码存储的设计方案/" data-toggle="tooltip" data-placement="top"
+                           title="token, 流水号, 密码存储的设计方案">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -248,7 +207,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-token设计方案"><span class="toc-text">1. token设计方案</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-流水号"><span class="toc-text">2. 流水号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-密码存储方案"><span class="toc-text">3. 密码存储方案</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-一种工作中设计的方案"><span class="toc-text">1.一种工作中设计的方案</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-加密技术"><span class="toc-text">2. 加密技术</span></a></li></ol></li></ol></li></ol>
+                    
                 </div>
             </div>
         </div>

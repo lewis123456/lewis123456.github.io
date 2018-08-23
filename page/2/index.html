@@ -273,6 +273,35 @@
 
 <div class="post-preview "
      style="background-image: url('img/post-default-img.jpg')">
+    <a href="/2018/08/01/openjdk-8浏览总结/">
+        <h2 class="post-title">
+            openjdk-8浏览总结
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-01
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                1. 模块介绍
+common  
+
+corbaCommon Object Request Broker Architecture(通用对象请求代理架构), 基于对象-服务机制设计，类似于JavaBean和微软的COM技术。  
+
+
+RPC支持xml和json两种格式的消息，使用http作为其传输..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview "
+     style="background-image: url('img/post-default-img.jpg')">
     <a href="/2018/08/01/临时/">
         <h2 class="post-title">
             临时
@@ -437,42 +466,6 @@ Java网络编程
 
 
 阻塞I/O例如accept会一直阻塞到一个连接的建立，readLine会一直阻塞到换行符或者回车结尾的字符被读取。进一步，可以采用线程池处理多个请求，但存在大量的线程因为等待I/O数据就绪而处于休眠状态，并且需要为每个线程分配调用栈并切..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('img/post-default-img.jpg')">
-    <a href="/2018/07/20/分布式事务与秒杀技巧/">
-        <h2 class="post-title">
-            分布式事务与秒杀技巧
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-07-20
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                1. 分布式事务的解法
-一个系统操作多个数据库
-
-XA协议（数据库要支持XA协议）基本功能：数据库功能+开源组件（atomikos）实现
-
-
-多系统操作多数据库
-
-MQ消息队列（生产者消费者模型），优点是解耦，缺点是不能保证实时性（需要结合业务场景进行规避）  
-
-
-TCC补偿机制
-
-可逆操作，..
             </p>
         </div>
     </a>
