@@ -273,6 +273,82 @@
 
 <div class="post-preview "
      style="background-image: url('img/post-default-img.jpg')">
+    <a href="/2018/09/04/乐观锁，悲观锁/">
+        <h2 class="post-title">
+            乐观锁，悲观锁
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-09-04
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                1. 悲观锁
+使用场景悲观并发控制主要用于数据争用激烈的环境，以及发生并发冲突时使用锁保护数据的成本要低于回滚事务的成本的环境中。
+
+流程在对任意记录进行修改前，先尝试为该记录加上排他锁（exclusive locking）。如果加锁失败，说明该记录正在被修改，那么当前查询可能要等待或者抛出异常..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview "
+     style="background-image: url('img/post-default-img.jpg')">
+    <a href="/2018/09/04/Linux的I-O多路复用select-poll-epoll/">
+        <h2 class="post-title">
+            Linux的I/O多路复用select, poll, epoll
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-09-04
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                1. 共性
+select，poll，epoll都是IO多路复用的机制。I/O多路复用就通过一种机制，可以监视多个描述符，一旦某个描述符就绪（一般是读就绪或者写就绪），能够通知程序进行相应的读写操作。  
+
+但select，poll，epoll本质上都是同步I/O，因为他们都需要在读写事件就绪后自..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview "
+     style="background-image: url('img/post-default-img.jpg')">
+    <a href="/2018/09/04/Java并发深入CPU内部/">
+        <h2 class="post-title">
+            Java并发深入CPU内部
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-09-04
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                CPU高速缓存, L1, L2, L3, 多核心MESI缓存一致性协议storebuffe, loadbuffer内存屏障的种类（store, load, full）指令重排序as-if-serial语义可见性
+并发future, countdownlatch, condition, forkj..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview "
+     style="background-image: url('img/post-default-img.jpg')">
     <a href="/2018/08/28/kafka-rocketmq-wemq的特点，改进/">
         <h2 class="post-title">
             kafka, rocketmq, wemq的特点，改进
@@ -352,7 +428,12 @@
         
         <div class="post-content-preview">
             <p>
-                
+                1. 进程与线程的区别
+操作系统以多任务的方式，即多进程的方式运行。
+进程是操作系统分配资源的单位，线程(Thread)是进程的一个实体，是CPU调度和分派的基本单位。
+进程之间是通过时间片轮转算法进行调度。
+在Windows中，进行CPU分配是以线程为单位的。
+对于一些要求同时进行并且又要共享..
             </p>
         </div>
     </a>
@@ -379,83 +460,6 @@
 默认创建时间、更新时间  
 
 create_time datetime default current_timestamp comment &apos;创建时间&apos;   update_time datetime not null default current_timestamp on..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('img/post-default-img.jpg')">
-    <a href="/2018/08/17/token-流水号-密码存储的设计方案/">
-        <h2 class="post-title">
-            token, 流水号, 密码存储的设计方案
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-17
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                1. token设计方案token=version+sha256(module+userId+ua+ip+timestamp+randKey)+timestamp其中module代表业务，userId用户号，randKey系统生成的随机数将token, randKey作为value，module..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('img/post-default-img.jpg')">
-    <a href="/2018/08/16/OAuth和OpenId-Connect/">
-        <h2 class="post-title">
-            OAuth和OpenId Connect
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-16
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                1. OAuth的概念开放授权，OAuth允许用户提供一个令牌，而不是用户名和密码来访问他们存放在特定服务提供者的数据。每一个令牌授权一个特定的网站在特定的时段内访问特定的资源。
-2. OAuth1.0和OAuth2.0的区别3. OAuth2.0的运行流程
-用户打开客户端以后，客户端要求用户给..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('img/post-default-img.jpg')">
-    <a href="/2018/08/16/微服务的难点/">
-        <h2 class="post-title">
-            微服务的难点
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-16
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                1. 如何拆分微服务拆分领域数据库  
-领域模型的设计概念，聚合  
-2. 微服务和数据库不同服务间跨表查询困难  
-CQRS解决分布式查询问题
-分布式事务，NoSQL不支持ACID，2PC  
-事件驱动架构的一种技术，事件源，解决分布式事务
-3. DDD聚合4. 事件源5. CQRS命令查询责..
             </p>
         </div>
     </a>

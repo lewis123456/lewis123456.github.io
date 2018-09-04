@@ -273,6 +273,83 @@
 
 <div class="post-preview "
      style="background-image: url('img/post-default-img.jpg')">
+    <a href="/2018/08/17/token-流水号-密码存储的设计方案/">
+        <h2 class="post-title">
+            token, 流水号, 密码存储的设计方案
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-17
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                1. token设计方案token=version+sha256(module+userId+ua+ip+timestamp+randKey)+timestamp其中module代表业务，userId用户号，randKey系统生成的随机数将token, randKey作为value，module..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview "
+     style="background-image: url('img/post-default-img.jpg')">
+    <a href="/2018/08/16/OAuth和OpenId-Connect/">
+        <h2 class="post-title">
+            OAuth和OpenId Connect
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-16
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                1. OAuth的概念开放授权，OAuth允许用户提供一个令牌，而不是用户名和密码来访问他们存放在特定服务提供者的数据。每一个令牌授权一个特定的网站在特定的时段内访问特定的资源。
+2. OAuth1.0和OAuth2.0的区别3. OAuth2.0的运行流程
+用户打开客户端以后，客户端要求用户给..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview "
+     style="background-image: url('img/post-default-img.jpg')">
+    <a href="/2018/08/16/微服务的难点/">
+        <h2 class="post-title">
+            微服务的难点
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-16
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                1. 如何拆分微服务拆分领域数据库  
+领域模型的设计概念，聚合  
+2. 微服务和数据库不同服务间跨表查询困难  
+CQRS解决分布式查询问题
+分布式事务，NoSQL不支持ACID，2PC  
+事件驱动架构的一种技术，事件源，解决分布式事务
+3. DDD聚合4. 事件源5. CQRS命令查询责..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview "
+     style="background-image: url('img/post-default-img.jpg')">
     <a href="/2018/08/06/SQLite/">
         <h2 class="post-title">
             SQLite
@@ -400,84 +477,6 @@ corbaCommon Object Request Broker Architecture(通用对象请求代理架构), 
 
 
 RPC支持xml和json两种格式的消息，使用http作为其传输..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('img/post-default-img.jpg')">
-    <a href="/2018/08/01/临时/">
-        <h2 class="post-title">
-            临时
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-01
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                1. 零拷贝2. Netty的ChannelPipeline3. 2PC，3PC4. redis选举5. CAP中的P6. HBase与MySQL的对比7. POW挖矿，POF, DPOF, RAFT8. 行内的架构9. 消息中间件需要解决的问题10. BloomFilter 布隆过滤器11. ..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('img/post-default-img.jpg')">
-    <a href="/2018/07/26/一致性算法/">
-        <h2 class="post-title">
-            一致性算法
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-07-26
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                1. 2PC
-投票阶段
-协调者向所有参与者发送事务内容，等待参与者的响应；参与者执行事务，并将undo和redo信息记入事务日志；参与者向协调者反馈事务的响应YES或者NO；  
-
-
-
-
-提交阶段
-
-如果所有参与者都反馈YES，则协调者向所有参与者发出提交请求，参与者完成事务提交后，向协调者发送..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('img/post-default-img.jpg')">
-    <a href="/2018/07/26/《代码的未来》/">
-        <h2 class="post-title">
-            《代码的未来》
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-07-26
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                1. 编程的时间和空间2. 编程语言的过去、现在和未来3. 编程语言的新潮流4. 云计算时代的编程5. 支撑大数据的数据存储技术6. 多核时代的编程
             </p>
         </div>
     </a>
