@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-09-04T13:36:29.348Z</updated>
+  <updated>2018-09-09T04:45:39.108Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>域名解析的过程</title>
+    <link href="http://longman.kim/2018/09/08/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E7%9A%84%E8%BF%87%E7%A8%8B/"/>
+    <id>http://longman.kim/2018/09/08/域名解析的过程/</id>
+    <published>2018-09-08T08:36:21.000Z</published>
+    <updated>2018-09-09T04:45:39.108Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-浏览器如何根据域名查找IP？"><a href="#1-浏览器如何根据域名查找IP？" class="headerlink" title="1. 浏览器如何根据域名查找IP？"></a>1. 浏览器如何根据域名查找IP？</h3><ol><li>查浏览器缓存（浏览器会定期刷新DNS缓存）。</li><li>操作系统缓存。</li><li>路由器缓存。</li><li>ISP的DNS服务器。</li><li>根服务器。（cn -&gt; com.cn -&gt; baidu.com.cn -&gt; <a href="http://www.baidu.com.cn）。" target="_blank" rel="noopener">www.baidu.com.cn）。</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-浏览器如何根据域名查找IP？&quot;&gt;&lt;a href=&quot;#1-浏览器如何根据域名查找IP？&quot; class=&quot;headerlink&quot; title=&quot;1. 浏览器如何根据域名查找IP？&quot;&gt;&lt;/a&gt;1. 浏览器如何根据域名查找IP？&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;查浏览器缓存
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《算法导论》粗略</title>
+    <link href="http://longman.kim/2018/09/07/%E3%80%8A%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA%E3%80%8B%E7%B2%97%E7%95%A5/"/>
+    <id>http://longman.kim/2018/09/07/《算法导论》粗略/</id>
+    <published>2018-09-07T10:54:00.000Z</published>
+    <updated>2018-09-08T08:32:42.178Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-基础知识"><a href="#1-基础知识" class="headerlink" title="1. 基础知识"></a>1. 基础知识</h3><h5 id="1-如何分析算法，时间复杂度和空间复杂度的计算，最坏、平均、最好情况的分析？"><a href="#1-如何分析算法，时间复杂度和空间复杂度的计算，最坏、平均、最好情况的分析？" class="headerlink" title="1. 如何分析算法，时间复杂度和空间复杂度的计算，最坏、平均、最好情况的分析？"></a>1. 如何分析算法，时间复杂度和空间复杂度的计算，最坏、平均、最好情况的分析？</h5><h5 id="2-如何设计算法，分治法、递归法、主方法（主定理的证明）？"><a href="#2-如何设计算法，分治法、递归法、主方法（主定理的证明）？" class="headerlink" title="2.  如何设计算法，分治法、递归法、主方法（主定理的证明）？"></a>2.  如何设计算法，分治法、递归法、主方法（主定理的证明）？</h5><h5 id="3-概率分析和随机算法？"><a href="#3-概率分析和随机算法？" class="headerlink" title="3. 概率分析和随机算法？"></a>3. 概率分析和随机算法？</h5><h3 id="2-排序和顺序统计学"><a href="#2-排序和顺序统计学" class="headerlink" title="2. 排序和顺序统计学"></a>2. 排序和顺序统计学</h3><h5 id="1-有哪些排序算法，时间复杂度和空间复杂度多少，都有哪些优缺点，哪些方面可以优化？"><a href="#1-有哪些排序算法，时间复杂度和空间复杂度多少，都有哪些优缺点，哪些方面可以优化？" class="headerlink" title="1. 有哪些排序算法，时间复杂度和空间复杂度多少，都有哪些优缺点，哪些方面可以优化？"></a>1. 有哪些排序算法，时间复杂度和空间复杂度多少，都有哪些优缺点，哪些方面可以优化？</h5><p>快排<br>堆排序<br>计数排序<br>基数排序<br>桶排序<br>冒泡<br>选择<br>插入</p><h5 id="2-中位数，最小值，最大值的求解和时空分析？"><a href="#2-中位数，最小值，最大值的求解和时空分析？" class="headerlink" title="2. 中位数，最小值，最大值的求解和时空分析？"></a>2. 中位数，最小值，最大值的求解和时空分析？</h5><h3 id="3-数据结构"><a href="#3-数据结构" class="headerlink" title="3. 数据结构"></a>3. 数据结构</h3><h5 id="1-有哪些基本的数据结构？"><a href="#1-有哪些基本的数据结构？" class="headerlink" title="1. 有哪些基本的数据结构？"></a>1. 有哪些基本的数据结构？</h5><p>栈<br>队列<br>链表  </p><h5 id="2-如何用数组模拟指针，用链表模拟有根树？"><a href="#2-如何用数组模拟指针，用链表模拟有根树？" class="headerlink" title="2. 如何用数组模拟指针，用链表模拟有根树？"></a>2. 如何用数组模拟指针，用链表模拟有根树？</h5><p>开辟另一个数组，内部元素的值代表指针。</p><h5 id="2-散列表"><a href="#2-散列表" class="headerlink" title="2. 散列表"></a>2. 散列表</h5><h3 id="4-高级设计和分析技术"><a href="#4-高级设计和分析技术" class="headerlink" title="4. 高级设计和分析技术"></a>4. 高级设计和分析技术</h3><h3 id="5-高级数据结构"><a href="#5-高级数据结构" class="headerlink" title="5. 高级数据结构"></a>5. 高级数据结构</h3><h3 id="6-图算法"><a href="#6-图算法" class="headerlink" title="6. 图算法"></a>6. 图算法</h3><h3 id="7-算法研究问题选编"><a href="#7-算法研究问题选编" class="headerlink" title="7. 算法研究问题选编"></a>7. 算法研究问题选编</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-基础知识&quot;&gt;&lt;a href=&quot;#1-基础知识&quot; class=&quot;headerlink&quot; title=&quot;1. 基础知识&quot;&gt;&lt;/a&gt;1. 基础知识&lt;/h3&gt;&lt;h5 id=&quot;1-如何分析算法，时间复杂度和空间复杂度的计算，最坏、平均、最好情况的分析？&quot;&gt;&lt;a href
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>乐观锁，悲观锁</title>
@@ -793,44 +836,6 @@
       
         &lt;h3 id=&quot;1-什么是Kalfka？&quot;&gt;&lt;a href=&quot;#1-什么是Kalfka？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是Kalfka？&quot;&gt;&lt;/a&gt;1. 什么是Kalfka？&lt;/h3&gt;&lt;p&gt;由Scala和Java编写，开源流处理平台，高吞吐量的分
       
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>程序员国外面试流程（同事口述）</title>
-    <link href="http://longman.kim/2018/07/06/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%9B%BD%E5%A4%96%E9%9D%A2%E8%AF%95%E6%B5%81%E7%A8%8B%EF%BC%88%E5%90%8C%E4%BA%8B%E5%8F%A3%E8%BF%B0%EF%BC%89/"/>
-    <id>http://longman.kim/2018/07/06/程序员国外面试流程（同事口述）/</id>
-    <published>2018-07-06T12:54:55.000Z</published>
-    <updated>2018-07-06T13:06:06.706Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="1-面试准备"><a href="#1-面试准备" class="headerlink" title="1. 面试准备"></a>1. 面试准备</h3><ol><li><p>英语<br>口语，可以找网上一对一的私教</p></li><li><p>算法<br>ACM类型的算法题目，刷leetcode，打比赛</p></li><li><p>项目  </p></li></ol><ol start="4"><li><p>面向对象设计，设计模式<br>面向对象的思想，设计模式</p></li><li><p>架构<br>AWS的一些架构</p></li></ol><h3 id="2-面试流程"><a href="#2-面试流程" class="headerlink" title="2. 面试流程"></a>2. 面试流程</h3><ol><li>在线做题（一个小时左右网上完成一份试卷）  </li><li>三轮电面（2轮在线编程，1轮项目介绍）  </li><li>一天之内6轮现场面试（白板手写算法，面向对象设计，架构）</li></ol><h3 id="3-机会"><a href="#3-机会" class="headerlink" title="3. 机会"></a>3. 机会</h3><p>使用linkedin，吸引国外公司的HR，多加群</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;1-面试准备&quot;&gt;&lt;a href=&quot;#1-面试准备&quot; class=&quot;headerlink&quot; title=&quot;1. 面试准备&quot;&gt;&lt;/a&gt;1. 面试准备&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;英语&lt;br&gt;口语，可以找网上一对一的私教&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;算法&lt;br
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>剧本20180705</title>
-    <link href="http://longman.kim/2018/07/04/%E5%89%A7%E6%9C%AC20180705/"/>
-    <id>http://longman.kim/2018/07/04/剧本20180705/</id>
-    <published>2018-07-04T14:11:05.000Z</published>
-    <updated>2018-07-04T14:11:05.147Z</updated>
-    
-    <summary type="html">
     
     </summary>
     
