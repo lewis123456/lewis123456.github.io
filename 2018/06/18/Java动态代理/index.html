@@ -1,347 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="张凡在 Github 上的个人博客">
-    <meta name="keyword" content="软件，算法，机器人">
-    <meta name="theme-color" content="#600090">
-    <meta name="msapplication-navbutton-color" content="#600090">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
-    <link rel="shortcut icon" href="img/header-img.jpg">
-    <link rel="alternate" type="application/atom+xml" title="longman" href="/atom.xml">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
-    <title>
-        
-        Java动态代理｜longman&#39;s blog
-        
-    </title>
+	
+	<title>Java动态代理</title>
+	<meta name="keywords" content="longman" />
 
-    <link rel="canonical" href="http://longman.kim/2018/06/18/Java动态代理/">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+	   <link href="/css/main.css?v=3" rel="stylesheet" type="text/css" />
+    
+        <script src="/js/util.js"></script>
+        <script>
+            if(isMobile()) {
+                loadjscssfile('../css/mobile.css', 'css');
+            } else {
+                loadjscssfile('../css/desktop.css', 'css');
+            }
+        </script> 
+    
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/blog-style.css">
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="Atom feed">
 
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
+    
+	<link rel="shortcut icon" type="image/x-icon" href="/header-img.jpg?v=3"/>
+    
+    
+
 </head>
 
-<style>
-
-    header.intro-header {
-        background-image: url('img/post-default-img.jpg')
-    }
-</style>
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="" class="animated fadeIn">
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
-" data-ishome = "false" >
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand animated pulse" href="/">
-                <span class="brand-logo">
-                    longman
-                </span>
-                's Blog
-            </a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <!-- /.navbar-collapse -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-					
-                    
-                        
-							
-                        <li>
-                            <a href="/Tags/">Tags</a>
-                        </li>
-							
-						
-                    
-					
-					
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-//    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-<!-- Main Content -->
-
-<!--only post-->
+<body>
 
 
-<img class="wechat-title-img"
-     src="img/post-default-img.jpg">
+<h2 class="title">Java动态代理</h2>
+<!---
+<div style="text-align:center;margin-top: -10px;">
+<div class="article-category">
+发表于2018年6月18日
 
 
-<style>
-    
-    header.intro-header {
-        background-image: url('img/post-default-img.jpg')
-    }
 
-    
-</style>
 
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <div class="post-heading">
-                    <h1>Java动态代理</h1>
-                    
-                    <span class="meta">
-                         作者 lewis longman
-                        <span>
-                          日期 2018-06-18
-                         </span>
-                    </span>
-                    <div class="tags text-center">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="post-title-haojen">
-        <span>
-            Java动态代理
-        </span>
-    </div>
-</header>
+ </div>
+--->
+</div>
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <!-- Post Container -->
-            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Spring最重要的一个特点就是AOP，面向切面编程。它以织入的方式向系统中添加非业务功能的代码，例如参数检验，安全验证等。这个功能使得代码的逻辑变得更加清晰，它的底层实现方式正是Java的动态代理。举个例子，在Spring中如果我们定义了一个类，然后类中有一个@Async修饰的方法，在Spring启动时会为这个类生成一个代理类。在Spring AOP中，当拦截对象实现了接口时，使用的是JDK的Proxy类，如果没有实现接口则使用GCLIB生成拦截类的子类。<br>首先看看下面两个接口User和Client，以及实现了两个接口的CommonImpl，我们现在要实现CommonImpl的代理，在CommonImpl中某些方法的前后添加一些功能。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public interface User &#123;</span><br><span class="line">    void insert();</span><br><span class="line">    void update();</span><br><span class="line">    void delete();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public interface Client &#123;</span><br><span class="line">    void one();</span><br><span class="line">    void two();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class CommonImpl implements User, Client &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void insert() &#123;</span><br><span class="line">        System.out.println(&quot;insert&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    publid void update() &#123;</span><br><span class="line">        System.out.println(&quot;update&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void delete() &#123;</span><br><span class="line">        System.out.println(&quot;delete&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void one() &#123;</span><br><span class="line">        System.out.println(&quot;one&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void two() &#123;</span><br><span class="line">        System.out.println(&quot;two&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#装饰器模式"><span class="toc-text">装饰器模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态代理"><span class="toc-text">动态代理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-使用JDK中的Proxy和InvocationHandler"><span class="toc-text">1. 使用JDK中的Proxy和InvocationHandler</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-使用cglib库"><span class="toc-text">2. 使用cglib库</span></a></li></ol></li></ol></li></ol>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Spring最重要的一个特点就是AOP，面向切面编程。它以织入的方式向系统中添加非业务功能的代码，例如参数检验，安全验证等。这个功能使得代码的逻辑变得更加清晰，它的底层实现方式正是Java的动态代理。举个例子，在Spring中如果我们定义了一个类，然后类中有一个@Async修饰的方法，在Spring启动时会为这个类生成一个代理类。在Spring AOP中，当拦截对象实现了接口时，使用的是JDK的Proxy类，如果没有实现接口则使用GCLIB生成拦截类的子类。<br>首先看看下面两个接口User和Client，以及实现了两个接口的CommonImpl，我们现在要实现CommonImpl的代理，在CommonImpl中某些方法的前后添加一些功能。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public interface User &#123;</span><br><span class="line">    void insert();</span><br><span class="line">    void update();</span><br><span class="line">    void delete();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public interface Client &#123;</span><br><span class="line">    void one();</span><br><span class="line">    void two();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class CommonImpl implements User, Client &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void insert() &#123;</span><br><span class="line">        System.out.println(&quot;insert&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    publid void update() &#123;</span><br><span class="line">        System.out.println(&quot;update&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void delete() &#123;</span><br><span class="line">        System.out.println(&quot;delete&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void one() &#123;</span><br><span class="line">        System.out.println(&quot;one&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void two() &#123;</span><br><span class="line">        System.out.println(&quot;two&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="装饰器模式"><a href="#装饰器模式" class="headerlink" title="装饰器模式"></a>装饰器模式</h3><p>静态代理可以理解为设计模式中的装饰器模式。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class DecorateCommon implements User, Client &#123;</span><br><span class="line">    private CommonImpl common;</span><br><span class="line">    </span><br><span class="line">    public DecorateCommon(CommonImpl common) &#123;</span><br><span class="line">        this.common = common;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void insert() &#123;</span><br><span class="line">        System.out.println(&quot;before&quot;);</span><br><span class="line">        common.insert();</span><br><span class="line">        System.out.println(&quot;after&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void update() &#123;</span><br><span class="line">        System.out.println(&quot;before&quot;);</span><br><span class="line">        common.update();</span><br><span class="line">        System.out.println(&quot;after&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void delete() &#123;</span><br><span class="line">        System.out.println(&quot;delete&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override </span><br><span class="line">    public void one() &#123;</span><br><span class="line">        System.out.println(&quot;hello&quot;);</span><br><span class="line">        common.one();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void two() &#123;</span><br><span class="line">        common.two();</span><br><span class="line">        System.out.println(&quot;world&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        DecorateCommon decorateCommon = new DecorateCommon(new CommonImpl());</span><br><span class="line">        decorateCommon.insert();</span><br><span class="line">        decorateCommon.update();</span><br><span class="line">        decorateCommon.delete();</span><br><span class="line">        decorateCommon.one();</span><br><span class="line">        decorateCommon.two();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h3><h5 id="1-使用JDK中的Proxy和InvocationHandler"><a href="#1-使用JDK中的Proxy和InvocationHandler" class="headerlink" title="1. 使用JDK中的Proxy和InvocationHandler"></a>1. 使用JDK中的Proxy和InvocationHandler</h5><p>CommonImpl的代理类，其中CommonImpl必须实现某些接口。<br>重点关注Proxy的方法<code>public static Object newProxyInstance(ClassLoader loader, Class&lt;?&gt;[] interfaces, InvocationHandler h)</code><br>loader: 被代理类的类加载器<br>interfaces: 被代理类实现的接口<br>h: 被代理类关联的handler<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class ProxyCommon implements InvocationHandler &#123;</span><br><span class="line">    private Object obj;</span><br><span class="line">    </span><br><span class="line">    public ProxyCommon(Object obj) &#123;</span><br><span class="line">        this.obj = obj;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public Object invoke(Object proxy, Method method, Object[] args) throw Throwable &#123;</span><br><span class="line">        String methodName = method.getName();</span><br><span class="line">        </span><br><span class="line">        if (&quot;insert&quot;.equalsIgnoreCase(methodName) || &quot;update&quot;.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            System.out.println(&quot;before&quot;);</span><br><span class="line">            Object result = method.invoke(obj, args);</span><br><span class="line">            System.out.println(&quot;after&quot;);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        if (&quot;one&quot;.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            System.out.println(&quot;hello&quot;);</span><br><span class="line">            Object result = method.invoke(obj, args);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        if (&quot;two&quot;.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            Object result = method.invoke(obj, args);</span><br><span class="line">            System.out.println(&quot;world&quot;);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        return method.invoke(obj, args);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        InvocationHandler handler = new ProxyCommon(new CommonImpl());</span><br><span class="line">        ClassLoader classLoader = CommonImpl.class.getClassLoader();</span><br><span class="line">        Class&lt;?&gt;[] interfaces = new Class[] &#123;User.class, Client.class&#125;;</span><br><span class="line">        Object object = Proxy.newProxyInstance(classLoader, interfaces, handler);</span><br><span class="line">        </span><br><span class="line">        User user = (User)object;</span><br><span class="line">        user.insert();</span><br><span class="line">        user.update();</span><br><span class="line">        user.delete();</span><br><span class="line">        </span><br><span class="line">        Client client = (Client)client;</span><br><span class="line">        client.one();</span><br><span class="line">        client.two();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h5 id="2-使用cglib库"><a href="#2-使用cglib库" class="headerlink" title="2. 使用cglib库"></a>2. 使用cglib库</h5><p>CommonImpl的代理类，不论CommonImpl实现接口与否</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class CglibCommon implements MethodInterceptor &#123;</span><br><span class="line">    private static CglibCommon cglibCommon = new CglibCommon();</span><br><span class="line">    private CglibCommon();</span><br><span class="line">    </span><br><span class="line">    public static CglibCommon getInstance() &#123;</span><br><span class="line">        return cglibCommon;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public Object intercept(Object obj, Method method, Object[] args, MethodProxy methodProxy) throws Throwable &#123;</span><br><span class="line">        String methodName = method.getName();</span><br><span class="line">                </span><br><span class="line">        if (&quot;insert&quot;.equalsIgnoreCase(methodName) || &quot;update&quot;.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            System.out.println(&quot;before&quot;);</span><br><span class="line">            Object result = methodProxy.invokeSuper(obj, args);</span><br><span class="line">            System.out.println(&quot;after&quot;);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">                </span><br><span class="line">        if (&quot;one&quot;.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            System.out.println(&quot;hello&quot;);</span><br><span class="line">            Object result = methodProxy.invokeSuper(obj, args);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">                </span><br><span class="line">        if (&quot;two&quot;.equalsIgnoreCase(methodName)) &#123;</span><br><span class="line">            Object result = methodProxy.invokeSuper(obj, args);</span><br><span class="line">            System.out.println(&quot;world&quot;);</span><br><span class="line">            return result;</span><br><span class="line">        &#125;</span><br><span class="line">                </span><br><span class="line">        return methodProxy.invokeSuper(obj, args);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        CommonImpl common = (CommonImpl)Enhancer.create(CommonImpl.class, CglibCommon.getInstance());</span><br><span class="line">        common.insert();</span><br><span class="line">        common.update();</span><br><span class="line">        common.delete();</span><br><span class="line">        common.one();</span><br><span class="line">        common.two();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-                <hr>
-                
 
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2018/06/18/Go的协程/" data-toggle="tooltip" data-placement="top"
-                           title="Go的协程">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/2018/06/18/深度优先搜索与广度优先搜索/" data-toggle="tooltip" data-placement="top"
-                           title="深度优先搜索与广度优先搜索">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
-
-                
-
-
-                
-
-
-                <!--加入新的评论系统-->
-                
-            </div>
-
-            <div class="hidden-xs col-sm-3 toc-col">
-                <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#装饰器模式"><span class="toc-text">装饰器模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态代理"><span class="toc-text">动态代理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-使用JDK中的Proxy和InvocationHandler"><span class="toc-text">1. 使用JDK中的Proxy和InvocationHandler</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-使用cglib库"><span class="toc-text">2. 使用cglib库</span></a></li></ol></li></ol></li></ol>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Sidebar Container -->
-
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                
-                <section>
-                    <!-- no hr -->
-                    <h5 class="text-center">
-                        <a href="/tags/">FEATURED TAGS</a>
-                    </h5>
-                    <div class="tags">
-                        
-                    </div>
-                </section>
-                
-
-                <!-- Friends Blog -->
-                
-            </div>
-        </div>
-
-    </div>
-</article>
-
-
-
-
-
-
-
-<!-- Footer -->
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <br>
-                <ul class="list-inline text-center">
-                
-                
-                
-
-                
-
-                
-
-                
-
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; longman 2018
-                    <br>
-                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
-                </p>
-
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- jQuery -->
-<script src="/js/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/js/blog.js"></script>
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("http://longman.kim/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-<!--fastClick.js -->
-<script>
-    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
-
-<!-- Google Analytics -->
-
-
-
-<!-- Baidu Tongji -->
-
-
-<!-- swiftype -->
+<!--<a href="http://longman.kim/2018/06/18/Java动态代理/#disqus_thread" class="article-comment-link">Comments</a>
+<div id="disqus_thread"></div>
 <script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = ''; // required: replace example with your forum shortname
 
-  _st('install','','2.0.0');
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
 </script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+-->
+<div style="display:none">
+<script src="http://s4.cnzz.com/stat.php?id=&web_id=" language="JavaScript"></script>script>
+</div>
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="img/header-img.jpg">
+
+
+
+
 </body>
-
 </html>

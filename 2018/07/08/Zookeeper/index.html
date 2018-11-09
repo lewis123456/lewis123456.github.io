@@ -1,179 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="张凡在 Github 上的个人博客">
-    <meta name="keyword" content="软件，算法，机器人">
-    <meta name="theme-color" content="#600090">
-    <meta name="msapplication-navbutton-color" content="#600090">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
-    <link rel="shortcut icon" href="img/header-img.jpg">
-    <link rel="alternate" type="application/atom+xml" title="longman" href="/atom.xml">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
-    <title>
-        
-        Zookeeper｜longman&#39;s blog
-        
-    </title>
+	
+	<title>Zookeeper</title>
+	<meta name="keywords" content="longman" />
 
-    <link rel="canonical" href="http://longman.kim/2018/07/08/Zookeeper/">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+	   <link href="/css/main.css?v=3" rel="stylesheet" type="text/css" />
+    
+        <script src="/js/util.js"></script>
+        <script>
+            if(isMobile()) {
+                loadjscssfile('../css/mobile.css', 'css');
+            } else {
+                loadjscssfile('../css/desktop.css', 'css');
+            }
+        </script> 
+    
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/blog-style.css">
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="Atom feed">
 
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
+    
+	<link rel="shortcut icon" type="image/x-icon" href="/header-img.jpg?v=3"/>
+    
+    
+
 </head>
 
-<style>
-
-    header.intro-header {
-        background-image: url('img/post-default-img.jpg')
-    }
-</style>
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="" class="animated fadeIn">
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
-" data-ishome = "false" >
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand animated pulse" href="/">
-                <span class="brand-logo">
-                    longman
-                </span>
-                's Blog
-            </a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <!-- /.navbar-collapse -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-					
-                    
-                        
-							
-                        <li>
-                            <a href="/Tags/">Tags</a>
-                        </li>
-							
-						
-                    
-					
-					
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-//    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-<!-- Main Content -->
-
-<!--only post-->
+<body>
 
 
-<img class="wechat-title-img"
-     src="img/post-default-img.jpg">
+<h2 class="title">Zookeeper</h2>
+<!---
+<div style="text-align:center;margin-top: -10px;">
+<div class="article-category">
+发表于2018年7月8日
 
 
-<style>
-    
-    header.intro-header {
-        background-image: url('img/post-default-img.jpg')
-    }
 
-    
-</style>
 
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <div class="post-heading">
-                    <h1>Zookeeper</h1>
-                    
-                    <span class="meta">
-                         作者 lewis longman
-                        <span>
-                          日期 2018-07-08
-                         </span>
-                    </span>
-                    <div class="tags text-center">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="post-title-haojen">
-        <span>
-            Zookeeper
-        </span>
-    </div>
-</header>
+ </div>
+--->
+</div>
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <!-- Post Container -->
-            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3 id="1-Zookeeper是什么？"><a href="#1-Zookeeper是什么？" class="headerlink" title="1. Zookeeper是什么？"></a>1. Zookeeper是什么？</h3><p>Zookeeper是一个分布式的分布式应用程序协调服务，它为分布式应用提供一致性服务，功能包括：配置维护、域名服务、分布式同步、组服务等，提供的接口主要有分布式独享锁、选举、队列。</p>
+<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Zookeeper是什么？"><span class="toc-text">1. Zookeeper是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Zookeeper的架构与组成"><span class="toc-text">2. Zookeeper的架构与组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Fast-Paxos算法，ZAB算法"><span class="toc-text">3. Fast Paxos算法，ZAB算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-动物园管理员（Zookeeper）的故事"><span class="toc-text">4. 动物园管理员（Zookeeper）的故事</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-优点与缺点"><span class="toc-text">5. 优点与缺点</span></a></li></ol>
+<h3 id="1-Zookeeper是什么？"><a href="#1-Zookeeper是什么？" class="headerlink" title="1. Zookeeper是什么？"></a>1. Zookeeper是什么？</h3><p>Zookeeper是一个分布式的分布式应用程序协调服务，它为分布式应用提供一致性服务，功能包括：配置维护、域名服务、分布式同步、组服务等，提供的接口主要有分布式独享锁、选举、队列。</p>
 <h3 id="2-Zookeeper的架构与组成"><a href="#2-Zookeeper的架构与组成" class="headerlink" title="2. Zookeeper的架构与组成"></a>2. Zookeeper的架构与组成</h3><ol>
 <li>类似于文件系统，多叉树的结构，每个节点znode的大小&lt;1M。Zookeeper服务由多个互相通信的Server构成，其中有一个Server是leader。当leader挂了之后，会重新选择一个新的leader。</li>
 <li>普通的Server能处理read和watch请求，只有leader能处理write请求。因此，当普通Server收到write请求时，它会将请求重定向到leader。Client配置所有Server的列表，但只会选择其中的一个Server进行连接。</li>
@@ -190,170 +63,30 @@
 <li><strong><em>client挂了后的处理</em></strong><br>zookeeper允许client创建两种类型的节点：persistent, ephemeral，ephemeral类型的节点与client一起共存亡。客户端与follower连接时，会创建一个session, follower和leader都保存了session信息。client定期向follower发送ping包，证明自己活着。leader定期向follower发送ping包，检查是否有超过一半的follower还活着，同时follower会返回session，告诉leader哪些client还活着，这样leader就可以删除不错在客户端的ephemeral节点，ephemeral不允许有children。</li>
 </ol>
 <h3 id="4-动物园管理员（Zookeeper）的故事"><a href="#4-动物园管理员（Zookeeper）的故事" class="headerlink" title="4. 动物园管理员（Zookeeper）的故事"></a>4. 动物园管理员（Zookeeper）的故事</h3><h3 id="5-优点与缺点"><a href="#5-优点与缺点" class="headerlink" title="5. 优点与缺点"></a>5. 优点与缺点</h3>
-                <hr>
-                
 
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2018/07/09/AWS认证考试（云技术架构师）/" data-toggle="tooltip" data-placement="top"
-                           title="AWS认证考试（云技术架构师）">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/2018/07/08/Kafka/" data-toggle="tooltip" data-placement="top"
-                           title="Kafka">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
-
-                
-
-
-                
-
-
-                <!--加入新的评论系统-->
-                
-            </div>
-
-            <div class="hidden-xs col-sm-3 toc-col">
-                <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Zookeeper是什么？"><span class="toc-text">1. Zookeeper是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Zookeeper的架构与组成"><span class="toc-text">2. Zookeeper的架构与组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Fast-Paxos算法，ZAB算法"><span class="toc-text">3. Fast Paxos算法，ZAB算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-动物园管理员（Zookeeper）的故事"><span class="toc-text">4. 动物园管理员（Zookeeper）的故事</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-优点与缺点"><span class="toc-text">5. 优点与缺点</span></a></li></ol>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Sidebar Container -->
-
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                
-                <section>
-                    <!-- no hr -->
-                    <h5 class="text-center">
-                        <a href="/tags/">FEATURED TAGS</a>
-                    </h5>
-                    <div class="tags">
-                        
-                    </div>
-                </section>
-                
-
-                <!-- Friends Blog -->
-                
-            </div>
-        </div>
-
-    </div>
-</article>
-
-
-
-
-
-
-
-<!-- Footer -->
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <br>
-                <ul class="list-inline text-center">
-                
-                
-                
-
-                
-
-                
-
-                
-
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; longman 2018
-                    <br>
-                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
-                </p>
-
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- jQuery -->
-<script src="/js/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/js/blog.js"></script>
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("http://longman.kim/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-<!--fastClick.js -->
-<script>
-    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
-
-<!-- Google Analytics -->
-
-
-
-<!-- Baidu Tongji -->
-
-
-<!-- swiftype -->
+<!--<a href="http://longman.kim/2018/07/08/Zookeeper/#disqus_thread" class="article-comment-link">Comments</a>
+<div id="disqus_thread"></div>
 <script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = ''; // required: replace example with your forum shortname
 
-  _st('install','','2.0.0');
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
 </script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+-->
+<div style="display:none">
+<script src="http://s4.cnzz.com/stat.php?id=&web_id=" language="JavaScript"></script>script>
+</div>
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="img/header-img.jpg">
+
+
+
+
 </body>
-
 </html>
