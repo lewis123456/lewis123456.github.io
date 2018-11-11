@@ -46,6 +46,51 @@
 </div>
 
 
+<center><br><img src="/img/you.jpg" width="100%"><br></center>
+
+<p>private, default(没加修饰符为friendly), protected, public 都是用来做访问权限控制，权限由小到大，如下表，构成一个<strong>三角型</strong>。其中主要关注default和protected修饰的属性或方法，在本包内能够访问，并且protected修饰的能够在子类访问。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">权限关键字</th>
+<th style="text-align:left">类内部</th>
+<th style="text-align:left">本包</th>
+<th style="text-align:left">子类</th>
+<th style="text-align:left">外部包</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">private</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">default</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">protected</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">public</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">Y</td>
+</tr>
+</tbody>
+</table>
+<p>类似于这种需要死记硬背的东西，我们可以稍微找出一种规律，那就是<strong>三角型</strong>，即每种情况都要有，所以权限数量依次为1,2,3,4。</p>
 
 
 <!--<a href="http://longman.kim/2018/11/11/private-protected-public/#disqus_thread" class="article-comment-link">Comments</a>
