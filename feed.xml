@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-11-11T14:32:31.587Z</updated>
+  <updated>2018-11-11T14:55:49.117Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://longman.kim/2018/11/11/%E5%85%B3%E9%94%AE%E5%AD%97static-final-throws-try-catch-throw-finally/"/>
     <id>http://longman.kim/2018/11/11/关键字static-final-throws-try-catch-throw-finally/</id>
     <published>2018-11-11T04:33:21.000Z</published>
-    <updated>2018-11-11T14:32:31.587Z</updated>
+    <updated>2018-11-11T14:55:49.117Z</updated>
     
     <content type="html"><![CDATA[<center><br><img src="/img/suo_long.jpg" width="100%"><br></center><p>static用来修饰静态属性、静态方法、静态内部类。对于static修饰的静态属性，该类的所有对象都共享一个。对于static修饰的方法，只能修改静态属性，不能修改私有属性。对于静态内部类，在创建静态内部类时，不需要外部类的对象，并且静态内部类的对象只能访问外部类的静态成员。  </p><p>final修饰不可变的类、成员变量、本地变量、方法。final修饰的类不能被继承，final修饰的本地变量必须在声明时初始化。final修饰的成员变量必须在声明的时候初始化或者在构造器中初始化，否则编译报错。final修饰的方法不能被重写，在编译阶段绑定（静态绑定）。final变量不能再次赋值，只能初始化。接口中声明的所有变量本身是final的。在匿名类中所有变量都必须是final变量。</p><p>throws使用在方法名后，将函数内部的异常向上抛。</p>]]></content>
     
@@ -36,6 +36,20 @@
     
     </summary>
     
+      <category term="Java基础" scheme="http://longman.kim/categories/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="static" scheme="http://longman.kim/tags/static/"/>
+    
+      <category term="final" scheme="http://longman.kim/tags/final/"/>
+    
+      <category term="throws" scheme="http://longman.kim/tags/throws/"/>
+    
+      <category term="try" scheme="http://longman.kim/tags/try/"/>
+    
+      <category term="catch" scheme="http://longman.kim/tags/catch/"/>
+    
+      <category term="finally" scheme="http://longman.kim/tags/finally/"/>
     
   </entry>
   
