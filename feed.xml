@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-11-11T14:55:49.117Z</updated>
+  <updated>2018-11-25T07:27:00.696Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -21,35 +21,19 @@
     <link href="http://longman.kim/2018/11/11/%E5%85%B3%E9%94%AE%E5%AD%97static-final-throws-try-catch-throw-finally/"/>
     <id>http://longman.kim/2018/11/11/关键字static-final-throws-try-catch-throw-finally/</id>
     <published>2018-11-11T04:33:21.000Z</published>
-    <updated>2018-11-11T14:55:49.117Z</updated>
+    <updated>2018-11-25T07:27:00.696Z</updated>
     
-    <content type="html"><![CDATA[<center><br><img src="/img/suo_long.jpg" width="100%"><br></center><p>static用来修饰静态属性、静态方法、静态内部类。对于static修饰的静态属性，该类的所有对象都共享一个。对于static修饰的方法，只能修改静态属性，不能修改私有属性。对于静态内部类，在创建静态内部类时，不需要外部类的对象，并且静态内部类的对象只能访问外部类的静态成员。  </p><p>final修饰不可变的类、成员变量、本地变量、方法。final修饰的类不能被继承，final修饰的本地变量必须在声明时初始化。final修饰的成员变量必须在声明的时候初始化或者在构造器中初始化，否则编译报错。final修饰的方法不能被重写，在编译阶段绑定（静态绑定）。final变量不能再次赋值，只能初始化。接口中声明的所有变量本身是final的。在匿名类中所有变量都必须是final变量。</p><p>throws使用在方法名后，将函数内部的异常向上抛。</p>]]></content>
+    <content type="html"><![CDATA[<p>static用来修饰静态属性、静态方法、静态内部类。对于static修饰的静态属性，该类的所有对象都共享一个。对于static修饰的方法，只能修改静态属性，不能修改私有属性。对于静态内部类，在创建静态内部类时，不需要外部类的对象，并且静态内部类的对象只能访问外部类的静态成员。  </p><p>final修饰不可变的类、成员变量、本地变量、方法。final修饰的类不能被继承，final修饰的本地变量必须在声明时初始化。final修饰的成员变量必须在声明的时候初始化或者在构造器中初始化，否则编译报错。final修饰的方法不能被重写，在编译阶段绑定（静态绑定）。final变量不能再次赋值，只能初始化。接口中声明的所有变量本身是final的。在匿名类中所有变量都必须是final变量。</p><p>throws使用在方法名后，将函数内部的异常向上抛。</p><p>Java中的异常最顶层是Throwable，然后被Error和Exception继承。Error错误是非常严重的错误，通常会导致程序终止，例如JVM内存溢出、堆栈异常等。Exception是异常，分为可检查异常（checked）和不可检查异常（unchecked）。可检查异常是指在编译期间就可以知道会不会发生的异常，如果不对这种异常进行捕获，编译通不过（例如IOException）。不可检查异常是指，只能在运行阶段才可以知道会不会发生异常（例如除以0）。  </p><p>当有可能出现异常时，一般会采用try-catch-finally处理。使用try语句包裹需要检查的代码，如果出现异常利用catch捕获进行处理。finally中的语句不论是否出现异常，都会执行的。finally中的代码块，在程序执行try-catch之后或者return之后（不论try中还是catch中），程序返回之前执行。如果finally中也有return返回，那么它的return会覆盖之前try或catch中的返回值。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;center&gt;&lt;br&gt;&lt;img src=&quot;/img/suo_long.jpg&quot; width=&quot;100%&quot;&gt;&lt;br&gt;&lt;/center&gt;
-
-&lt;p&gt;static用来修饰静态属性、静态方法、静态内部类。对于static修饰的静态属性，该类的所有对象都共享一个。对于static修饰的方法
+        &lt;p&gt;static用来修饰静态属性、静态方法、静态内部类。对于static修饰的静态属性，该类的所有对象都共享一个。对于static修饰的方法，只能修改静态属性，不能修改私有属性。对于静态内部类，在创建静态内部类时，不需要外部类的对象，并且静态内部类的对象只能访问外部类的静态成员
       
     
     </summary>
     
-      <category term="Java基础" scheme="http://longman.kim/categories/Java%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="static" scheme="http://longman.kim/tags/static/"/>
-    
-      <category term="final" scheme="http://longman.kim/tags/final/"/>
-    
-      <category term="throws" scheme="http://longman.kim/tags/throws/"/>
-    
-      <category term="try" scheme="http://longman.kim/tags/try/"/>
-    
-      <category term="catch" scheme="http://longman.kim/tags/catch/"/>
-    
-      <category term="finally" scheme="http://longman.kim/tags/finally/"/>
     
   </entry>
   
@@ -428,18 +412,19 @@
     <link href="http://longman.kim/2018/08/02/%E6%9C%AA%E6%9D%A5%E4%B8%80%E5%B9%B4%E7%9A%84%E8%A7%84%E5%88%92%EF%BC%882018-8%E2%80%94%E2%80%942019-8%EF%BC%89/"/>
     <id>http://longman.kim/2018/08/02/未来一年的规划（2018-8——2019-8）/</id>
     <published>2018-08-02T12:32:43.000Z</published>
-    <updated>2018-08-07T06:33:31.686Z</updated>
+    <updated>2018-12-03T14:50:49.821Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="1-英语"><a href="#1-英语" class="headerlink" title="1. 英语"></a>1. 英语</h3><p>雅思8分  </p><ol><li>听<br>听新闻  </li><li>说<br>注册网站，与老外视频聊天  </li><li>读<br>读短篇、长篇文章  </li><li>写<br>议论文  </li><li>练<br>做题  </li></ol><h3 id="2-数据结构与算法"><a href="#2-数据结构与算法" class="headerlink" title="2. 数据结构与算法"></a>2. 数据结构与算法</h3><p>leetcode最少2遍（Java和C++各实现一遍）<br>poj最少500题</p><ol><li><p>排序<br>冒泡排序，选择排序，插入排序，堆排序，快速排序，基数排序，桶排序， 归并排序  </p></li><li><p>查找<br>二分查找</p></li><li><p>贪心</p></li><li><p>动态规划</p></li><li><p>KMP</p></li><li><p>A*</p></li><li><p>线段树  </p></li></ol><p>树状数组</p><ol start="8"><li><p>网络流</p></li><li><p>数论</p></li><li><p>最短路径</p></li><li><p>BFS, DFS</p></li><li><p>AVL树、红黑树</p></li><li><p>B, B-, B+树</p></li></ol><h3 id="3-Java-C-源码分析"><a href="#3-Java-C-源码分析" class="headerlink" title="3. Java/C++源码分析"></a>3. Java/C++源码分析</h3><p>分析笔记  </p><ol><li>精读JDK中的util, lang, io, nio</li><li>C++ STL</li></ol><h3 id="4-架构设计"><a href="#4-架构设计" class="headerlink" title="4. 架构设计"></a>4. 架构设计</h3><p>AWS、阿里的设计方案  </p><p>给出解决方案，指出架构的优缺点，结合业务逻辑</p><h3 id="5-优化"><a href="#5-优化" class="headerlink" title="5. 优化"></a>5. 优化</h3><p>带实验的知识点笔记  </p><ol><li>架构优化</li><li>JVM优化</li><li>线程池</li><li>数据库优化</li><li>C++程序的调试和性能优化</li></ol><h3 id="6-数据库"><a href="#6-数据库" class="headerlink" title="6. 数据库"></a>6. 数据库</h3><p>画图、带实验的个人总结<br>书籍、数据结构、算法、架构、原理、源码</p><ol><li>mysql</li><li>redis</li><li>hbase</li></ol><h3 id="7-业界方案"><a href="#7-业界方案" class="headerlink" title="7. 业界方案"></a>7. 业界方案</h3><p>腾讯、阿里、百度、美团、微博、豆瓣，它们的github</p><h3 id="8-大数据"><a href="#8-大数据" class="headerlink" title="8. 大数据"></a>8. 大数据</h3><p>画图、实验<br>Hadoop生态</p><h3 id="9-源码分析"><a href="#9-源码分析" class="headerlink" title="9. 源码分析"></a>9. 源码分析</h3><p>手写，带实验的笔记  </p><ol><li>redis</li><li>mongodb</li><li>zookeeper</li><li>spring</li><li>nginx</li><li>tomcat</li><li>netty</li><li>rocketmq</li><li>dubbo</li></ol><h3 id="10-个人品牌输出"><a href="#10-个人品牌输出" class="headerlink" title="10. 个人品牌输出"></a>10. 个人品牌输出</h3><p>完整的后台服务框架需要做哪些东西-业务逻辑和服务治理（服务发现、发布、容灾、容错、扩展、链路分析、服务可降级、白名单、安全）</p><ol><li>登录注册</li><li>负载均衡</li><li>cdn加速</li><li>接入层</li><li>逻辑层</li><li>中间层</li><li>存储层</li><li>业务运营管理平台、配置管理、发布管理、监控告警上报、统计上报</li><li>项目管理、需求管理</li></ol><h3 id="11-Github"><a href="#11-Github" class="headerlink" title="11. Github"></a>11. Github</h3><p>工程实战<br>让github成为自己的名片，以项目推动自己的进步，输出代码和文档。</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="英语"><a href="#英语" class="headerlink" title="英语"></a>英语</h3><p>雅思8分  </p><ol><li>听<br>听新闻  </li><li>说<br>注册网站，与老外视频聊天  </li><li>读<br>读短篇、长篇文章  </li><li>写<br>议论文  </li><li>练<br>做题  </li></ol><h3 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h3><p>leetcode最少2遍（Java和C++各实现一遍）<br>poj最少500题</p><ol><li><p>排序<br>冒泡排序，选择排序，插入排序，堆排序，快速排序，基数排序，桶排序， 归并排序  </p></li><li><p>查找<br>二分查找</p></li><li><p>贪心</p></li><li><p>动态规划</p></li><li><p>KMP</p></li><li><p>A*</p></li><li><p>线段树  </p></li></ol><p>树状数组</p><ol start="8"><li><p>网络流</p></li><li><p>数论</p></li><li><p>最短路径</p></li><li><p>BFS, DFS</p></li><li><p>AVL树、红黑树</p></li><li><p>B, B-, B+树</p></li></ol><h3 id="Java-C-源码分析"><a href="#Java-C-源码分析" class="headerlink" title="Java/C++源码分析"></a>Java/C++源码分析</h3><p>分析笔记  </p><ol><li>精读JDK中的util, lang, io, nio</li><li>C++ STL</li></ol><h3 id="架构设计"><a href="#架构设计" class="headerlink" title="架构设计"></a>架构设计</h3><p>AWS、阿里的设计方案  </p><p>给出解决方案，指出架构的优缺点，结合业务逻辑</p><h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>带实验的知识点笔记  </p><ol><li>架构优化</li><li>JVM优化</li><li>线程池</li><li>数据库优化</li><li>C++程序的调试和性能优化</li></ol><h3 id="6-数据库"><a href="#6-数据库" class="headerlink" title="6. 数据库"></a>6. 数据库</h3><p>画图、带实验的个人总结<br>书籍、数据结构、算法、架构、原理、源码</p><ol><li>mysql</li><li>redis</li><li>hbase</li></ol><h3 id="7-业界方案"><a href="#7-业界方案" class="headerlink" title="7. 业界方案"></a>7. 业界方案</h3><p>腾讯、阿里、百度、美团、微博、豆瓣，它们的github</p><h3 id="8-大数据"><a href="#8-大数据" class="headerlink" title="8. 大数据"></a>8. 大数据</h3><p>画图、实验<br>Hadoop生态</p><h3 id="9-源码分析"><a href="#9-源码分析" class="headerlink" title="9. 源码分析"></a>9. 源码分析</h3><p>手写，带实验的笔记  </p><ol><li>redis</li><li>mongodb</li><li>zookeeper</li><li>spring</li><li>nginx</li><li>tomcat</li><li>netty</li><li>rocketmq</li><li>dubbo</li></ol><h3 id="10-个人品牌输出"><a href="#10-个人品牌输出" class="headerlink" title="10. 个人品牌输出"></a>10. 个人品牌输出</h3><p>完整的后台服务框架需要做哪些东西-业务逻辑和服务治理（服务发现、发布、容灾、容错、扩展、链路分析、服务可降级、白名单、安全）</p><ol><li>登录注册</li><li>负载均衡</li><li>cdn加速</li><li>接入层</li><li>逻辑层</li><li>中间层</li><li>存储层</li><li>业务运营管理平台、配置管理、发布管理、监控告警上报、统计上报</li><li>项目管理、需求管理</li></ol><h3 id="11-Github"><a href="#11-Github" class="headerlink" title="11. Github"></a>11. Github</h3><p>工程实战<br>让github成为自己的名片，以项目推动自己的进步，输出代码和文档。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;1-英语&quot;&gt;&lt;a href=&quot;#1-英语&quot; class=&quot;headerlink&quot; title=&quot;1. 英语&quot;&gt;&lt;/a&gt;1. 英语&lt;/h3&gt;&lt;p&gt;雅思8分  &lt;/p&gt;
+        &lt;h3 id=&quot;英语&quot;&gt;&lt;a href=&quot;#英语&quot; class=&quot;headerlink&quot; title=&quot;英语&quot;&gt;&lt;/a&gt;英语&lt;/h3&gt;&lt;p&gt;雅思8分  &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;听&lt;br&gt;听新闻  &lt;/li&gt;
-&lt;li&gt;说&lt;br&gt;注册网站，与老外视频聊天  &lt;
+&lt;li&gt;说&lt;br&gt;注册网站，与老外视频聊天  &lt;/li&gt;
+&lt;li&gt;读
       
     
     </summary>

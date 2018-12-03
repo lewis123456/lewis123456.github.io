@@ -39,8 +39,6 @@
 发表于2018年11月11日
 
 
-    <a class="article-category-link" href="/categories/Java基础/">Java基础</a>
-
 
 
  </div>
@@ -48,11 +46,11 @@
 </div>
 
 
-<center><br><img src="/img/suo_long.jpg" width="100%"><br></center>
-
 <p>static用来修饰静态属性、静态方法、静态内部类。对于static修饰的静态属性，该类的所有对象都共享一个。对于static修饰的方法，只能修改静态属性，不能修改私有属性。对于静态内部类，在创建静态内部类时，不需要外部类的对象，并且静态内部类的对象只能访问外部类的静态成员。  </p>
 <p>final修饰不可变的类、成员变量、本地变量、方法。final修饰的类不能被继承，final修饰的本地变量必须在声明时初始化。final修饰的成员变量必须在声明的时候初始化或者在构造器中初始化，否则编译报错。final修饰的方法不能被重写，在编译阶段绑定（静态绑定）。final变量不能再次赋值，只能初始化。接口中声明的所有变量本身是final的。在匿名类中所有变量都必须是final变量。</p>
 <p>throws使用在方法名后，将函数内部的异常向上抛。</p>
+<p>Java中的异常最顶层是Throwable，然后被Error和Exception继承。Error错误是非常严重的错误，通常会导致程序终止，例如JVM内存溢出、堆栈异常等。Exception是异常，分为可检查异常（checked）和不可检查异常（unchecked）。可检查异常是指在编译期间就可以知道会不会发生的异常，如果不对这种异常进行捕获，编译通不过（例如IOException）。不可检查异常是指，只能在运行阶段才可以知道会不会发生异常（例如除以0）。  </p>
+<p>当有可能出现异常时，一般会采用try-catch-finally处理。使用try语句包裹需要检查的代码，如果出现异常利用catch捕获进行处理。finally中的语句不论是否出现异常，都会执行的。finally中的代码块，在程序执行try-catch之后或者return之后（不论try中还是catch中），程序返回之前执行。如果finally中也有return返回，那么它的return会覆盖之前try或catch中的返回值。</p>
 
 
 <!--<a href="http://longman.kim/2018/11/11/关键字static-final-throws-try-catch-throw-finally/#disqus_thread" class="article-comment-link">Comments</a>
