@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://longman.kim/"/>
-  <updated>2018-12-03T16:04:11.893Z</updated>
+  <updated>2018-12-03T16:13:28.914Z</updated>
   <id>http://longman.kim/</id>
   
   <author>
@@ -21,16 +21,17 @@
     <link href="http://longman.kim/2018/12/03/%E4%BB%8E%E7%82%B9%E5%AD%90%E5%88%B0%E4%BA%A7%E5%93%81%E7%9A%84%E5%B0%9D%E8%AF%95/"/>
     <id>http://longman.kim/2018/12/03/从点子到产品的尝试/</id>
     <published>2018-12-03T15:03:57.000Z</published>
-    <updated>2018-12-03T16:04:11.893Z</updated>
+    <updated>2018-12-03T16:13:28.914Z</updated>
     
-    <content type="html"><![CDATA[<p>一个朋友给我提了一个点子，我感觉也十分不错，想开发出一款app出来。但是我现在知识技能不全面，在实现的过程中遇到了很多难点，为了使自己能坚持下来，我决定记录这一实现的过程。</p><h3 id="朋友的点子"><a href="#朋友的点子" class="headerlink" title="朋友的点子"></a>朋友的点子</h3><p>“我的设计理念原本是基于自由行医，但现在法律和政策问题，暂时搁浅这个方案，所以我在这个方案的基础上又进行了改进，就是不只是行医这一个职业，而是适用于所有行业，比如教师，律师，软件工程师，建筑师，设计师，画家，植物学家等等，只要你对某行感兴趣，想要咨询或解决这行的问题，我不需要赶到专业的机构或地点去咨询，也又不想搜索百度或引擎那样整天面对电脑或手机显得单调和无趣，比如我坐在家里，养了一些花草，但是我却缺乏养好花草的知识和经验，去专门的花草店去咨询吧，路程有些远又显得太刻意了，去百度搜索又显得太单调乏味，缺少了点趣味，这时周围的邻居刚好有植物学家或者花草爱好者，刚好他也想要与人接触交流，这时这款软件就成全了他们，又比如隔壁的张大爷是个慢阻肺患者，经常会咳嗽或者活动后气喘，他的家人也一般只会在他病的重时候送到医院治疗，平常如何预防和保养都缺乏相应的经验和知识，作为老王的儿女或老王本人有时也苦闷，这时当他们打开这个搜索周围的人，发现住在他们楼上24楼的居然是一个医生，刚好这个医生也在用这个软件，那么只要这个医生想要帮助他们，那么他们就建立了互动和联系。又比如在地铁上，一眼望过去，黑压压的一片人，十有八九都是低头在玩手机，怎样来改变这种不好的社会现象，看书固然是一种很好的风气，但短期内很难养成习惯，那就不能改变了吗，有，那就是因地制宜，让他们沟通交流，那如何才能打破这个心理的隔阂和不信任的防线呢，以新奇，流行，以及基于兴趣和职业，周围附近的人等特点于一身的软件应运而生，比如，我坐在地铁上，路程有点远，稍显无聊，看着陌生的周围人无人认识，又都互不搭理的自顾玩着手机，他们都玩手机，唉，没办法，也掏出手机，看看朋友圈，玩玩游戏，看起来多有意思，其实无聊透顶也显得无奈，这时坐在我隔壁座位的朋友也显得无聊，大家互相望了几眼又都继续玩着手机，想和他聊天又显得冒昧，这时大家如果都打开这个软件，定位下隔壁的人的身份认证，就会发现原来你是一个医生，原来你是软件工程师，那么就这么一下，因为身份的确认，彼此的隔阂就会打破，信任就会在彼此心里建立，大家就会彼此互相尊重，交流和默契就在彼此间传递，建立联系也就水到渠成。这，就是良好社会和美好社会缩影的一把钥匙或者一个开关，打开或启动就会与周围的人建立联系，建立沟通，消除隔阂，传递美好。”  </p><h3 id="功能抽象"><a href="#功能抽象" class="headerlink" title="功能抽象"></a>功能抽象</h3><ol><li><p>注册登录<br>注册：微信授权+手机otp，手机号+邮箱<br>微信登录，手机号otp登录</p></li><li><p>附近的人<br>基于地理位置显示500米以内人的头像，职业，性别，自我介绍</p></li><li><p>单人聊天</p></li><li>群聊</li></ol><h3 id="架构设计"><a href="#架构设计" class="headerlink" title="架构设计"></a>架构设计</h3><p>接入层，服务层，组件层，存储层，服务化，容器化</p><h3 id="交互设计"><a href="#交互设计" class="headerlink" title="交互设计"></a>交互设计</h3><p>交互设计稿，切图</p><h3 id="前端开发"><a href="#前端开发" class="headerlink" title="前端开发"></a>前端开发</h3><h3 id="后端开发"><a href="#后端开发" class="headerlink" title="后端开发"></a>后端开发</h3><ol><li>数据库设计</li><li>接口定义</li></ol>]]></content>
+    <content type="html"><![CDATA[<center><br><img src="/img/zx.jpg" width="100%"><br></center><p>一个朋友给我提了一个点子，我感觉也十分不错，想开发出一款app出来。但是我现在知识技能不全面，在实现的过程中遇到了很多难点，为了使自己能坚持下来，我决定记录这一实现的过程。</p><h3 id="朋友的点子"><a href="#朋友的点子" class="headerlink" title="朋友的点子"></a>朋友的点子</h3><p>“我的设计理念原本是基于自由行医，但现在法律和政策问题，暂时搁浅这个方案，所以我在这个方案的基础上又进行了改进，就是不只是行医这一个职业，而是适用于所有行业，比如教师，律师，软件工程师，建筑师，设计师，画家，植物学家等等，只要你对某行感兴趣，想要咨询或解决这行的问题，我不需要赶到专业的机构或地点去咨询，也又不想搜索百度或引擎那样整天面对电脑或手机显得单调和无趣，比如我坐在家里，养了一些花草，但是我却缺乏养好花草的知识和经验，去专门的花草店去咨询吧，路程有些远又显得太刻意了，去百度搜索又显得太单调乏味，缺少了点趣味，这时周围的邻居刚好有植物学家或者花草爱好者，刚好他也想要与人接触交流，这时这款软件就成全了他们，又比如隔壁的张大爷是个慢阻肺患者，经常会咳嗽或者活动后气喘，他的家人也一般只会在他病的重时候送到医院治疗，平常如何预防和保养都缺乏相应的经验和知识，作为老王的儿女或老王本人有时也苦闷，这时当他们打开这个搜索周围的人，发现住在他们楼上24楼的居然是一个医生，刚好这个医生也在用这个软件，那么只要这个医生想要帮助他们，那么他们就建立了互动和联系。又比如在地铁上，一眼望过去，黑压压的一片人，十有八九都是低头在玩手机，怎样来改变这种不好的社会现象，看书固然是一种很好的风气，但短期内很难养成习惯，那就不能改变了吗，有，那就是因地制宜，让他们沟通交流，那如何才能打破这个心理的隔阂和不信任的防线呢，以新奇，流行，以及基于兴趣和职业，周围附近的人等特点于一身的软件应运而生，比如，我坐在地铁上，路程有点远，稍显无聊，看着陌生的周围人无人认识，又都互不搭理的自顾玩着手机，他们都玩手机，唉，没办法，也掏出手机，看看朋友圈，玩玩游戏，看起来多有意思，其实无聊透顶也显得无奈，这时坐在我隔壁座位的朋友也显得无聊，大家互相望了几眼又都继续玩着手机，想和他聊天又显得冒昧，这时大家如果都打开这个软件，定位下隔壁的人的身份认证，就会发现原来你是一个医生，原来你是软件工程师，那么就这么一下，因为身份的确认，彼此的隔阂就会打破，信任就会在彼此心里建立，大家就会彼此互相尊重，交流和默契就在彼此间传递，建立联系也就水到渠成。这，就是良好社会和美好社会缩影的一把钥匙或者一个开关，打开或启动就会与周围的人建立联系，建立沟通，消除隔阂，传递美好。”  </p><h3 id="功能抽象"><a href="#功能抽象" class="headerlink" title="功能抽象"></a>功能抽象</h3><ol><li><p>注册登录<br>注册：微信授权+手机otp，手机号+邮箱<br>微信登录，手机号otp登录</p></li><li><p>附近的人<br>基于地理位置显示500米以内人的头像，职业，性别，自我介绍</p></li><li><p>单人聊天</p></li><li>群聊</li></ol><h3 id="架构设计"><a href="#架构设计" class="headerlink" title="架构设计"></a>架构设计</h3><p>接入层，服务层，组件层，存储层，服务化，容器化</p><h3 id="交互设计"><a href="#交互设计" class="headerlink" title="交互设计"></a>交互设计</h3><p>交互设计稿，切图</p><h3 id="前端开发"><a href="#前端开发" class="headerlink" title="前端开发"></a>前端开发</h3><h3 id="后端开发"><a href="#后端开发" class="headerlink" title="后端开发"></a>后端开发</h3><ol><li>数据库设计</li><li>接口定义</li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;一个朋友给我提了一个点子，我感觉也十分不错，想开发出一款app出来。但是我现在知识技能不全面，在实现的过程中遇到了很多难点，为了使自己能坚持下来，我决定记录这一实现的过程。&lt;/p&gt;
-&lt;h3 id=&quot;朋友的点子&quot;&gt;&lt;a href=&quot;#朋友的点子&quot; class=&quot;headerl
+        &lt;center&gt;&lt;br&gt;&lt;img src=&quot;/img/zx.jpg&quot; width=&quot;100%&quot;&gt;&lt;br&gt;&lt;/center&gt;
+
+&lt;p&gt;一个朋友给我提了一个点子，我感觉也十分不错，想开发出一款app出来。但是我现在知识技能不全面，在实现的过程中遇到了很多难点，为了使自己能坚持下来，我
       
     
     </summary>
@@ -43,16 +44,17 @@
     <link href="http://longman.kim/2018/12/03/Web%E5%BC%80%E5%8F%91%E8%BF%99%E9%97%A8%E6%89%8B%E8%89%BA%E6%B4%BB/"/>
     <id>http://longman.kim/2018/12/03/Web开发这门手艺活/</id>
     <published>2018-12-03T15:01:59.000Z</published>
-    <updated>2018-12-03T15:28:26.161Z</updated>
+    <updated>2018-12-03T16:08:22.127Z</updated>
     
-    <content type="html"><![CDATA[<p>毕业之后一直做Web开发，已经两年半了，越来越感觉Web开发是门手艺活，随着从业人员的增加，云计算以及各种傻瓜式框架的出现，未来是全栈工程师的天下。因此，及早成为全栈工程师迫在眉睫，下面我将从各个方面加以分析，让自己早日成为独立的全栈开发。  </p><h3 id="业务需求"><a href="#业务需求" class="headerlink" title="业务需求"></a>业务需求</h3><h3 id="UI-UE设计"><a href="#UI-UE设计" class="headerlink" title="UI/UE设计"></a>UI/UE设计</h3><p>photoshop, ai, ae, sketch, xmind</p><h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>html/css, javascript, bootstrap, nodejs, vue</p><h3 id="Web服务器"><a href="#Web服务器" class="headerlink" title="Web服务器"></a>Web服务器</h3><p>nginx + openresty</p><h3 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h3><ol><li>Java<br>Java语言规范，JDK源码，Java虚拟机，高级特性<br>SpringMVC, SpringBoot, SpringCloud, Netty</li></ol><ol start="2"><li>Golang</li></ol><h3 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h3><p>dubbo, SpringCloud, gRPC</p><h3 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h3><p>kafka, rabbitMQ, rocketMQ</p><h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>redis</p><h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p>mysql, tikv</p><h3 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h3><p>2pc, 3pc, xa, paxos, raft, cap, base, 一致性，zookeepr</p><h3 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h3><p>docker, k8s</p><h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p>jenkins</p><h3 id="运维监控"><a href="#运维监控" class="headerlink" title="运维监控"></a>运维监控</h3><p>ELK</p><h3 id="大数据"><a href="#大数据" class="headerlink" title="大数据"></a>大数据</h3><p>hadoop</p><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>elasticsearch</p><h3 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h3>]]></content>
+    <content type="html"><![CDATA[<center><br><img src="/img/xmg.jpg" width="100%"><br></center><p>毕业之后一直做Web开发，已经两年半了，越来越感觉Web开发是门手艺活，随着从业人员的增加，云计算以及各种傻瓜式框架的出现，未来是全栈工程师的天下。因此，及早成为全栈工程师迫在眉睫，下面我将从各个方面加以分析，让自己早日成为独立的全栈开发。  </p><h3 id="业务需求"><a href="#业务需求" class="headerlink" title="业务需求"></a>业务需求</h3><h3 id="UI-UE设计"><a href="#UI-UE设计" class="headerlink" title="UI/UE设计"></a>UI/UE设计</h3><p>photoshop, ai, ae, sketch, xmind</p><h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>html/css, javascript, bootstrap, nodejs, vue</p><h3 id="Web服务器"><a href="#Web服务器" class="headerlink" title="Web服务器"></a>Web服务器</h3><p>nginx + openresty</p><h3 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h3><ol><li>Java<br>Java语言规范，JDK源码，Java虚拟机，高级特性<br>SpringMVC, SpringBoot, SpringCloud, Netty</li></ol><ol start="2"><li>Golang</li></ol><h3 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h3><p>dubbo, SpringCloud, gRPC</p><h3 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h3><p>kafka, rabbitMQ, rocketMQ</p><h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>redis</p><h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p>mysql, tikv</p><h3 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h3><p>2pc, 3pc, xa, paxos, raft, cap, base, 一致性，zookeepr</p><h3 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h3><p>docker, k8s</p><h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p>jenkins</p><h3 id="运维监控"><a href="#运维监控" class="headerlink" title="运维监控"></a>运维监控</h3><p>ELK</p><h3 id="大数据"><a href="#大数据" class="headerlink" title="大数据"></a>大数据</h3><p>hadoop</p><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>elasticsearch</p><h3 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h3>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;毕业之后一直做Web开发，已经两年半了，越来越感觉Web开发是门手艺活，随着从业人员的增加，云计算以及各种傻瓜式框架的出现，未来是全栈工程师的天下。因此，及早成为全栈工程师迫在眉睫，下面我将从各个方面加以分析，让自己早日成为独立的全栈开发。  &lt;/p&gt;
-&lt;h3 id=&quot;业务
+        &lt;center&gt;&lt;br&gt;&lt;img src=&quot;/img/xmg.jpg&quot; width=&quot;100%&quot;&gt;&lt;br&gt;&lt;/center&gt;
+
+&lt;p&gt;毕业之后一直做Web开发，已经两年半了，越来越感觉Web开发是门手艺活，随着从业人员的增加，云计算以及各种傻瓜式框架的出现，未来是全栈工程师的天下
       
     
     </summary>
